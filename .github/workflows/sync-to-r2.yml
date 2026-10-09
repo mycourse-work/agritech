@@ -1,0 +1,11 @@
+name: Sync to R2
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  sync:
+    uses: mycourse-work/.github/.github/workflows/sync-to-r2.yml@main
+    secrets: inherit
