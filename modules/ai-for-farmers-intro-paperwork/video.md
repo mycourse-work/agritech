@@ -1,10 +1,10 @@
 # Farm paperwork made easier
 
-Allow 2 minutes for the video. Production is pending; the summary and lessons cover the learning points.
+Allow 2 minutes for the video.
 
-<video controls poster="/api/content/ai-for-farmers-intro/@modules/ai-for-farmers-intro-paperwork/assets/ai-for-farmers-intro-paperwork-hero.jpg" playsinline preload="metadata" aria-label="Module 2: Farm paperwork made easier" style="width: 100%; max-width: 800px; border-radius: 12px; margin: 1.5rem auto; display: block;">
+<video controls poster="/api/content/ai-for-farmers-intro/@modules/ai-for-farmers-intro-paperwork/assets/ai-for-farmers-intro-paperwork-poster.jpg" playsinline preload="metadata" aria-label="Module 2: Farm paperwork made easier" style="width: 100%; max-width: 800px; border-radius: 12px; margin: 1.5rem auto; display: block;">
   <source src="./assets/ai-for-farmers-intro-paperwork.mp4" type="video/mp4">
-  <track kind="captions" src="./assets/ai-for-farmers-intro-paperwork.vtt" srclang="en-NZ" label="English (NZ)">
+  <track kind="captions" src="./assets/ai-for-farmers-intro-paperwork.vtt" srclang="en-NZ" label="English (NZ)" default>
   Read the summary below if video is unavailable.
 </video>
 
@@ -35,7 +35,7 @@ In the activity, assemble a prompt from the supplied chips and watch the sample 
 
 ## Shot list and on-screen text
 
-Master: 1920x1080, 25 fps, total target 120 seconds. Narration: 264 words. Read at 132 words per minute with natural pauses. The scene slots include speech and holds; record without ad-libs. Align each paragraph to its scene. Captions match the full narration; draft timings need the finished recording.
+Master: 1920x1080, 25 fps, total target 120 seconds. Narration: 264 words. Read at 132 words per minute with natural pauses. The scene slots include speech and holds; record without ad-libs. Align each paragraph to its scene. Captions match the full narration.
 
 | Scene | Time | Shot and edit | On-screen text |
 | --- | --- | --- | --- |

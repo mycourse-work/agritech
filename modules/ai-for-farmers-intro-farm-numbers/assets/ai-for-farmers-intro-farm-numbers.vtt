@@ -1,113 +1,154 @@
 WEBVTT
 
-NOTE Draft 120-second timing; retime after voice recording.
-
 1
-00:00:00.000 --> 00:00:05.455
+00:00:00.600 --> 00:00:05.709
 A number can look precise while answering
-the wrong question. Example Station has
+the wrong question.
 
 2
-00:00:05.455 --> 00:00:10.909
-observed rain of ten millimetres yesterday
-and forecast rain of twenty tomorrow.
+00:00:05.709 --> 00:00:11.840
+Example Station has observed rain of ten
+millimetres yesterday and forecast rain
 
 3
-00:00:10.909 --> 00:00:16.364
-Today's reading is missing. Keep those
-periods and evidence types separate.
+00:00:11.840 --> 00:00:13.373
+of twenty tomorrow.
 
 4
-00:00:16.364 --> 00:00:21.818
-Thirty millimetres received would be an
-unsupported summary. Our invented feed
+00:00:13.373 --> 00:00:15.416
+Today's reading is missing.
 
 5
-00:00:21.818 --> 00:00:27.273
-worksheet starts with one thousand
-kilograms of dry matter, adds one hundred
+00:00:15.416 --> 00:00:18.993
+Keep those periods and evidence types
+separate.
 
 6
-00:00:27.273 --> 00:00:32.727
-and subtracts five hundred of expected
-use. The arithmetic gives six hundred.
+00:00:18.993 --> 00:00:23.080
+Thirty millimetres received would be an
+unsupported summary.
 
 7
-00:00:32.727 --> 00:00:38.182
-Check the sum yourself. Then ask whether
-the inputs are measurements or assumptions
+00:00:23.880 --> 00:00:29.786
+Our invented feed worksheet starts with
+one thousand kilograms of dry matter,
 
 8
-00:00:38.182 --> 00:00:43.636
-before using a real feed plan. A document
-reader can miss a decimal or fill a
+00:00:29.786 --> 00:00:34.708
+adds one hundred and subtracts five
+hundred of expected use.
 
 9
-00:00:43.636 --> 00:00:49.091
-blurred row. In our packing extract,
-twenty pieces and thirty pieces give a
+00:00:34.708 --> 00:00:37.169
+The arithmetic gives six hundred.
 
 10
-00:00:49.091 --> 00:00:54.545
-clear-row subtotal of fifty. The full
-total remains unknown. Check extracted
+00:00:37.169 --> 00:00:39.137
+Check the sum yourself.
 
 11
-00:00:54.545 --> 00:01:00.000
-figures against their exact rows and
-obtain a readable source for missing
+00:00:39.137 --> 00:00:45.043
+Then ask whether the inputs are
+measurements or assumptions before using a
 
 12
-00:01:00.000 --> 00:01:05.455
-details. Different apps may use different
-dates, names, periods and units. Keep
+00:00:45.043 --> 00:00:46.520
+real feed plan.
 
 13
-00:01:05.455 --> 00:01:10.909
-original exports and propose uncertain
-matches for review. Check a repeated event
+00:00:47.320 --> 00:00:52.937
+A document reader can miss a decimal or
+fill a blurred row.
 
 14
-00:01:10.909 --> 00:01:16.364
-before removing a duplicate from a working
-copy. A current snapshot cannot establish
+00:00:52.937 --> 00:00:58.554
+In our packing extract, twenty pieces and
+thirty pieces give a clear-row
 
 15
-00:01:16.364 --> 00:01:21.818
-a trend, and an unusual sensor reading
-needs investigation. Before uploading real
+00:00:58.554 --> 00:00:59.958
+subtotal of fifty.
 
 16
-00:01:21.818 --> 00:01:27.273
-files, check permissions and provider
-terms. Entered records and derived
+00:00:59.958 --> 00:01:02.299
+The full total remains unknown.
 
 17
-00:01:27.273 --> 00:01:32.727
-summaries may have different rights. The
-drift activity is another model output to
+00:01:02.299 --> 00:01:07.916
+Check extracted figures against their
+exact rows and obtain a readable source
 
 18
-00:01:32.727 --> 00:01:38.182
-question. It pictures how changes affect a
-plume, but it cannot predict the field
+00:01:07.916 --> 00:01:09.320
+for missing details.
 
 19
-00:01:38.182 --> 00:01:43.636
-result or approve spraying. The wind
-comparison starts at an illustrative
+00:01:10.120 --> 00:01:15.240
+Different apps may use different dates,
+names, periods and units.
 
 20
-00:01:43.636 --> 00:01:49.091
-fifteen kilometres an hour. It is not a
-legal limit. Check your regional plan,
+00:01:15.240 --> 00:01:19.848
+Keep original exports and propose
+uncertain matches for review.
 
 21
-00:01:49.091 --> 00:01:54.545
-product label and GROWSAFE guidance for
-actual work. Try one change in the lab,
+00:01:19.848 --> 00:01:25.992
+Check a repeated event before removing a
+duplicate from a working copy.
 
 22
-00:01:54.545 --> 00:02:00.000
-describe what moved, and name the evidence
-the picture still cannot supply.
+00:01:25.992 --> 00:01:32.648
+A current snapshot cannot establish a
+trend, and an unusual sensor reading needs
+
+23
+00:01:32.648 --> 00:01:33.160
+investigation.
+
+24
+00:01:33.960 --> 00:01:37.805
+Before uploading real files, check
+permissions and provider terms.
+
+25
+00:01:37.805 --> 00:01:41.651
+Entered records and derived summaries may
+have different rights.
+
+26
+00:01:41.651 --> 00:01:45.496
+The drift activity is another model output
+to question.
+
+27
+00:01:45.496 --> 00:01:51.478
+It pictures how changes affect a plume,
+but it cannot predict the field result
+
+28
+00:01:51.478 --> 00:01:52.760
+or approve spraying.
+
+29
+00:01:53.560 --> 00:01:58.447
+The wind comparison starts at an
+illustrative fifteen kilometres an hour.
+
+30
+00:01:58.447 --> 00:02:01.112
+It is not a legal limit.
+
+31
+00:02:01.112 --> 00:02:06.443
+Check your regional plan, product label
+and GROWSAFE guidance for actual work.
+
+32
+00:02:06.443 --> 00:02:12.663
+Try one change in the lab, describe what
+moved, and name the evidence the
+
+33
+00:02:12.663 --> 00:02:14.440
+picture still cannot supply.

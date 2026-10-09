@@ -1,10 +1,10 @@
 # Reading your farm's numbers
 
-Allow 2 minutes for the video. Production is pending; the summary and lessons cover the learning points.
+Allow 2 minutes for the video.
 
-<video controls poster="/api/content/ai-for-farmers-intro/@modules/ai-for-farmers-intro-farm-numbers/assets/ai-for-farmers-intro-farm-numbers-hero.jpg" playsinline preload="metadata" aria-label="Module 3: Reading your farm's numbers" style="width: 100%; max-width: 800px; border-radius: 12px; margin: 1.5rem auto; display: block;">
+<video controls poster="/api/content/ai-for-farmers-intro/@modules/ai-for-farmers-intro-farm-numbers/assets/ai-for-farmers-intro-farm-numbers-poster.jpg" playsinline preload="metadata" aria-label="Module 3: Reading your farm's numbers" style="width: 100%; max-width: 800px; border-radius: 12px; margin: 1.5rem auto; display: block;">
   <source src="./assets/ai-for-farmers-intro-farm-numbers.mp4" type="video/mp4">
-  <track kind="captions" src="./assets/ai-for-farmers-intro-farm-numbers.vtt" srclang="en-NZ" label="English (NZ)">
+  <track kind="captions" src="./assets/ai-for-farmers-intro-farm-numbers.vtt" srclang="en-NZ" label="English (NZ)" default>
   Read the summary below if video is unavailable.
 </video>
 
@@ -35,7 +35,7 @@ The wind comparison starts at an illustrative fifteen kilometres an hour. It is 
 
 ## Shot list and on-screen text
 
-Master: 1920x1080, 25 fps, total target 120 seconds. Narration: 273 words. Read at 136 words per minute with natural pauses. The scene slots include speech and holds; record without ad-libs. Align each paragraph to its scene. Captions match the full narration; draft timings need the finished recording.
+Master: 1920x1080, 25 fps, total target 120 seconds. Narration: 273 words. Read at 136 words per minute with natural pauses. The scene slots include speech and holds; record without ad-libs. Align each paragraph to its scene. Captions match the full narration.
 
 | Scene | Time | Shot and edit | On-screen text |
 | --- | --- | --- | --- |
