@@ -1,198 +1,289 @@
 {
-  "title": "Module 1: check your understanding",
+  "title": "Quiz: AI on the farm",
   "type": "quiz",
+  "passingScore": 80,
   "questions": [
     {
-      "id": "q1",
+      "id": "ai-on-the-farm-q01-good-first-job",
+      "questionNumber": 1,
       "type": "MULTIPLE_CHOICE",
-      "question": "The gate note says Tuesday requested, not booked. The draft says Tuesday confirmed. What should you do?",
+      "question": "It's a busy week at Ridgeback Farm. Which of these jobs suits an AI chat tool?",
       "answers": [
         {
-          "id": "q1_a",
-          "text": "Remove the confirmation and ask about availability.",
+          "id": "ai-on-the-farm-q01-good-first-job-a",
+          "text": "Turning your rough notes into a welcome text for the new relief milker",
           "correct": true,
-          "feedback": "Correct. The source requests Tuesday. It supplies no booking. Restore the question and check the revised wording."
+          "feedback": "Right. You supply the facts and the tool turns them into a clear message, which you then check before sending."
         },
         {
-          "id": "q1_b",
-          "text": "Keep it because the email sounds clear.",
+          "id": "ai-on-the-farm-q01-good-first-job-b",
+          "text": "Finding out this week's schedule price for prime steers before you book them in",
           "correct": false,
-          "feedback": "Recheck the source. The source requests Tuesday. It supplies no booking. Restore the question and check the revised wording."
+          "feedback": "Chat tools can give an old or overseas price with full confidence. Get current prices from your processor or agent."
         },
         {
-          "id": "q1_c",
-          "text": "Ask another helper to agree with the draft.",
+          "id": "ai-on-the-farm-q01-good-first-job-c",
+          "text": "Telling you how much pasture cover is on the milking platform today",
           "correct": false,
-          "feedback": "Recheck the source. The source requests Tuesday. It supplies no booking. Restore the question and check the revised wording."
+          "feedback": "The tool can't see your paddocks or your farm software. Without your figures it can only guess."
         },
         {
-          "id": "q1_d",
-          "text": "Treat the proposed day as proof of a booking.",
+          "id": "ai-on-the-farm-q01-good-first-job-d",
+          "text": "Deciding whether a lame cow needs antibiotics or can wait for the vet",
           "correct": false,
-          "feedback": "Recheck the source. The source requests Tuesday. It supplies no booking. Restore the question and check the revised wording."
+          "feedback": "Animal health calls go to your vet. AI can help you write the question down, but it shouldn't make the call."
         }
       ],
-      "feedback": "The source requests Tuesday. It supplies no booking. Restore the question and check the revised wording."
+      "feedback": "AI chat tools are good at turning information you give them into writing. They can't see your farm and can't be relied on for current prices or animal health decisions."
     },
     {
-      "id": "q2",
-      "type": "MULTIPLE_CHOICE",
-      "question": "You want a short contractor enquiry from rough notes. Which request gives a useful brief?",
+      "id": "ai-on-the-farm-q02-keep-out",
+      "questionNumber": 2,
+      "type": "MULTIPLE_RESPONSE",
+      "question": "Select ALL that apply: You're using an AI tool to help with this month's staff paperwork. Which details should stay out of the chat?",
       "answers": [
         {
-          "id": "q2_a",
-          "text": "Make it sound confident and fill gaps.",
-          "correct": false,
-          "feedback": "Recheck the source. A task, source facts and visible gaps let you check whether the enquiry stays within the note."
-        },
-        {
-          "id": "q2_b",
-          "text": "Write whatever a contractor expects.",
-          "correct": false,
-          "feedback": "Recheck the source. A task, source facts and visible gaps let you check whether the enquiry stays within the note."
-        },
-        {
-          "id": "q2_c",
-          "text": "Use the notes, ask about availability and list unknowns.",
+          "id": "ai-on-the-farm-q02-keep-out-a",
+          "text": "Priya's IRD number and bank account number",
           "correct": true,
-          "feedback": "Correct. A task, source facts and visible gaps let you check whether the enquiry stays within the note."
+          "feedback": "Correct. These are staff personal details. The Privacy Act applies when you use AI tools, so keep them out."
         },
         {
-          "id": "q2_d",
-          "text": "Copy a previous booking and change the day.",
+          "id": "ai-on-the-farm-q02-keep-out-b",
+          "text": "The reason Sam was off sick last week",
+          "correct": true,
+          "feedback": "Correct. Health information about a staff member is personal and sensitive. The tool doesn't need it to draft a roster or message."
+        },
+        {
+          "id": "ai-on-the-farm-q02-keep-out-c",
+          "text": "A grazing client's contact details and stock records",
+          "correct": true,
+          "feedback": "Correct. That's someone else's information, given to you for a specific purpose. Leave it out."
+        },
+        {
+          "id": "ai-on-the-farm-q02-keep-out-d",
+          "text": "The start times for next week's milkings",
           "correct": false,
-          "feedback": "Recheck the source. A task, source facts and visible gaps let you check whether the enquiry stays within the note."
+          "feedback": "Milking start times aren't personal information. They're exactly the kind of fact the tool needs to draft a roster or message."
+        },
+        {
+          "id": "ai-on-the-farm-q02-keep-out-e",
+          "text": "Staff first names and the days each person is rostered on",
+          "correct": false,
+          "feedback": "First names and rostered days are fine for a roster job. Using first names or roles is how you keep the rest of their details out."
         }
       ],
-      "feedback": "A task, source facts and visible gaps let you check whether the enquiry stays within the note."
+      "feedback": "Give the tool the facts the job needs and nothing more. Staff personal details, bank details and other people's information stay out of the chat."
     },
     {
-      "id": "q3",
+      "id": "ai-on-the-farm-q03-clear-prompt",
+      "questionNumber": 3,
       "type": "MULTIPLE_CHOICE",
-      "question": "A cited page opens, but its text does not support the claimed deadline. What does that mean?",
+      "question": "You want a short text to the team about a change to Saturday's afternoon milking. Which prompt gives the tool the clearest job?",
       "answers": [
         {
-          "id": "q3_a",
-          "text": "The title is sufficient evidence.",
+          "id": "ai-on-the-farm-q03-clear-prompt-a",
+          "text": "Write a message to the team about the change to Saturday's afternoon milking. Keep it short, friendly and easy to read on a phone.",
           "correct": false,
-          "feedback": "Recheck the source. The supporting words must appear in a relevant current source. A working link cannot establish the deadline."
+          "feedback": "It has a job and a format but no facts. The tool would have to guess what changed, so you'd spend longer fixing the draft."
         },
         {
-          "id": "q3_b",
-          "text": "The citation fails; verify the requirement from a relevant source.",
+          "id": "ai-on-the-farm-q03-clear-prompt-b",
+          "text": "Text the team: Saturday's afternoon milking starts 2.30 pm, not 3 pm. Jack's on with Priya. Under 50 words. Don't add anything else.",
           "correct": true,
-          "feedback": "Correct. The supporting words must appear in a relevant current source. A working link cannot establish the deadline."
+          "feedback": "Right. It covers the job, the facts, the format and what to do with gaps, so there's little left for the tool to guess."
         },
         {
-          "id": "q3_c",
-          "text": "Two AI answers could validate it.",
+          "id": "ai-on-the-farm-q03-clear-prompt-c",
+          "text": "You're an experienced farm manager. Write a professional message to all staff about the weekend changes.",
           "correct": false,
-          "feedback": "Recheck the source. The supporting words must appear in a relevant current source. A working link cannot establish the deadline."
+          "feedback": "Giving the tool a role and a tone doesn't tell it what the change is. It will invent the details to fill the message."
         },
         {
-          "id": "q3_d",
-          "text": "A professional tone validates it.",
+          "id": "ai-on-the-farm-q03-clear-prompt-d",
+          "text": "Write the team a message about Saturday's milking. Fill in the start time and who's on with whatever seems sensible to you.",
           "correct": false,
-          "feedback": "Recheck the source. The supporting words must appear in a relevant current source. A working link cannot establish the deadline."
+          "feedback": "This invites the tool to guess. Whatever seems sensible to it may not match what's actually happening on your farm."
         }
       ],
-      "feedback": "The supporting words must appear in a relevant current source. A working link cannot establish the deadline."
+      "feedback": "A clear prompt covers the job, the context, the facts, the format and what to do with gaps. The facts have to come from you."
     },
     {
-      "id": "q4",
+      "id": "ai-on-the-farm-q04-gaps",
+      "questionNumber": 4,
       "type": "MULTIPLE_CHOICE",
-      "question": "Voice input transcribes Thursday as Tuesday. What should happen before submitting?",
+      "question": "Your notes for a contractor message don't say what time the job starts. What should your prompt tell the tool to do about that?",
       "answers": [
         {
-          "id": "q4_a",
-          "text": "Let AI infer the intended day.",
+          "id": "ai-on-the-farm-q04-gaps-a",
+          "text": "Pick a sensible start time, such as 8 am, so the message sounds organised",
           "correct": false,
-          "feedback": "Recheck the source. Check dictated dates and numbers while parked. The helper receives the transcript, including its errors."
+          "feedback": "Any time the tool picks is a guess, and the contractor may take it as agreed. Organised-sounding isn't the same as correct."
         },
         {
-          "id": "q4_b",
-          "text": "Submit and correct the answer later.",
+          "id": "ai-on-the-farm-q04-gaps-b",
+          "text": "Say the farm office will confirm the start time closer to the day",
           "correct": false,
-          "feedback": "Recheck the source. Check dictated dates and numbers while parked. The helper receives the transcript, including its errors."
+          "feedback": "That adds a promise nobody has made. If the office doesn't know about it, the contractor ends up waiting on a call that never comes."
         },
         {
-          "id": "q4_c",
-          "text": "Add both days without explanation.",
-          "correct": false,
-          "feedback": "Recheck the source. Check dictated dates and numbers while parked. The helper receives the transcript, including its errors."
-        },
-        {
-          "id": "q4_d",
-          "text": "Correct the transcript against the original note.",
+          "id": "ai-on-the-farm-q04-gaps-c",
+          "text": "Leave the time out and ask the contractor what suits them",
           "correct": true,
-          "feedback": "Correct. Check dictated dates and numbers while parked. The helper receives the transcript, including its errors."
+          "feedback": "Right. Turning the gap into a question keeps the message true to your notes and gets you the missing fact."
+        },
+        {
+          "id": "ai-on-the-farm-q04-gaps-d",
+          "text": "Work out the most likely time from the rest of the notes",
+          "correct": false,
+          "feedback": "The rest of the notes don't contain a time, so the tool can only guess. A guess written up as a fact is how a draft goes wrong."
         }
       ],
-      "feedback": "Check dictated dates and numbers while parked. The helper receives the transcript, including its errors."
+      "feedback": "Tell the tool what to do when your notes run out. Ask, or leave it out, but don't let it fill gaps with guesses."
     },
     {
-      "id": "q5",
+      "id": "ai-on-the-farm-q05-booked-trap",
+      "questionNumber": 5,
       "type": "MULTIPLE_CHOICE",
-      "question": "Which small trial can the farmer check directly with the supplied gate note?",
+      "question": "Your note says \"Tuesday would suit. Not booked.\" The AI draft to Dave says \"Just confirming you're booked in for 8 am Tuesday.\" The rest reads well. What do you do?",
       "answers": [
         {
-          "id": "q5_a",
-          "text": "Approve a repair method.",
+          "id": "ai-on-the-farm-q05-booked-trap-a",
+          "text": "Send it, because Dave will say so if Tuesday at 8 am doesn't suit",
           "correct": false,
-          "feedback": "Recheck the source. The note supports an enquiry. A method, approval or booking would need additional evidence."
+          "feedback": "Dave may simply turn up at 8 am for a job he thinks you've confirmed. Don't rely on the other person to catch your mistakes."
         },
         {
-          "id": "q5_b",
-          "text": "Confirm legal compliance.",
+          "id": "ai-on-the-farm-q05-booked-trap-b",
+          "text": "Keep the booking for Tuesday but delete the 8 am, since Tuesday is in your note",
           "correct": false,
-          "feedback": "Recheck the source. The note supports an enquiry. A method, approval or booking would need additional evidence."
+          "feedback": "Tuesday is in your note as a preference, not a booking. Deleting the time still leaves a commitment that was never made."
         },
         {
-          "id": "q5_c",
-          "text": "Draft an enquiry about hinge inspection.",
+          "id": "ai-on-the-farm-q05-booked-trap-c",
+          "text": "Ask the tool to rewrite it in a friendlier tone, then send the new version",
+          "correct": false,
+          "feedback": "A friendlier tone doesn't fix the facts. The rewrite will probably keep the booking and the time."
+        },
+        {
+          "id": "ai-on-the-farm-q05-booked-trap-d",
+          "text": "Remove the booking and the time, and ask whether Tuesday suits",
           "correct": true,
-          "feedback": "Correct. The note supports an enquiry. A method, approval or booking would need additional evidence."
-        },
-        {
-          "id": "q5_d",
-          "text": "Book an arrival time.",
-          "correct": false,
-          "feedback": "Recheck the source. The note supports an enquiry. A method, approval or booking would need additional evidence."
+          "feedback": "Right. Your note only supports a request, so the message should ask rather than confirm."
         }
       ],
-      "feedback": "The note supports an enquiry. A method, approval or booking would need additional evidence."
+      "feedback": "A request can quietly become a commitment in an AI draft. Check every date, time and promise against your notes, and fix anything you can't point to."
     },
     {
-      "id": "q6",
+      "id": "ai-on-the-farm-q06-missing-from-summary",
+      "questionNumber": 6,
       "type": "MULTIPLE_CHOICE",
-      "question": "The helper repeats an invented arrival time after you ask if it is true. What is the useful check?",
+      "question": "You've asked an AI tool to summarise your 30-page resource consent. The summary looks tidy. What should you do next?",
       "answers": [
         {
-          "id": "q6_a",
-          "text": "Compare the time with booking evidence.",
+          "id": "ai-on-the-farm-q06-missing-from-summary-a",
+          "text": "Ask the tool to confirm that its summary is accurate and nothing important is missing",
+          "correct": false,
+          "feedback": "The tool will usually say yes. Its own reassurance isn't a check against the consent."
+        },
+        {
+          "id": "ai-on-the-farm-q06-missing-from-summary-b",
+          "text": "Ask what conditions or dates it left out, then check the summary against the consent",
           "correct": true,
-          "feedback": "Correct. Repetition supplies no booking evidence. Keep the time unknown unless a checked source confirms it."
+          "feedback": "Right. Summaries can drop things as well as add them, and the consent is the only source that settles it."
         },
         {
-          "id": "q6_b",
-          "text": "Accept the repeated answer.",
+          "id": "ai-on-the-farm-q06-missing-from-summary-c",
+          "text": "Paste the summary into a second AI tool and see if it agrees",
           "correct": false,
-          "feedback": "Recheck the source. Repetition supplies no booking evidence. Keep the time unknown unless a checked source confirms it."
+          "feedback": "A second tool is just another draft. Agreement between two tools isn't evidence from the consent."
         },
         {
-          "id": "q6_c",
-          "text": "Shorten the email without checking it.",
+          "id": "ai-on-the-farm-q06-missing-from-summary-d",
+          "text": "File the summary and use it in place of the consent from now on",
           "correct": false,
-          "feedback": "Recheck the source. Repetition supplies no booking evidence. Keep the time unknown unless a checked source confirms it."
-        },
-        {
-          "id": "q6_d",
-          "text": "Assume confidence means accuracy.",
-          "correct": false,
-          "feedback": "Recheck the source. Repetition supplies no booking evidence. Keep the time unknown unless a checked source confirms it."
+          "feedback": "A missed condition or reporting date can cost you. Keep using the consent itself for anything you rely on."
         }
       ],
-      "feedback": "Repetition supplies no booking evidence. Keep the time unknown unless a checked source confirms it."
+      "feedback": "For a summary, check what was added and what was left out. The original document is the source; the summary is a draft."
+    },
+    {
+      "id": "ai-on-the-farm-q07-voice-check",
+      "questionNumber": 7,
+      "type": "MULTIPLE_CHOICE",
+      "question": "Parked in the ute, you dictate a text to the vet clinic: \"We've got fifteen heifers to scan on Thursday.\" What should you do before sending?",
+      "answers": [
+        {
+          "id": "ai-on-the-farm-q07-voice-check-a",
+          "text": "Send it straight away, because dictation is accurate when you're parked",
+          "correct": false,
+          "feedback": "Being parked makes it safe, not accurate. Engine and wind noise can still change what the phone hears."
+        },
+        {
+          "id": "ai-on-the-farm-q07-voice-check-b",
+          "text": "Read the transcript, because noise can turn fifteen into fifty",
+          "correct": true,
+          "feedback": "Right. A quick read catches a changed number before the clinic plans around it."
+        },
+        {
+          "id": "ai-on-the-farm-q07-voice-check-c",
+          "text": "Ask the AI tool to correct any mistakes in the transcript, then send",
+          "correct": false,
+          "feedback": "The tool doesn't know what you actually said. It could just as easily tidy up the wrong number."
+        },
+        {
+          "id": "ai-on-the-farm-q07-voice-check-d",
+          "text": "Send it, then ring the clinic later if the numbers look wrong",
+          "correct": false,
+          "feedback": "By then the clinic may have booked the wrong amount of time. Reading it first takes seconds."
+        }
+      ],
+      "feedback": "Voice input is handy, but the transcript is a draft too. Pull over and read it before it goes anywhere."
+    },
+    {
+      "id": "ai-on-the-farm-q08-check-items",
+      "questionNumber": 8,
+      "type": "MULTIPLE_RESPONSE",
+      "question": "Select ALL that apply: An AI tool has written up the team meeting actions from your notes. Which details do you check against the notes before sending?",
+      "answers": [
+        {
+          "id": "ai-on-the-farm-q08-check-items-a",
+          "text": "Days and times",
+          "correct": true,
+          "feedback": "Correct. Tools often add a time of day or a deadline that sounds normal but wasn't agreed."
+        },
+        {
+          "id": "ai-on-the-farm-q08-check-items-b",
+          "text": "People's names",
+          "correct": true,
+          "feedback": "Correct. A name that isn't in your notes means someone is being given a job they never heard about."
+        },
+        {
+          "id": "ai-on-the-farm-q08-check-items-c",
+          "text": "Numbers, such as paddock numbers or head counts",
+          "correct": true,
+          "feedback": "Correct. A wrong paddock number or head count sends someone to the wrong place or the wrong mob."
+        },
+        {
+          "id": "ai-on-the-farm-q08-check-items-d",
+          "text": "Anything that says a job will be done, or has been done",
+          "correct": true,
+          "feedback": "Correct. Promises and \"done\" claims turn plans into commitments. Check each one against what was actually said."
+        },
+        {
+          "id": "ai-on-the-farm-q08-check-items-e",
+          "text": "Only the lines that read differently from how you'd write them",
+          "correct": false,
+          "feedback": "Made-up details often read perfectly naturally. You have to check the facts, not just the lines that look odd."
+        },
+        {
+          "id": "ai-on-the-farm-q08-check-items-f",
+          "text": "Nothing, if your prompt told it not to add anything",
+          "correct": false,
+          "feedback": "A clear prompt cuts down on guesses but doesn't stop them. You still check every fact before sending."
+        }
+      ],
+      "feedback": "Check every date, name, number and promise against your notes. A good prompt reduces mistakes, and the check catches the rest."
     }
   ]
 }

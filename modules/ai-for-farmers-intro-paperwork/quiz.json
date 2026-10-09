@@ -1,198 +1,283 @@
 {
-  "title": "Module 2: check your understanding",
+  "title": "Quiz: Farm paperwork made easier",
   "type": "quiz",
+  "passingScore": 80,
   "questions": [
     {
-      "id": "q1",
+      "id": "paperwork-q01-unconfirmed-relief",
+      "questionNumber": 1,
       "type": "MULTIPLE_CHOICE",
-      "question": "Worker A cannot work Wednesday and B becomes unavailable too. What should the roster show?",
+      "question": "Your AI roster fills Sunday PM with \"Tom (relief)\". Your note says Tom hasn't confirmed Sunday PM, and Ben can't milk on his own. What do you do?",
       "answers": [
         {
-          "id": "q1_a",
-          "text": "A assigned because the day needs coverage.",
+          "id": "paperwork-q01-unconfirmed-relief-a",
+          "text": "Leave it in, because Tom will probably say yes by Friday anyway.",
           "correct": false,
-          "feedback": "Recheck the source. Neither worker is available. Preserve the coverage gap so the manager can arrange it."
+          "feedback": "A probable yes is still a guess. If Tom can't come, the roster on the wall says the milking is covered when it isn't."
         },
         {
-          "id": "q1_b",
-          "text": "Wednesday unassigned with a question for the manager.",
+          "id": "paperwork-q01-unconfirmed-relief-b",
+          "text": "Change Sunday PM to UNCOVERED and note Tom hasn't confirmed.",
           "correct": true,
-          "feedback": "Correct. Neither worker is available. Preserve the coverage gap so the manager can arrange it."
+          "feedback": "Right. The gap stays visible until Tom confirms or you arrange cover yourself."
         },
         {
-          "id": "q1_c",
-          "text": "B assigned without mentioning the change.",
+          "id": "paperwork-q01-unconfirmed-relief-c",
+          "text": "Put Ben on by himself, since it's only one milking on a Sunday.",
           "correct": false,
-          "feedback": "Recheck the source. Neither worker is available. Preserve the coverage gap so the manager can arrange it."
+          "feedback": "That breaks your own pairing rule. The rule exists because Ben is still learning, and Sunday afternoon is no different."
         },
         {
-          "id": "q1_d",
-          "text": "The Wednesday column removed.",
+          "id": "paperwork-q01-unconfirmed-relief-d",
+          "text": "Ask the AI to find someone else and accept whoever it picks.",
           "correct": false,
-          "feedback": "Recheck the source. Neither worker is available. Preserve the coverage gap so the manager can arrange it."
+          "feedback": "Everyone else is off or unavailable, so any name the AI picks breaks your note. Arranging cover is your job."
         }
       ],
-      "feedback": "Neither worker is available. Preserve the coverage gap so the manager can arrange it."
+      "feedback": "An AI roster should show a gap as a gap. Unconfirmed shifts stay marked until a person confirms them."
     },
     {
-      "id": "q2",
+      "id": "paperwork-q02-personal-reasons",
+      "questionNumber": 2,
       "type": "MULTIPLE_CHOICE",
-      "question": "The neighbour-notice draft has Friday but no exact date or timing. What next?",
+      "question": "Priya can't do Thursday PM because of a physio appointment. What goes in your roster prompt?",
       "answers": [
         {
-          "id": "q2_a",
-          "text": "Send because Friday is familiar.",
-          "correct": false,
-          "feedback": "Recheck the source. A weekday is insufficient for the intended notice. Exact date and timing need checked source information."
-        },
-        {
-          "id": "q2_b",
-          "text": "Let the helper choose a morning.",
-          "correct": false,
-          "feedback": "Recheck the source. A weekday is insufficient for the intended notice. Exact date and timing need checked source information."
-        },
-        {
-          "id": "q2_c",
-          "text": "Copy last month's date.",
-          "correct": false,
-          "feedback": "Recheck the source. A weekday is insufficient for the intended notice. Exact date and timing need checked source information."
-        },
-        {
-          "id": "q2_d",
-          "text": "Keep the fields to confirm and obtain checked details.",
+          "id": "paperwork-q02-personal-reasons-a",
+          "text": "Priya: not available Thursday PM.",
           "correct": true,
-          "feedback": "Correct. A weekday is insufficient for the intended notice. Exact date and timing need checked source information."
+          "feedback": "Right. That's all the AI needs to build the roster. The reason is Priya's business."
+        },
+        {
+          "id": "paperwork-q02-personal-reasons-b",
+          "text": "Priya: physio Thursday PM, so keep her week light.",
+          "correct": false,
+          "feedback": "The health detail adds nothing the AI needs, and asking it to go easy on her hands a judgement about her health to a chatbot."
+        },
+        {
+          "id": "paperwork-q02-personal-reasons-c",
+          "text": "Priya: off Thursday PM for physio on her knee.",
+          "correct": false,
+          "feedback": "Same constraint, more private detail. Free tools may keep what you type, and her medical appointment doesn't belong there."
+        },
+        {
+          "id": "paperwork-q02-personal-reasons-d",
+          "text": "Leave her out and fix Thursday PM by hand later.",
+          "correct": false,
+          "feedback": "Leave the constraint out and the AI will probably roster her on Thursday PM. Give it the rule and keep the reason."
         }
       ],
-      "feedback": "A weekday is insufficient for the intended notice. Exact date and timing need checked source information."
+      "feedback": "Give the AI the rule, not the reason. Staff health and personal details stay out of AI chats and group chats."
     },
     {
-      "id": "q3",
+      "id": "paperwork-q03-translated-roster",
+      "questionNumber": 3,
       "type": "MULTIPLE_CHOICE",
-      "question": "A draft says one notice deadline applies across NZ. What should you do?",
+      "question": "You've asked the AI to translate the roster message for a team member who reads more easily in Tagalog. How should you use the translation?",
       "answers": [
         {
-          "id": "q3_a",
-          "text": "Remove it and check the applicable regional plan and job requirements.",
+          "id": "paperwork-q03-translated-roster-a",
+          "text": "Send only the translation, since that's the version he'll read.",
+          "correct": false,
+          "feedback": "If the translation has a mistake, there's no checked version to compare it with. Keep the English roster as the master."
+        },
+        {
+          "id": "paperwork-q03-translated-roster-b",
+          "text": "Keep the English roster as master and get a bilingual workmate to check it.",
           "correct": true,
-          "feedback": "Correct. Notification arrangements vary. The responsible operator checks the applicable sources and job details."
+          "feedback": "Right. The checked English roster stays on the wall, and a person who reads both languages catches what the AI got wrong."
         },
         {
-          "id": "q3_b",
-          "text": "Use it because the draft is labelled.",
+          "id": "paperwork-q03-translated-roster-c",
+          "text": "Have the AI translate it back to English and compare the two yourself.",
           "correct": false,
-          "feedback": "Recheck the source. Notification arrangements vary. The responsible operator checks the applicable sources and job details."
+          "feedback": "Back-translation can catch big slips, but the same tool can repeat its own mistake. A bilingual person is a better check."
         },
         {
-          "id": "q3_c",
-          "text": "Accept it if the tone is calm.",
+          "id": "paperwork-q03-translated-roster-d",
+          "text": "Post it straight away, since roster translations are usually accurate.",
           "correct": false,
-          "feedback": "Recheck the source. Notification arrangements vary. The responsible operator checks the applicable sources and job details."
-        },
-        {
-          "id": "q3_d",
-          "text": "Send without the source check.",
-          "correct": false,
-          "feedback": "Recheck the source. Notification arrangements vary. The responsible operator checks the applicable sources and job details."
+          "feedback": "Usually accurate isn't checked. Days and times are exactly the details a bad translation scrambles."
         }
       ],
-      "feedback": "Notification arrangements vary. The responsible operator checks the applicable sources and job details."
+      "feedback": "A translation is a copy of the checked roster, not a replacement. Have someone who reads both languages check it."
     },
     {
-      "id": "q4",
-      "type": "MULTIPLE_CHOICE",
-      "question": "A maintenance card says planned. The evidence index says complete. Which status is supported?",
+      "id": "paperwork-q04-notice-lines",
+      "questionNumber": 4,
+      "type": "MULTIPLE_RESPONSE",
+      "question": "Select ALL that apply: Your notes give a spray window of 13 to 15 October and no product name. Which lines in the AI's neighbour notice must you fix before it goes out?",
       "answers": [
         {
-          "id": "q4_a",
-          "text": "Complete if a task exists.",
-          "correct": false,
-          "feedback": "Recheck the source. The source supports planned. Neither completion nor cancellation has evidence."
-        },
-        {
-          "id": "q4_b",
-          "text": "Complete if the helper repeats it.",
-          "correct": false,
-          "feedback": "Recheck the source. The source supports planned. Neither completion nor cancellation has evidence."
-        },
-        {
-          "id": "q4_c",
-          "text": "Planned; ask for completion evidence.",
+          "id": "paperwork-q04-notice-lines-a",
+          "text": "Spraying will start at 7 am on Tuesday 13 October.",
           "correct": true,
-          "feedback": "Correct. The source supports planned. Neither completion nor cancellation has evidence."
+          "feedback": "Fix it. The day and time are invented. Your notes give a three-day window and no start time."
         },
         {
-          "id": "q4_d",
-          "text": "Cancelled because evidence is absent.",
+          "id": "paperwork-q04-notice-lines-b",
+          "text": "The herbicide is safe for people, pets and stock.",
+          "correct": true,
+          "feedback": "Fix it. Nobody has checked that, and a notice should never promise safety. Any label advice comes through the contractor."
+        },
+        {
+          "id": "paperwork-q04-notice-lines-c",
+          "text": "Please tell us about any beehives near the boundary.",
           "correct": false,
-          "feedback": "Recheck the source. The source supports planned. Neither completion nor cancellation has evidence."
+          "feedback": "This one can stay. It asks for information that helps you and the contractor plan, and promises nothing."
+        },
+        {
+          "id": "paperwork-q04-notice-lines-d",
+          "text": "It will be applied at 2 litres per hectare.",
+          "correct": true,
+          "feedback": "Fix it. You never gave a rate. Remove it, and leave product details to the contractor as [confirm: …]."
+        },
+        {
+          "id": "paperwork-q04-notice-lines-e",
+          "text": "Any questions, call Sam on the farm mobile.",
+          "correct": false,
+          "feedback": "This came from your notes, so it can stay once the number is filled in."
         }
       ],
-      "feedback": "The source supports planned. Neither completion nor cancellation has evidence."
+      "feedback": "Anything in a notice that you didn't supply, such as a time, a rate or a safety claim, is a guess. Mark it [confirm: …] or delete it."
     },
     {
-      "id": "q5",
+      "id": "paperwork-q05-who-confirms",
+      "questionNumber": 5,
       "type": "MULTIPLE_CHOICE",
-      "question": "The visitor note says wait for the supervisor. A checklist tells visitors to enter the workshop alone. What edit is needed?",
+      "question": "Your AI spray notice reads well, and the neighbours expect it today. The product and start time still say [confirm: …]. What happens next?",
       "answers": [
         {
-          "id": "q5_a",
-          "text": "Keep the shorter instruction.",
+          "id": "paperwork-q05-who-confirms-a",
+          "text": "Send it now as it is, and let the neighbours ring Sam if they want the missing details.",
           "correct": false,
-          "feedback": "Recheck the source. The waiting condition must survive the rewrite. The responsible person supplies approved safety arrangements."
+          "feedback": "The neighbours would get a notice with blanks in it and still not know the product or time. Fill the gaps first."
         },
         {
-          "id": "q5_b",
-          "text": "Restore the waiting condition and seek missing approved details.",
+          "id": "paperwork-q05-who-confirms-b",
+          "text": "Get the product, time and label advice from the operator, and check regional rules.",
           "correct": true,
-          "feedback": "Correct. The waiting condition must survive the rewrite. The responsible person supplies approved safety arrangements."
+          "feedback": "Right. The operator knows what's going in the tank and when. Your regional plan sets who needs the notice and how far ahead."
         },
         {
-          "id": "q5_c",
-          "text": "Add a made-up meeting place.",
+          "id": "paperwork-q05-who-confirms-c",
+          "text": "Ask the AI which product is normally used on thistles and fill that in for now.",
           "correct": false,
-          "feedback": "Recheck the source. The waiting condition must survive the rewrite. The responsible person supplies approved safety arrangements."
+          "feedback": "That swaps a visible gap for a plausible guess. Only the operator knows what product they're using."
         },
         {
-          "id": "q5_d",
-          "text": "Treat the checklist as an inspection.",
+          "id": "paperwork-q05-who-confirms-d",
+          "text": "Delete the [confirm] lines so the notice looks finished, then send it out today.",
           "correct": false,
-          "feedback": "Recheck the source. The waiting condition must survive the rewrite. The responsible person supplies approved safety arrangements."
+          "feedback": "Then the neighbours get a notice with no product or start time and no sign that anything is missing."
         }
       ],
-      "feedback": "The waiting condition must survive the rewrite. The responsible person supplies approved safety arrangements."
+      "feedback": "AI drafts the wording. The spray operator confirms the product, timing and label, and you check the notice against your regional rules."
     },
     {
-      "id": "q6",
+      "id": "paperwork-q06-vet-email",
+      "questionNumber": 6,
       "type": "MULTIPLE_CHOICE",
-      "question": "The contractor note requests Tuesday. Which email sentence stays within it?",
+      "question": "Six calves have had loose yellow scours for two days and are still drinking. The AI's email to your vet says: \"We have a likely rotavirus outbreak and have started electrolytes twice daily.\" You haven't started anything. What do you do?",
       "answers": [
         {
-          "id": "q6_a",
-          "text": "We have booked Tuesday at eight.",
-          "correct": false,
-          "feedback": "Recheck the source. The note supports a request about availability, without an arrival time or approval."
-        },
-        {
-          "id": "q6_b",
-          "text": "Start Tuesday; the cost is approved.",
-          "correct": false,
-          "feedback": "Recheck the source. The note supports a request about availability, without an arrival time or approval."
-        },
-        {
-          "id": "q6_c",
-          "text": "The inspection is complete.",
-          "correct": false,
-          "feedback": "Recheck the source. The note supports a request about availability, without an arrival time or approval."
-        },
-        {
-          "id": "q6_d",
-          "text": "Could you confirm whether Tuesday suits?",
+          "id": "paperwork-q06-vet-email-a",
+          "text": "Rewrite it to describe what you've seen and ask what the vet needs.",
           "correct": true,
-          "feedback": "Correct. The note supports a request about availability, without an arrival time or approval."
+          "feedback": "Right. The vet works from your observations. The cause and the treatment are the vet's call."
+        },
+        {
+          "id": "paperwork-q06-vet-email-b",
+          "text": "Keep the rotavirus line, because it gives the vet a useful head start.",
+          "correct": false,
+          "feedback": "It's the AI's guess written as your finding, and it can steer the vet before anyone has looked at the calves."
+        },
+        {
+          "id": "paperwork-q06-vet-email-c",
+          "text": "Keep it all, but add a note saying the AI suggested the diagnosis.",
+          "correct": false,
+          "feedback": "Labelling the guess doesn't fix it, and the treatment line is still false because you haven't started anything."
+        },
+        {
+          "id": "paperwork-q06-vet-email-d",
+          "text": "Send it now, and ring the vet later if the calves get any worse.",
+          "correct": false,
+          "feedback": "The email describes a treatment you never gave, so fix it first. And if calves go down or stop drinking, ring straight away."
         }
       ],
-      "feedback": "The note supports a request about availability, without an arrival time or approval."
+      "feedback": "Emails to the vet describe what you saw. Leave diagnosis and treatment to the vet, and phone for anything urgent."
+    },
+    {
+      "id": "paperwork-q07-planned-not-done",
+      "questionNumber": 7,
+      "type": "MULTIPLE_CHOICE",
+      "question": "Thursday's notebook says \"vat 2 seal leaking - Sam to swap Sat\". The AI log for Thursday says \"Vat 2 seal replaced.\" What should the log say?",
+      "answers": [
+        {
+          "id": "paperwork-q07-planned-not-done-a",
+          "text": "Done, because Sam is reliable and it will be swapped by Saturday.",
+          "correct": false,
+          "feedback": "It hadn't happened on Thursday. If Saturday slips, the log says a leaking seal was fixed."
+        },
+        {
+          "id": "paperwork-q07-planned-not-done-b",
+          "text": "Planned for Saturday, with Sam's name, and marked done after the swap.",
+          "correct": true,
+          "feedback": "Right. The log matches the note, and it gets updated when the job actually happens."
+        },
+        {
+          "id": "paperwork-q07-planned-not-done-c",
+          "text": "Leave the seal out of the log entirely until the swap is done.",
+          "correct": false,
+          "feedback": "Then the leak isn't recorded at all, and nobody can follow up if Saturday slips."
+        },
+        {
+          "id": "paperwork-q07-planned-not-done-d",
+          "text": "Not confirmed, because nobody has had a proper look at the seal.",
+          "correct": false,
+          "feedback": "Someone saw it leaking, and the swap has a person and a day. Planned is the accurate status."
+        }
+      ],
+      "feedback": "Planned never becomes done in a summary. A job is done when the record says it happened."
+    },
+    {
+      "id": "paperwork-q08-sound-record-uses",
+      "questionNumber": 8,
+      "type": "MULTIPLE_RESPONSE",
+      "question": "Select ALL that apply: Which of these are sound uses of AI with farm records?",
+      "answers": [
+        {
+          "id": "paperwork-q08-sound-record-uses-a",
+          "text": "Tidying a shed notebook page into a log with a \"not yet confirmed\" list.",
+          "correct": true,
+          "feedback": "Sound. The log is easier to read, the open items are visible, and the original page stays with it."
+        },
+        {
+          "id": "paperwork-q08-sound-record-uses-b",
+          "text": "Summarising the week's logs for the owner, then checking each \"done\" against the source.",
+          "correct": true,
+          "feedback": "Sound. The summary saves time, and checking each \"done\" catches anything that drifted."
+        },
+        {
+          "id": "paperwork-q08-sound-record-uses-c",
+          "text": "Keeping an AI summary of heifer movements instead of entering them in NAIT.",
+          "correct": false,
+          "feedback": "Not sound. NAIT movements must be recorded in NAIT within 48 hours. A summary somewhere else doesn't count."
+        },
+        {
+          "id": "paperwork-q08-sound-record-uses-d",
+          "text": "Writing \"planting maintained\" as FEP evidence when the note says the guards need checking.",
+          "correct": false,
+          "feedback": "Not sound. It turns a job still to do into a claim. FEP evidence is dated photos and records of what happened."
+        },
+        {
+          "id": "paperwork-q08-sound-record-uses-e",
+          "text": "Listing visitors from the sign-in sheet for a meeting, and keeping the signed sheet.",
+          "correct": true,
+          "feedback": "Sound. The list is handy for the meeting, and the signed sheet stays the record."
+        }
+      ],
+      "feedback": "AI can tidy and summarise records. It can't replace the record itself or upgrade a plan into a fact."
     }
   ]
 }

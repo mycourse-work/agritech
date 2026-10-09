@@ -1,48 +1,36 @@
 {
   "id": "ai-for-farmers-intro-farm-numbers",
-  "title": "Reading your farm's numbers",
-  "description": "Check units, dates, evidence and sharing rights before relying on a summary.",
-  "estimatedDuration": "24 minutes",
+  "title": "Making sense of farm numbers",
+  "description": "Use AI to tidy pasture, rain and kill sheet numbers, check every figure against its source, and decide what farm data is safe to share.",
+  "estimatedDuration": "20-25 minutes",
+  "tags": [
+    "farm data",
+    "pasture cover",
+    "kill sheets",
+    "data privacy"
+  ],
   "lessons": [
     {
-      "id": "video",
-      "title": "Video: Reading your farm's numbers",
+      "id": "feed-rain-and-forecasts",
+      "title": "Feed, rain and forecasts",
       "type": "content",
-      "markdownPath": "video.md"
+      "markdownPath": "01-feed-rain-and-forecasts.md"
     },
     {
-      "id": "forecast-and-feed",
-      "title": "Separate a forecast from a measurement",
+      "id": "kill-sheets-invoices-and-exports",
+      "title": "Kill sheets, invoices and exports",
       "type": "content",
-      "markdownPath": "forecast-and-feed.md"
+      "markdownPath": "02-kill-sheets-invoices-and-exports.md"
     },
     {
-      "id": "check-a-document",
-      "title": "Check a kill sheet or invoice against its source",
+      "id": "your-data-who-sees-it",
+      "title": "Your data: who sees it",
       "type": "content",
-      "markdownPath": "check-a-document.md"
-    },
-    {
-      "id": "combine-exports",
-      "title": "Bring different app exports together carefully",
-      "type": "content",
-      "markdownPath": "combine-exports.md"
-    },
-    {
-      "id": "privacy-and-weather",
-      "title": "Check sharing rights and weather evidence",
-      "type": "content",
-      "markdownPath": "privacy-and-weather.md"
-    },
-    {
-      "id": "activity",
-      "title": "Activity: Explore weather and drift evidence",
-      "type": "content",
-      "markdownPath": "activity.md"
+      "markdownPath": "03-your-data-who-sees-it.md"
     },
     {
       "id": "quiz",
-      "title": "Module 3: check your understanding",
+      "title": "Quiz: Making sense of farm numbers",
       "type": "quiz",
       "quizPath": "quiz.json"
     }

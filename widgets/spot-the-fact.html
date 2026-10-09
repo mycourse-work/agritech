@@ -1,37 +1,333 @@
 <!DOCTYPE html>
-<html lang="en-NZ">
+<html lang="en-NZ" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Spot the made-up fact</title>
 <style>
-:root{--green:#244A35;--ink:#24392e;--muted:#526459;--paper:#faf7ef;--gold:#dcc481;--ochre:#936a2b;--sage:#e6ece2;--line:#8c998c;--white:#fffdf8;--error:#813c29}
-*{box-sizing:border-box}body{margin:0;padding:24px;background:var(--paper);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1120px;margin:auto}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:default}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--ochre);outline-offset:4px}h1,h2,h3,p{margin:0}h1{font:500 clamp(30px,4vw,44px)/1.15 Georgia,serif;letter-spacing:-.5px}h2{font:500 25px/1.25 Georgia,serif}h3{font-size:17px}p+p{margin-top:12px}.eyebrow{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700}.hero{position:relative;overflow:hidden;padding:30px 32px;background:var(--green);color:var(--paper);border-radius:22px 22px 0 0}.hero:after{content:"";position:absolute;right:-50px;bottom:-120px;width:390px;height:250px;border:1px solid #758970;border-radius:50%;box-shadow:0 -32px 0 0 #ffffff08,0 -64px 0 0 #ffffff08;transform:rotate(-15deg);pointer-events:none}.hero .eyebrow{color:var(--gold);margin-bottom:12px}.hero p{max-width:700px;margin-top:12px;color:#e6ece2;position:relative;z-index:1}.meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 24px;border:1px solid var(--line);border-top:0;border-radius:0 0 16px 16px;font-size:13px;background:var(--sage);margin-bottom:24px}.grid{display:grid;grid-template-columns:1fr 1.1fr;gap:22px;align-items:start}.card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:24px}.card>h2{margin-bottom:14px}.card .eyebrow{color:var(--muted);margin-bottom:8px}.stack{display:grid;gap:16px}.note{font-size:14px;color:var(--muted)}.tag{display:inline-block;font-size:12px;font-weight:700;padding:4px 10px;border-radius:20px;background:var(--sage);color:var(--green)}.tag.gold{background:var(--gold);color:var(--ink)}.btn{min-height:48px;border:1px solid var(--green);border-radius:10px;padding:10px 18px;background:var(--green);color:var(--white);font-weight:650}.btn:hover{background:#193925}.btn.secondary{background:transparent;color:var(--green)}.btn.secondary:hover{background:var(--sage)}.btn:disabled{background:#e3e6df;border-color:#90998d;color:#536052}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.callout{border-left:4px solid var(--ochre);background:#f0e7ce;padding:16px 18px;border-radius:3px 12px 12px 3px;font-size:14px}.feedback{background:var(--sage);border:1px solid var(--line);padding:18px;border-radius:14px;margin-top:18px}.feedback h3{margin-bottom:8px}.feedback ul{margin-bottom:0;padding-left:20px}.score{font:500 32px Georgia,serif;color:var(--green)}[hidden]{display:none!important}fieldset{margin:0 0 18px;padding:0;border:0}legend{font-weight:700;font-size:14px;margin-bottom:8px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{padding:10px 14px;min-height:46px;background:var(--white);border:1px solid var(--line);border-radius:24px;color:var(--ink);text-align:left;font-size:14px}.chip[aria-pressed=true]{background:var(--green);color:var(--white);border-color:var(--green)}.chip[aria-pressed=true]:before{content:"✓ ";font-weight:700}.source-list{margin:0;padding-left:20px}.source-list li{padding:7px 0}.divider{height:1px;background:var(--line);margin:18px 0}.small-label{font-size:13px;font-weight:700;color:var(--muted)}details{margin-top:12px}summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:6px;font-weight:650;color:var(--green);text-decoration:underline;text-underline-offset:4px}summary:before{content:"+";font-size:22px}details[open]>summary:before{content:"−"}.footer{font-size:13px;color:var(--muted);margin-top:22px;padding-top:14px;border-top:1px solid var(--line)}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}label{display:block;font-weight:650;font-size:14px;margin-bottom:8px}input[type=range]{width:100%;height:44px;accent-color:var(--green);cursor:pointer}input[type=checkbox]{width:22px;height:22px;accent-color:var(--green);flex-shrink:0}textarea,select,input[type=number]{width:100%;border:1px solid var(--line);border-radius:10px;padding:12px;color:var(--ink);background:var(--white);min-height:48px}textarea{resize:vertical;min-height:150px;font-size:15px}.check{display:flex;align-items:center;gap:10px;min-height:48px;padding:8px 0;font-weight:500}.readout{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:5px}.readout label{margin:0}.readout output{font-weight:700;color:var(--green)}.progress{height:7px;background:#dce1d7;border-radius:10px;margin:12px 0 18px;overflow:hidden}.progress span{display:block;height:100%;background:var(--green);width:0}.draft-text{font:500 21px/1.65 Georgia,serif;margin-top:14px}.missing{border-bottom:2px dotted var(--ochre);color:#755321}.mini{font-size:13px;margin-top:5px;color:var(--muted)}
-@media(max-width:650px){body{padding:12px}.hero{padding:24px 20px;border-radius:18px 18px 0 0}.hero p{font-size:15px}.meta{padding:12px 18px;margin-bottom:16px}.grid{grid-template-columns:1fr;gap:16px}.card{padding:20px;border-radius:16px}.actions .btn{flex:1}.hero:after{right:-180px}h2{font-size:24px}.draft-text{font-size:20px}}
+:root{--green:#244A35;--green-dark:#193925;--ink:#24392e;--muted:#526459;--paper:#faf7ef;--gold:#dcc481;--ochre:#936a2b;--sage:#e6ece2;--line:#8c998c;--white:#fffdf8;--pick:#f1e5c3;--ok:#2f6b45;--ok-bg:#e3efe4;--bad:#8a3a26;--bad-bg:#f6e2d9;--warn:#7a5a14;--warn-bg:#f4ead0;--hero-ink:#e6ece2;--font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;--serif:Georgia,"Times New Roman",serif}
+[data-theme=dark]{--green:#9cc9a8;--green-dark:#b8dcc1;--ink:#eef0e8;--muted:#c2cdbf;--paper:#172119;--gold:#dcc481;--ochre:#e0b46a;--sage:#223126;--line:#5d6f60;--white:#1f2d22;--pick:#3a3320;--ok:#9fd3ad;--ok-bg:#1f3a28;--bad:#f2a58f;--bad-bg:#3d2620;--warn:#ecd08a;--warn-bg:#3a3220;--hero-ink:#d9e3d6}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{padding:20px;background:var(--paper);color:var(--ink);font:16px/1.55 var(--font);overflow-x:hidden}
+main{max-width:1120px;margin:auto}
+button,textarea{font:inherit}
+button{cursor:pointer}
+button:focus-visible,textarea:focus-visible,[tabindex="-1"]:focus-visible{outline:3px solid var(--ochre);outline-offset:3px}
+h1,h2,h3,p{margin:0}
+h1{font:500 clamp(28px,4vw,40px)/1.15 var(--serif);letter-spacing:-.3px}
+h2{font:500 23px/1.25 var(--serif)}
+h3{font-size:17px}
+.eyebrow{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700}
+.hero{padding:26px 28px;background:#244A35;color:#faf7ef;border-radius:20px 20px 0 0}
+.hero .eyebrow{color:var(--gold);margin-bottom:10px}
+.hero p.lede{max-width:680px;margin-top:10px;color:var(--hero-ink)}
+.meta{display:flex;justify-content:space-between;gap:8px 12px;flex-wrap:wrap;padding:12px 22px;border:1px solid var(--line);border-top:0;border-radius:0 0 16px 16px;font-size:13px;background:var(--sage);margin-bottom:20px}
+.meta strong{color:var(--green)}
+.grid{display:grid;grid-template-columns:1fr 1.15fr;gap:20px;align-items:start}
+.card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card .eyebrow{color:var(--muted);margin-bottom:6px}
+.note{font-size:14px;color:var(--muted);margin-top:6px}
+.source-list{margin:14px 0 0;padding-left:20px}
+.source-list li{padding:5px 0}
+.claims{display:grid;gap:10px;margin-top:16px}
+.claim{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;width:100%;min-height:60px;padding:13px 12px;text-align:left;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:12px}
+.claim[aria-pressed=true]{background:var(--pick);border:2px solid var(--ochre);padding:12px 11px}
+.claim-number{font:20px var(--serif);color:var(--ochre);min-width:16px}
+.mark{font-size:20px;color:var(--green);width:22px;text-align:center}
+.claim.locked{cursor:default}
+.verdict{grid-column:1/-1;display:block;margin-top:2px;padding:8px 10px;border-radius:8px;font-size:14px;line-height:1.4}
+.verdict strong{display:block}
+.claim.caught{border:2px solid var(--ok);background:var(--ok-bg)}
+.claim.caught .verdict{color:var(--ok)}
+.claim.missed{border:2px solid var(--bad);background:var(--bad-bg)}
+.claim.missed .verdict{color:var(--bad)}
+.claim.flagged{border:2px solid var(--warn);background:var(--warn-bg)}
+.claim.flagged .verdict{color:var(--warn)}
+.claim.backed .verdict{color:var(--muted)}
+.btn{min-height:48px;border:1px solid var(--green);border-radius:10px;padding:10px 18px;background:#244A35;color:#fffdf8;font-weight:650}
+[data-theme=dark] .btn{background:var(--green);color:#172119}
+.btn:hover{filter:brightness(1.12)}
+.btn.secondary{background:transparent;color:var(--green)}
+.btn.secondary:hover{background:var(--sage);filter:none}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.feedback{background:var(--sage);border:1px solid var(--line);padding:18px;border-radius:14px;margin-top:18px}
+.feedback[hidden],[hidden]{display:none!important}
+.score{font:500 26px/1.3 var(--serif);color:var(--green)}
+.feedback p+p,.feedback h3+p{margin-top:8px}
+.rewrite{margin-top:14px;padding:14px 16px;border-left:4px solid var(--ochre);background:var(--white);border-radius:4px 12px 12px 4px;font:17px/1.6 var(--serif)}
+.summary{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.summary li{padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+label.copy-label{display:block;font-weight:650;font-size:14px;margin:18px 0 8px}
+textarea{width:100%;min-height:170px;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);font-size:15px;line-height:1.5;resize:vertical}
+.copy-status{font-size:14px;color:var(--muted);margin-top:8px;min-height:1.4em}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:650px){body{padding:12px}.hero{padding:22px 18px;border-radius:16px 16px 0 0}.meta{padding:10px 16px;margin-bottom:14px}.grid{grid-template-columns:1fr;gap:14px}.card{padding:18px;border-radius:16px}.actions .btn{flex:1 1 140px}h2{font-size:21px}.score{font-size:23px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-
-.claims{display:grid;gap:10px;margin-top:18px}.claim{display:flex;align-items:center;gap:12px;padding:15px 12px;min-height:64px;width:100%;text-align:left;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:12px}.claim[aria-pressed=true]{background:#f1e5c3;border:2px solid var(--ochre);padding:14px 11px}.claim-number{font:22px Georgia,serif;color:var(--ochre);min-width:18px}.selection{margin-left:auto;font-size:22px;color:var(--green)}.next{margin-top:16px}</style>
+</style>
 </head>
 <body>
-<main><header class="hero"><p class="eyebrow">Field practice / 01 / Compare the evidence</p><h1>Spot the made-up fact</h1><p>The draft sounds convincing. Which details can you actually trace to the farmer's notes?</p></header><div class="meta"><span>Example Station · fictional practice</span><span>About 5 minutes · no account needed</span></div>
-<div class="grid"><section class="card"><p class="eyebrow">The source</p><h2 id="source-title">A gate enquiry</h2><span class="tag gold" id="round-label">Round 1 of 2</span><ul class="source-list" id="notes"></ul><div class="divider"></div><p class="note">Keep these notes beside the draft. An added detail needs evidence, even when it sounds helpful.</p></section>
-<section class="card"><p class="eyebrow">The AI draft</p><h2>Tap unsupported details</h2><p class="note">Select each claim that adds or changes a fact. Tap again to undo.</p><div id="claims" class="claims"></div><div class="actions"><button class="btn" id="check">Check my choices</button><button class="btn secondary" id="reset">Start this round again</button></div><section id="result" class="feedback" aria-live="polite" hidden></section><button class="btn secondary next" id="next" hidden>Try the roster round</button></section></div>
-<p class="footer">A local scripted exercise. Your selections stay in this page and are cleared when you reload.</p>
+<main>
+  <header class="hero">
+    <p class="eyebrow">Practice</p>
+    <h1>Spot the made-up fact</h1>
+    <p class="lede">Read the farmer's notes, then tap every line in the AI draft that the notes don't back up.</p>
+  </header>
+  <div class="meta"><strong id="round-label">Round 1 of 2</strong><span>Practice only. Ridgeback Farm is made up.</span></div>
+
+  <div id="play" class="grid">
+    <section class="card" aria-labelledby="source-title">
+      <p class="eyebrow">The farmer's notes</p>
+      <h2 id="source-title" tabindex="-1"></h2>
+      <ul class="source-list" id="notes"></ul>
+      <p class="note">Anything in the draft that you can't point to here is a guess.</p>
+    </section>
+    <section class="card" aria-labelledby="draft-title">
+      <p class="eyebrow">The AI draft</p>
+      <h2 id="draft-title">Tap what the notes don't back up</h2>
+      <p class="note" id="claims-hint">Tap a line to flag it. Tap again to unflag.</p>
+      <div id="claims" class="claims" role="group" aria-labelledby="draft-title"></div>
+      <div class="actions">
+        <button type="button" class="btn" id="check">Check my picks</button>
+        <button type="button" class="btn secondary" id="clear">Clear picks</button>
+      </div>
+      <section id="result" class="feedback" aria-live="polite" hidden></section>
+      <div class="actions" id="next-wrap" hidden>
+        <button type="button" class="btn" id="next"></button>
+      </div>
+    </section>
+  </div>
+
+  <section id="finish" class="card" hidden aria-labelledby="finish-title">
+    <p class="eyebrow">Done</p>
+    <h2 id="finish-title" tabindex="-1">How you went</h2>
+    <p class="score" id="finish-score"></p>
+    <ul class="summary" id="finish-list"></ul>
+    <label class="copy-label" for="checklist">Your check, ready to paste into your phone notes</label>
+    <textarea id="checklist" readonly></textarea>
+    <div class="actions">
+      <button type="button" class="btn" id="copy">Copy</button>
+      <button type="button" class="btn secondary" id="reset">Start again</button>
+    </div>
+    <p class="copy-status" id="copy-status" aria-live="polite"></p>
+  </section>
+
+  <div id="announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
 </main>
 <script>
+(function(){
 "use strict";
 
-const rounds=[{title:'A gate enquiry',notes:['Gate hinge needs inspection.','Tuesday requested; no booking agreed.','Contractor availability is unknown.','No extra repairs or safety result supplied.'],claims:[['The gate hinge needs inspection.',false,'Supported: the note requests hinge inspection.'],['We have booked you for Tuesday at 8 am.',true,'Unsupported: Tuesday is requested, and no booking or time is agreed.'],['Please replace the whole gate as well.',true,'Unsupported: the note supplies no replacement work.'],['Could you confirm whether Tuesday suits?',false,'Supported: asking about availability preserves the uncertainty.'],['The gate has already passed a safety check.',true,'Unsupported: the source gives no safety-check result.']],corrected:'Could you inspect the gate hinge? Tuesday would suit us, but no booking is agreed. Please confirm availability. Time and any further work are to be discussed.'},
-{title:'A morning-check roster',notes:['Worker A is available Monday and Tuesday.','Worker A is unavailable Wednesday.','Worker B is available Tuesday and Wednesday.','One worker is needed each morning.'],claims:[['Monday: Worker A.',false,'Supported: A is available Monday.'],['Tuesday: Worker B.',false,'Supported: B is available Tuesday.'],['Wednesday: Worker A.',true,'Incorrect: A is unavailable Wednesday. B could cover it.'],['Both workers have approved extra hours.',true,'Unsupported: the note contains no agreement on extra hours.'],['All workplace requirements have been verified.',true,'Unsupported: availability notes do not establish all workplace checks.']],corrected:'Monday: A. Tuesday: A or B. Wednesday: B. The manager still checks hours, competence and the other requirements for a real roster.'}];
-let round=0,selected=new Set();const $=id=>document.getElementById(id);
-function render(){const r=rounds[round];$('source-title').textContent=r.title;$('round-label').textContent=`Round ${round+1} of 2`;$('notes').replaceChildren();r.notes.forEach(t=>{const li=document.createElement('li');li.textContent=t;$('notes').append(li);});$('claims').replaceChildren();r.claims.forEach(([t],i)=>{const b=document.createElement('button');b.type='button';b.className='claim';b.dataset.index=i;b.setAttribute('aria-pressed','false');b.innerHTML=`<span class="claim-number">${i+1}</span><span></span><span class="selection" aria-hidden="true">+</span>`;b.children[1].textContent=t;b.onclick=()=>{selected.has(i)?selected.delete(i):selected.add(i);b.setAttribute('aria-pressed',selected.has(i));b.lastElementChild.textContent=selected.has(i)?'✓':'+';$('result').hidden=true;$('next').hidden=true;};$('claims').append(b);});$('result').hidden=true;$('next').hidden=true;}
-$('check').onclick=()=>{const r=rounds[round];let matches=0,hits=0,extra=0;r.claims.forEach(([,bad],i)=>{if(selected.has(i)===bad)matches++;if(bad&&selected.has(i))hits++;if(!bad&&selected.has(i))extra++;});$('result').innerHTML=`<p class="score">${matches} / ${r.claims.length} judgements matched</p><h3>${hits} of 3 errors found${extra?`; ${extra} supported claim${extra===1?'':'s'} also selected`:''}</h3><ul>${r.claims.map(([t,bad,why],i)=>`<li><strong>Claim ${i+1}: ${bad?'needs correction':'supported'}</strong><br>${why}</li>`).join('')}</ul><div class="divider"></div><h3>A checked rewrite</h3><p>${r.corrected}</p>`;$('result').hidden=false;$('next').hidden=false;$('next').textContent=round===0?'Try the roster round':'Return to the gate round';};
-$('reset').onclick=()=>{selected.clear();render();$('check').focus();};$('next').onclick=()=>{round=1-round;selected.clear();render();$('claims').querySelector('button').focus();};render();
+var root=document.documentElement;
+var params=new URLSearchParams(window.location.search);
+if(params.get("theme")==="dark")root.setAttribute("data-theme","dark");
 
+var resizeTimer;
+function reportHeight(){
+  window.clearTimeout(resizeTimer);
+  resizeTimer=window.setTimeout(function(){
+    window.parent.postMessage({type:"widget-resize",height:Math.ceil(document.body.getBoundingClientRect().height)},"*");
+  },40);
+}
+window.addEventListener("message",function(event){
+  var data=event.data||{};
+  if(data.type==="widget-theme"&&(data.theme==="dark"||data.theme==="light")){
+    root.setAttribute("data-theme",data.theme);
+    reportHeight();
+  }
+});
+if(typeof ResizeObserver==="function")new ResizeObserver(reportHeight).observe(document.body);
+window.addEventListener("load",reportHeight);
+window.addEventListener("resize",reportHeight);
 
-function resize(){requestAnimationFrame(()=>window.parent.postMessage({type:'widget-resize',height:Math.ceil(document.documentElement.scrollHeight)},'*'));}
-window.parent.postMessage({type:'widget-ready'},'*');
-new ResizeObserver(resize).observe(document.body);window.addEventListener('load',resize);window.addEventListener('resize',resize);setTimeout(resize,100);
+/* Each claim: [text, notInNotes, explanation] */
+var rounds=[
+  {title:"A text to the contractor",
+   notes:["Yard gate hinge is dragging. Needs a look.","Asked Tom about Tuesday. Nothing booked.","Don't know yet if Tom's free.","No other work discussed."],
+   claims:[
+     ["The hinge on the yard gate needs a look.",false,"The notes say the hinge is dragging and needs a look."],
+     ["You're booked in for 8 am Tuesday.",true,"Tuesday would suit, but nothing is booked and no time was set."],
+     ["While you're here, please replace the latch too.",true,"The notes don't mention a latch or any other work."],
+     ["Does Tuesday suit you?",false,"Asking keeps Tuesday as a request, which is what the notes say."],
+     ["The rest of the gate is in good nick.",true,"Nobody has checked the rest of the gate, so the draft can't say that."]
+   ],
+   rewrite:"Hi Tom, the hinge on the yard gate is dragging. Could you come and take a look? Tuesday would suit if you're free. Let me know what works."},
+  {title:"Morning milking cover",
+   notes:["Sam can do Monday and Tuesday mornings.","Sam is off Wednesday.","Priya can do Tuesday and Wednesday mornings.","One person on each morning milking."],
+   claims:[
+     ["Monday: Sam.",false,"Sam can do Monday."],
+     ["Tuesday: Priya.",false,"Priya can do Tuesday. Sam could too."],
+     ["Wednesday: Sam.",true,"Sam is off Wednesday. Priya can cover it."],
+     ["Sam and Priya have both agreed to extra hours.",true,"The notes don't mention extra hours or anyone agreeing to them."],
+     ["Jack is backup if anyone's sick.",true,"Jack isn't in the notes, so nobody has asked him."]
+   ],
+   rewrite:"Morning milking this week. Monday: Sam. Tuesday: Priya (Sam is free too). Wednesday: Priya. No backup arranged yet."}
+];
+
+var CHECKLIST="Before I send an AI draft:\n1. Put my notes beside the draft.\n2. Check every date, name, number and promise against the notes.\n3. Ask the tool to list anything it assumed or added.\n4. Fix or remove anything I can't point to in my notes.\n5. Read the whole thing before it goes out.";
+
+var state;
+function freshState(){return {round:0,selected:new Set(),checked:false,results:[]};}
+var $=function(id){return document.getElementById(id);};
+
+function announce(msg){
+  var a=$("announcer");a.textContent="";
+  window.setTimeout(function(){a.textContent=msg;},30);
+}
+function countBad(r){return r.claims.filter(function(c){return c[1];}).length;}
+
+function renderRound(){
+  var r=rounds[state.round];
+  $("play").hidden=false;$("finish").hidden=true;
+  $("round-label").textContent="Round "+(state.round+1)+" of "+rounds.length;
+  $("source-title").textContent=r.title;
+  var notes=$("notes");notes.replaceChildren();
+  r.notes.forEach(function(t){var li=document.createElement("li");li.textContent=t;notes.append(li);});
+  renderClaims();
+  $("result").hidden=true;$("result").replaceChildren();
+  $("next-wrap").hidden=true;
+  $("check").disabled=false;$("clear").disabled=false;
+  $("claims-hint").textContent="Tap a line to flag it. Tap again to unflag.";
+  reportHeight();
+}
+
+function verdictFor(bad,picked){
+  if(bad&&picked)return ["caught","✓ Caught. Not in the notes."];
+  if(bad&&!picked)return ["missed","✗ Missed. Not in the notes."];
+  if(!bad&&picked)return ["flagged","! Flagged, but the notes back this."];
+  return ["backed","✓ Backed by the notes."];
+}
+
+function renderClaims(){
+  var r=rounds[state.round];var box=$("claims");box.replaceChildren();
+  r.claims.forEach(function(c,i){
+    var b=document.createElement("button");
+    b.type="button";b.className="claim";
+    var picked=state.selected.has(i);
+    b.setAttribute("aria-pressed",picked?"true":"false");
+    var num=document.createElement("span");num.className="claim-number";num.textContent=String(i+1);num.setAttribute("aria-hidden","true");
+    var txt=document.createElement("span");txt.textContent=c[0];
+    var mark=document.createElement("span");mark.className="mark";mark.setAttribute("aria-hidden","true");mark.textContent=picked?"✓":"+";
+    b.append(num,txt,mark);
+    if(state.checked){
+      var v=verdictFor(c[1],picked);
+      b.classList.add("locked",v[0]);
+      b.setAttribute("aria-disabled","true");
+      var ver=document.createElement("span");ver.className="verdict";
+      var strong=document.createElement("strong");strong.textContent=v[1];
+      ver.append(strong,document.createTextNode(c[2]));
+      b.append(ver);
+    }
+    b.addEventListener("click",function(){
+      if(state.checked)return;
+      if(state.selected.has(i))state.selected.delete(i);else state.selected.add(i);
+      var on=state.selected.has(i);
+      b.setAttribute("aria-pressed",on?"true":"false");
+      mark.textContent=on?"✓":"+";
+    });
+    box.append(b);
+  });
+}
+
+function check(){
+  var r=rounds[state.round];var bad=countBad(r);var hits=0,flags=0;
+  r.claims.forEach(function(c,i){
+    if(c[1]&&state.selected.has(i))hits++;
+    if(!c[1]&&state.selected.has(i))flags++;
+  });
+  state.checked=true;
+  state.results[state.round]={hits:hits,bad:bad,flags:flags};
+  renderClaims();
+  var res=$("result");res.replaceChildren();
+  var score=document.createElement("p");score.className="score";score.tabIndex=-1;score.id="score";
+  score.textContent="You caught "+hits+" of "+bad+" made-up details.";
+  res.append(score);
+  if(flags){
+    var f=document.createElement("p");
+    f.textContent="You also flagged "+flags+" line"+(flags===1?"":"s")+" the notes do back up. Have another look at "+(flags===1?"it":"them")+" above.";
+    res.append(f);
+  }else if(hits===bad){
+    var g=document.createElement("p");g.textContent="Every guess caught, and nothing true thrown out.";res.append(g);
+  }
+  var h=document.createElement("h3");h.textContent="What the draft should have said";h.style.marginTop="14px";
+  var rw=document.createElement("p");rw.className="rewrite";rw.textContent=r.rewrite;
+  res.append(h,rw);
+  res.hidden=false;
+  $("check").disabled=true;$("clear").disabled=true;
+  $("claims-hint").textContent="Each line now shows whether the notes back it up.";
+  $("next").textContent=state.round<rounds.length-1?"Next round":"See how you went";
+  $("next-wrap").hidden=false;
+  score.focus();
+  reportHeight();
+}
+
+function clearPicks(){
+  state.selected.clear();renderClaims();
+  announce("Picks cleared.");
+  var first=$("claims").querySelector("button");if(first)first.focus();
+}
+
+function next(){
+  if(state.round<rounds.length-1){
+    state.round++;state.selected=new Set();state.checked=false;
+    renderRound();
+    $("source-title").focus();
+    announce("Round "+(state.round+1)+" of "+rounds.length+": "+rounds[state.round].title+".");
+  }else{
+    renderFinish();
+  }
+}
+
+function renderFinish(){
+  $("play").hidden=true;$("finish").hidden=false;
+  $("round-label").textContent="Finished";
+  var totalHits=0,totalBad=0;var list=$("finish-list");list.replaceChildren();
+  state.results.forEach(function(res,i){
+    totalHits+=res.hits;totalBad+=res.bad;
+    var li=document.createElement("li");
+    li.textContent=rounds[i].title+": caught "+res.hits+" of "+res.bad+(res.flags?", and flagged "+res.flags+" line"+(res.flags===1?"":"s")+" the notes back up":"")+".";
+    list.append(li);
+  });
+  $("finish-score").textContent="You caught "+totalHits+" of "+totalBad+" made-up details.";
+  $("checklist").value=CHECKLIST;
+  $("copy-status").textContent="";
+  $("finish-title").focus();
+  reportHeight();
+}
+
+function copyChecklist(){
+  var ta=$("checklist");var status=$("copy-status");
+  function fallback(){
+    ta.focus();ta.select();ta.setSelectionRange(0,ta.value.length);
+    var ok=false;
+    try{ok=document.execCommand("copy");}catch(e){ok=false;}
+    status.textContent=ok?"Copied.":"Text selected. Press Ctrl+C, or long-press and choose Copy.";
+  }
+  if(navigator.clipboard&&typeof navigator.clipboard.writeText==="function"){
+    navigator.clipboard.writeText(ta.value).then(function(){status.textContent="Copied.";},fallback);
+  }else{fallback();}
+}
+
+function reset(){
+  state=freshState();renderRound();
+  $("source-title").focus();
+  announce("Started again. Round 1 of "+rounds.length+".");
+}
+
+$("check").addEventListener("click",check);
+$("clear").addEventListener("click",clearPicks);
+$("next").addEventListener("click",next);
+$("copy").addEventListener("click",copyChecklist);
+$("reset").addEventListener("click",reset);
+
+state=freshState();
+renderRound();
+window.setTimeout(function(){
+  reportHeight();
+  window.parent.postMessage({type:"widget-ready"},"*");
+},0);
+}());
 </script>
 </body>
 </html>

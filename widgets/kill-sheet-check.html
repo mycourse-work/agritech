@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en-NZ" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check the kill sheet summary</title>
+<style>
+:root{
+  --green:#244A35;--green-dark:#193925;--ink:#24392e;--muted:#526459;--paper:#faf7ef;--white:#fffdf8;
+  --gold:#dcc481;--ochre:#936a2b;--sage:#e6ece2;--line:#8c998c;--soft-line:#cfd6cb;
+  --ok:#2f6b45;--ok-bg:#e3efe5;--bad:#813c29;--bad-bg:#f6e3dc;--focus:#936a2b;
+  --sheet:#fffefa;--sheet-head:#eef1ea;
+}
+[data-theme="dark"]{
+  --ink:#eef1e8;--muted:#c3cdbf;--paper:#152019;--white:#1d2a21;--sage:#26362b;--line:#5f7262;--soft-line:#3c4d40;
+  --ok:#8fd0a3;--ok-bg:#1f3a28;--bad:#f2a68f;--bad-bg:#3d2620;--focus:#dcc481;
+  --sheet:#1a261e;--sheet-head:#243328;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{padding:20px;background:var(--paper);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+main{max-width:1120px;margin:0 auto}
+h1,h2,h3,p{margin:0}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible+span,textarea:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.hero{padding:24px 26px;background:var(--green);color:#faf7ef;border-radius:18px 18px 0 0}
+.eyebrow{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;font-weight:700;color:var(--gold);margin-bottom:8px}
+h1{font:500 clamp(26px,4vw,38px)/1.15 Georgia,"Times New Roman",serif}
+.hero p.lede{margin-top:10px;max-width:680px;color:#e6ece2}
+.meta{display:flex;justify-content:space-between;gap:8px 16px;flex-wrap:wrap;padding:11px 20px;border:1px solid var(--line);border-top:0;border-radius:0 0 14px 14px;background:var(--sage);font-size:13px;margin-bottom:20px}
+
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:20px;align-items:start}
+.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px}
+.card h2{font:500 22px/1.25 Georgia,"Times New Roman",serif;margin-bottom:4px}
+.card .kicker{font-size:12px;letter-spacing:1.2px;text-transform:uppercase;font-weight:700;color:var(--muted);margin-bottom:6px}
+.note{font-size:14px;color:var(--muted)}
+
+/* Kill sheet */
+.sheet{background:var(--sheet);border:1px solid var(--soft-line);border-radius:10px;padding:14px;margin-top:12px;font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;font-size:13.5px}
+.sheet-head{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:0 0 12px;font-size:13px}
+.sheet-head dt{color:var(--muted)}
+.sheet-head dd{margin:0;font-weight:600}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+caption{text-align:left;font-weight:700;padding-bottom:6px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:13px;color:var(--muted)}
+th,td{padding:7px 6px;border-bottom:1px solid var(--soft-line);text-align:left;vertical-align:top}
+th{background:var(--sheet-head);font-weight:700;font-size:12.5px}
+td.num,th.num{text-align:right;white-space:nowrap}
+.smudge span[aria-hidden]{display:inline-block;filter:blur(2.4px);opacity:.75;user-select:none}
+.sheet-foot{margin-top:10px;font-size:12.5px;color:var(--muted)}
+
+/* Summary lines */
+.lines{display:grid;gap:10px;margin-top:14px}
+fieldset.line{margin:0;padding:12px 12px 10px;border:1px solid var(--line);border-radius:12px;background:var(--paper);min-width:0}
+fieldset.line legend{float:left;width:100%;padding:0;margin-bottom:10px;font-weight:600;display:flex;gap:10px}
+fieldset.line legend .n{font:20px/1.2 Georgia,serif;color:var(--ochre);min-width:16px}
+[data-theme="dark"] fieldset.line legend .n{color:var(--gold)}
+.seg{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg label{position:relative;display:block}
+.seg input{position:absolute;opacity:0;width:100%;height:100%;inset:0;margin:0;cursor:pointer}
+.seg span{display:flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--white);font-weight:650;font-size:15px}
+.seg input:checked+span{background:var(--green);border-color:var(--green);color:#fffdf8}
+[data-theme="dark"] .seg input:checked+span{background:var(--gold);border-color:var(--gold);color:#1b241d}
+.seg input:checked+span::before{content:"\2713"}
+.seg input:disabled{cursor:default}
+.seg input:disabled+span{opacity:.85}
+fieldset.line.got{border-color:var(--ok);border-width:2px;padding:11px 11px 9px}
+fieldset.line.missed{border-color:var(--bad);border-width:2px;padding:11px 11px 9px}
+.why{clear:both;margin-top:10px;padding:10px 12px;border-radius:9px;font-size:14px}
+fieldset.line.got .why{background:var(--ok-bg)}
+fieldset.line.missed .why{background:var(--bad-bg)}
+.why strong{display:block;margin-bottom:2px}
+fieldset.line.got .why strong{color:var(--ok)}
+fieldset.line.missed .why strong{color:var(--bad)}
+
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.btn{min-height:48px;border:1px solid var(--green);border-radius:10px;padding:10px 18px;background:var(--green);color:#fffdf8;font-weight:650}
+.btn:hover{background:var(--green-dark)}
+.btn.secondary{background:transparent;color:var(--green)}
+.btn.secondary:hover{background:var(--sage)}
+[data-theme="dark"] .btn{background:var(--gold);border-color:var(--gold);color:#1b241d}
+[data-theme="dark"] .btn.secondary{background:transparent;color:var(--gold)}
+[data-theme="dark"] .btn.secondary:hover{background:var(--sage)}
+
+.result{margin-top:18px;padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--sage)}
+.score{font:500 28px/1.2 Georgia,serif;color:var(--green)}
+[data-theme="dark"] .score{color:var(--gold)}
+.result h3{font-size:16px;margin-top:6px}
+.result p{margin-top:8px;font-size:15px}
+.copy-label{display:block;font-weight:700;font-size:14px;margin-top:14px;margin-bottom:6px}
+textarea{width:100%;min-height:190px;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--white);color:var(--ink);font:13.5px/1.5 ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;resize:vertical}
+.copy-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:8px}
+.copy-status{font-size:14px;color:var(--muted)}
+.footer{margin-top:18px;padding-top:12px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+[hidden]{display:none!important}
+
+@media (max-width:760px){
+  body{padding:12px}
+  .hero{padding:20px 18px}
+  .meta{padding:10px 16px;margin-bottom:14px}
+  .grid{grid-template-columns:minmax(0,1fr);gap:14px}
+  .card{padding:16px;border-radius:14px}
+  .sheet{padding:8px;font-size:12px}
+  th,td{padding:6px 3px}
+  th.num{white-space:normal}
+  .actions .btn{flex:1 1 140px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main aria-labelledby="title">
+  <header class="hero">
+    <p class="eyebrow">Kill sheet check</p>
+    <h1 id="title">Check the kill sheet summary</h1>
+    <p class="lede">Jack asked an AI tool to summarise this kill sheet. Compare each line of the summary with the sheet, mark it OK or Wrong, then check your answers.</p>
+  </header>
+  <div class="meta"><span>Ridgeback Farm runoff · 8 lambs</span><span>About 5 minutes</span></div>
+
+  <div class="grid">
+    <section class="card" aria-labelledby="sheet-title">
+      <p class="kicker">The source</p>
+      <h2 id="sheet-title">Kill sheet</h2>
+      <div class="sheet">
+        <dl class="sheet-head">
+          <dt>Supplier</dt><dd>Ridgeback Farm</dd>
+          <dt>Lot</dt><dd>4471</dd>
+          <dt>Kill date</dt><dd>3 March</dd>
+          <dt>Stock</dt><dd>Lambs, 8 head</dd>
+        </dl>
+        <div class="table-wrap">
+          <table>
+            <caption>Carcass detail</caption>
+            <thead><tr><th scope="col">Tag</th><th scope="col" class="num">Hot wt (kg)</th><th scope="col">Grade</th><th scope="col">Notes</th></tr></thead>
+            <tbody id="sheet-rows"></tbody>
+          </table>
+        </div>
+        <p class="sheet-foot">Tag 2207's weight is smudged on the scan.</p>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="summary-title">
+      <p class="kicker">The AI summary</p>
+      <h2 id="summary-title">Is each line right?</h2>
+      <p class="note">Mark every line. A line with any mistake in it counts as Wrong.</p>
+      <div class="lines" id="lines"></div>
+      <div class="actions">
+        <button type="button" class="btn" id="check">Check my answers</button>
+        <button type="button" class="btn secondary" id="reset">Reset</button>
+      </div>
+
+      <section class="result" id="result" hidden tabindex="-1" aria-labelledby="score">
+        <p class="score" id="score"></p>
+        <h3 id="caught"></h3>
+        <p id="unmarked" hidden></p>
+        <label class="copy-label" for="checked">Checked summary</label>
+        <textarea id="checked" readonly></textarea>
+        <div class="copy-row">
+          <button type="button" class="btn secondary" id="copy">Copy</button>
+          <span class="copy-status" id="copy-status"></span>
+        </div>
+      </section>
+    </section>
+  </div>
+
+  <p class="footer">Practice only: Ridgeback Farm and this kill sheet are made up.</p>
+  <div class="sr-only" id="announcer" aria-live="polite" aria-atomic="true"></div>
+</main>
+
+<script>
+(function () {
+  "use strict";
+
+  var root = document.documentElement;
+  var params = new URLSearchParams(window.location.search);
+  if (params.get("theme") === "dark") root.setAttribute("data-theme", "dark");
+
+  var resizeTimer;
+  function reportHeight() {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(function () {
+      window.parent.postMessage({ type: "widget-resize", height: Math.ceil(document.documentElement.scrollHeight) }, "*");
+    }, 40);
+  }
+
+  window.addEventListener("message", function (event) {
+    var data = event.data || {};
+    if (data.type === "widget-theme" && (data.theme === "dark" || data.theme === "light")) {
+      root.setAttribute("data-theme", data.theme);
+      reportHeight();
+    }
+  });
+
+  // The source document. weight null = unreadable on the scan.
+  var sheet = [
+    { tag: "2201", weight: 18.6, grade: "PM", note: "" },
+    { tag: "2202", weight: 19.4, grade: "PM", note: "" },
+    { tag: "2203", weight: 17.2, grade: "YM", note: "" },
+    { tag: "2204", weight: 21.3, grade: "PM", note: "Downgraded from PX: grass seed" },
+    { tag: "2205", weight: 16.0, grade: "", note: "Condemned" },
+    { tag: "2206", weight: 20.1, grade: "PX", note: "" },
+    { tag: "2207", weight: null, grade: "PM", note: "" },
+    { tag: "2208", weight: 18.9, grade: "PM", note: "Bruising: trimmed" }
+  ];
+
+  // Figures derived from the sheet, so the explanations can't drift from the data.
+  var graded = sheet.filter(function (r) { return r.grade; });
+  var readableGraded = graded.filter(function (r) { return r.weight !== null; });
+  var condemned = sheet.filter(function (r) { return !r.grade; });
+  var trueTotal = round1(sum(readableGraded));
+  var trueAverage = round1(trueTotal / readableGraded.length);
+  var wrongAverageRows = sheet.filter(function (r) { return r.weight !== null; });
+  var wrongAverage = round1(sum(wrongAverageRows) / wrongAverageRows.length);
+  var lightest = readableGraded.slice().sort(function (a, b) { return a.weight - b.weight; })[0];
+
+  function sum(rows) { return rows.reduce(function (t, r) { return t + r.weight; }, 0); }
+  function round1(n) { return Math.round(n * 10) / 10; }
+  function kg(n) { return n.toFixed(1) + " kg"; }
+
+  var lines = [
+    {
+      text: "8 lambs processed in lot 4471.",
+      wrong: false,
+      why: "The sheet has 8 rows, tags 2201 to 2208. The head count matches."
+    },
+    {
+      text: "7 carcasses graded and 1 condemned (tag 2205).",
+      wrong: false,
+      why: "Tag 2205 is the only row without a grade, and its note says condemned. The other " + graded.length + " are graded."
+    },
+    {
+      text: "Grades: 5 PM, 1 PX, 1 YM, with no downgrades.",
+      wrong: true,
+      kind: "Downgrade dropped",
+      why: "The grade counts are right, but tag 2204 was downgraded from PX to PM for grass seed. That note is the one you'd act on next season."
+    },
+    {
+      text: "Total hot weight of the 6 graded carcasses with a readable weight: 125.5 kg.",
+      wrong: true,
+      kind: "Wrong total",
+      why: readableGraded.map(function (r) { return r.weight.toFixed(1); }).join(" + ") + " = " + kg(trueTotal) + ", not 125.5 kg. The tool slipped 10 kg in the addition."
+    },
+    {
+      text: "Average hot weight: " + wrongAverage.toFixed(1) + " kg across 7 carcasses.",
+      wrong: true,
+      kind: "Condemned carcass in the average",
+      why: "The 7 carcasses include condemned tag 2205 (16.0 kg). The graded carcasses with a readable weight average " + trueTotal.toFixed(1) + " ÷ " + readableGraded.length + " = " + kg(trueAverage) + "."
+    },
+    {
+      text: "Lightest graded carcass: tag 2207 at 0.0 kg.",
+      wrong: true,
+      kind: "Missing value treated as zero",
+      why: "Tag 2207's weight is unreadable, not zero. The lightest readable graded carcass is tag " + lightest.tag + " at " + kg(lightest.weight) + ", and 2207 needs a query to the processor."
+    },
+    {
+      text: "Tag 2208 had bruising trimmed and kept its PM grade.",
+      wrong: false,
+      why: "Row 2208 shows grade PM with the note \"Bruising: trimmed\". The line matches the sheet."
+    }
+  ];
+  var errorCount = lines.filter(function (l) { return l.wrong; }).length;
+
+  var checkedSummary = [
+    "Kill sheet summary, checked against the sheet",
+    "Ridgeback Farm, lot 4471, kill date 3 March",
+    "",
+    "8 lambs processed: " + graded.length + " graded, " + condemned.length + " condemned (tag " + condemned.map(function (r) { return r.tag; }).join(", ") + ").",
+    "Grades: 5 PM, 1 PX, 1 YM.",
+    "Downgrade: tag 2204, PX to PM, grass seed.",
+    "Trim: tag 2208, bruising, kept PM.",
+    "Total hot weight, " + readableGraded.length + " graded carcasses with a readable weight: " + kg(trueTotal) + ".",
+    "  (tags " + readableGraded.map(function (r) { return r.tag; }).join(", ") + ")",
+    "Average: " + trueTotal.toFixed(1) + " ÷ " + readableGraded.length + " = " + kg(trueAverage) + ".",
+    "Tag 2207: weight unreadable on the scan. Not included. Query with the processor."
+  ].join("\n");
+
+  var $ = function (id) { return document.getElementById(id); };
+  var linesEl = $("lines");
+  var resultEl = $("result");
+  var announcer = $("announcer");
+  var checked = false;
+
+  function announce(message) {
+    announcer.textContent = "";
+    window.setTimeout(function () { announcer.textContent = message; }, 30);
+  }
+
+  function el(tag, attrs, text) {
+    var node = document.createElement(tag);
+    Object.keys(attrs || {}).forEach(function (k) { node.setAttribute(k, attrs[k]); });
+    if (text !== undefined) node.textContent = text;
+    return node;
+  }
+
+  function renderSheet() {
+    var body = $("sheet-rows");
+    sheet.forEach(function (r) {
+      var tr = el("tr");
+      tr.appendChild(el("th", { scope: "row" }, r.tag));
+      var w = el("td", { "class": "num" });
+      if (r.weight === null) {
+        w.className = "num smudge";
+        w.appendChild(el("span", { "aria-hidden": "true" }, "1?.?"));
+        w.appendChild(el("span", { "class": "sr-only" }, "unreadable"));
+      } else {
+        w.textContent = r.weight.toFixed(1);
+      }
+      tr.appendChild(w);
+      tr.appendChild(el("td", {}, r.grade || "–"));
+      tr.appendChild(el("td", {}, r.note));
+      body.appendChild(tr);
+    });
+  }
+
+  function renderLines() {
+    linesEl.textContent = "";
+    lines.forEach(function (line, i) {
+      var fs = el("fieldset", { "class": "line", id: "line-" + i });
+      var legend = el("legend");
+      legend.appendChild(el("span", { "class": "n", "aria-hidden": "true" }, String(i + 1)));
+      legend.appendChild(el("span", {}, line.text));
+      fs.appendChild(legend);
+      var seg = el("div", { "class": "seg" });
+      [["ok", "OK"], ["wrong", "Wrong"]].forEach(function (opt) {
+        var label = el("label");
+        var input = el("input", { type: "radio", name: "line-" + i, value: opt[0] });
+        label.appendChild(input);
+        label.appendChild(el("span", {}, opt[1]));
+        seg.appendChild(label);
+      });
+      fs.appendChild(seg);
+      linesEl.appendChild(fs);
+    });
+  }
+
+  function answerFor(i) {
+    var input = linesEl.querySelector('input[name="line-' + i + '"]:checked');
+    return input ? input.value : "";
+  }
+
+  function check() {
+    var right = 0, caught = 0, unmarked = 0;
+    lines.forEach(function (line, i) {
+      var answer = answerFor(i);
+      var correct = line.wrong ? "wrong" : "ok";
+      var got = answer === correct;
+      if (!answer) unmarked += 1;
+      if (got) right += 1;
+      if (line.wrong && answer === "wrong") caught += 1;
+
+      var fs = $("line-" + i);
+      fs.classList.remove("got", "missed");
+      fs.classList.add(got ? "got" : "missed");
+      var old = fs.querySelector(".why");
+      if (old) old.remove();
+      var why = el("div", { "class": "why" });
+      var verdict = (line.wrong ? "Wrong" + (line.kind ? ": " + line.kind.toLowerCase() : "") : "OK") + ". ";
+      verdict += !answer ? "You didn't mark this line." : got ? "You got this one." : "You marked it " + (answer === "ok" ? "OK" : "Wrong") + ".";
+      why.appendChild(el("strong", {}, verdict));
+      why.appendChild(el("span", {}, line.why));
+      fs.appendChild(why);
+      fs.querySelectorAll("input").forEach(function (input) { input.disabled = true; });
+    });
+
+    $("score").textContent = right + " of " + lines.length + " lines judged correctly";
+    $("caught").textContent = caught + " of " + errorCount + " errors caught";
+    var un = $("unmarked");
+    if (unmarked) {
+      un.hidden = false;
+      un.textContent = unmarked === 1 ? "You left 1 line unmarked." : "You left " + unmarked + " lines unmarked.";
+    } else {
+      un.hidden = true;
+      un.textContent = "";
+    }
+    $("checked").value = checkedSummary;
+    $("copy-status").textContent = "";
+    resultEl.hidden = false;
+    $("check").disabled = true;
+    checked = true;
+    resultEl.focus();
+    announce(right + " of " + lines.length + " lines judged correctly. " + caught + " of " + errorCount + " errors caught. Explanations are shown under each line.");
+    reportHeight();
+  }
+
+  function reset() {
+    renderLines();
+    resultEl.hidden = true;
+    $("checked").value = "";
+    $("copy-status").textContent = "";
+    $("check").disabled = false;
+    var wasChecked = checked;
+    checked = false;
+    var first = linesEl.querySelector("input");
+    if (first) first.focus();
+    announce(wasChecked ? "Reset. All lines are unmarked." : "All lines are unmarked.");
+    reportHeight();
+  }
+
+  function copy() {
+    var box = $("checked");
+    var status = $("copy-status");
+    function fallback() {
+      box.focus();
+      box.select();
+      var ok = false;
+      try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+      status.textContent = ok ? "Copied." : "Text selected. Press Ctrl+C, or long-press and choose Copy.";
+      announce(status.textContent);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(box.value).then(function () {
+        status.textContent = "Copied.";
+        announce("Copied.");
+      }, fallback);
+    } else {
+      fallback();
+    }
+  }
+
+  renderSheet();
+  renderLines();
+  $("check").addEventListener("click", check);
+  $("reset").addEventListener("click", reset);
+  $("copy").addEventListener("click", copy);
+
+  if (typeof ResizeObserver === "function") new ResizeObserver(reportHeight).observe(document.body);
+  window.addEventListener("load", reportHeight);
+  window.addEventListener("resize", reportHeight);
+  window.setTimeout(function () {
+    reportHeight();
+    window.parent.postMessage({ type: "widget-ready" }, "*");
+  }, 0);
+}());
+</script>
+</body>
+</html>

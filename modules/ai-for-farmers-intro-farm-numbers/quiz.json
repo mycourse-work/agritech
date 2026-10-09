@@ -1,198 +1,277 @@
 {
-  "title": "Module 3: check your understanding",
+  "title": "Quiz: Making sense of farm numbers",
   "type": "quiz",
+  "passingScore": 80,
   "questions": [
     {
-      "id": "q1",
+      "id": "farm-numbers-q01-blank-not-zero",
+      "questionNumber": 1,
       "type": "MULTIPLE_CHOICE",
-      "question": "Yesterday has 10 mm observed rain; tomorrow has 20 mm forecast. What summary is supported?",
+      "question": "Sam's farm walk notes read \"P1 2400, P2 –, P3 2100, P4 2700\" (kg DM/ha). The AI reports an average cover of 1,800 kg DM/ha. What's the best next step?",
       "answers": [
         {
-          "id": "q1_a",
-          "text": "30 mm received.",
-          "correct": false,
-          "feedback": "Recheck the source. Keep evidence types and periods separate. Today's absent reading remains unknown."
-        },
-        {
-          "id": "q1_b",
-          "text": "10 mm observed and 20 mm forecast, with separate periods.",
+          "id": "farm-numbers-q01-blank-not-zero-a",
+          "text": "Ask it to average only the paddocks Sam measured, and show the sum and count.",
           "correct": true,
-          "feedback": "Correct. Keep evidence types and periods separate. Today's absent reading remains unknown."
+          "feedback": "Right. 7,200 ÷ 4 = 1,800 means P2's dash was counted as zero. The three measured paddocks average 2,400 kg DM/ha."
         },
         {
-          "id": "q1_c",
-          "text": "20 mm observed.",
+          "id": "farm-numbers-q01-blank-not-zero-b",
+          "text": "Accept it. 1,800 kg DM/ha is a believable cover for this time of year.",
           "correct": false,
-          "feedback": "Recheck the source. Keep evidence types and periods separate. Today's absent reading remains unknown."
+          "feedback": "Believable isn't the same as right. The figure is low because P2's blank was treated as a paddock with no grass."
         },
         {
-          "id": "q1_d",
-          "text": "Today must have zero rain.",
+          "id": "farm-numbers-q01-blank-not-zero-c",
+          "text": "Ask it to convert the answer to kg DM per paddock so the units are clearer.",
           "correct": false,
-          "feedback": "Recheck the source. Keep evidence types and periods separate. Today's absent reading remains unknown."
+          "feedback": "The units are fine. The problem is the divide: four paddocks were counted when only three were measured."
+        },
+        {
+          "id": "farm-numbers-q01-blank-not-zero-d",
+          "text": "Fill in P2 yourself with the average of the paddocks either side, then run it again.",
+          "correct": false,
+          "feedback": "That swaps one made-up number for another. Leave P2 as not recorded unless someone actually measures it."
         }
       ],
-      "feedback": "Keep evidence types and periods separate. Today's absent reading remains unknown."
+      "feedback": "A blank means not recorded, not zero. Ask for the sum and count behind any average so you can see what was included."
     },
     {
-      "id": "q2",
+      "id": "farm-numbers-q02-forecast-vs-measured",
+      "questionNumber": 2,
       "type": "MULTIPLE_CHOICE",
-      "question": "The invented feed worksheet is 1,000 + 100 - 500 kg dry matter. What does the result establish?",
+      "question": "Your gauge reads 6 mm Monday, 0 mm Tuesday and 10 mm Wednesday. The forecast is 20 mm on Thursday. The AI summary says \"36 mm of rain this week\". What should the summary say?",
       "answers": [
         {
-          "id": "q2_a",
-          "text": "Enough feed for the actual farm.",
+          "id": "farm-numbers-q02-forecast-vs-measured-a",
+          "text": "26 mm, since forecasts often overstate rain and it's safer to allow for that.",
           "correct": false,
-          "feedback": "Recheck the source. The calculation is 600 kg dry matter. Correct arithmetic does not validate the inputs or a real feed plan."
+          "feedback": "This still mixes a forecast into a measured total, just with a guess on top."
         },
         {
-          "id": "q2_b",
-          "text": "A guaranteed future feed supply.",
+          "id": "farm-numbers-q02-forecast-vs-measured-b",
+          "text": "36 mm is fine, because the forecast rain will have fallen by the time anyone reads it.",
           "correct": false,
-          "feedback": "Recheck the source. The calculation is 600 kg dry matter. Correct arithmetic does not validate the inputs or a real feed plan."
+          "feedback": "Twenty of those millimetres haven't fallen, and they may not. A forecast never belongs in a measured total."
         },
         {
-          "id": "q2_c",
-          "text": "A fresh-weight total.",
+          "id": "farm-numbers-q02-forecast-vs-measured-c",
+          "text": "16 mm, leaving out the 0 mm on Tuesday because a dry day adds nothing.",
           "correct": false,
-          "feedback": "Recheck the source. The calculation is 600 kg dry matter. Correct arithmetic does not validate the inputs or a real feed plan."
+          "feedback": "The 16 mm is right, but Tuesday's 0 mm is a real reading and belongs in the table. The forecast should still be shown separately."
         },
         {
-          "id": "q2_d",
-          "text": "An arithmetic result of 600 kg dry matter; assumptions still need checking.",
+          "id": "farm-numbers-q02-forecast-vs-measured-d",
+          "text": "16 mm measured Monday to Wednesday, and Thursday's 20 mm forecast on its own line.",
           "correct": true,
-          "feedback": "Correct. The calculation is 600 kg dry matter. Correct arithmetic does not validate the inputs or a real feed plan."
+          "feedback": "Correct. Measured rain and forecast rain are different kinds of number, so they stay apart."
         }
       ],
-      "feedback": "The calculation is 600 kg dry matter. Correct arithmetic does not validate the inputs or a real feed plan."
+      "feedback": "Keep measured, forecast and estimated numbers separate, with the source and time for each."
     },
     {
-      "id": "q3",
+      "id": "farm-numbers-q03-condemned-in-average",
+      "questionNumber": 3,
       "type": "MULTIPLE_CHOICE",
-      "question": "Two clear invoice rows show 20 and 30 pieces; another is blurred. How should 50 be labelled?",
+      "question": "A kill sheet for six steers shows one condemned carcass. The AI gives an average hot weight across all six carcasses. What's wrong with that figure?",
       "answers": [
         {
-          "id": "q3_a",
-          "text": "Clear-row subtotal; the full total is unknown.",
+          "id": "farm-numbers-q03-condemned-in-average-a",
+          "text": "Nothing, as long as every weight on the sheet has been added up correctly.",
+          "correct": false,
+          "feedback": "The sum can be perfect and the average still wrong, because it includes a carcass that doesn't belong in a graded average."
+        },
+        {
+          "id": "farm-numbers-q03-condemned-in-average-b",
+          "text": "The condemned carcass has no grade, so it shouldn't be in the graded average.",
           "correct": true,
-          "feedback": "Correct. Fifty adds the clear rows. The unreadable quantity prevents a full total."
+          "feedback": "Right. Ask the AI to average the graded carcasses only and list the tags it used."
         },
         {
-          "id": "q3_b",
-          "text": "Final document total.",
+          "id": "farm-numbers-q03-condemned-in-average-c",
+          "text": "Hot weights have to be converted to liveweights before they can be averaged.",
           "correct": false,
-          "feedback": "Recheck the source. Fifty adds the clear rows. The unreadable quantity prevents a full total."
+          "feedback": "Hot weight is the figure on the kill sheet and can be averaged as it is. The problem is which carcasses went in."
         },
         {
-          "id": "q3_c",
-          "text": "Estimate of the blurred row.",
+          "id": "farm-numbers-q03-condemned-in-average-d",
+          "text": "The condemned carcass should be counted at zero so the head count stays at six.",
           "correct": false,
-          "feedback": "Recheck the source. Fifty adds the clear rows. The unreadable quantity prevents a full total."
-        },
-        {
-          "id": "q3_d",
-          "text": "Verified processor outcome.",
-          "correct": false,
-          "feedback": "Recheck the source. Fifty adds the clear rows. The unreadable quantity prevents a full total."
+          "feedback": "Counting it at zero would drag the average down further. Leave it out of the average and report it separately."
         }
       ],
-      "feedback": "Fifty adds the clear rows. The unreadable quantity prevents a full total."
+      "feedback": "Ask what's inside every average. A condemned carcass belongs in the head count, not in the graded average weight."
     },
     {
-      "id": "q4",
-      "type": "MULTIPLE_CHOICE",
-      "question": "Upper Flat and Upper Flats occur in different exports. What should the matching table do?",
+      "id": "farm-numbers-q04-kill-sheet-checks",
+      "questionNumber": 4,
+      "type": "MULTIPLE_RESPONSE",
+      "question": "Select ALL that apply: Which checks would catch mistakes in an AI summary of a kill sheet?",
       "answers": [
         {
-          "id": "q4_a",
-          "text": "Merge them automatically.",
-          "correct": false,
-          "feedback": "Recheck the source. A similar name does not establish an identical location. Preserve originals and review the proposed match."
-        },
-        {
-          "id": "q4_b",
-          "text": "Delete the less common label.",
-          "correct": false,
-          "feedback": "Recheck the source. A similar name does not establish an identical location. Preserve originals and review the proposed match."
-        },
-        {
-          "id": "q4_c",
-          "text": "Preserve both and ask the record owner to confirm.",
+          "id": "farm-numbers-q04-kill-sheet-checks-a",
+          "text": "Count the rows on the sheet and compare them with the summary's head count.",
           "correct": true,
-          "feedback": "Correct. A similar name does not establish an identical location. Preserve originals and review the proposed match."
+          "feedback": "Yes. A missed or doubled row shows up straight away."
         },
         {
-          "id": "q4_d",
-          "text": "Infer their boundary from the names.",
+          "id": "farm-numbers-q04-kill-sheet-checks-b",
+          "text": "Match each downgrade or condemned note on the sheet to a line in the summary.",
+          "correct": true,
+          "feedback": "Yes. Dropped downgrade notes are an easy slip, and they're often the most useful part."
+        },
+        {
+          "id": "farm-numbers-q04-kill-sheet-checks-c",
+          "text": "Re-add one total yourself, using the tags the AI says it included.",
+          "correct": true,
+          "feedback": "Yes. If one total checks out with the listed tags, you can trust the working more."
+        },
+        {
+          "id": "farm-numbers-q04-kill-sheet-checks-d",
+          "text": "Ask the same AI tool to confirm that its summary is accurate.",
           "correct": false,
-          "feedback": "Recheck the source. A similar name does not establish an identical location. Preserve originals and review the proposed match."
+          "feedback": "The tool will usually say yes. Checking against the source rows is what catches errors."
+        },
+        {
+          "id": "farm-numbers-q04-kill-sheet-checks-e",
+          "text": "Make sure the summary is easy to read and uses the processor's grade codes.",
+          "correct": false,
+          "feedback": "A tidy summary can still have the wrong total. Readability isn't a check on the numbers."
         }
       ],
-      "feedback": "A similar name does not establish an identical location. Preserve originals and review the proposed match."
+      "feedback": "Check a summary against the source: rows, notes and one recomputed total. Don't ask the tool to mark its own work."
     },
     {
-      "id": "q5",
+      "id": "farm-numbers-q05-column-map-first",
+      "questionNumber": 5,
       "type": "MULTIPLE_CHOICE",
-      "question": "An app permits exporting entered notes but gives no reuse terms for derived summaries. Can you upload the summaries to an AI tool?",
+      "question": "Your herd app exports dates as 03/04/2026 and your pasture app as 2026-04-03. You want AI to combine the two files. What should happen first?",
       "answers": [
         {
-          "id": "q5_a",
-          "text": "Yes, because an export button exists.",
+          "id": "farm-numbers-q05-column-map-first-a",
+          "text": "Let it merge the files on date, since both clearly cover the same fortnight of grazing.",
           "correct": false,
-          "feedback": "Recheck the source. Export access does not settle AI reuse rights. Ask about the relevant data category and sharing purpose."
+          "feedback": "03/04 could be read as 3 April or 4 March. Merging before you've checked the format can pair the wrong rows."
         },
         {
-          "id": "q5_b",
-          "text": "Check the relevant rights, permissions and provider terms.",
+          "id": "farm-numbers-q05-column-map-first-b",
+          "text": "Delete any rows where the group names don't match exactly between files.",
+          "correct": false,
+          "feedback": "\"R1 heifers\" and \"R1H\" may be the same mob. Deleting rows throws away data you'd want to match."
+        },
+        {
+          "id": "farm-numbers-q05-column-map-first-c",
+          "text": "Ask it for each file's columns, units and date format, then confirm the matches.",
           "correct": true,
-          "feedback": "Correct. Export access does not settle AI reuse rights. Ask about the relevant data category and sharing purpose."
+          "feedback": "Right. A column map shows mismatched dates, names and units before anything is joined."
         },
         {
-          "id": "q5_c",
-          "text": "Yes, if the app is paid.",
+          "id": "farm-numbers-q05-column-map-first-d",
+          "text": "Save both files as PDFs so the AI reads them in exactly the same way.",
           "correct": false,
-          "feedback": "Recheck the source. Export access does not settle AI reuse rights. Ask about the relevant data category and sharing purpose."
-        },
-        {
-          "id": "q5_d",
-          "text": "Yes, after removing a name.",
-          "correct": false,
-          "feedback": "Recheck the source. Export access does not settle AI reuse rights. Ask about the relevant data category and sharing purpose."
+          "feedback": "Changing the file type doesn't change how the dates are written. It also makes the data harder to check."
         }
       ],
-      "feedback": "Export access does not settle AI reuse rights. Ask about the relevant data category and sharing purpose."
+      "feedback": "Before combining exports, match columns, units and date formats, and confirm uncertain matches yourself."
     },
     {
-      "id": "q6",
+      "id": "farm-numbers-q06-check-settings-first",
+      "questionNumber": 6,
       "type": "MULTIPLE_CHOICE",
-      "question": "The drift lab is below its wind comparison and points away from the boundary. What is supported?",
+      "question": "Hannah wants to paste the farm's full herd export into an AI chat tool on her personal phone account. What should she do first?",
       "answers": [
         {
-          "id": "q6_a",
-          "text": "The job has legal approval.",
+          "id": "farm-numbers-q06-check-settings-first-a",
+          "text": "Nothing extra, because the herd app's own data terms already cover anything she pastes.",
           "correct": false,
-          "feedback": "Recheck the source. The lab supplies no operational approval. Its comparison is illustrative and the actual sources and conditions still need checking."
+          "feedback": "The herd app's terms cover the herd app. Once she pastes into a chat tool, that tool's settings and terms apply."
         },
         {
-          "id": "q6_b",
-          "text": "All field conditions are checked.",
-          "correct": false,
-          "feedback": "Recheck the source. The lab supplies no operational approval. Its comparison is illustrative and the actual sources and conditions still need checking."
-        },
-        {
-          "id": "q6_c",
-          "text": "The default comparison is a national limit.",
-          "correct": false,
-          "feedback": "Recheck the source. The lab supplies no operational approval. Its comparison is illustrative and the actual sources and conditions still need checking."
-        },
-        {
-          "id": "q6_d",
-          "text": "A stylised visual changed; source and operator checks remain unresolved.",
+          "id": "farm-numbers-q06-check-settings-first-b",
+          "text": "Check the account's data settings and cut the export down to the columns she needs.",
           "correct": true,
-          "feedback": "Correct. The lab supplies no operational approval. Its comparison is illustrative and the actual sources and conditions still need checking."
+          "feedback": "Right. She can see whether chats are used for training and send only what the question needs."
+        },
+        {
+          "id": "farm-numbers-q06-check-settings-first-c",
+          "text": "Remove the farm name from the file, which makes the export anonymous.",
+          "correct": false,
+          "feedback": "Tag numbers, dates and mob details can still point to the farm. Removing one name rarely makes data anonymous."
+        },
+        {
+          "id": "farm-numbers-q06-check-settings-first-d",
+          "text": "Paste it, then delete the chat as soon as she has the answer she wanted.",
+          "correct": false,
+          "feedback": "Deleting later doesn't change what was sent, or whether settings allowed it to be used. Check first."
         }
       ],
-      "feedback": "The lab supplies no operational approval. Its comparison is illustrative and the actual sources and conditions still need checking."
+      "feedback": "Check the tool's data settings before you paste, and give it only the data the question needs."
+    },
+    {
+      "id": "farm-numbers-q07-staff-roster-privacy",
+      "questionNumber": 7,
+      "type": "MULTIPLE_CHOICE",
+      "question": "Priya's calf-rearing roster spreadsheet has staff names, mobile numbers, days off, leave reasons and health notes. She wants AI to draft next month's roster. What's the right approach?",
+      "answers": [
+        {
+          "id": "farm-numbers-q07-staff-roster-privacy-a",
+          "text": "Swap the names for numbers and paste the whole sheet as it is.",
+          "correct": false,
+          "feedback": "With health notes and leave reasons left in, people on a small farm are easy to identify even without names."
+        },
+        {
+          "id": "farm-numbers-q07-staff-roster-privacy-b",
+          "text": "Give the tool names, days off and shifts only, and leave the rest out.",
+          "correct": true,
+          "feedback": "Right. A roster doesn't need phone numbers, leave reasons or health notes, so they stay out."
+        },
+        {
+          "id": "farm-numbers-q07-staff-roster-privacy-c",
+          "text": "Paste it all, since the Privacy Act doesn't apply to AI chat tools.",
+          "correct": false,
+          "feedback": "The Privacy Commissioner's position is that the Privacy Act applies to everyone using AI tools in New Zealand."
+        },
+        {
+          "id": "farm-numbers-q07-staff-roster-privacy-d",
+          "text": "Paste it all, because staff agreed to share their details with the farm.",
+          "correct": false,
+          "feedback": "Staff gave those details for running the farm, not for pasting into an AI account. Use them for that purpose."
+        }
+      ],
+      "feedback": "Staff details are covered by the Privacy Act. Give an AI tool only the personal information the job actually needs."
+    },
+    {
+      "id": "farm-numbers-q08-farm-data-code",
+      "questionNumber": 8,
+      "type": "MULTIPLE_CHOICE",
+      "question": "You're comparing two herd recording apps. How does the NZ Farm Data Code of Practice help?",
+      "answers": [
+        {
+          "id": "farm-numbers-q08-farm-data-code-a",
+          "text": "It's a law that stops any farm software company from sharing your data with others.",
+          "correct": false,
+          "feedback": "The Code is voluntary and isn't a law. Accredited organisations can share data, with your permission."
+        },
+        {
+          "id": "farm-numbers-q08-farm-data-code-b",
+          "text": "It guarantees that AI chat tools keep any farm data you paste into them private.",
+          "correct": false,
+          "feedback": "The Code covers organisations that sign up to it. A general AI chat tool runs under its own terms and settings."
+        },
+        {
+          "id": "farm-numbers-q08-farm-data-code-c",
+          "text": "Accredited providers disclose who has rights to your data, and how it's shared and stored.",
+          "correct": true,
+          "feedback": "Right. That gives you clear answers to compare before you sign up."
+        },
+        {
+          "id": "farm-numbers-q08-farm-data-code-d",
+          "text": "It sets one standard data contract that every herd recording app in NZ has to use.",
+          "correct": false,
+          "feedback": "Providers write their own terms. The Code asks accredited ones to disclose their data rights and practices clearly."
+        }
+      ],
+      "feedback": "The NZ Farm Data Code is a voluntary standard. Accredited organisations disclose who has rights to farm data and how it's processed, shared and stored."
     }
   ]
 }

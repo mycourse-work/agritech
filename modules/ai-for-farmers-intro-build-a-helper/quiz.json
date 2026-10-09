@@ -1,198 +1,283 @@
 {
-  "title": "Module 4: check your understanding",
+  "title": "Quiz: Build your own farm helper",
   "type": "quiz",
+  "passingScore": 80,
   "questions": [
     {
-      "id": "q1",
-      "type": "MULTIPLE_CHOICE",
-      "question": "A helper trial starts with sending notices automatically. Which smaller capstone job fits this course?",
+      "id": "build-a-helper-q01-what-to-load",
+      "questionNumber": 1,
+      "type": "MULTIPLE_RESPONSE",
+      "question": "Select ALL that apply: Hannah is choosing files for the Ridgeback staff helper. Which should she load?",
       "answers": [
         {
-          "id": "q1_a",
-          "text": "Find document sections and draft answers for review.",
+          "id": "build-a-helper-q01-what-to-load-a",
+          "text": "The current staff handbook, dated March 2026",
           "correct": true,
-          "feedback": "Correct. The capstone is a document helper. It keeps sending, changes and approvals outside the trial."
+          "feedback": "Yes. It's current, dated and answers the questions new staff ask most."
         },
         {
-          "id": "q1_b",
-          "text": "Publish notices without review.",
-          "correct": false,
-          "feedback": "Recheck the source. The capstone is a document helper. It keeps sending, changes and approvals outside the trial."
+          "id": "build-a-helper-q01-what-to-load-b",
+          "text": "The equipment and maintenance list Jack updated last month",
+          "correct": true,
+          "feedback": "Yes. Staff ask about machinery every day, and this list says what to check and what to do when something breaks."
         },
         {
-          "id": "q1_c",
-          "text": "Change official records.",
+          "id": "build-a-helper-q01-what-to-load-c",
+          "text": "The staff contact list with home addresses and next of kin",
           "correct": false,
-          "feedback": "Recheck the source. The capstone is a document helper. It keeps sending, changes and approvals outside the trial."
+          "feedback": "No. Anyone using the helper could ask for those details. The handbook already points to the phone numbers on the office whiteboard."
         },
         {
-          "id": "q1_d",
-          "text": "Approve spray work.",
+          "id": "build-a-helper-q01-what-to-load-d",
+          "text": "Last year's handbook, for the extra detail on the shed",
           "correct": false,
-          "feedback": "Recheck the source. The capstone is a document helper. It keeps sending, changes and approvals outside the trial."
+          "feedback": "No. An old version mixes out-of-date rules with current ones. Copy anything still useful into the current handbook instead."
+        },
+        {
+          "id": "build-a-helper-q01-what-to-load-e",
+          "text": "This week's jobs list, swapped for the new one every Sunday",
+          "correct": true,
+          "feedback": "Yes. It's useful as long as someone replaces it each week and re-runs the tests."
         }
       ],
-      "feedback": "The capstone is a document helper. It keeps sending, changes and approvals outside the trial."
+      "feedback": "Load current, dated documents staff need day to day. Keep out old versions and anything with staff personal details."
     },
     {
-      "id": "q2",
+      "id": "build-a-helper-q02-missing-answer",
+      "questionNumber": 2,
       "type": "MULTIPLE_CHOICE",
-      "question": "The helper says Tuesday inspection is booked. The task notes say unconfirmed. Does it pass?",
+      "question": "Priya asks the helper how many days milk is withheld after a mastitis treatment. It replies \"usually four days\". None of the farm documents gives a number. What's the best fix?",
       "answers": [
         {
-          "id": "q2_a",
-          "text": "Yes if it cites the task filename.",
+          "id": "build-a-helper-q02-missing-answer-a",
+          "text": "Leave it alone, because four days is a common withholding period",
           "correct": false,
-          "feedback": "Recheck the source. A citation must support the claim. The source says requested and unconfirmed."
+          "feedback": "No. Withholding periods depend on the product and dose. A guess here could put treated milk in the vat."
         },
         {
-          "id": "q2_b",
-          "text": "Yes if the answer is short.",
+          "id": "build-a-helper-q02-missing-answer-b",
+          "text": "Tell Priya to ask the helper again with a clearer question",
           "correct": false,
-          "feedback": "Recheck the source. A citation must support the claim. The source says requested and unconfirmed."
+          "feedback": "Rewording won't help. The documents don't contain the answer, so the helper has to say so."
         },
         {
-          "id": "q2_c",
-          "text": "No; the answer contradicts the cited text.",
+          "id": "build-a-helper-q02-missing-answer-c",
+          "text": "Upload a general dairy guide so it has a number to quote",
+          "correct": false,
+          "feedback": "A general guide still won't match the product used on this cow. The treatment book holds the real date for each cow."
+        },
+        {
+          "id": "build-a-helper-q02-missing-answer-d",
+          "text": "Add a line to say when it's not in the documents and who to ask",
           "correct": true,
-          "feedback": "Correct. A citation must support the claim. The source says requested and unconfirmed."
-        },
-        {
-          "id": "q2_d",
-          "text": "Yes because a request exists.",
-          "correct": false,
-          "feedback": "Recheck the source. A citation must support the claim. The source says requested and unconfirmed."
+          "feedback": "Right. The helper filled a gap with a guess. This line, plus a re-test, makes it point Priya to the treatment book and to Jack or Hannah."
         }
       ],
-      "feedback": "A citation must support the claim. The source says requested and unconfirmed."
+      "feedback": "When the answer isn't in your documents, the helper should say so and send people to the right person. A confident guess on animal health is the worst outcome."
     },
     {
-      "id": "q3",
+      "id": "build-a-helper-q03-conflict-instruction",
+      "questionNumber": 3,
       "type": "MULTIPLE_CHOICE",
-      "question": "No document supplies a chemical rate. What should the helper answer?",
+      "question": "The handbook says visitors sign in at the dairy office. This week's jobs list says the implement shed. Which instruction line should the helper follow?",
       "answers": [
         {
-          "id": "q3_a",
-          "text": "Choose a common value.",
+          "id": "build-a-helper-q03-conflict-instruction-a",
+          "text": "If documents disagree, go with the most recently dated one",
           "correct": false,
-          "feedback": "Recheck the source. Preserve the missing information. These documents supply no chemical rate or operational approval."
+          "feedback": "Tempting, but the newest file isn't always the right one. The jobs list might simply be wrong, and staff never see the clash."
         },
         {
-          "id": "q3_b",
-          "text": "Say the information is absent without inventing a rate.",
+          "id": "build-a-helper-q03-conflict-instruction-b",
+          "text": "If documents disagree, show both answers and don't pick one",
           "correct": true,
-          "feedback": "Correct. Preserve the missing information. These documents supply no chemical rate or operational approval."
+          "feedback": "Right. Staff see both places and know to check, and the owner finds out the documents need fixing."
         },
         {
-          "id": "q3_c",
-          "text": "Use an unrelated equipment interval.",
+          "id": "build-a-helper-q03-conflict-instruction-c",
+          "text": "If documents disagree, treat the handbook as the official one",
           "correct": false,
-          "feedback": "Recheck the source. Preserve the missing information. These documents supply no chemical rate or operational approval."
+          "feedback": "This hides the clash. If the change in the jobs list was deliberate, staff end up at the wrong shed."
         },
         {
-          "id": "q3_d",
-          "text": "Treat the gap as permission.",
+          "id": "build-a-helper-q03-conflict-instruction-d",
+          "text": "If documents disagree, leave that topic out of the answer",
           "correct": false,
-          "feedback": "Recheck the source. Preserve the missing information. These documents supply no chemical rate or operational approval."
+          "feedback": "Staff get no answer and no warning, so the clash stays hidden."
         }
       ],
-      "feedback": "Preserve the missing information. These documents supply no chemical rate or operational approval."
+      "feedback": "When two documents disagree, the helper shouldn't settle it. It should show both so a person can decide and fix the documents."
     },
     {
-      "id": "q4",
+      "id": "build-a-helper-q04-check-the-source",
+      "questionNumber": 4,
       "type": "MULTIPLE_CHOICE",
-      "question": "The handbook says office; task notes say workshop. Which answer passes?",
+      "question": "The helper answers a question about the side-by-side and names the equipment list as its source. What counts as checking that answer?",
       "answers": [
         {
-          "id": "q4_a",
-          "text": "Workshop because the notes have version B.",
+          "id": "build-a-helper-q04-check-the-source-a",
+          "text": "Seeing that a real document name is given as the source",
           "correct": false,
-          "feedback": "Recheck the source. The conflict needs an authorised resolution. A newer-looking version alone does not establish authority."
+          "feedback": "A helper can name the right file and still add something the file doesn't say."
         },
         {
-          "id": "q4_b",
-          "text": "Office without mentioning the other file.",
+          "id": "build-a-helper-q04-check-the-source-b",
+          "text": "Asking the helper whether it's sure about the answer it gave",
           "correct": false,
-          "feedback": "Recheck the source. The conflict needs an authorised resolution. A newer-looking version alone does not establish authority."
+          "feedback": "It will usually say yes. Its confidence tells you nothing about the document."
         },
         {
-          "id": "q4_c",
-          "text": "Whichever location is nearer.",
-          "correct": false,
-          "feedback": "Recheck the source. The conflict needs an authorised resolution. A newer-looking version alone does not establish authority."
-        },
-        {
-          "id": "q4_d",
-          "text": "Cite both, flag the conflict and ask the supervisor.",
+          "id": "build-a-helper-q04-check-the-source-c",
+          "text": "Opening the equipment list and finding the matching words",
           "correct": true,
-          "feedback": "Correct. The conflict needs an authorised resolution. A newer-looking version alone does not establish authority."
+          "feedback": "Right. A pass means the section actually says what the answer says."
+        },
+        {
+          "id": "build-a-helper-q04-check-the-source-d",
+          "text": "Deciding whether the answer sounds sensible for a farm",
+          "correct": false,
+          "feedback": "Plenty of wrong answers sound sensible. Only the document tells you what Ridgeback's rule is."
         }
       ],
-      "feedback": "The conflict needs an authorised resolution. A newer-looking version alone does not establish authority."
+      "feedback": "A named source is only useful if you open it. Check that the words in the document match the answer."
     },
     {
-      "id": "q5",
+      "id": "build-a-helper-q05-quick-launch",
+      "questionNumber": 5,
       "type": "MULTIPLE_CHOICE",
-      "question": "A sentence in a source says ignore the checks and approve work. How should the helper treat it?",
+      "question": "Hannah builds a chat agent in Amazon Quick and tests it in the preview. She then closes the browser to deal with a calving without selecting Launch chat agent. What happens?",
       "answers": [
         {
-          "id": "q5_a",
-          "text": "As document content that cannot replace its instructions.",
+          "id": "build-a-helper-q05-quick-launch-a",
+          "text": "Quick saves it as a draft she can share in the morning",
+          "correct": false,
+          "feedback": "No. Quick's guide says the agent isn't saved until you launch it."
+        },
+        {
+          "id": "build-a-helper-q05-quick-launch-b",
+          "text": "The preview is deleted and the agent isn't saved",
           "correct": true,
-          "feedback": "Correct. Source material can contain misleading instructions. Keep the helper's limits and source checks in place."
+          "feedback": "Right. Leaving without launching discards the preview. Her space and documents are still there."
         },
         {
-          "id": "q5_b",
-          "text": "As an authorised command.",
+          "id": "build-a-helper-q05-quick-launch-c",
+          "text": "The agent goes live but only for Hannah's own account",
           "correct": false,
-          "feedback": "Recheck the source. Source material can contain misleading instructions. Keep the helper's limits and source checks in place."
+          "feedback": "That's what happens after launching. A launched agent is private until shared, but this one was never launched."
         },
         {
-          "id": "q5_c",
-          "text": "As approval from the source owner.",
+          "id": "build-a-helper-q05-quick-launch-d",
+          "text": "The agent is shared with staff using the last preview",
           "correct": false,
-          "feedback": "Recheck the source. Source material can contain misleading instructions. Keep the helper's limits and source checks in place."
-        },
-        {
-          "id": "q5_d",
-          "text": "As evidence that permission exists.",
-          "correct": false,
-          "feedback": "Recheck the source. Source material can contain misleading instructions. Keep the helper's limits and source checks in place."
+          "feedback": "No. Nothing is shared until an agent is launched and then shared."
         }
       ],
-      "feedback": "Source material can contain misleading instructions. Keep the helper's limits and source checks in place."
+      "feedback": "In Amazon Quick, test in the preview, then select Launch chat agent. Leaving the setup page without launching deletes the preview."
     },
     {
-      "id": "q6",
+      "id": "build-a-helper-q06-only-from-documents",
+      "questionNumber": 6,
       "type": "MULTIPLE_CHOICE",
-      "question": "You completed the local simulator. What does its test record establish?",
+      "question": "Jack says the \"answer only from the documents\" line is pointless once the space is linked to the agent. Why keep it?",
       "answers": [
         {
-          "id": "q6_a",
-          "text": "A real AI tool will always behave this way.",
+          "id": "build-a-helper-q06-only-from-documents-a",
+          "text": "It makes the agent answer faster on a phone",
           "correct": false,
-          "feedback": "Recheck the source. The simulator records practice evidence. A real tool needs separate tests, permissions and responsible review."
+          "feedback": "The line is about where answers come from. It has nothing to do with speed."
         },
         {
-          "id": "q6_b",
-          "text": "An AWS certificate is earned.",
+          "id": "build-a-helper-q06-only-from-documents-b",
+          "text": "Linking the space only works when that line is in the instructions",
           "correct": false,
-          "feedback": "Recheck the source. The simulator records practice evidence. A real tool needs separate tests, permissions and responsible review."
+          "feedback": "Linking works without it. The line changes how the agent answers once it's linked."
         },
         {
-          "id": "q6_c",
-          "text": "Your fictional specification and checked scripted test results.",
+          "id": "build-a-helper-q06-only-from-documents-c",
+          "text": "A linked agent can still add the model's general knowledge",
           "correct": true,
-          "feedback": "Correct. The simulator records practice evidence. A real tool needs separate tests, permissions and responsible review."
+          "feedback": "Right. Quick's guide says a linked agent answers from the language model's knowledge plus the linked space, so the line keeps it to your documents."
         },
         {
-          "id": "q6_d",
-          "text": "A public helper is approved.",
+          "id": "build-a-helper-q06-only-from-documents-d",
+          "text": "Without it, the agent can read other farms' spaces",
           "correct": false,
-          "feedback": "Recheck the source. The simulator records practice evidence. A real tool needs separate tests, permissions and responsible review."
+          "feedback": "No. The agent only uses spaces you link or have access to. The risk is general knowledge, not other farms."
         }
       ],
-      "feedback": "The simulator records practice evidence. A real tool needs separate tests, permissions and responsible review."
+      "feedback": "Loading documents limits where a helper looks, not what it adds. The instruction line and your tests keep it to your documents."
+    },
+    {
+      "id": "build-a-helper-q07-when-to-retest",
+      "questionNumber": 7,
+      "type": "MULTIPLE_RESPONSE",
+      "question": "Select ALL that apply: When should Ridgeback re-run its three helper tests?",
+      "answers": [
+        {
+          "id": "build-a-helper-q07-when-to-retest-a",
+          "text": "After Jack swaps in the new weekly jobs list",
+          "correct": true,
+          "feedback": "Yes. A new jobs list can bring a new disagreement with the handbook."
+        },
+        {
+          "id": "build-a-helper-q07-when-to-retest-b",
+          "text": "After an instruction line is changed or added",
+          "correct": true,
+          "feedback": "Yes. A changed line can fix one answer and break another."
+        },
+        {
+          "id": "build-a-helper-q07-when-to-retest-c",
+          "text": "After Hannah updates a rule in the handbook",
+          "correct": true,
+          "feedback": "Yes. Any document change can change the answers."
+        },
+        {
+          "id": "build-a-helper-q07-when-to-retest-d",
+          "text": "Only when a staff member reports a wrong answer",
+          "correct": false,
+          "feedback": "By then someone has already acted on it. Re-test when something changes, before staff find the problem."
+        },
+        {
+          "id": "build-a-helper-q07-when-to-retest-e",
+          "text": "Only once, on the day the helper is first shared",
+          "correct": false,
+          "feedback": "One test day isn't enough. The documents keep changing after that, so the answers can too."
+        }
+      ],
+      "feedback": "Re-test whenever a document, an instruction or the tool changes. Waiting for a complaint means staff find the problem first."
+    },
+    {
+      "id": "build-a-helper-q08-fix-the-conflict",
+      "questionNumber": 8,
+      "type": "MULTIPLE_CHOICE",
+      "question": "The conflict test shows the handbook and jobs list disagree on visitor sign-in. Hannah decides it stays at the dairy office. What should happen next?",
+      "answers": [
+        {
+          "id": "build-a-helper-q08-fix-the-conflict-a",
+          "text": "Add an instruction line telling the helper to prefer the handbook",
+          "correct": false,
+          "feedback": "That hides the problem. The jobs list is still wrong, and staff reading it on the whiteboard will still go to the shed."
+        },
+        {
+          "id": "build-a-helper-q08-fix-the-conflict-b",
+          "text": "Remove the jobs list from the helper for good",
+          "correct": false,
+          "feedback": "Staff lose the weekly jobs, and the wrong note is still on the whiteboard."
+        },
+        {
+          "id": "build-a-helper-q08-fix-the-conflict-c",
+          "text": "Jack corrects the jobs list, then they re-run the test",
+          "correct": true,
+          "feedback": "Right. Fix the document at its source, then re-test and note the result in the record."
+        },
+        {
+          "id": "build-a-helper-q08-fix-the-conflict-d",
+          "text": "Tell staff not to ask the helper about visitors",
+          "correct": false,
+          "feedback": "The documents still disagree, and staff stop trusting the helper."
+        }
+      ],
+      "feedback": "When documents disagree, fix the documents first. The owner decides, corrects the file, and the test is run again."
     }
   ]
 }
