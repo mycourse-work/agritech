@@ -1,0 +1,198 @@
+{
+  "title": "Module 1: check your understanding",
+  "type": "quiz",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "MULTIPLE_CHOICE",
+      "question": "The gate note says Tuesday requested, not booked. The draft says Tuesday confirmed. What should you do?",
+      "answers": [
+        {
+          "id": "q1_a",
+          "text": "Remove the confirmation and ask about availability.",
+          "correct": true,
+          "feedback": "Correct. The source requests Tuesday. It supplies no booking. Restore the question and check the revised wording."
+        },
+        {
+          "id": "q1_b",
+          "text": "Keep it because the email sounds clear.",
+          "correct": false,
+          "feedback": "Recheck the source. The source requests Tuesday. It supplies no booking. Restore the question and check the revised wording."
+        },
+        {
+          "id": "q1_c",
+          "text": "Ask another helper to agree with the draft.",
+          "correct": false,
+          "feedback": "Recheck the source. The source requests Tuesday. It supplies no booking. Restore the question and check the revised wording."
+        },
+        {
+          "id": "q1_d",
+          "text": "Treat the proposed day as proof of a booking.",
+          "correct": false,
+          "feedback": "Recheck the source. The source requests Tuesday. It supplies no booking. Restore the question and check the revised wording."
+        }
+      ],
+      "feedback": "The source requests Tuesday. It supplies no booking. Restore the question and check the revised wording."
+    },
+    {
+      "id": "q2",
+      "type": "MULTIPLE_CHOICE",
+      "question": "You want a short contractor enquiry from rough notes. Which request gives a useful brief?",
+      "answers": [
+        {
+          "id": "q2_a",
+          "text": "Make it sound confident and fill gaps.",
+          "correct": false,
+          "feedback": "Recheck the source. A task, source facts and visible gaps let you check whether the enquiry stays within the note."
+        },
+        {
+          "id": "q2_b",
+          "text": "Write whatever a contractor expects.",
+          "correct": false,
+          "feedback": "Recheck the source. A task, source facts and visible gaps let you check whether the enquiry stays within the note."
+        },
+        {
+          "id": "q2_c",
+          "text": "Use the notes, ask about availability and list unknowns.",
+          "correct": true,
+          "feedback": "Correct. A task, source facts and visible gaps let you check whether the enquiry stays within the note."
+        },
+        {
+          "id": "q2_d",
+          "text": "Copy a previous booking and change the day.",
+          "correct": false,
+          "feedback": "Recheck the source. A task, source facts and visible gaps let you check whether the enquiry stays within the note."
+        }
+      ],
+      "feedback": "A task, source facts and visible gaps let you check whether the enquiry stays within the note."
+    },
+    {
+      "id": "q3",
+      "type": "MULTIPLE_CHOICE",
+      "question": "A cited page opens, but its text does not support the claimed deadline. What does that mean?",
+      "answers": [
+        {
+          "id": "q3_a",
+          "text": "The title is sufficient evidence.",
+          "correct": false,
+          "feedback": "Recheck the source. The supporting words must appear in a relevant current source. A working link cannot establish the deadline."
+        },
+        {
+          "id": "q3_b",
+          "text": "The citation fails; verify the requirement from a relevant source.",
+          "correct": true,
+          "feedback": "Correct. The supporting words must appear in a relevant current source. A working link cannot establish the deadline."
+        },
+        {
+          "id": "q3_c",
+          "text": "Two AI answers could validate it.",
+          "correct": false,
+          "feedback": "Recheck the source. The supporting words must appear in a relevant current source. A working link cannot establish the deadline."
+        },
+        {
+          "id": "q3_d",
+          "text": "A professional tone validates it.",
+          "correct": false,
+          "feedback": "Recheck the source. The supporting words must appear in a relevant current source. A working link cannot establish the deadline."
+        }
+      ],
+      "feedback": "The supporting words must appear in a relevant current source. A working link cannot establish the deadline."
+    },
+    {
+      "id": "q4",
+      "type": "MULTIPLE_CHOICE",
+      "question": "Voice input transcribes Thursday as Tuesday. What should happen before submitting?",
+      "answers": [
+        {
+          "id": "q4_a",
+          "text": "Let AI infer the intended day.",
+          "correct": false,
+          "feedback": "Recheck the source. Check dictated dates and numbers while parked. The helper receives the transcript, including its errors."
+        },
+        {
+          "id": "q4_b",
+          "text": "Submit and correct the answer later.",
+          "correct": false,
+          "feedback": "Recheck the source. Check dictated dates and numbers while parked. The helper receives the transcript, including its errors."
+        },
+        {
+          "id": "q4_c",
+          "text": "Add both days without explanation.",
+          "correct": false,
+          "feedback": "Recheck the source. Check dictated dates and numbers while parked. The helper receives the transcript, including its errors."
+        },
+        {
+          "id": "q4_d",
+          "text": "Correct the transcript against the original note.",
+          "correct": true,
+          "feedback": "Correct. Check dictated dates and numbers while parked. The helper receives the transcript, including its errors."
+        }
+      ],
+      "feedback": "Check dictated dates and numbers while parked. The helper receives the transcript, including its errors."
+    },
+    {
+      "id": "q5",
+      "type": "MULTIPLE_CHOICE",
+      "question": "Which small trial can the farmer check directly with the supplied gate note?",
+      "answers": [
+        {
+          "id": "q5_a",
+          "text": "Approve a repair method.",
+          "correct": false,
+          "feedback": "Recheck the source. The note supports an enquiry. A method, approval or booking would need additional evidence."
+        },
+        {
+          "id": "q5_b",
+          "text": "Confirm legal compliance.",
+          "correct": false,
+          "feedback": "Recheck the source. The note supports an enquiry. A method, approval or booking would need additional evidence."
+        },
+        {
+          "id": "q5_c",
+          "text": "Draft an enquiry about hinge inspection.",
+          "correct": true,
+          "feedback": "Correct. The note supports an enquiry. A method, approval or booking would need additional evidence."
+        },
+        {
+          "id": "q5_d",
+          "text": "Book an arrival time.",
+          "correct": false,
+          "feedback": "Recheck the source. The note supports an enquiry. A method, approval or booking would need additional evidence."
+        }
+      ],
+      "feedback": "The note supports an enquiry. A method, approval or booking would need additional evidence."
+    },
+    {
+      "id": "q6",
+      "type": "MULTIPLE_CHOICE",
+      "question": "The helper repeats an invented arrival time after you ask if it is true. What is the useful check?",
+      "answers": [
+        {
+          "id": "q6_a",
+          "text": "Compare the time with booking evidence.",
+          "correct": true,
+          "feedback": "Correct. Repetition supplies no booking evidence. Keep the time unknown unless a checked source confirms it."
+        },
+        {
+          "id": "q6_b",
+          "text": "Accept the repeated answer.",
+          "correct": false,
+          "feedback": "Recheck the source. Repetition supplies no booking evidence. Keep the time unknown unless a checked source confirms it."
+        },
+        {
+          "id": "q6_c",
+          "text": "Shorten the email without checking it.",
+          "correct": false,
+          "feedback": "Recheck the source. Repetition supplies no booking evidence. Keep the time unknown unless a checked source confirms it."
+        },
+        {
+          "id": "q6_d",
+          "text": "Assume confidence means accuracy.",
+          "correct": false,
+          "feedback": "Recheck the source. Repetition supplies no booking evidence. Keep the time unknown unless a checked source confirms it."
+        }
+      ],
+      "feedback": "Repetition supplies no booking evidence. Keep the time unknown unless a checked source confirms it."
+    }
+  ]
+}

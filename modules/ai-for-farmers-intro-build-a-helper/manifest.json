@@ -1,0 +1,44 @@
+{
+  "id": "ai-for-farmers-intro-build-a-helper",
+  "title": "Build your own farm helper",
+  "description": "Specify a small document helper and test supported, missing and conflicting answers.",
+  "estimatedDuration": "23 minutes",
+  "lessons": [
+    {
+      "id": "video",
+      "title": "Video: Build your own farm helper",
+      "type": "content",
+      "markdownPath": "video.md"
+    },
+    {
+      "id": "documents-and-instructions",
+      "title": "Choose documents and write instructions",
+      "type": "content",
+      "markdownPath": "documents-and-instructions.md"
+    },
+    {
+      "id": "amazon-quick-example",
+      "title": "Worked example in Amazon Quick",
+      "type": "content",
+      "markdownPath": "amazon-quick-example.md"
+    },
+    {
+      "id": "test-and-maintain",
+      "title": "Test the helper and keep a record",
+      "type": "content",
+      "markdownPath": "test-and-maintain.md"
+    },
+    {
+      "id": "activity",
+      "title": "Activity: Build and test your helper",
+      "type": "content",
+      "markdownPath": "activity.md"
+    },
+    {
+      "id": "quiz",
+      "title": "Module 4: check your understanding",
+      "type": "quiz",
+      "quizPath": "quiz.json"
+    }
+  ]
+}

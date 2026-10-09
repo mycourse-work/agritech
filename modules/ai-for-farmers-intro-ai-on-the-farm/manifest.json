@@ -1,0 +1,50 @@
+{
+  "id": "ai-for-farmers-intro-ai-on-the-farm",
+  "title": "AI on the farm",
+  "description": "Give AI a clear job, then check the answer against your notes.",
+  "estimatedDuration": "19 minutes",
+  "lessons": [
+    {
+      "id": "video",
+      "title": "Video: AI on the farm",
+      "type": "content",
+      "markdownPath": "video.md"
+    },
+    {
+      "id": "what-ai-can-do",
+      "title": "What AI can do for a farm",
+      "type": "content",
+      "markdownPath": "what-ai-can-do.md"
+    },
+    {
+      "id": "a-clear-prompt",
+      "title": "Give the helper a clear job",
+      "type": "content",
+      "markdownPath": "a-clear-prompt.md"
+    },
+    {
+      "id": "check-a-draft",
+      "title": "Check the answer before using it",
+      "type": "content",
+      "markdownPath": "check-a-draft.md"
+    },
+    {
+      "id": "activity",
+      "title": "Activity: Spot the made-up fact",
+      "type": "content",
+      "markdownPath": "activity.md"
+    },
+    {
+      "id": "tractor-listen",
+      "title": "Bonus: tractor listen (podcast)",
+      "type": "content",
+      "markdownPath": "tractor-listen.md"
+    },
+    {
+      "id": "quiz",
+      "title": "Module 1: check your understanding",
+      "type": "quiz",
+      "quizPath": "quiz.json"
+    }
+  ]
+}

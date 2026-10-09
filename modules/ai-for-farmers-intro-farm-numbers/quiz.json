@@ -1,0 +1,198 @@
+{
+  "title": "Module 3: check your understanding",
+  "type": "quiz",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "MULTIPLE_CHOICE",
+      "question": "Yesterday has 10 mm observed rain; tomorrow has 20 mm forecast. What summary is supported?",
+      "answers": [
+        {
+          "id": "q1_a",
+          "text": "30 mm received.",
+          "correct": false,
+          "feedback": "Recheck the source. Keep evidence types and periods separate. Today's absent reading remains unknown."
+        },
+        {
+          "id": "q1_b",
+          "text": "10 mm observed and 20 mm forecast, with separate periods.",
+          "correct": true,
+          "feedback": "Correct. Keep evidence types and periods separate. Today's absent reading remains unknown."
+        },
+        {
+          "id": "q1_c",
+          "text": "20 mm observed.",
+          "correct": false,
+          "feedback": "Recheck the source. Keep evidence types and periods separate. Today's absent reading remains unknown."
+        },
+        {
+          "id": "q1_d",
+          "text": "Today must have zero rain.",
+          "correct": false,
+          "feedback": "Recheck the source. Keep evidence types and periods separate. Today's absent reading remains unknown."
+        }
+      ],
+      "feedback": "Keep evidence types and periods separate. Today's absent reading remains unknown."
+    },
+    {
+      "id": "q2",
+      "type": "MULTIPLE_CHOICE",
+      "question": "The invented feed worksheet is 1,000 + 100 - 500 kg dry matter. What does the result establish?",
+      "answers": [
+        {
+          "id": "q2_a",
+          "text": "Enough feed for the actual farm.",
+          "correct": false,
+          "feedback": "Recheck the source. The calculation is 600 kg dry matter. Correct arithmetic does not validate the inputs or a real feed plan."
+        },
+        {
+          "id": "q2_b",
+          "text": "A guaranteed future feed supply.",
+          "correct": false,
+          "feedback": "Recheck the source. The calculation is 600 kg dry matter. Correct arithmetic does not validate the inputs or a real feed plan."
+        },
+        {
+          "id": "q2_c",
+          "text": "A fresh-weight total.",
+          "correct": false,
+          "feedback": "Recheck the source. The calculation is 600 kg dry matter. Correct arithmetic does not validate the inputs or a real feed plan."
+        },
+        {
+          "id": "q2_d",
+          "text": "An arithmetic result of 600 kg dry matter; assumptions still need checking.",
+          "correct": true,
+          "feedback": "Correct. The calculation is 600 kg dry matter. Correct arithmetic does not validate the inputs or a real feed plan."
+        }
+      ],
+      "feedback": "The calculation is 600 kg dry matter. Correct arithmetic does not validate the inputs or a real feed plan."
+    },
+    {
+      "id": "q3",
+      "type": "MULTIPLE_CHOICE",
+      "question": "Two clear invoice rows show 20 and 30 pieces; another is blurred. How should 50 be labelled?",
+      "answers": [
+        {
+          "id": "q3_a",
+          "text": "Clear-row subtotal; the full total is unknown.",
+          "correct": true,
+          "feedback": "Correct. Fifty adds the clear rows. The unreadable quantity prevents a full total."
+        },
+        {
+          "id": "q3_b",
+          "text": "Final document total.",
+          "correct": false,
+          "feedback": "Recheck the source. Fifty adds the clear rows. The unreadable quantity prevents a full total."
+        },
+        {
+          "id": "q3_c",
+          "text": "Estimate of the blurred row.",
+          "correct": false,
+          "feedback": "Recheck the source. Fifty adds the clear rows. The unreadable quantity prevents a full total."
+        },
+        {
+          "id": "q3_d",
+          "text": "Verified processor outcome.",
+          "correct": false,
+          "feedback": "Recheck the source. Fifty adds the clear rows. The unreadable quantity prevents a full total."
+        }
+      ],
+      "feedback": "Fifty adds the clear rows. The unreadable quantity prevents a full total."
+    },
+    {
+      "id": "q4",
+      "type": "MULTIPLE_CHOICE",
+      "question": "Upper Flat and Upper Flats occur in different exports. What should the matching table do?",
+      "answers": [
+        {
+          "id": "q4_a",
+          "text": "Merge them automatically.",
+          "correct": false,
+          "feedback": "Recheck the source. A similar name does not establish an identical location. Preserve originals and review the proposed match."
+        },
+        {
+          "id": "q4_b",
+          "text": "Delete the less common label.",
+          "correct": false,
+          "feedback": "Recheck the source. A similar name does not establish an identical location. Preserve originals and review the proposed match."
+        },
+        {
+          "id": "q4_c",
+          "text": "Preserve both and ask the record owner to confirm.",
+          "correct": true,
+          "feedback": "Correct. A similar name does not establish an identical location. Preserve originals and review the proposed match."
+        },
+        {
+          "id": "q4_d",
+          "text": "Infer their boundary from the names.",
+          "correct": false,
+          "feedback": "Recheck the source. A similar name does not establish an identical location. Preserve originals and review the proposed match."
+        }
+      ],
+      "feedback": "A similar name does not establish an identical location. Preserve originals and review the proposed match."
+    },
+    {
+      "id": "q5",
+      "type": "MULTIPLE_CHOICE",
+      "question": "An app permits exporting entered notes but gives no reuse terms for derived summaries. Can you upload the summaries to an AI tool?",
+      "answers": [
+        {
+          "id": "q5_a",
+          "text": "Yes, because an export button exists.",
+          "correct": false,
+          "feedback": "Recheck the source. Export access does not settle AI reuse rights. Ask about the relevant data category and sharing purpose."
+        },
+        {
+          "id": "q5_b",
+          "text": "Check the relevant rights, permissions and provider terms.",
+          "correct": true,
+          "feedback": "Correct. Export access does not settle AI reuse rights. Ask about the relevant data category and sharing purpose."
+        },
+        {
+          "id": "q5_c",
+          "text": "Yes, if the app is paid.",
+          "correct": false,
+          "feedback": "Recheck the source. Export access does not settle AI reuse rights. Ask about the relevant data category and sharing purpose."
+        },
+        {
+          "id": "q5_d",
+          "text": "Yes, after removing a name.",
+          "correct": false,
+          "feedback": "Recheck the source. Export access does not settle AI reuse rights. Ask about the relevant data category and sharing purpose."
+        }
+      ],
+      "feedback": "Export access does not settle AI reuse rights. Ask about the relevant data category and sharing purpose."
+    },
+    {
+      "id": "q6",
+      "type": "MULTIPLE_CHOICE",
+      "question": "The drift lab is below its wind comparison and points away from the boundary. What is supported?",
+      "answers": [
+        {
+          "id": "q6_a",
+          "text": "The job has legal approval.",
+          "correct": false,
+          "feedback": "Recheck the source. The lab supplies no operational approval. Its comparison is illustrative and the actual sources and conditions still need checking."
+        },
+        {
+          "id": "q6_b",
+          "text": "All field conditions are checked.",
+          "correct": false,
+          "feedback": "Recheck the source. The lab supplies no operational approval. Its comparison is illustrative and the actual sources and conditions still need checking."
+        },
+        {
+          "id": "q6_c",
+          "text": "The default comparison is a national limit.",
+          "correct": false,
+          "feedback": "Recheck the source. The lab supplies no operational approval. Its comparison is illustrative and the actual sources and conditions still need checking."
+        },
+        {
+          "id": "q6_d",
+          "text": "A stylised visual changed; source and operator checks remain unresolved.",
+          "correct": true,
+          "feedback": "Correct. The lab supplies no operational approval. Its comparison is illustrative and the actual sources and conditions still need checking."
+        }
+      ],
+      "feedback": "The lab supplies no operational approval. Its comparison is illustrative and the actual sources and conditions still need checking."
+    }
+  ]
+}

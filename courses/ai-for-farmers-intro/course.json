@@ -1,0 +1,17 @@
+{
+  "id": "ai-for-farmers-intro",
+  "title": "Introduction to AI for Farmers",
+  "coverImage": "cover.jpg",
+  "description": "Draft farm messages, check numbers and sources, and build a small document helper with fictional Example Station material. Four modules with local practice activities. Independent demonstration proposed for training review.",
+  "estimatedDuration": "86 minutes",
+  "welcomePath": "welcome.md",
+  "quizPassingThreshold": 80,
+  "quizRevealMode": "immediate",
+  "modules": [
+    "ai-for-farmers-intro-ai-on-the-farm",
+    "ai-for-farmers-intro-paperwork",
+    "ai-for-farmers-intro-farm-numbers",
+    "ai-for-farmers-intro-build-a-helper"
+  ],
+  "quizMaxAttempts": 10
+}

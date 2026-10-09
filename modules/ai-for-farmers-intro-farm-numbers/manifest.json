@@ -1,0 +1,50 @@
+{
+  "id": "ai-for-farmers-intro-farm-numbers",
+  "title": "Reading your farm's numbers",
+  "description": "Check units, dates, evidence and sharing rights before relying on a summary.",
+  "estimatedDuration": "24 minutes",
+  "lessons": [
+    {
+      "id": "video",
+      "title": "Video: Reading your farm's numbers",
+      "type": "content",
+      "markdownPath": "video.md"
+    },
+    {
+      "id": "forecast-and-feed",
+      "title": "Separate a forecast from a measurement",
+      "type": "content",
+      "markdownPath": "forecast-and-feed.md"
+    },
+    {
+      "id": "check-a-document",
+      "title": "Check a kill sheet or invoice against its source",
+      "type": "content",
+      "markdownPath": "check-a-document.md"
+    },
+    {
+      "id": "combine-exports",
+      "title": "Bring different app exports together carefully",
+      "type": "content",
+      "markdownPath": "combine-exports.md"
+    },
+    {
+      "id": "privacy-and-weather",
+      "title": "Check sharing rights and weather evidence",
+      "type": "content",
+      "markdownPath": "privacy-and-weather.md"
+    },
+    {
+      "id": "activity",
+      "title": "Activity: Explore weather and drift evidence",
+      "type": "content",
+      "markdownPath": "activity.md"
+    },
+    {
+      "id": "quiz",
+      "title": "Module 3: check your understanding",
+      "type": "quiz",
+      "quizPath": "quiz.json"
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "title": "Module 2: check your understanding",
+  "type": "quiz",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "MULTIPLE_CHOICE",
+      "question": "Worker A cannot work Wednesday and B becomes unavailable too. What should the roster show?",
+      "answers": [
+        {
+          "id": "q1_a",
+          "text": "A assigned because the day needs coverage.",
+          "correct": false,
+          "feedback": "Recheck the source. Neither worker is available. Preserve the coverage gap so the manager can arrange it."
+        },
+        {
+          "id": "q1_b",
+          "text": "Wednesday unassigned with a question for the manager.",
+          "correct": true,
+          "feedback": "Correct. Neither worker is available. Preserve the coverage gap so the manager can arrange it."
+        },
+        {
+          "id": "q1_c",
+          "text": "B assigned without mentioning the change.",
+          "correct": false,
+          "feedback": "Recheck the source. Neither worker is available. Preserve the coverage gap so the manager can arrange it."
+        },
+        {
+          "id": "q1_d",
+          "text": "The Wednesday column removed.",
+          "correct": false,
+          "feedback": "Recheck the source. Neither worker is available. Preserve the coverage gap so the manager can arrange it."
+        }
+      ],
+      "feedback": "Neither worker is available. Preserve the coverage gap so the manager can arrange it."
+    },
+    {
+      "id": "q2",
+      "type": "MULTIPLE_CHOICE",
+      "question": "The neighbour-notice draft has Friday but no exact date or timing. What next?",
+      "answers": [
+        {
+          "id": "q2_a",
+          "text": "Send because Friday is familiar.",
+          "correct": false,
+          "feedback": "Recheck the source. A weekday is insufficient for the intended notice. Exact date and timing need checked source information."
+        },
+        {
+          "id": "q2_b",
+          "text": "Let the helper choose a morning.",
+          "correct": false,
+          "feedback": "Recheck the source. A weekday is insufficient for the intended notice. Exact date and timing need checked source information."
+        },
+        {
+          "id": "q2_c",
+          "text": "Copy last month's date.",
+          "correct": false,
+          "feedback": "Recheck the source. A weekday is insufficient for the intended notice. Exact date and timing need checked source information."
+        },
+        {
+          "id": "q2_d",
+          "text": "Keep the fields to confirm and obtain checked details.",
+          "correct": true,
+          "feedback": "Correct. A weekday is insufficient for the intended notice. Exact date and timing need checked source information."
+        }
+      ],
+      "feedback": "A weekday is insufficient for the intended notice. Exact date and timing need checked source information."
+    },
+    {
+      "id": "q3",
+      "type": "MULTIPLE_CHOICE",
+      "question": "A draft says one notice deadline applies across NZ. What should you do?",
+      "answers": [
+        {
+          "id": "q3_a",
+          "text": "Remove it and check the applicable regional plan and job requirements.",
+          "correct": true,
+          "feedback": "Correct. Notification arrangements vary. The responsible operator checks the applicable sources and job details."
+        },
+        {
+          "id": "q3_b",
+          "text": "Use it because the draft is labelled.",
+          "correct": false,
+          "feedback": "Recheck the source. Notification arrangements vary. The responsible operator checks the applicable sources and job details."
+        },
+        {
+          "id": "q3_c",
+          "text": "Accept it if the tone is calm.",
+          "correct": false,
+          "feedback": "Recheck the source. Notification arrangements vary. The responsible operator checks the applicable sources and job details."
+        },
+        {
+          "id": "q3_d",
+          "text": "Send without the source check.",
+          "correct": false,
+          "feedback": "Recheck the source. Notification arrangements vary. The responsible operator checks the applicable sources and job details."
+        }
+      ],
+      "feedback": "Notification arrangements vary. The responsible operator checks the applicable sources and job details."
+    },
+    {
+      "id": "q4",
+      "type": "MULTIPLE_CHOICE",
+      "question": "A maintenance card says planned. The evidence index says complete. Which status is supported?",
+      "answers": [
+        {
+          "id": "q4_a",
+          "text": "Complete if a task exists.",
+          "correct": false,
+          "feedback": "Recheck the source. The source supports planned. Neither completion nor cancellation has evidence."
+        },
+        {
+          "id": "q4_b",
+          "text": "Complete if the helper repeats it.",
+          "correct": false,
+          "feedback": "Recheck the source. The source supports planned. Neither completion nor cancellation has evidence."
+        },
+        {
+          "id": "q4_c",
+          "text": "Planned; ask for completion evidence.",
+          "correct": true,
+          "feedback": "Correct. The source supports planned. Neither completion nor cancellation has evidence."
+        },
+        {
+          "id": "q4_d",
+          "text": "Cancelled because evidence is absent.",
+          "correct": false,
+          "feedback": "Recheck the source. The source supports planned. Neither completion nor cancellation has evidence."
+        }
+      ],
+      "feedback": "The source supports planned. Neither completion nor cancellation has evidence."
+    },
+    {
+      "id": "q5",
+      "type": "MULTIPLE_CHOICE",
+      "question": "The visitor note says wait for the supervisor. A checklist tells visitors to enter the workshop alone. What edit is needed?",
+      "answers": [
+        {
+          "id": "q5_a",
+          "text": "Keep the shorter instruction.",
+          "correct": false,
+          "feedback": "Recheck the source. The waiting condition must survive the rewrite. The responsible person supplies approved safety arrangements."
+        },
+        {
+          "id": "q5_b",
+          "text": "Restore the waiting condition and seek missing approved details.",
+          "correct": true,
+          "feedback": "Correct. The waiting condition must survive the rewrite. The responsible person supplies approved safety arrangements."
+        },
+        {
+          "id": "q5_c",
+          "text": "Add a made-up meeting place.",
+          "correct": false,
+          "feedback": "Recheck the source. The waiting condition must survive the rewrite. The responsible person supplies approved safety arrangements."
+        },
+        {
+          "id": "q5_d",
+          "text": "Treat the checklist as an inspection.",
+          "correct": false,
+          "feedback": "Recheck the source. The waiting condition must survive the rewrite. The responsible person supplies approved safety arrangements."
+        }
+      ],
+      "feedback": "The waiting condition must survive the rewrite. The responsible person supplies approved safety arrangements."
+    },
+    {
+      "id": "q6",
+      "type": "MULTIPLE_CHOICE",
+      "question": "The contractor note requests Tuesday. Which email sentence stays within it?",
+      "answers": [
+        {
+          "id": "q6_a",
+          "text": "We have booked Tuesday at eight.",
+          "correct": false,
+          "feedback": "Recheck the source. The note supports a request about availability, without an arrival time or approval."
+        },
+        {
+          "id": "q6_b",
+          "text": "Start Tuesday; the cost is approved.",
+          "correct": false,
+          "feedback": "Recheck the source. The note supports a request about availability, without an arrival time or approval."
+        },
+        {
+          "id": "q6_c",
+          "text": "The inspection is complete.",
+          "correct": false,
+          "feedback": "Recheck the source. The note supports a request about availability, without an arrival time or approval."
+        },
+        {
+          "id": "q6_d",
+          "text": "Could you confirm whether Tuesday suits?",
+          "correct": true,
+          "feedback": "Correct. The note supports a request about availability, without an arrival time or approval."
+        }
+      ],
+      "feedback": "The note supports a request about availability, without an arrival time or approval."
+    }
+  ]
+}

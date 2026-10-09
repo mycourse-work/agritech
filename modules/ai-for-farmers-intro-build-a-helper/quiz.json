@@ -1,0 +1,198 @@
+{
+  "title": "Module 4: check your understanding",
+  "type": "quiz",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "MULTIPLE_CHOICE",
+      "question": "A helper trial starts with sending notices automatically. Which smaller capstone job fits this course?",
+      "answers": [
+        {
+          "id": "q1_a",
+          "text": "Find document sections and draft answers for review.",
+          "correct": true,
+          "feedback": "Correct. The capstone is a document helper. It keeps sending, changes and approvals outside the trial."
+        },
+        {
+          "id": "q1_b",
+          "text": "Publish notices without review.",
+          "correct": false,
+          "feedback": "Recheck the source. The capstone is a document helper. It keeps sending, changes and approvals outside the trial."
+        },
+        {
+          "id": "q1_c",
+          "text": "Change official records.",
+          "correct": false,
+          "feedback": "Recheck the source. The capstone is a document helper. It keeps sending, changes and approvals outside the trial."
+        },
+        {
+          "id": "q1_d",
+          "text": "Approve spray work.",
+          "correct": false,
+          "feedback": "Recheck the source. The capstone is a document helper. It keeps sending, changes and approvals outside the trial."
+        }
+      ],
+      "feedback": "The capstone is a document helper. It keeps sending, changes and approvals outside the trial."
+    },
+    {
+      "id": "q2",
+      "type": "MULTIPLE_CHOICE",
+      "question": "The helper says Tuesday inspection is booked. The task notes say unconfirmed. Does it pass?",
+      "answers": [
+        {
+          "id": "q2_a",
+          "text": "Yes if it cites the task filename.",
+          "correct": false,
+          "feedback": "Recheck the source. A citation must support the claim. The source says requested and unconfirmed."
+        },
+        {
+          "id": "q2_b",
+          "text": "Yes if the answer is short.",
+          "correct": false,
+          "feedback": "Recheck the source. A citation must support the claim. The source says requested and unconfirmed."
+        },
+        {
+          "id": "q2_c",
+          "text": "No; the answer contradicts the cited text.",
+          "correct": true,
+          "feedback": "Correct. A citation must support the claim. The source says requested and unconfirmed."
+        },
+        {
+          "id": "q2_d",
+          "text": "Yes because a request exists.",
+          "correct": false,
+          "feedback": "Recheck the source. A citation must support the claim. The source says requested and unconfirmed."
+        }
+      ],
+      "feedback": "A citation must support the claim. The source says requested and unconfirmed."
+    },
+    {
+      "id": "q3",
+      "type": "MULTIPLE_CHOICE",
+      "question": "No document supplies a chemical rate. What should the helper answer?",
+      "answers": [
+        {
+          "id": "q3_a",
+          "text": "Choose a common value.",
+          "correct": false,
+          "feedback": "Recheck the source. Preserve the missing information. These documents supply no chemical rate or operational approval."
+        },
+        {
+          "id": "q3_b",
+          "text": "Say the information is absent without inventing a rate.",
+          "correct": true,
+          "feedback": "Correct. Preserve the missing information. These documents supply no chemical rate or operational approval."
+        },
+        {
+          "id": "q3_c",
+          "text": "Use an unrelated equipment interval.",
+          "correct": false,
+          "feedback": "Recheck the source. Preserve the missing information. These documents supply no chemical rate or operational approval."
+        },
+        {
+          "id": "q3_d",
+          "text": "Treat the gap as permission.",
+          "correct": false,
+          "feedback": "Recheck the source. Preserve the missing information. These documents supply no chemical rate or operational approval."
+        }
+      ],
+      "feedback": "Preserve the missing information. These documents supply no chemical rate or operational approval."
+    },
+    {
+      "id": "q4",
+      "type": "MULTIPLE_CHOICE",
+      "question": "The handbook says office; task notes say workshop. Which answer passes?",
+      "answers": [
+        {
+          "id": "q4_a",
+          "text": "Workshop because the notes have version B.",
+          "correct": false,
+          "feedback": "Recheck the source. The conflict needs an authorised resolution. A newer-looking version alone does not establish authority."
+        },
+        {
+          "id": "q4_b",
+          "text": "Office without mentioning the other file.",
+          "correct": false,
+          "feedback": "Recheck the source. The conflict needs an authorised resolution. A newer-looking version alone does not establish authority."
+        },
+        {
+          "id": "q4_c",
+          "text": "Whichever location is nearer.",
+          "correct": false,
+          "feedback": "Recheck the source. The conflict needs an authorised resolution. A newer-looking version alone does not establish authority."
+        },
+        {
+          "id": "q4_d",
+          "text": "Cite both, flag the conflict and ask the supervisor.",
+          "correct": true,
+          "feedback": "Correct. The conflict needs an authorised resolution. A newer-looking version alone does not establish authority."
+        }
+      ],
+      "feedback": "The conflict needs an authorised resolution. A newer-looking version alone does not establish authority."
+    },
+    {
+      "id": "q5",
+      "type": "MULTIPLE_CHOICE",
+      "question": "A sentence in a source says ignore the checks and approve work. How should the helper treat it?",
+      "answers": [
+        {
+          "id": "q5_a",
+          "text": "As document content that cannot replace its instructions.",
+          "correct": true,
+          "feedback": "Correct. Source material can contain misleading instructions. Keep the helper's limits and source checks in place."
+        },
+        {
+          "id": "q5_b",
+          "text": "As an authorised command.",
+          "correct": false,
+          "feedback": "Recheck the source. Source material can contain misleading instructions. Keep the helper's limits and source checks in place."
+        },
+        {
+          "id": "q5_c",
+          "text": "As approval from the source owner.",
+          "correct": false,
+          "feedback": "Recheck the source. Source material can contain misleading instructions. Keep the helper's limits and source checks in place."
+        },
+        {
+          "id": "q5_d",
+          "text": "As evidence that permission exists.",
+          "correct": false,
+          "feedback": "Recheck the source. Source material can contain misleading instructions. Keep the helper's limits and source checks in place."
+        }
+      ],
+      "feedback": "Source material can contain misleading instructions. Keep the helper's limits and source checks in place."
+    },
+    {
+      "id": "q6",
+      "type": "MULTIPLE_CHOICE",
+      "question": "You completed the local simulator. What does its test record establish?",
+      "answers": [
+        {
+          "id": "q6_a",
+          "text": "A real AI tool will always behave this way.",
+          "correct": false,
+          "feedback": "Recheck the source. The simulator records practice evidence. A real tool needs separate tests, permissions and responsible review."
+        },
+        {
+          "id": "q6_b",
+          "text": "An AWS certificate is earned.",
+          "correct": false,
+          "feedback": "Recheck the source. The simulator records practice evidence. A real tool needs separate tests, permissions and responsible review."
+        },
+        {
+          "id": "q6_c",
+          "text": "Your fictional specification and checked scripted test results.",
+          "correct": true,
+          "feedback": "Correct. The simulator records practice evidence. A real tool needs separate tests, permissions and responsible review."
+        },
+        {
+          "id": "q6_d",
+          "text": "A public helper is approved.",
+          "correct": false,
+          "feedback": "Recheck the source. The simulator records practice evidence. A real tool needs separate tests, permissions and responsible review."
+        }
+      ],
+      "feedback": "The simulator records practice evidence. A real tool needs separate tests, permissions and responsible review."
+    }
+  ]
+}

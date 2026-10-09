@@ -1,0 +1,44 @@
+{
+  "id": "ai-for-farmers-intro-paperwork",
+  "title": "Farm paperwork made easier",
+  "description": "Draft rosters, messages and record summaries while keeping gaps visible.",
+  "estimatedDuration": "20 minutes",
+  "lessons": [
+    {
+      "id": "video",
+      "title": "Video: Farm paperwork made easier",
+      "type": "content",
+      "markdownPath": "video.md"
+    },
+    {
+      "id": "a-roster-that-fits",
+      "title": "A roster that fits the note",
+      "type": "content",
+      "markdownPath": "a-roster-that-fits.md"
+    },
+    {
+      "id": "notices-and-emails",
+      "title": "Write a notice or an enquiry",
+      "type": "content",
+      "markdownPath": "notices-and-emails.md"
+    },
+    {
+      "id": "records-and-evidence",
+      "title": "Keep records and compliance drafts honest",
+      "type": "content",
+      "markdownPath": "records-and-evidence.md"
+    },
+    {
+      "id": "activity",
+      "title": "Activity: Build a neighbour-notice prompt",
+      "type": "content",
+      "markdownPath": "activity.md"
+    },
+    {
+      "id": "quiz",
+      "title": "Module 2: check your understanding",
+      "type": "quiz",
+      "quizPath": "quiz.json"
+    }
+  ]
+}
