@@ -6,6 +6,15 @@
   Your browser cannot play this video.
 </video>
 
+## Explore a farm in 2035 (optional)
+
+What could AI on a farm look like in ten years? This is one possible future, not a forecast. In this 3D tour you stop at each piece of farm technology, see what it measures and how AI turns it into a morning brief, and answer a quick question. It takes about five minutes. If you'd rather skip the download, open **Read the tour as text** inside the activity.
+
+:::widget farm-2035
+title: Explore a farm in 2035
+description: A five-stop 3D tour of a made-up farm. At each stop, see what the technology measures and how AI turns it into the morning brief, then answer one question.
+:::
+
 It's nine at night in the second week of calving. A relief milker starts Monday and your notes on the shed routine are half a page of scribble. An AI chat tool can turn them into a clear message in a couple of minutes.
 
 > **On the farm:** A lot of farm admin is writing: texts to staff, rosters, procedures, meeting notes. AI tools are quick at first drafts of all of it. The skill is knowing which jobs to hand over and which information to keep to yourself.

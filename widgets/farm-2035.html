@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en-NZ" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explore a farm in 2035</title>
+<style>
+:root{--green:#244A35;--ink:#24392e;--muted:#526459;--paper:#faf7ef;--gold:#dcc481;--ochre:#936a2b;--sage:#e6ece2;--line:#8c998c;--white:#fffdf8;--ok:#2f6b45;--ok-bg:#e3efe4;--bad:#8a3a26;--bad-bg:#f6e2d9;--amber:#b7791f;--amber-bg:#fbefd5;--hero-ink:#e6ece2;--font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;--serif:Georgia,"Times New Roman",serif}
+[data-theme=dark]{--green:#9cc9a8;--ink:#eef0e8;--muted:#c2cdbf;--paper:#172119;--sage:#223126;--line:#5d6f60;--white:#1f2d22;--ok:#9fd3ad;--ok-bg:#1f3a28;--bad:#f2a58f;--bad-bg:#3d2620;--amber:#ecc06a;--amber-bg:#3a3220;--hero-ink:#d9e3d6}
+*{box-sizing:border-box}html,body{margin:0}
+body{padding:16px;background:var(--paper);color:var(--ink);font:16px/1.55 var(--font)}
+main{max-width:1040px;margin:auto}
+h1,h2,h3,p{margin:0}
+h1{font:500 clamp(26px,4vw,36px)/1.15 var(--serif)}
+h2{font:500 22px/1.25 var(--serif)}
+.eyebrow{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700}
+.hero{padding:22px 24px;background:#244A35;color:#faf7ef;border-radius:18px 18px 0 0}
+.hero .eyebrow{color:var(--gold);margin-bottom:8px}
+.hero p.lede{max-width:680px;margin-top:8px;color:var(--hero-ink)}
+.stage{position:relative;aspect-ratio:16/9;background:#1b2a20;overflow:hidden;border:1px solid var(--line);border-top:0}
+@media(max-width:640px){.stage{aspect-ratio:4/5}}
+.stage img.poster,.stage canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.stage canvas{touch-action:none;outline:none}
+.stage canvas:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+.launch{position:absolute;inset:auto 0 0 0;padding:18px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:linear-gradient(transparent,rgba(10,20,14,.72) 45%)}
+.launch p{color:#f5f1e6;font-size:14px;flex:1 1 220px}
+.btn{min-height:48px;min-width:44px;border:1px solid var(--green);border-radius:10px;padding:10px 18px;background:#244A35;color:#fffdf8;font:650 16px var(--font);cursor:pointer}
+[data-theme=dark] .btn{background:var(--green);color:#172119}
+.btn.light{background:#fffdf8;color:#244A35;border-color:#fffdf8}
+.btn.ghost{background:transparent;color:var(--green)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+button:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--ochre);outline-offset:3px}
+.hud{position:absolute;top:10px;right:10px;display:flex;gap:8px}
+.hud .btn{background:rgba(250,247,239,.92);color:#244A35;border-color:transparent;min-height:44px;padding:8px 14px;font-size:14px}
+.snav{position:absolute;left:10px;top:10px;display:flex;gap:8px}.snav .btn{background:rgba(250,247,239,.92);color:#244A35;border-color:transparent;min-height:44px;min-width:48px;padding:8px 12px}
+.progress{position:absolute;inset:auto 18px 18px 18px;background:rgba(10,20,14,.75);color:#fff;border-radius:10px;padding:12px 14px;font-size:14px}
+.bar{height:6px;background:rgba(255,255,255,.25);border-radius:3px;margin-top:8px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--gold)}
+.overlay{position:absolute;left:12px;bottom:12px;max-width:min(360px,calc(100% - 24px));max-height:calc(100% - 76px);overflow:auto;z-index:1}
+.hud,.snav{z-index:2}
+.hold{background:var(--amber-bg);color:var(--ink);border:2px solid var(--amber);border-radius:14px;padding:14px 16px;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.hold .tag{display:inline-block;background:var(--amber);color:#1b1305;font-weight:800;letter-spacing:2px;padding:2px 10px;border-radius:6px;margin-bottom:6px}
+.hold .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.phone{background:#101712;color:#eef0e8;border-radius:26px;padding:14px 14px 16px;border:3px solid #2b3a2f;box-shadow:0 8px 28px rgba(0,0,0,.35);font-size:13.5px;line-height:1.4}
+.phone h3{font:500 17px var(--serif);margin:2px 0 8px}
+.phone ol{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.phone li{background:#1d2a20;border-radius:10px;padding:7px 9px}
+.phone b{color:var(--gold);font-weight:700}.phone small{display:block;color:#a9b8aa;margin-top:2px}
+.phone .amber{color:#f3c66b;font-weight:700}
+.card{background:var(--white);border:1px solid var(--line);border-top:0;border-radius:0 0 16px 16px;padding:20px 22px}
+.card .eyebrow{color:var(--muted);margin-bottom:6px}
+.card h3{font-size:14px;margin:14px 0 2px;color:var(--green);text-transform:uppercase;letter-spacing:1px}
+.card .q{font-weight:650;margin-top:16px}
+.opts{display:grid;gap:8px;margin-top:10px}
+.opt{min-height:48px;text-align:left;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);font:inherit;cursor:pointer}
+.opt.right{border:2px solid var(--ok);background:var(--ok-bg)}.opt.wrong{border:2px solid var(--bad);background:var(--bad-bg)}
+.fb{margin-top:10px;padding:10px 12px;border-radius:10px;background:var(--sage)}
+.nav{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;margin-top:18px;align-items:center}
+.nav .grp{display:flex;gap:10px}
+.dots{display:flex;gap:6px}.dots span{width:10px;height:10px;border-radius:50%;background:var(--line)}.dots span.on{background:var(--green)}
+details{margin-top:14px;border:1px solid var(--line);border-radius:12px;background:var(--white)}
+summary{cursor:pointer;padding:12px 16px;font-weight:650;min-height:44px}
+details .in{padding:0 18px 16px}
+details .in section{border-top:1px solid var(--line);padding-top:12px;margin-top:12px}
+details .in h3{font:500 18px var(--serif);margin-bottom:4px}
+details .in p{margin-top:6px}
+.note{font-size:14px;color:var(--muted);margin-top:10px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <p class="eyebrow">Explore</p>
+    <h1>A farm in 2035</h1>
+    <p class="lede">A five-stop 3D tour of a made-up New Zealand farm, built from the same models as the video. At each stop: what the technology measures, how AI turns it into the morning brief, and one quick question.</p>
+  </header>
+
+  <div class="stage" id="stage">
+    <img class="poster" id="poster" alt="A made-up New Zealand farm at golden hour: an electric tractor and a four-rotor spray drone at the edge of a paddock, with pines and hills behind." src="/api/content/ai-for-farmers-intro/@modules/ai-for-farmers-intro-ai-on-the-farm/assets/farm3d/poster.webp" width="960" height="540" decoding="async">
+    <div class="launch" id="launch">
+      <p id="launch-note">Uses 3D graphics. Downloads about 2.0 MB, so Wi-Fi is best. You can also <a href="#text" id="text-link" style="color:#fff">read the tour as text</a>.</p>
+      <button class="btn light" id="go" type="button">Explore the 2035 farm (≈2.0 MB)</button>
+    </div>
+    <div class="progress" id="progress" hidden role="status" aria-live="polite"><span id="progress-text">Loading the farm…</span><div class="bar"><i id="bar"></i></div></div>
+    <div class="hud" id="hud" hidden>
+      <button class="btn" id="pause" type="button" aria-pressed="false" aria-label="Pause motion">Pause</button>
+      <button class="btn" id="exit" type="button" aria-label="Exit 3D">Exit 3D</button>
+    </div>
+    <div class="snav" id="snav" hidden><button class="btn" id="sback" type="button" aria-label="Previous stop">‹</button><button class="btn" id="snext" type="button" aria-label="Next stop">›</button></div>
+    <div class="overlay" id="hold" hidden>
+      <div class="hold" role="group" aria-labelledby="hold-title">
+        <span class="tag" id="hold-title">HOLD</span>
+        <p><strong>Spraying, 10 am.</strong> Wind picks up after ten. Suggest holding the job.</p>
+        <div class="row"><button class="btn" type="button" data-hold="hold">Hold the job</button><button class="btn ghost" type="button" data-hold="go">Spray anyway</button></div>
+        <p class="note" id="hold-fb" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="overlay" id="phone" hidden>
+      <div class="phone" role="group" aria-label="Morning brief on the phone">
+        <h3>Morning brief · 5:30</h3>
+        <ol id="brief-lines"></ol>
+      </div>
+    </div>
+  </div>
+
+  <section class="card" id="card" aria-live="polite">
+    <div id="card-pre">
+      <p class="eyebrow">What you'll see</p>
+      <p>Satellite and pasture, a soil probe and weather station, collars and a virtual fence, a tractor and spray drone, and the morning brief. Next and Back buttons move between stops, and you can drag to look around at each stop. Keys: arrow keys move between stops, Esc leaves 3D.</p>
+    </div>
+    <div id="card-stop" hidden>
+      <p class="eyebrow" id="c-eyebrow"></p>
+      <h2 id="c-title" tabindex="-1"></h2>
+      <h3>What it measures</h3><p id="c-data"></p>
+      <h3>How AI uses it</h3><p id="c-ai"></p>
+      <p class="q" id="c-q"></p>
+      <div class="opts" id="c-opts"></div>
+      <p class="fb" id="c-fb" hidden></p>
+      <div class="nav">
+        <button class="btn ghost" id="back" type="button">← Back</button>
+        <div class="dots" id="dots" aria-hidden="true"></div>
+        <button class="btn" id="next" type="button">Next →</button>
+      </div>
+    </div>
+    <div id="card-end" hidden>
+      <p class="eyebrow">End of the tour</p>
+      <h2 id="e-title" tabindex="-1"></h2>
+      <p id="e-body" style="margin-top:8px"></p>
+      <div class="nav"><button class="btn ghost" id="again" type="button">Start again</button><button class="btn" id="done" type="button">Back to the lesson</button></div>
+    </div>
+  </section>
+
+  <details id="text">
+    <summary>Read the tour as text</summary>
+    <div class="in" id="text-body"><section><p class="eyebrow">Stop 1 of 5</p><h3>Satellite and pasture</h3><p><strong>What it measures.</strong> Overnight, an earth-observation satellite passed over the farm. Its camera measures how green and thick the grass is, which gives an estimate of pasture cover for every paddock, every few days when the sky is clear.</p><p><strong>How AI uses it.</strong> The AI helper compares this pass with last week's and with the feed plan, then lists the paddocks that are ahead or behind. It also notes how old each reading is.</p><p><strong>Question.</strong> Cloud has hidden the farm for three days. What should the brief do about pasture cover?</p><ul><li>Use the last clear reading and say how old it is</li><li>Make up a figure from the weather</li><li>Leave pasture out and say nothing</li></ul><p><em>Answer:</em> Use the last clear reading and say how old it is. An old number is still useful if the brief is honest about its age, so you know how much to trust it.</p></section><section><p class="eyebrow">Stop 2 of 5</p><h3>Soil probe and weather station</h3><p><strong>What it measures.</strong> The soil probe logs moisture and temperature at several depths every 15 minutes. The weather station on the ridge logs rain, wind, temperature and humidity.</p><p><strong>How AI uses it.</strong> The helper reads them together: how wet the soil is, how much rain fell, and what's forecast. It turns that into one line, for example "soil drying on the flats, growth likely to slow by Thursday".</p><p><strong>Question.</strong> The probe says the soil is dry, but the station logged 20 mm of rain overnight. What should the brief do?</p><ul><li>Trust the rain gauge and ignore the probe</li><li>Flag the mismatch so someone checks the sensors</li><li>Average the two and carry on</li></ul><p><em>Answer:</em> Flag the mismatch so someone checks the sensors. When two sources disagree, the brief should say so. A blocked gauge or a probe that's shifted is worth a look.</p></section><section><p class="eyebrow">Stop 3 of 5</p><h3>Collars and a virtual fence</h3><p><strong>What it measures.</strong> Each animal wears a collar that logs where it is and how much it moves and grazes. The virtual fence is a line drawn on a map. The collar uses sound and a gentle vibration to keep stock on the right side of it.</p><p><strong>How AI uses it.</strong> The helper watches for animals behaving differently from usual, such as grazing less for two days, and suggests when to open the next break of fresh grass.</p><p><strong>Question.</strong> The brief says one cow has been grazing less for two days. What happens next?</p><ul><li>The collar treats the cow</li><li>The farmer checks the cow and decides</li><li>Wait until the data is certain</li></ul><p><em>Answer:</em> The farmer checks the cow and decides. The data says where to look. A person looks at the animal and decides what to do.</p></section><section><p class="eyebrow">Stop 4 of 5</p><h3>Tractor and spray drone</h3><p><strong>What it measures.</strong> The electric tractor started drilling on the river flats at four. It logs where it has been and how much seed went in. The spray drone has a job planned for this morning.</p><p><strong>How AI uses it.</strong> The helper checks the spray job against the wind forecast. The wind picks up after ten, so it flags the job amber: HOLD.</p><p><strong>Question.</strong> Gusts are forecast to rise above the limit on the spray label after ten. What should the brief do?</p><ul><li>Cancel the job by itself</li><li>Suggest holding the job, and let the farmer decide</li><li>Spray faster before the wind arrives</li></ul><p><em>Answer:</em> Suggest holding the job, and let the farmer decide. The helper suggests. The farmer decides, and can see the forecast behind the suggestion.</p></section><section><p class="eyebrow">Stop 5 of 5</p><h3>The morning brief</h3><p><strong>What it measures.</strong> At the gate, everything from the night arrives as one short brief on the phone: feed, water, stock, jobs and paperwork.</p><p><strong>How AI uses it.</strong> Each line points back to where it came from: the satellite, the probe, the collars, the tractor log. Drafted records wait for a tick before they go anywhere.</p><ul><li><strong>Feed:</strong> Paddocks 7 and 12 ahead of plan. Paddock 3 behind. (source: Satellite, 2 days old)</li><li><strong>Water:</strong> Soil drying on the flats. No action today. (source: Soil probe + weather station)</li><li><strong>Stock:</strong> One cow grazing less for 2 days. Check her this morning. (source: Collars)</li><li><strong>Jobs:</strong> Drilling on the flats 60% done. Spraying: HOLD, wind after 10. (source: Tractor log + forecast)</li><li><strong>Records:</strong> 2 drafts ready for your tick. (source: Waiting for you)</li></ul><p><strong>Question.</strong> One line in a brief has no source next to it. What do you do?</p><ul><li>Use it. The other lines checked out</li><li>Check it before you act on it</li><li>Bin the whole brief</li></ul><p><em>Answer:</em> Check it before you act on it. The same habit as the rest of this course: give AI a clear job, then check its answer.</p></section><section><h3>The farmer still makes the calls</h3><p>The technology does the reading. The farmer still makes the calls. Getting there starts smaller than a robot: give AI one clear job, and check its answer. That's what the rest of this lesson is about.</p></section></div>
+  </details>
+  <details>
+    <summary>Credits</summary>
+    <div class="in"><p>Lighting: <em>Nqweba Dawn</em> HDRI by Dario Barresi, Poly Haven, CC0.</p><p>Ground texture: <em>Aerial Grass Rock</em> by Rob Tuytel, Poly Haven, CC0.</p><p>Pine trees: <em>Pine Tree 01</em> by Rico Cilliers and Rob Tuytel, Poly Haven, CC0.</p><p>Sheep and cattle: <em>Farm Animal Pack</em> by Quaternius, CC0.</p><p>Farmer body: derived from the MakeHuman base mesh, MakeHuman Team, CC0 (no face geometry).</p><p>Machines, sensors, shed, gate, dog and landscape: original models made for this course, rendered and baked in Blender Cycles.</p><p>3D engine: three.js r186 (MIT), bundled with the widget.</p><p>No CC BY assets are used in this widget. The video credits are listed with the video.</p></div>
+  </details>
+  <p class="note">A scenario, not a forecast. The farm, the numbers and the brief are made up. Nothing you do here is sent anywhere except anonymous tour events to the course.</p>
+</main>
+<script>
+(() => {
+'use strict';
+const TOUR = {"stops":[{"id":"satellite","title":"Satellite and pasture","eyebrow":"Stop 1 of 5","data":"Overnight, an earth-observation satellite passed over the farm. Its camera measures how green and thick the grass is, which gives an estimate of pasture cover for every paddock, every few days when the sky is clear.","ai":"The AI helper compares this pass with last week's and with the feed plan, then lists the paddocks that are ahead or behind. It also notes how old each reading is.","question":"Cloud has hidden the farm for three days. What should the brief do about pasture cover?","options":[{"text":"Use the last clear reading and say how old it is","correct":true,"feedback":"Right. An old number is still useful if the brief is honest about its age, so you know how much to trust it."},{"text":"Make up a figure from the weather","correct":false,"feedback":"Not quite. A guessed number that looks like a measurement is how bad decisions start. The brief should show the last real reading and its date."},{"text":"Leave pasture out and say nothing","correct":false,"feedback":"Not quite. Silence hides the gap. Better to show the last clear reading and say it's three days old."}]},{"id":"probe","title":"Soil probe and weather station","eyebrow":"Stop 2 of 5","data":"The soil probe logs moisture and temperature at several depths every 15 minutes. The weather station on the ridge logs rain, wind, temperature and humidity.","ai":"The helper reads them together: how wet the soil is, how much rain fell, and what's forecast. It turns that into one line, for example \"soil drying on the flats, growth likely to slow by Thursday\".","question":"The probe says the soil is dry, but the station logged 20 mm of rain overnight. What should the brief do?","options":[{"text":"Trust the rain gauge and ignore the probe","correct":false,"feedback":"Not quite. Either sensor could be wrong. Ignoring one hides a possible fault."},{"text":"Flag the mismatch so someone checks the sensors","correct":true,"feedback":"Right. When two sources disagree, the brief should say so. A blocked gauge or a probe that's shifted is worth a look."},{"text":"Average the two and carry on","correct":false,"feedback":"Not quite. An average of a right and a wrong reading is still wrong. Flag it for a check."}]},{"id":"stock","title":"Collars and a virtual fence","eyebrow":"Stop 3 of 5","data":"Each animal wears a collar that logs where it is and how much it moves and grazes. The virtual fence is a line drawn on a map. The collar uses sound and a gentle vibration to keep stock on the right side of it.","ai":"The helper watches for animals behaving differently from usual, such as grazing less for two days, and suggests when to open the next break of fresh grass.","question":"The brief says one cow has been grazing less for two days. What happens next?","options":[{"text":"The collar treats the cow","correct":false,"feedback":"Not quite. A collar can notice a change. It can't examine or treat an animal."},{"text":"The farmer checks the cow and decides","correct":true,"feedback":"Right. The data says where to look. A person looks at the animal and decides what to do."},{"text":"Wait until the data is certain","correct":false,"feedback":"Not quite. Waiting for certainty can mean waiting too long. The flag is a reason to go and look today."}]},{"id":"spray","title":"Tractor and spray drone","eyebrow":"Stop 4 of 5","data":"The electric tractor started drilling on the river flats at four. It logs where it has been and how much seed went in. The spray drone has a job planned for this morning.","ai":"The helper checks the spray job against the wind forecast. The wind picks up after ten, so it flags the job amber: HOLD.","hold":true,"question":"Gusts are forecast to rise above the limit on the spray label after ten. What should the brief do?","options":[{"text":"Cancel the job by itself","correct":false,"feedback":"Not quite. The helper doesn't make the call. It suggests, and shows why."},{"text":"Suggest holding the job, and let the farmer decide","correct":true,"feedback":"Right. The helper suggests. The farmer decides, and can see the forecast behind the suggestion."},{"text":"Spray faster before the wind arrives","correct":false,"feedback":"Not quite. Rushing a spray job to beat the wind is how drift happens. Follow the label."}]},{"id":"brief","title":"The morning brief","eyebrow":"Stop 5 of 5","data":"At the gate, everything from the night arrives as one short brief on the phone: feed, water, stock, jobs and paperwork.","ai":"Each line points back to where it came from: the satellite, the probe, the collars, the tractor log. Drafted records wait for a tick before they go anywhere.","brief":[["Feed","Paddocks 7 and 12 ahead of plan. Paddock 3 behind.","Satellite, 2 days old"],["Water","Soil drying on the flats. No action today.","Soil probe + weather station"],["Stock","One cow grazing less for 2 days. Check her this morning.","Collars"],["Jobs","Drilling on the flats 60% done. Spraying: HOLD, wind after 10.","Tractor log + forecast"],["Records","2 drafts ready for your tick.","Waiting for you"]],"question":"One line in a brief has no source next to it. What do you do?","options":[{"text":"Use it. The other lines checked out","correct":false,"feedback":"Not quite. Each line stands on its own. A line with no source is a line you can't check."},{"text":"Check it before you act on it","correct":true,"feedback":"Right. The same habit as the rest of this course: give AI a clear job, then check its answer."},{"text":"Bin the whole brief","correct":false,"feedback":"Not quite. One unsourced line doesn't spoil the rest. Check that line before acting on it."}]}],"end":{"title":"The farmer still makes the calls","body":"The technology does the reading. The farmer still makes the calls. Getting there starts smaller than a robot: give AI one clear job, and check its answer. That's what the rest of this lesson is about."}};
+const FILES = [{"name":"farm3d.js","file":"farm3d.js.gz","gz":true,"type":"text/javascript"},{"name":"basis_transcoder.js","file":"basis_transcoder.js.gz","gz":true},{"name":"basis_transcoder.wasm","file":"basis_transcoder.wasm.gz","gz":true},{"name":"cow.glb","file":"cow.glb.gz","gz":true},{"name":"dog.glb","file":"dog.glb.gz","gz":true},{"name":"farmer.glb","file":"farmer.glb.gz","gz":true},{"name":"gate.glb","file":"gate.glb.gz","gz":true},{"name":"satellite.glb","file":"satellite.glb.gz","gz":true},{"name":"shed.glb","file":"shed.glb.gz","gz":true},{"name":"sheep.glb","file":"sheep.glb.gz","gz":true},{"name":"soil_probe.glb","file":"soil_probe.glb.gz","gz":true},{"name":"spray_drone.glb","file":"spray_drone.glb.gz","gz":true},{"name":"terrain.glb","file":"terrain.glb.gz","gz":true},{"name":"tractor.glb","file":"tractor.glb.gz","gz":true},{"name":"weather_station.glb","file":"weather_station.glb.gz","gz":true},{"name":"terrain_baked.ktx2","file":"terrain_baked.ktx2","gz":false},{"name":"ground_detail.ktx2","file":"ground_detail.ktx2","gz":false},{"name":"pine_atlas.ktx2","file":"pine_atlas.ktx2","gz":false},{"name":"pano.webp","file":"pano.webp","gz":false,"type":"image/webp"},{"name":"env.hdr","file":"env.hdr.gz","gz":true},{"name":"world.json","file":"world.json.gz","gz":true,"type":"application/json"}];
+const BUILD = {"bytes":1964005,"pine":{"height":20.396811850368977,"radius":4.4583892822265625,"zmin":-0.08023393899202347,"ortho":21.212684631347656,"views":8},"defaultBackend":"auto","built":"2026-10-10T10:09:31.082Z"};
+const $ = (id) => document.getElementById(id);
+const qs = new URLSearchParams(location.search);
+let props = {};
+try { props = JSON.parse(qs.get('props') || '{}') || {}; } catch (e) {}
+const theme = qs.get('theme');
+if (theme === 'dark' || theme === 'light') document.documentElement.dataset.theme = theme;
+const DEFAULT_BASE = '/api/content/ai-for-farmers-intro/@modules/ai-for-farmers-intro-ai-on-the-farm/assets/farm3d/';
+const base = (typeof props.assets === 'string' && /^\/[\w@%./-]+\/$/.test(props.assets)) ? props.assets : (qs.get('assets') && /^\/[\w@%./-]+\/$/.test(qs.get('assets')) ? qs.get('assets') : DEFAULT_BASE);
+// Forward the course access/environment params to asset requests (same as the lesson's own media).
+const fwd = new URLSearchParams();
+for (const k of ['env', 'branch', 'payload', 'sig', 'signature']) if (qs.get(k)) fwd.set(k, qs.get(k));
+const assetURL = (f) => base + f + (fwd.toString() ? '?' + fwd : '');
+const parentOrigin = (location.ancestorOrigins && location.ancestorOrigins[0]) || (document.referrer ? new URL(document.referrer).origin : location.origin);
+const post = (msg) => { try { if (window.parent !== window) window.parent.postMessage(msg, parentOrigin); } catch (e) {} };
+const track = (event, params) => post({ type: 'widget-event', widget: 'farm-2035', event, params: params || {} });
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Height reporting for the course iframe.
+let lastH = 0;
+const report = () => { const h = Math.ceil(document.documentElement.scrollHeight); if (h !== lastH) { lastH = h; post({ type: 'widget-resize', height: h }); } };
+new ResizeObserver(report).observe(document.body);
+window.addEventListener('message', (e) => {
+  if (e.source !== window.parent || !e.data || e.data.type !== 'widget-theme') return;
+  if (e.data.theme === 'dark' || e.data.theme === 'light') document.documentElement.dataset.theme = e.data.theme;
+});
+
+// Brief lines (phone overlay + text version share them).
+const briefStop = TOUR.stops.find((s) => s.brief);
+$('brief-lines').innerHTML = briefStop.brief.map(([k, v, src]) => `<li><b>${k}</b> ${v.replace('HOLD', '<span class="amber">HOLD</span>')}<small>Source: ${src}</small></li>`).join('');
+
+// Capability check: without WebGL2 or streams decompression, offer the text tour only.
+const canvasTest = document.createElement('canvas');
+const has3D = !!(window.WebGL2RenderingContext && canvasTest.getContext('webgl2')) && 'DecompressionStream' in window;
+if (!has3D) {
+  $('go').hidden = true;
+  $('launch-note').textContent = 'The 3D tour needs a newer browser. The full tour is below as text.';
+  $('text').open = true;
+}
+$('poster').src = assetURL('poster.webp');
+$('text-link').addEventListener('click', (e) => { e.preventDefault(); $('text').open = true; $('text').querySelector('summary').focus(); report(); });
+
+let farm = null, idx = -1, answered = {}, loading = false;
+const dots = $('dots');
+dots.innerHTML = TOUR.stops.map(() => '<span></span>').join('');
+
+async function fetchAll(onBytes) {
+  const out = {};
+  let done = 0;
+  await Promise.all(FILES.map(async (f) => {
+    const res = await fetch(assetURL(f.file), { credentials: 'same-origin' });
+    if (!res.ok) throw new Error(f.file + ' ' + res.status);
+    const reader = res.body.getReader();
+    const chunks = [];
+    for (;;) { const { done: d, value } = await reader.read(); if (d) break; chunks.push(value); done += value.length; onBytes(done); }
+    let blob = new Blob(chunks);
+    if (f.gz) blob = await new Response(blob.stream().pipeThrough(new DecompressionStream('gzip'))).blob();
+    out[f.name] = URL.createObjectURL(new Blob([blob], { type: f.type || 'application/octet-stream' }));
+  }));
+  return out;
+}
+
+function showStop(i, from) {
+  if (!farm) return;
+  if (i >= TOUR.stops.length) return showEnd();
+  i = Math.max(0, i);
+  idx = i;
+  const s = TOUR.stops[i];
+  $('card-pre').hidden = true; $('card-end').hidden = true; $('card-stop').hidden = false;
+  $('c-eyebrow').textContent = s.eyebrow; $('c-title').textContent = s.title;
+  $('c-data').textContent = s.data; $('c-ai').textContent = s.ai; $('c-q').textContent = s.question;
+  const opts = $('c-opts'); opts.innerHTML = '';
+  s.options.forEach((o, k) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'opt'; b.textContent = o.text;
+    b.addEventListener('click', () => answer(i, k));
+    opts.appendChild(b);
+  });
+  $('c-fb').hidden = true;
+  if (answered[i] !== undefined) answer(i, answered[i], true);
+  $('back').disabled = i === 0; $('sback').disabled = i === 0;
+  $('next').textContent = i === TOUR.stops.length - 1 ? 'Finish →' : 'Next →';
+  [...dots.children].forEach((d, k) => d.classList.toggle('on', k === i));
+  $('hold').hidden = !s.hold; $('hold-fb').textContent = '';
+  $('phone').hidden = !s.brief;
+  farm.goTo(i);
+  track('farm3d_tour_stop', { stop: s.id, index: i + 1, from: from || 'nav' });
+  if (from !== 'start' && from !== 'stage' && from !== 'key') $('c-title').focus({ preventScroll: true });
+  report();
+}
+function answer(i, k, silent) {
+  const s = TOUR.stops[i], o = s.options[k];
+  answered[i] = k;
+  [...$('c-opts').children].forEach((b, n) => { b.classList.toggle('right', n === k && o.correct); b.classList.toggle('wrong', n === k && !o.correct); b.setAttribute('aria-pressed', n === k ? 'true' : 'false'); });
+  const fb = $('c-fb'); fb.hidden = false; fb.textContent = o.feedback;
+  if (!silent) track('farm3d_question_answered', { stop: s.id, correct: !!o.correct, choice: k + 1 });
+  report();
+}
+function showEnd() {
+  idx = TOUR.stops.length;
+  $('card-stop').hidden = true; $('card-end').hidden = false;
+  $('hold').hidden = true; $('phone').hidden = true;
+  $('e-title').textContent = TOUR.end.title; $('e-body').textContent = TOUR.end.body;
+  $('e-title').focus({ preventScroll: true });
+  track('farm3d_tour_stop', { stop: 'end', index: TOUR.stops.length + 1 });
+  report();
+}
+function exit3D(reason) {
+  if (farm) { try { farm.dispose(); } catch (e) {} farm = null; }
+  const c = $('stage').querySelector('canvas'); if (c) c.remove();
+  $('poster').hidden = false; $('launch').hidden = false; $('hud').hidden = true; $('snav').hidden = true; $('hold').hidden = true; $('phone').hidden = true; $('progress').hidden = true;
+  $('card-stop').hidden = true; $('card-end').hidden = true; $('card-pre').hidden = false;
+  if (reason) { $('launch-note').textContent = reason; $('text').open = true; }
+  $('go').focus({ preventScroll: true });
+  report();
+}
+async function launch() {
+  if (loading || farm) return;
+  loading = true;
+  track('farm3d_load_tap', { bytes: BUILD.bytes });
+  const t0 = performance.now();
+  $('launch').hidden = true; $('progress').hidden = false;
+  const total = BUILD.bytes;
+  try {
+    const urls = await fetchAll((n) => { const p = Math.min(100, Math.round(n / total * 100)); $('bar').style.width = p + '%'; $('progress-text').textContent = 'Loading the farm… ' + p + '%'; });
+    $('progress-text').textContent = 'Building the scene…';
+    const [mod, world] = await Promise.all([import(urls['farm3d.js']), fetch(urls['world.json']).then((r) => r.json())]);
+    const canvas = document.createElement('canvas');
+    canvas.tabIndex = 0;
+    canvas.setAttribute('role', 'img');
+    canvas.setAttribute('aria-label', '3D view of the farm. Drag to look around. Use the Next and Back buttons, or the arrow keys, to move between stops.');
+    $('stage').insertBefore(canvas, $('launch'));
+    const backend = qs.get('backend') || props.backend || BUILD.defaultBackend;
+    farm = await mod.createFarm({
+      canvas, urls, world, pine: BUILD.pine, backend, tier: qs.get('tier') || undefined, reducedMotion: reduced,
+      exposure: qs.has('exp') ? +qs.get('exp') : undefined, sunScale: qs.has('sun') ? +qs.get('sun') : undefined, envScale: qs.has('envs') ? +qs.get('envs') : undefined, groundSat: qs.has('sat') ? +qs.get('sat') : undefined,
+      onProgress: (s) => console.info('farm3d stage', s, Math.round(performance.now() - t0)),
+      onEvent: (type, d) => {
+        if (type === 'lost') { track('farm3d_error', { kind: 'context_lost', detail: String(d.why).slice(0, 80) }); exit3D('The 3D view stopped (the graphics driver reset it). The full tour is below as text, or try again.'); }
+      },
+    });
+    $('poster').hidden = true; $('progress').hidden = true; $('hud').hidden = false; $('snav').hidden = false;
+    $('pause').textContent = farm.paused ? 'Play' : 'Pause'; $('pause').setAttribute('aria-label', farm.paused ? 'Play motion' : 'Pause motion');
+    $('pause').setAttribute('aria-pressed', farm.paused ? 'true' : 'false');
+    const info = farm.info();
+    track('farm3d_ready', { ms: Math.round(performance.now() - t0), backend: info.backend, tier: info.tier });
+    window.__farm3d = farm;
+    showStop(0, 'start');
+    $('c-title').focus({ preventScroll: true });
+  } catch (err) {
+    console.error(err);
+    track('farm3d_error', { kind: 'load', detail: String(err && err.message || err).slice(0, 80) });
+    exit3D('The 3D tour could not load on this device. The full tour is below as text.');
+  } finally {
+    loading = false;
+  }
+}
+$('go').addEventListener('click', launch);
+$('next').addEventListener('click', () => showStop(idx + 1));
+$('back').addEventListener('click', () => showStop(idx - 1));
+$('snext').addEventListener('click', () => { if (idx < TOUR.stops.length) showStop(idx + 1, 'stage'); });
+$('sback').addEventListener('click', () => { if (idx > 0) showStop(Math.min(idx, TOUR.stops.length) - 1, 'stage'); });
+$('again').addEventListener('click', () => { answered = {}; showStop(0); });
+$('done').addEventListener('click', () => { track('farm3d_tour_stop', { stop: 'done' }); exit3D(); $('launch-note').textContent = 'Tour finished. Carry on with the lesson below.'; });
+$('exit').addEventListener('click', () => exit3D());
+$('pause').addEventListener('click', () => {
+  if (!farm) return;
+  farm.setPaused(!farm.paused);
+  $('pause').textContent = farm.paused ? 'Play' : 'Pause'; $('pause').setAttribute('aria-label', farm.paused ? 'Play motion' : 'Pause motion');
+  $('pause').setAttribute('aria-pressed', farm.paused ? 'true' : 'false');
+});
+document.querySelectorAll('[data-hold]').forEach((b) => b.addEventListener('click', () => {
+  const hold = b.dataset.hold === 'hold';
+  $('hold-fb').textContent = hold ? 'Held. The job moves to the next calm morning, and the brief says why.' : 'Your call. The brief records that you chose to go ahead, with the forecast attached.';
+  track('farm3d_hold_choice', { choice: hold ? 'hold' : 'go' });
+}));
+document.addEventListener('keydown', (e) => {
+  if (!farm) return;
+  if (e.target && /INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+  if (e.key === 'ArrowRight' && idx < TOUR.stops.length) { e.preventDefault(); showStop(idx + 1, 'key'); }
+  else if (e.key === 'ArrowLeft' && idx > 0) { e.preventDefault(); showStop(Math.min(idx, TOUR.stops.length) - 1, 'key'); }
+  else if (e.key === 'Escape') { e.preventDefault(); exit3D(); }
+});
+post({ type: 'widget-ready' });
+report();
+})();
+</script>
+</body>
+</html>
