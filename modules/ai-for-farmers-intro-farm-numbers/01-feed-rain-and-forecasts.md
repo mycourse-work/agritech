@@ -9,15 +9,19 @@
 <details>
 <summary>Read the video transcript</summary>
 
-A number can look precise while answering the wrong question. Example Station has observed rain of ten millimetres yesterday and forecast rain of twenty tomorrow. Today's reading is missing. Keep those periods and evidence types separate. Thirty millimetres received would be an unsupported summary.
+Tuesday night. The farm walk's done, the covers are on your phone, nobody checked the rain gauge on Monday, and a kill sheet's just landed in your inbox.
 
-Our invented feed worksheet starts with one thousand kilograms of dry matter, adds one hundred and subtracts five hundred of expected use. The arithmetic gives six hundred. Check the sum yourself. Then ask whether the inputs are measurements or assumptions before using a real feed plan.
+Paste your notes into ChatGPT, Copilot, Gemini or Claude and ask for a table. In seconds you've got every paddock sorted by cover, in kilograms of dry matter per hectare, ready for the feed wedge.
 
-A document reader can miss a decimal or fill a blurred row. In our packing extract, twenty pieces and thirty pieces give a clear-row subtotal of fifty. The full total remains unknown. Check extracted figures against their exact rows and obtain a readable source for missing details.
+Ask it to show the sum and what it divided by, and you can check the average on your phone in ten seconds.
 
-Different apps may use different dates, names, periods and units. Keep original exports and propose uncertain matches for review. Check a repeated event before removing a duplicate from a working copy. A current snapshot cannot establish a trend, and an unusual sensor reading needs investigation.
+Here's the catch. The paddock you didn't walk can come back as zero, and the average drops to a cover that still looks believable. Thursday's forecast gets added to the rain that's already fallen. On the kill sheet, a condemned carcass slips into the average and a downgrade note disappears.
 
-Before uploading real files, check permissions and provider terms. Entered records and derived summaries may have different rights.
+So check every number against its row. Ask for the paddocks or tags behind each figure. A blank means not recorded, never zero, and a forecast stays a forecast.
+
+Before you paste anything, check the tool's data settings, and leave out what the job doesn't need, like staff phone numbers and health notes.
+
+Next, check an AI summary of a kill sheet against the sheet itself.
 
 </details>
 

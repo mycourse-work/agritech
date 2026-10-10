@@ -1,117 +1,95 @@
 WEBVTT
 
-1
-00:00:00.600 --> 00:00:05.709
-A number can look precise while answering
-the wrong question.
+00:00:01.200 --> 00:00:03.720
+Tuesday night. The farm walk's done,
 
-2
-00:00:05.709 --> 00:00:11.840
-Example Station has observed rain of ten
-millimetres yesterday and forecast rain
+00:00:03.760 --> 00:00:05.510
+the covers are on your phone,
 
-3
-00:00:11.840 --> 00:00:13.373
-of twenty tomorrow.
+00:00:05.550 --> 00:00:07.960
+nobody checked the
+rain gauge on Monday,
 
-4
-00:00:13.373 --> 00:00:15.416
-Today's reading is missing.
+00:00:08.000 --> 00:00:10.710
+and a kill sheet's just
+landed in your inbox.
 
-5
-00:00:15.416 --> 00:00:18.993
-Keep those periods and evidence types
-separate.
+00:00:12.200 --> 00:00:15.480
+Paste your notes into
+ChatGPT, Copilot,
 
-6
-00:00:18.993 --> 00:00:23.080
-Thirty millimetres received would be an
-unsupported summary.
+00:00:15.520 --> 00:00:17.900
+Gemini or Claude and ask for a table.
 
-7
-00:00:23.880 --> 00:00:29.786
-Our invented feed worksheet starts with
-one thousand kilograms of dry matter,
+00:00:18.280 --> 00:00:21.460
+In seconds you've got every
+paddock sorted by cover,
 
-8
-00:00:29.786 --> 00:00:34.708
-adds one hundred and subtracts five
-hundred of expected use.
+00:00:21.500 --> 00:00:23.850
+in kilograms of dry
+matter per hectare,
 
-9
-00:00:34.708 --> 00:00:37.169
-The arithmetic gives six hundred.
+00:00:23.890 --> 00:00:25.400
+ready for the feed wedge.
 
-10
-00:00:37.169 --> 00:00:39.137
-Check the sum yourself.
+00:00:25.800 --> 00:00:28.820
+Ask it to show the sum
+and what it divided by,
 
-11
-00:00:39.137 --> 00:00:45.043
-Then ask whether the inputs are
-measurements or assumptions before using a
+00:00:28.860 --> 00:00:32.410
+and you can check the average
+on your phone in ten seconds.
 
-12
-00:00:45.043 --> 00:00:46.520
-real feed plan.
+00:00:34.200 --> 00:00:35.540
+Here's the catch.
 
-13
-00:00:47.320 --> 00:00:52.937
-A document reader can miss a decimal or
-fill a blurred row.
+00:00:35.580 --> 00:00:38.640
+The paddock you didn't walk
+can come back as zero,
 
-14
-00:00:52.937 --> 00:00:58.554
-In our packing extract, twenty pieces and
-thirty pieces give a clear-row
+00:00:38.680 --> 00:00:42.350
+and the average drops to a cover
+that still looks believable.
 
-15
-00:00:58.554 --> 00:00:59.958
-subtotal of fifty.
+00:00:43.140 --> 00:00:47.060
+Thursday's forecast gets added to
+the rain that's already fallen.
 
-16
-00:00:59.958 --> 00:01:02.299
-The full total remains unknown.
+00:00:47.400 --> 00:00:51.070
+On the kill sheet, a condemned
+carcass slips into the average
 
-17
-00:01:02.299 --> 00:01:07.916
-Check extracted figures against their
-exact rows and obtain a readable source
+00:00:51.110 --> 00:00:53.040
+and a downgrade note disappears.
 
-18
-00:01:07.916 --> 00:01:09.320
-for missing details.
+00:00:54.200 --> 00:00:56.760
+So check every number against its row.
 
-19
-00:01:10.120 --> 00:01:15.240
-Different apps may use different dates,
-names, periods and units.
+00:00:57.260 --> 00:01:00.200
+Ask for the paddocks or
+tags behind each figure.
 
-20
-00:01:15.240 --> 00:01:19.848
-Keep original exports and propose
-uncertain matches for review.
+00:01:00.660 --> 00:01:03.960
+A blank means not
+recorded, never zero,
 
-21
-00:01:19.848 --> 00:01:25.992
-Check a repeated event before removing a
-duplicate from a working copy.
+00:01:04.000 --> 00:01:06.040
+and a forecast stays a forecast.
 
-22
-00:01:25.992 --> 00:01:32.648
-A current snapshot cannot establish a
-trend, and an unusual sensor reading needs
+00:01:07.400 --> 00:01:09.160
+Before you paste anything,
 
-23
-00:01:32.648 --> 00:01:33.160
-investigation.
+00:01:09.200 --> 00:01:11.070
+check the tool's data settings,
 
-24
-00:01:33.960 --> 00:01:37.805
-Before uploading real files, check
-permissions and provider terms.
+00:01:11.110 --> 00:01:13.520
+and leave out what
+the job doesn't need,
 
-25
-00:01:37.805 --> 00:01:41.651
-Entered records and derived summaries may
-have different rights.
+00:01:13.560 --> 00:01:16.090
+like staff phone numbers
+and health notes.
+
+00:01:18.000 --> 00:01:22.160
+Next, check an AI summary of a kill
+sheet against the sheet itself.
