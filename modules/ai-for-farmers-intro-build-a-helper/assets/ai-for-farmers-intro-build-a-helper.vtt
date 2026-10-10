@@ -1,168 +1,93 @@
 WEBVTT
 
-1
-00:00:00.600 --> 00:00:05.699
-Build a small helper that answers document
-questions and drafts short responses
+00:00:01.200 --> 00:00:04.640
+It's five in the morning,
+Priya's second week on the farm,
 
-2
-00:00:05.699 --> 00:00:06.548
-for review.
+00:00:04.680 --> 00:00:06.640
+and she's got a question.
 
-3
-00:00:06.548 --> 00:00:11.222
-Begin with the job and the documents in
-any suitable tool.
+00:00:06.680 --> 00:00:08.960
+Jack's busy in the shed.
 
-4
-00:00:11.222 --> 00:00:14.196
-Our Example Station capstone uses invented
-files.
+00:00:09.000 --> 00:00:11.500
+She asks the farm helper on her phone.
 
-5
-00:00:14.196 --> 00:00:19.295
-It does not send messages, change records
-or give permission for operational
+00:00:11.540 --> 00:00:14.420
+It answers from the farm's
+own equipment list.
 
-6
-00:00:19.295 --> 00:00:19.720
-work.
+00:00:14.460 --> 00:00:18.120
+Take the key off the board,
+hang the red tag, tell Jack.
 
-7
-00:00:20.520 --> 00:00:24.936
-Select the visitor handbook, task notes
-and equipment note.
+00:00:18.160 --> 00:00:21.840
+And it shows her where that
+came from, so she can check.
 
-8
-00:00:24.936 --> 00:00:27.389
-Check versions and readable text.
+00:00:23.000 --> 00:00:24.720
+A helper is an AI assistant
 
-9
-00:00:27.389 --> 00:00:34.259
-The handbook tells visitors to wait at the
-office, while the task notes say
+00:00:24.760 --> 00:00:29.060
+you load with your own farm
+documents and a few standing rules.
 
-10
-00:00:34.259 --> 00:00:34.749
-workshop.
+00:00:29.100 --> 00:00:31.120
+Answer only from the documents.
 
-11
-00:00:34.749 --> 00:00:36.712
-Keep that conflict visible.
+00:00:31.160 --> 00:00:35.100
+Say where the answer came from.
+Say when something's missing.
 
-12
-00:00:36.712 --> 00:00:42.600
-A more recent date alone does not
-establish which instruction is authorised.
+00:00:37.000 --> 00:00:38.420
+Here's the catch.
 
-13
-00:00:43.400 --> 00:00:48.182
-Write instructions for short answers with
-the filename and section.
+00:00:38.460 --> 00:00:42.080
+The handbook says visitors
+sign in at the dairy office.
 
-14
-00:00:48.182 --> 00:00:53.921
-Ask the helper to show missing information
-and flag conflicts for the
+00:00:42.120 --> 00:00:45.260
+This week's jobs list
+says the implement shed.
 
-15
-00:00:53.921 --> 00:00:54.399
-supervisor.
+00:00:45.300 --> 00:00:46.700
+Nobody spotted it.
 
-16
-00:00:54.399 --> 00:00:56.790
-Documents are evidence to examine.
+00:00:46.740 --> 00:00:49.740
+Ask the helper and it
+picks one, sounds sure,
 
-17
-00:00:56.790 --> 00:01:03.485
-A sentence inside a file telling the
-helper to ignore its checks must not
+00:00:49.780 --> 00:00:52.900
+and the vet ends up
+waiting at the wrong shed.
 
-18
-00:01:03.485 --> 00:01:04.920
-replace your instructions.
+00:00:56.500 --> 00:01:00.680
+So before anyone relies on
+it, test three questions.
 
-19
-00:01:05.720 --> 00:01:09.128
-Amazon Quick is an optional worked
-example.
+00:01:00.720 --> 00:01:02.440
+One the documents answer.
 
-20
-00:01:09.128 --> 00:01:14.483
-Its public documentation describes Spaces
-for knowledge and custom chat agents.
+00:01:02.480 --> 00:01:05.040
+One they don't, like
+a withholding period,
 
-21
-00:01:14.483 --> 00:01:21.298
-Add the invented files to a practice
-Space, link that knowledge to the agent
+00:01:05.080 --> 00:01:07.440
+where it has to say it isn't there.
 
-22
-00:01:21.298 --> 00:01:23.245
-and test in preview.
+00:01:07.480 --> 00:01:09.880
+And one where two documents disagree,
 
-23
-00:01:23.245 --> 00:01:25.679
-Check current menus and permissions.
+00:01:09.920 --> 00:01:13.580
+where it should show both
+and send you to the boss.
 
-24
-00:01:25.679 --> 00:01:28.600
-The local simulator needs no account.
+00:01:16.000 --> 00:01:18.100
+The jobs list changes every week,
 
-25
-00:01:29.400 --> 00:01:32.579
-Ask whether Tuesday's inspection is
-booked.
+00:01:18.140 --> 00:01:21.940
+so run the same three questions
+every time a document changes.
 
-26
-00:01:32.579 --> 00:01:36.287
-The task notes say requested and
-unconfirmed.
-
-27
-00:01:36.287 --> 00:01:38.936
-Ask for a chemical rate.
-
-28
-00:01:38.936 --> 00:01:41.585
-The supplied documents contain none.
-
-29
-00:01:41.585 --> 00:01:43.704
-Ask where visitors wait.
-
-30
-00:01:43.704 --> 00:01:50.591
-The helper should show the office and
-workshop conflict and ask the supervisor,
-
-31
-00:01:50.591 --> 00:01:53.240
-without choosing an unsupported answer.
-
-32
-00:01:54.040 --> 00:01:57.686
-Record the question, answer, source and
-correction.
-
-33
-00:01:57.686 --> 00:02:01.332
-Open every citation and check its words.
-
-34
-00:02:01.332 --> 00:02:03.936
-Repeat failed tests after changes.
-
-35
-00:02:03.936 --> 00:02:08.624
-Finish with a specification and the three
-test records.
-
-36
-00:02:08.624 --> 00:02:15.916
-Give a real helper an owner and review
-date, then repeat the checks when
-
-37
-00:02:15.916 --> 00:02:18.520
-documents or access settings change.
+00:01:21.980 --> 00:01:24.300
+Then hand it to the team.

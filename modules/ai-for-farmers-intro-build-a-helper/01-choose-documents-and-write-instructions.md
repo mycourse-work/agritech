@@ -9,17 +9,17 @@
 <details>
 <summary>Read the video transcript</summary>
 
-Build a small helper that answers document questions and drafts short responses for review. Begin with the job and the documents in any suitable tool. Our Example Station capstone uses invented files. It does not send messages, change records or give permission for operational work.
+It's five in the morning, Priya's second week on the farm, and she's got a question. Jack's busy in the shed.
 
-Select the visitor handbook, task notes and equipment note. Check versions and readable text. The handbook tells visitors to wait at the office, while the task notes say workshop. Keep that conflict visible. A more recent date alone does not establish which instruction is authorised.
+She asks the farm helper on her phone. It answers from the farm's own equipment list. Take the key off the board, hang the red tag, tell Jack. And it shows her where that came from, so she can check.
 
-Write instructions for short answers with the filename and section. Ask the helper to show missing information and flag conflicts for the supervisor. Documents are evidence to examine. A sentence inside a file telling the helper to ignore its checks must not replace your instructions.
+A helper is an AI assistant you load with your own farm documents and a few standing rules. Answer only from the documents. Say where the answer came from. Say when something's missing.
 
-Amazon Quick is an optional worked example. Its public documentation describes Spaces for knowledge and custom chat agents. Add the invented files to a practice Space, link that knowledge to the agent and test in preview. Check current menus and permissions. The local simulator needs no account.
+Here's the catch. The handbook says visitors sign in at the dairy office. This week's jobs list says the implement shed. Nobody spotted it. Ask the helper and it picks one, sounds sure, and the vet ends up waiting at the wrong shed.
 
-Ask whether Tuesday's inspection is booked. The task notes say requested and unconfirmed. Ask for a chemical rate. The supplied documents contain none. Ask where visitors wait. The helper should show the office and workshop conflict and ask the supervisor, without choosing an unsupported answer.
+So before anyone relies on it, test three questions. One the documents answer. One they don't, like a withholding period, where it has to say it isn't there. And one where two documents disagree, where it should show both and send you to the boss.
 
-Record the question, answer, source and correction. Open every citation and check its words. Repeat failed tests after changes. Finish with a specification and the three test records. Give a real helper an owner and review date, then repeat the checks when documents or access settings change.
+The jobs list changes every week, so run the same three questions every time a document changes. Then hand it to the team.
 
 </details>
 
