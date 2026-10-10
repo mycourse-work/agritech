@@ -3,27 +3,8 @@
 <video controls poster="/api/content/ai-for-farmers-intro/@modules/ai-for-farmers-intro-ai-on-the-farm/assets/ai-for-farmers-intro-ai-on-the-farm-poster.jpg" playsinline preload="metadata" aria-label="Module 1: AI on the farm" style="width: 100%; max-width: 800px; border-radius: 12px; margin: 1.5rem auto; display: block;">
   <source src="./assets/ai-for-farmers-intro-ai-on-the-farm.mp4" type="video/mp4">
   <track kind="captions" src="./assets/ai-for-farmers-intro-ai-on-the-farm.vtt" srclang="en-NZ" label="English (NZ)" default>
-  Read the transcript below if the video is unavailable.
+  Your browser cannot play this video.
 </video>
-
-<details>
-<summary>Read the video transcript</summary>
-
-Nine at night, middle of calving. There's a new relief milker starting Monday, and your notes on the shed routine are half a page of scribble.
-
-This is where an AI chat tool earns its keep. ChatGPT, Copilot, Gemini or Claude. Type or say your rough notes, and ask for a short, friendly text.
-
-A few seconds later you've got a clear message, every fact from your notes, and a version in their first language if you need it. Rosters, meeting notes, a summary of a long contract: same idea.
-
-Here's the catch. Your note for the fencing contractor says Tuesday would suit. Nothing's booked. The draft comes back: "Just confirming you're booked in for 8 am Tuesday."
-
-It reads fine. But nobody booked anything, and nobody said 8 am. The tool wrote what contractor texts usually say. Send it, and Tom turns up for a job he never agreed to.
-
-So before anything goes out, put the draft beside your notes. Check every date, name, number and promise. If you can't point to it in your notes, take it out or turn it into a question.
-
-Let it write the first draft. You check it, and you send it.
-
-</details>
 
 It's nine at night in the second week of calving. A relief milker starts Monday and your notes on the shed routine are half a page of scribble. An AI chat tool can turn them into a clear message in a couple of minutes.
 

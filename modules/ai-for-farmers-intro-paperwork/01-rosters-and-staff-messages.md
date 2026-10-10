@@ -3,27 +3,8 @@
 <video controls poster="/api/content/ai-for-farmers-intro/@modules/ai-for-farmers-intro-paperwork/assets/ai-for-farmers-intro-paperwork-poster.jpg" playsinline preload="metadata" aria-label="Module 2: Farm paperwork made easier" style="width: 100%; max-width: 800px; border-radius: 12px; margin: 1.5rem auto; display: block;">
   <source src="./assets/ai-for-farmers-intro-paperwork.mp4" type="video/mp4">
   <track kind="captions" src="./assets/ai-for-farmers-intro-paperwork.vtt" srclang="en-NZ" label="English (NZ)" default>
-  Read the transcript below if the video is unavailable.
+  Your browser cannot play this video.
 </video>
-
-<details>
-<summary>Read the video transcript</summary>
-
-Sunday night, second week of calving. The roster for the week has to be on the shed wall before the five o'clock milking.
-
-It's all there. Who's off, who can't do Thursday afternoon, when the relief milker's free. It's just in a mess.
-
-Give ChatGPT, Copilot, Gemini or Claude the availability and the rules. Two on every milking. Ben always paired up. A minute later you've got a clean roster, and a message for the staff group chat.
-
-Now look at Sunday afternoon. The roster says Tom, the relief milker. Your note says Tom hasn't confirmed. The slot was empty and his name was close by, so the AI filled it in. It looks finished, but it's a guess.
-
-So ask for gaps, not guesses. Tell it to write "uncovered" when nobody's free, and check every name against your note before the roster goes up.
-
-It's the same with a neighbour spray notice or the shed notebook. If the start time isn't set, the draft says confirm. If the seal swap is planned for Saturday, the log doesn't call it done.
-
-AI does the drafting. The facts, and the final say, stay with you.
-
-</details>
 
 It's Sunday night, second week of calving. The roster has to be on the shed wall before the 5 am milking, and what you need to write it is spread across a text thread and the back of an envelope.
 

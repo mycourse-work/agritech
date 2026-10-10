@@ -3,25 +3,8 @@
 <video controls poster="/api/content/ai-for-farmers-intro/@modules/ai-for-farmers-intro-build-a-helper/assets/ai-for-farmers-intro-build-a-helper-poster.jpg" playsinline preload="metadata" aria-label="Module 4: Build your own farm helper" style="width: 100%; max-width: 800px; border-radius: 12px; margin: 1.5rem auto; display: block;">
   <source src="./assets/ai-for-farmers-intro-build-a-helper.mp4" type="video/mp4">
   <track kind="captions" src="./assets/ai-for-farmers-intro-build-a-helper.vtt" srclang="en-NZ" label="English (NZ)" default>
-  Read the transcript below if the video is unavailable.
+  Your browser cannot play this video.
 </video>
-
-<details>
-<summary>Read the video transcript</summary>
-
-It's five in the morning, Priya's second week on the farm, and she's got a question. Jack's busy in the shed.
-
-She asks the farm helper on her phone. It answers from the farm's own equipment list. Take the key off the board, hang the red tag, tell Jack. And it shows her where that came from, so she can check.
-
-A helper is an AI assistant you load with your own farm documents and a few standing rules. Answer only from the documents. Say where the answer came from. Say when something's missing.
-
-Here's the catch. The handbook says visitors sign in at the dairy office. This week's jobs list says the implement shed. Nobody spotted it. Ask the helper and it picks one, sounds sure, and the vet ends up waiting at the wrong shed.
-
-So before anyone relies on it, test three questions. One the documents answer. One they don't, like a withholding period, where it has to say it isn't there. And one where two documents disagree, where it should show both and send you to the boss.
-
-The jobs list changes every week, so run the same three questions every time a document changes. Then hand it to the team.
-
-</details>
 
 A new worker asks the same questions all month. Where does the vet sign in? Who do I tell about a flat tyre? Can this cow's milk go in the vat? A farm helper answers them on a phone at 5 am, straight from your own farm documents, so nobody has to stop work to explain.
 

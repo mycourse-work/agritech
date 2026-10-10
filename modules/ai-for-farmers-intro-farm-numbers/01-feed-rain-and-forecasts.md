@@ -3,27 +3,8 @@
 <video controls poster="/api/content/ai-for-farmers-intro/@modules/ai-for-farmers-intro-farm-numbers/assets/ai-for-farmers-intro-farm-numbers-poster.jpg" playsinline preload="metadata" aria-label="Module 3: Farm numbers" style="width: 100%; max-width: 800px; border-radius: 12px; margin: 1.5rem auto; display: block;">
   <source src="./assets/ai-for-farmers-intro-farm-numbers.mp4" type="video/mp4">
   <track kind="captions" src="./assets/ai-for-farmers-intro-farm-numbers.vtt" srclang="en-NZ" label="English (NZ)" default>
-  Read the transcript below if the video is unavailable.
+  Your browser cannot play this video.
 </video>
-
-<details>
-<summary>Read the video transcript</summary>
-
-Tuesday night. The farm walk's done, the covers are on your phone, nobody checked the rain gauge on Monday, and a kill sheet's just landed in your inbox.
-
-Paste your notes into ChatGPT, Copilot, Gemini or Claude and ask for a table. In seconds you've got every paddock sorted by cover, in kilograms of dry matter per hectare, ready for the feed wedge.
-
-Ask it to show the sum and what it divided by, and you can check the average on your phone in ten seconds.
-
-Here's the catch. The paddock you didn't walk can come back as zero, and the average drops to a cover that still looks believable. Thursday's forecast gets added to the rain that's already fallen. On the kill sheet, a condemned carcass slips into the average and a downgrade note disappears.
-
-So check every number against its row. Ask for the paddocks or tags behind each figure. A blank means not recorded, never zero, and a forecast stays a forecast.
-
-Before you paste anything, check the tool's data settings, and leave out what the job doesn't need, like staff phone numbers and health notes.
-
-Next, check an AI summary of a kill sheet against the sheet itself.
-
-</details>
 
 The farm walk's done and your notes are a column of plate meter readings, one paddock you didn't get to, and a rain gauge nobody checked on Monday. An AI chat tool will turn that into a tidy table in under a minute. Left to itself, it may also turn "didn't check" into zero and add Thursday's forecast to the rain you've already had.
 
