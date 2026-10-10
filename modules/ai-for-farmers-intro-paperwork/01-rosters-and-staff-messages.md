@@ -9,17 +9,19 @@
 <details>
 <summary>Read the video transcript</summary>
 
-A roster, a neighbour notice and a record summary have different checks. AI can prepare a draft from the notes you give it. The farmer still checks the assignments, dates and status before anyone uses it. Our Example Station material is invented for practice.
+Sunday night, second week of calving. The roster for the week has to be on the shed wall before the five o'clock milking.
 
-Worker A is available Monday and Tuesday. Worker B is available Tuesday and Wednesday. Each morning needs one check. A draft putting A on Wednesday breaks the note. If B also becomes unavailable, Wednesday needs a visible gap for the manager to resolve.
+It's all there. Who's off, who can't do Thursday afternoon, when the relief milker's free. It's just in a mess.
 
-For a proposed neighbour spray notice, exact timing, hazards, affected people and notification arrangements need confirmation. Ask for a preparation draft with visible gaps. The responsible operator checks the label, applicable regional plan and GROWSAFE guidance. A notice cannot approve the job.
+Give ChatGPT, Copilot, Gemini or Claude the availability and the rules. Two on every milking. Ben always paired up. A minute later you've got a clean roster, and a message for the staff group chat.
 
-A contractor email should ask whether a day suits when no booking is agreed. Check recipients and attachments before a real message is sent. A vet enquiry should keep observations separate from diagnosis and treatment, with urgent concerns taken directly to the vet under farm arrangements.
+Now look at Sunday afternoon. The roster says Tom, the relief milker. Your note says Tom hasn't confirmed. The slot was empty and his name was close by, so the AI filled it in. It looks finished, but it's a guess.
 
-For records, preserve the original status. Maintenance planned must not become maintenance completed. An activity log does not prove an inspection happened. A useful compliance draft lists the source, the missing evidence and the person to ask. Keep the original record beside the draft.
+So ask for gaps, not guesses. Tell it to write "uncovered" when nobody's free, and check every name against your note before the roster goes up.
 
-In the activity, assemble a prompt from the supplied chips and watch the sample draft change. Then review the missing dates and hazards. Nothing is sent. Use the same source check on any roster, notice or email you prepare later, and keep unresolved questions visible.
+It's the same with a neighbour spray notice or the shed notebook. If the start time isn't set, the draft says confirm. If the seal swap is planned for Saturday, the log doesn't call it done.
+
+AI does the drafting. The facts, and the final say, stay with you.
 
 </details>
 
