@@ -9,17 +9,19 @@
 <details>
 <summary>Read the video transcript</summary>
 
-You have a note to turn into a message before the next job. An AI helper can draft it, organise it or shorten it. In this course, every farm and document is fictional. You will practise with Example Station and check the result yourself.
+Nine at night, middle of calving. There's a new relief milker starting Monday, and your notes on the shed routine are half a page of scribble.
 
-The note says a gate hinge needs inspection. Tuesday has been requested, but no visit is booked. Give the helper those facts. Ask for a short contractor enquiry, and tell it to leave unknown details visible. That instruction is your prompt.
+This is where an AI chat tool earns its keep. ChatGPT, Copilot, Gemini or Claude. Type or say your rough notes, and ask for a short, friendly text.
 
-The answer may look useful and still change the meaning. If it says the contractor will arrive at eight on Tuesday, it has added a time and a commitment. Neither appears in the note. Smooth wording cannot supply that missing evidence.
+A few seconds later you've got a clear message, every fact from your notes, and a version in their first language if you need it. Rosters, meeting notes, a summary of a long contract: same idea.
 
-Replace the promise with a question about availability. Then compare the revised draft with the note again. Check names, dates, quantities and commitments. If there is a number, recalculate it. If there is a citation, open the source and read the supporting words.
+Here's the catch. Your note for the fencing contractor says Tuesday would suit. Nothing's booked. The draft comes back: "Just confirming you're booked in for 8 am Tuesday."
 
-Begin with a small task you can check. Keep health, spraying and legal decisions with the responsible person and the relevant evidence. You can complete this course without an AI account. The local activities give you invented drafts to review, and paper practice works too.
+It reads fine. But nobody booked anything, and nobody said 8 am. The tool wrote what contractor texts usually say. Send it, and Tom turns up for a job he never agreed to.
 
-Next, try spotting added details in an AI draft. Tap what the original notes do not support, then read the explanation. If you use voice input later, practise while parked and check the transcript before sending. A noisy recording can change a date or number.
+So before anything goes out, put the draft beside your notes. Check every date, name, number and promise. If you can't point to it in your notes, take it out or turn it into a question.
+
+Let it write the first draft. You check it, and you send it.
 
 </details>
 
