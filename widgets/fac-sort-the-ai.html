@@ -9,88 +9,105 @@
 :root{--paper:#F4F1EA;--white:#FFFFFF;--surface-2:#FAF8F3;--ink:#263341;--ink-2:#465565;--heading:#3B4E62;--muted:#5A6776;--line:#CEC8BA;--line-soft:#E3DED3;--control:#7A8592;--accent:#036DA0;--accent-hover:#025A85;--accent-soft:#E4F4FD;--accent-line:#B5DFF6;--sky:#05A5F1;--dark:#1F2B38;--on-accent:#FFFFFF;--ok:#1E6B45;--ok-bg:#E3F1E8;--bad:#9A3324;--bad-bg:#FBE6E1;--warn:#7A5A14;--warn-bg:#F6EDD3;--r-s:8px;--r-m:12px;--r-l:16px;--font:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;--serif:"Playfair Display",Georgia,"Times New Roman",serif}
 [data-theme=dark]{--paper:#0B0E12;--white:#1F2B38;--surface-2:#18222D;--ink:#EEF1F4;--ink-2:#D3D9E0;--heading:#E4E9EF;--muted:#B3BCC6;--line:#4A5868;--line-soft:#344252;--control:#8D99A6;--accent:#5CC3F5;--accent-hover:#8AD4F8;--accent-soft:#12324A;--accent-line:#2B5F80;--on-accent:#0B0E12;--ok:#8FD3AA;--ok-bg:#173A28;--bad:#F2A58F;--bad-bg:#3D2620;--warn:#ECD08A;--warn-bg:#3A3220}
 *{box-sizing:border-box}
-html,body{margin:0}
-body{padding:14px;background:var(--paper);color:var(--ink);font:17px/1.55 var(--font);overflow-x:hidden;-webkit-text-size-adjust:100%}
-main{max-width:760px;margin:0 auto}
+html,body{margin:0;background:transparent}
+body{padding:0;color:var(--ink);font:16px/1.45 var(--font);overflow-x:hidden;-webkit-text-size-adjust:100%}
+main{max-width:640px;margin:0 auto;background:var(--paper);border:1px solid var(--line-soft);border-radius:var(--r-m);padding:12px 14px 14px}
 h1,h2,h3,p,ul,ol,fieldset,legend{margin:0;padding:0}
 ul,ol{list-style:none}
 button,input,select,textarea{font:inherit;color:inherit}
-button{cursor:pointer}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.head{background:#1F2B38;color:#FFFFFF;padding:20px 20px 18px;border-radius:var(--r-l) var(--r-l) 0 0;border-bottom:4px solid #05A5F1}
-.head h1{font:500 27px/1.2 var(--serif);letter-spacing:-.2px}
-.head p{color:#E4E9EF;margin-top:6px;font-size:16px;max-width:60ch}
-.panel{background:var(--white);border:1px solid var(--line-soft);border-top:0;border-radius:0 0 var(--r-l) var(--r-l);padding:18px}
-.sub{font-size:15px;color:var(--muted)}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;min-width:48px;padding:10px 20px;border:2px solid var(--accent);border-radius:var(--r-m);background:var(--accent);color:var(--on-accent);font-weight:650;font-size:17px;line-height:1.25;text-align:center}
-.btn:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
-.btn.secondary{background:transparent;color:var(--accent)}
-.btn.secondary:hover{background:var(--accent-soft)}
+button{cursor:pointer;-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.top h1{font:500 20px/1.25 var(--serif);color:var(--heading)}
+.count{flex:none;font-size:16px;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{height:4px;margin-top:8px;border-radius:2px;background:var(--line-soft);overflow:hidden}
+.bar span{display:block;height:100%;width:0;background:var(--sky);transition:width .25s ease}
+.step{margin-top:12px}
+.step:focus{outline:none}
+.prompt{font-weight:650;font-size:18px;line-height:1.35;color:var(--ink)}
+.lead{font-size:16px;color:var(--muted)}
+.sub{font-size:16px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;min-width:48px;padding:10px 18px;border:2px solid var(--accent);border-radius:var(--r-s);background:var(--accent);color:var(--on-accent);font-weight:650;font-size:17px;line-height:1.25;text-align:center}
+.btn:active{transform:translateY(1px)}
+.btn.secondary{background:var(--white);color:var(--accent)}
 .btn[aria-disabled=true]{background:var(--surface-2);border-color:var(--line);color:var(--muted);cursor:not-allowed}
-.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.status{font-size:15px;color:var(--muted);min-height:1.5em;margin-top:8px}
-.result{margin-top:18px;padding:16px;border-radius:var(--r-m);background:var(--surface-2);border:1px solid var(--line)}
-.result h2{font:500 22px/1.3 var(--serif);color:var(--heading)}
-.result p{margin-top:8px}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.actions .btn{flex:1 1 auto}
+/* Answer buttons: full width, one per row. */
+.choices{display:grid;gap:8px;margin-top:10px}
+.choice{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:48px;padding:10px 12px;text-align:left;border:2px solid var(--line);border-radius:var(--r-s);background:var(--white);font-size:16px;line-height:1.35}
+.choice[aria-disabled=true]{cursor:default}
+.choice .tag{flex:none;font-size:16px;font-weight:700}
+.choice.right,.choice.right:hover{border-color:var(--ok);background:var(--ok-bg)}
+.choice.right .tag{color:var(--ok)}
+.choice.wrong,.choice.wrong:hover{border-color:var(--bad);background:var(--bad-bg)}
+.choice.wrong .tag{color:var(--bad)}
+.choice.flag,.choice.flag:hover{border-color:var(--warn);background:var(--warn-bg)}
+.choice.flag .tag{color:var(--warn)}
+.fb{margin-top:10px;padding:8px 12px;border-radius:var(--r-s);border-left:4px solid var(--ok);background:var(--ok-bg);font-size:16px;line-height:1.4}
+.fb.bad{border-left-color:var(--bad);background:var(--bad-bg);color:var(--ink)}
+.fb strong{font-weight:700}
+.fb:focus{outline:none}
+.status{font-size:16px;color:var(--muted);margin-top:6px}
+.status:empty{display:none}
+.score{font:500 34px/1.1 var(--serif);color:var(--accent)}
+.done h2{font:500 20px/1.3 var(--serif);color:var(--heading)}
+.done p{margin-top:6px}
+details.more{margin-top:10px;border-top:1px solid var(--line-soft)}
+details.more summary{display:flex;align-items:center;min-height:44px;font-weight:650;color:var(--accent);cursor:pointer;list-style:none}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary:before{content:"";flex:none;width:8px;height:8px;margin:0 10px 0 4px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .15s}
+details.more[open] summary:before{transform:rotate(45deg)}
 .ok{color:var(--ok)}.bad{color:var(--bad)}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 [hidden]{display:none!important}
-@media(max-width:480px){body{padding:8px}.head{padding:18px 16px 16px}.head h1{font-size:24px}.panel{padding:16px 14px}.actions .btn{flex:1 1 100%}}
+@media(max-width:400px){main{padding:10px 12px 12px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-.how{font-size:16px;color:var(--muted)}
-.tray-title,.bin h2{font:500 20px/1.3 var(--serif);color:var(--ink)}
-.tray{margin-top:14px;padding:12px;border:2px dashed var(--line);border-radius:var(--r-m);background:var(--paper)}
-.tray ul{display:grid;gap:8px;margin-top:10px}
-.tray .empty{font-size:16px;color:var(--muted);margin-top:8px}
-.item{display:flex;align-items:stretch;gap:0;border:2px solid var(--line);border-radius:var(--r-s);background:var(--white);min-height:52px}
-.item .pick{flex:1;display:flex;align-items:center;text-align:left;padding:10px 12px;min-height:48px;border:0;background:transparent;font-size:17px;line-height:1.35;border-radius:var(--r-s)}
-.item .grip{flex:none;width:48px;display:flex;align-items:center;justify-content:center;border:0;border-left:1px solid var(--line);background:transparent;color:var(--muted);touch-action:none;cursor:grab;border-radius:0 var(--r-s) var(--r-s) 0}
-.item .grip svg{width:20px;height:20px}
-.item.selected{border-color:var(--accent);background:var(--accent-soft);box-shadow:0 0 0 2px var(--accent)}
-.item.dragging{opacity:.35}
-.ghost{position:fixed;z-index:10;pointer-events:none;max-width:280px;padding:10px 12px;border:2px solid var(--accent);border-radius:var(--r-s);background:var(--accent-soft);color:var(--ink);font-size:16px;box-shadow:0 6px 18px rgba(31,43,56,.25)}
-.bins{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
-.bin{border:2px solid var(--line);border-radius:var(--r-m);background:var(--white);padding:12px;display:flex;flex-direction:column;gap:8px}
-.bin.over{border-color:var(--accent);background:var(--accent-soft)}
-.bin p.desc{font-size:15px;color:var(--muted)}
-.bin .put{margin-top:2px}
-.bin ul{display:grid;gap:6px}
-.placed{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:48px;width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:var(--r-s);background:var(--surface-2);text-align:left;font-size:16px;line-height:1.35}
-.placed .tag{flex:none;font-size:14px;font-weight:650}
-.placed.right{background:var(--ok-bg);border-color:var(--ok)}
-.placed.right .tag{color:var(--ok)}
-.placed.wrong{background:var(--bad-bg);border-color:var(--bad)}
-.placed.wrong .tag{color:var(--bad)}
-.feedback{margin-top:10px;display:grid;gap:8px}
-.feedback li{padding:10px 12px;border-radius:var(--r-s);background:var(--bad-bg);border-left:4px solid var(--bad);font-size:16px}
-.feedback li strong{display:block}
-@media(max-width:620px){.bins{grid-template-columns:1fr}}
+@media (hover:hover){.btn:hover{background:var(--accent-hover);border-color:var(--accent-hover)}.btn.secondary:hover{background:var(--accent-soft)}.choice:not([aria-disabled=true]):hover{border-color:var(--accent)}}
+/* The course player has a sticky header and footer (about 70 px each) around the frame. */
+main *{scroll-margin:80px 0 90px}
+/* Focus mode: fill the height the player gives us, Done at the foot. */
+.focus main{min-height:var(--focus-h,auto);display:flex;flex-direction:column;border:0;border-radius:0}
+.focus main>*{flex:none}
+.focus-done{margin-top:auto;padding-top:12px;display:flex;justify-content:flex-end}
+.focus-done .btn{min-width:120px}
+.tool{margin-top:8px;padding:12px 14px;border:1px solid var(--line);border-left:4px solid var(--sky);border-radius:var(--r-s);background:var(--white);font-weight:650;font-size:19px;line-height:1.3;color:var(--ink)}
+.tool:focus{outline:none}
+.kinds{margin-top:10px}
+.kind{flex-direction:column;align-items:flex-start;justify-content:center;gap:0;min-height:56px;padding:8px 12px}
+.kind .name{font-weight:700;font-size:17px;color:var(--accent)}
+.kind .desc{font-size:16px;color:var(--muted)}
+.kind .head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;width:100%}
+.kind.right .name{color:var(--ok)}.kind.wrong .name{color:var(--bad)}
+.tally{display:grid;gap:6px;margin-top:10px}
+.tally li{display:flex;justify-content:space-between;gap:10px;padding:8px 12px;border-radius:var(--r-s);background:var(--white);border:1px solid var(--line-soft)}
+.tally b{font-variant-numeric:tabular-nums}
 </style>
 </head>
 <body>
 <main>
-  <header class="head">
+  <header class="top">
     <h1 id="title">Sort the AI</h1>
-    <p>Which kind of AI is each farm tool? Tap a tool, then tap the kind it belongs to. You can also drag a tool by its handle.</p>
+    <p class="count" id="count" aria-hidden="true"></p>
   </header>
-  <section class="panel">
-    <div class="tray" id="tray" aria-labelledby="tray-title">
-      <h2 class="tray-title" id="tray-title">Farm tools to sort</h2>
-      <ul id="tray-list"></ul>
-      <p class="empty" id="tray-empty" hidden>All sorted. Tap Check when you're ready, or tap a tool in a bin to take it back out.</p>
-    </div>
-    <div class="bins" id="bins"></div>
-    <p class="status" id="status" aria-live="polite"></p>
+  <div class="bar" aria-hidden="true"><span id="bar-fill"></span></div>
+
+  <section class="step" id="play" aria-labelledby="ask">
+    <p class="lead" id="ask">Which kind of AI is this farm tool?</p>
+    <p class="tool" id="card" aria-live="off"></p>
+    <div class="choices kinds" id="kinds" role="group" aria-labelledby="ask"></div>
+    <p class="fb" id="fb" hidden></p>
+    <div class="actions" id="next-wrap" hidden><button class="btn" type="button" id="next">Next tool</button></div>
+  </section>
+
+  <section class="step done" id="result" hidden aria-labelledby="result-title">
+    <h2 id="result-title"></h2>
+    <ul class="tally" id="tally"></ul>
+    <p id="result-text"></p>
     <div class="actions">
-      <button class="btn" type="button" id="check" aria-disabled="true">Check</button>
-      <button class="btn secondary" type="button" id="retry" hidden>Try the wrong ones again</button>
-      <button class="btn secondary" type="button" id="reset" hidden>Start again</button>
+      <button class="btn" type="button" id="retry" hidden>Try the ones I missed</button>
+      <button class="btn secondary" type="button" id="reset">Start again</button>
     </div>
-    <section class="result" id="result" hidden tabindex="-1" aria-labelledby="result-title">
-      <h2 id="result-title"></h2>
-      <p id="result-text"></p>
-      <ul class="feedback" id="feedback"></ul>
-    </section>
   </section>
 </main>
 <div class="sr-only" id="announcer" aria-live="polite"></div>
@@ -107,163 +124,132 @@ function reportHeight(){
   },40);
 }
 window.addEventListener("message",function(event){
+  if(event.source!==window.parent)return;
   var data=event.data||{};
   if(data.type==="widget-theme"&&(data.theme==="dark"||data.theme==="light")){root.setAttribute("data-theme",data.theme);reportHeight();}
+  if(data.type==="widget-mode")setMode(data.mode,data.height);
 });
+// Focus mode (FOCUS-MODE.md): the player may open the frame full screen and tell us the height we have.
+// Fill that height and show a Done button; back inline, the compact layout returns with progress kept.
+var doneBar=null;
+function setMode(mode,height){
+  var focus=mode==="focus";
+  root.classList.toggle("focus",focus);
+  root.style.setProperty("--focus-h",focus&&height>0?Math.floor(height)+"px":"auto");
+  if(focus&&!doneBar){
+    doneBar=el("div","focus-done");var b=el("button","btn secondary","Done");b.type="button";
+    b.addEventListener("click",function(){window.parent.postMessage({type:"widget-focus-exit"},"*");});
+    doneBar.appendChild(b);document.querySelector("main").appendChild(doneBar);
+  }
+  if(doneBar)doneBar.hidden=!focus;
+  reportHeight();
+}
 if(typeof ResizeObserver==="function")new ResizeObserver(reportHeight).observe(document.body);
 window.addEventListener("load",reportHeight);
 window.addEventListener("resize",reportHeight);
 var $=function(id){return document.getElementById(id);};
 function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;}
 function announce(msg){var a=$("announcer");a.textContent="";window.setTimeout(function(){a.textContent=msg;},30);}
-function ready(){window.setTimeout(function(){reportHeight();window.parent.postMessage({type:"widget-ready"},"*");},0);}
+function ready(){window.setTimeout(function(){reportHeight();window.parent.postMessage({type:"widget-ready",title:props.title||document.title},"*");},0);}
 function copyFrom(ta,status){
   function fallback(){
+    var back=document.activeElement,d=ta.closest("details");d=d&&!d.open?d:null;if(d)d.open=true;
     ta.focus();ta.select();try{ta.setSelectionRange(0,ta.value.length);}catch(e){}
     var ok=false;try{ok=document.execCommand("copy");}catch(e){ok=false;}
-    status.textContent=ok?"Copied. Now paste it into your AI chat.":"The text is selected. Press Ctrl+C, or press and hold it and choose Copy.";
+    status.textContent=ok?"Copied. Now paste it into your AI chat.":"The text is selected. Press and hold it, then tap Copy (or press Ctrl+C).";
+    if(ok&&d){d.open=false;if(back&&back!==document.body)back.focus({preventScroll:true});}
   }
   if(navigator.clipboard&&typeof navigator.clipboard.writeText==="function"){
     navigator.clipboard.writeText(ta.value).then(function(){status.textContent="Copied. Now paste it into your AI chat.";},fallback);
   }else{fallback();}
 }
+function progress(done,total,text){$("count").textContent=text;$("bar-fill").style.width=Math.round(done/total*100)+"%";}
+function focusQuiet(node){if(node.tabIndex<0&&!node.hasAttribute("tabindex"))node.setAttribute("tabindex","-1");node.focus({preventScroll:true});}
+// Scroll the node into the player's view once the frame has grown to fit it (the resize is async).
+function reveal(node){
+  var tries=0;
+  (function go(){
+    if(node.getBoundingClientRect().bottom>window.innerHeight+1&&tries++<20){window.setTimeout(go,60);return;}
+    try{node.scrollIntoView({block:"nearest"});}catch(e){}
+  })();
+}
 var BINS=[
-  {id:"senses",name:"Senses",desc:"Takes in readings and spots a pattern."},
-  {id:"predicts",name:"Predicts",desc:"Uses past numbers to call what comes next."},
-  {id:"writes",name:"Writes and talks",desc:"Reads and writes everyday words."}
+  {id:"senses",name:"Senses",desc:"Takes readings, spots a pattern"},
+  {id:"predicts",name:"Predicts",desc:"Uses past numbers to call what's next"},
+  {id:"writes",name:"Writes and talks",desc:"Reads and writes everyday words"}
 ];
 var ITEMS=[
-  {id:"collar",text:"Collar that flags a cow on heat",bin:"senses",why:"It reads her movement and cud chewing and spots the pattern of a heat. That's sensing."},
-  {id:"weed",text:"Sprayer camera that tells a weed from the crop",bin:"senses",why:"It looks at the picture and picks out the weeds. That's sensing."},
-  {id:"drone",text:"Drone that counts ewes from a photo",bin:"senses",why:"It picks out each sheep in the picture. That's sensing, not a prediction."},
-  {id:"pasture",text:"Pasture growth model for next week",bin:"predicts",why:"It uses past growth, weather and soil data to call how much grass is coming. That's predicting."},
-  {id:"weather",text:"Weather app that says rain on Thursday",bin:"predicts",why:"A forecast is a best guess about what comes next. That's predicting."},
-  {id:"lambing",text:"Lambing date estimate from scanning",bin:"predicts",why:"It works forward from scanning to a likely date. That's predicting."},
-  {id:"chat",text:"Chat app that drafts a letter to the council",bin:"writes",why:"It writes in everyday words. That's the writes-and-talks kind."},
-  {id:"voice",text:"Phone that turns your voice into a text message",bin:"writes",why:"It turns your speech into written words. That's the writes-and-talks kind."},
-  {id:"summary",text:"App that sums up a long email in three lines",bin:"writes",why:"It reads words and writes a shorter version. That's the writes-and-talks kind."}
+  {id:"collar",text:"Collar that flags a cow on heat",bin:"senses",why:"It reads her movement and cud chewing and spots the pattern of a heat."},
+  {id:"chat",text:"Chat app that drafts a letter to the council",bin:"writes",why:"It writes in everyday words."},
+  {id:"pasture",text:"Pasture growth model for next week",bin:"predicts",why:"It uses past growth, weather and soil data to call how much grass is coming."},
+  {id:"weed",text:"Sprayer camera that tells a weed from the crop",bin:"senses",why:"It looks at the picture and picks out the weeds."},
+  {id:"drone",text:"Drone that counts ewes from a photo",bin:"senses",why:"It picks out each sheep in the picture. That's sensing, not predicting."},
+  {id:"voice",text:"Phone that turns your voice into a text message",bin:"writes",why:"It turns your speech into written words."},
+  {id:"weather",text:"Weather app that says rain on Thursday",bin:"predicts",why:"A forecast is a best guess about what comes next."},
+  {id:"summary",text:"App that sums up a long email in three lines",bin:"writes",why:"It reads words and writes a shorter version."},
+  {id:"lambing",text:"Lambing date estimate from scanning",bin:"predicts",why:"It works forward from scanning to a likely date."}
 ];
-var GRIP='<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="7" cy="5" r="1.6" fill="currentColor"/><circle cx="13" cy="5" r="1.6" fill="currentColor"/><circle cx="7" cy="10" r="1.6" fill="currentColor"/><circle cx="13" cy="10" r="1.6" fill="currentColor"/><circle cx="7" cy="15" r="1.6" fill="currentColor"/><circle cx="13" cy="15" r="1.6" fill="currentColor"/></svg>';
-var place={};var selected=null;var checked=false;
-var byId={};ITEMS.forEach(function(it){byId[it.id]=it;place[it.id]=null;});
-var binsEl=$("bins");
-BINS.forEach(function(b){
-  var box=el("section","bin");box.dataset.bin=b.id;box.setAttribute("aria-labelledby","bin-"+b.id);
-  var h=el("h2",null,b.name);h.id="bin-"+b.id;box.appendChild(h);
-  box.appendChild(el("p","desc",b.desc));
-  var put=el("button","btn secondary put","Put it here");put.type="button";put.dataset.bin=b.id;put.setAttribute("aria-disabled","true");
-  put.setAttribute("aria-label","Put the selected tool in "+b.name);
-  put.addEventListener("click",function(){if(selected&&!checked)drop(selected,b.id);else if(!checked)status("Tap a tool first, then tap where it goes.");});
-  box.appendChild(put);
-  var ul=el("ul");ul.id="list-"+b.id;box.appendChild(ul);
-  binsEl.appendChild(box);
-});
-function status(t){$("status").textContent=t;}
 function binName(id){for(var i=0;i<BINS.length;i++)if(BINS[i].id===id)return BINS[i].name;return "";}
-function render(){
-  var tray=$("tray-list");tray.textContent="";
-  ITEMS.forEach(function(it){
-    if(place[it.id])return;
-    var li=el("li","item"+(selected===it.id?" selected":""));li.dataset.id=it.id;
-    var b=el("button","pick",it.text);b.type="button";b.setAttribute("aria-pressed",selected===it.id?"true":"false");
-    b.addEventListener("click",function(){select(it.id);});
-    var g=el("button","grip");g.type="button";g.innerHTML=GRIP;g.setAttribute("aria-label","Drag "+it.text);g.tabIndex=-1;
-    g.addEventListener("pointerdown",function(ev){startDrag(ev,it.id,li);});
-    li.appendChild(b);li.appendChild(g);tray.appendChild(li);
+var queue=[],pos=0,result={},first={},answered=false;
+BINS.forEach(function(b){
+  var btn=el("button","choice kind");btn.type="button";btn.dataset.bin=b.id;
+  var head=el("span","head");head.appendChild(el("span","name",b.name));btn.appendChild(head);
+  btn.appendChild(el("span","desc",b.desc));
+  btn.addEventListener("click",function(){choose(b.id);});
+  $("kinds").appendChild(btn);
+});
+function start(list){queue=list;pos=0;$("result").hidden=true;$("play").hidden=false;showTool();}
+function showTool(){
+  var it=queue[pos];answered=false;
+  progress(pos,queue.length,(pos+1)+" of "+queue.length);
+  $("card").textContent=it.text;$("card").dataset.id=it.id;
+  document.querySelectorAll(".kind").forEach(function(b){
+    b.classList.remove("right","wrong");b.removeAttribute("aria-disabled");b.removeAttribute("aria-label");
+    var t=b.querySelector(".tag");if(t)t.remove();
   });
-  var left=ITEMS.filter(function(it){return !place[it.id];}).length;
-  $("tray-empty").hidden=left>0;
-  BINS.forEach(function(bn){
-    var ul=$("list-"+bn.id);ul.textContent="";
-    ITEMS.forEach(function(it){
-      if(place[it.id]!==bn.id)return;
-      var li=el("li");var b=el("button","placed");b.type="button";
-      var right=it.bin===bn.id;
-      if(checked)b.classList.add(right?"right":"wrong");
-      b.appendChild(el("span",null,it.text));
-      if(checked)b.appendChild(el("span","tag",right?"Right":"Wrong"));
-      b.setAttribute("aria-label",it.text+(checked?(right?", right":", wrong"):", in "+bn.name+". Tap to take it back out."));
-      if(checked)b.setAttribute("aria-disabled","true");
-      b.addEventListener("click",function(){if(checked)return;place[it.id]=null;select(it.id);status(it.text+" is back in the tools list.");});
-      li.appendChild(b);ul.appendChild(li);
-    });
+  $("fb").hidden=true;$("next-wrap").hidden=true;reportHeight();
+}
+function choose(bin){
+  if(answered)return;answered=true;
+  var it=queue[pos],right=bin===it.bin;result[it.id]=right;if(!(it.id in first))first[it.id]=right;
+  document.querySelectorAll(".kind").forEach(function(b){
+    b.setAttribute("aria-disabled","true");
+    var tag=null;
+    if(b.dataset.bin===it.bin){b.classList.add("right");tag=right?"Right":"Answer";}
+    else if(b.dataset.bin===bin){b.classList.add("wrong");tag="Your pick";}
+    if(tag){b.querySelector(".head").appendChild(el("span","tag",tag));b.setAttribute("aria-label",binName(b.dataset.bin)+". "+tag+".");}
   });
-  document.querySelectorAll(".put").forEach(function(p){p.setAttribute("aria-disabled",selected&&!checked?"false":"true");});
-  $("check").setAttribute("aria-disabled",left===0&&!checked?"false":"true");
-  $("check").hidden=checked;
-  $("tray-empty").textContent=checked?"All checked. The results are below.":"All sorted. Tap Check when you're ready, or tap a tool in a bin to take it back out.";
-  reportHeight();
+  var fb=$("fb");fb.textContent="";fb.className="fb"+(right?"":" bad");
+  fb.appendChild(el("strong",null,right?"Right. ":"It's "+binName(it.bin)+". "));fb.appendChild(document.createTextNode(it.why));
+  fb.hidden=false;$("next-wrap").hidden=false;
+  $("next").textContent=pos<queue.length-1?"Next tool":"See how I did";
+  progress(pos+1,queue.length,(pos+1)+" of "+queue.length);
+  announce((right?"Right. ":"It's "+binName(it.bin)+". ")+it.why);
+  $("next").focus({preventScroll:true});reportHeight();reveal($("next"));
 }
-function select(id){
-  if(checked)return;
-  selected=selected===id?null:id;render();
-  if(selected)status(byId[id].text+" picked. Now tap Put it here under the right kind.");
-  else status("");
-}
-function drop(id,binId){
-  place[id]=binId;selected=null;render();
-  var left=ITEMS.filter(function(it){return !place[it.id];});
-  status(byId[id].text+" went in "+binName(binId)+". "+(left.length?left.length+" to go.":"All sorted. Tap Check."));
-  var next=document.querySelector("#tray-list .pick");if(next)next.focus();else $("check").focus();
-}
-// Drag by the handle (pointer events, works for touch and mouse).
-var drag=null;
-function binAt(x,y){var e=document.elementFromPoint(x,y);return e?e.closest(".bin"):null;}
-function startDrag(ev,id,li){
-  if(checked)return;ev.preventDefault();
-  var g=el("div","ghost",byId[id].text);document.body.appendChild(g);
-  drag={id:id,li:li,ghost:g,over:null};li.classList.add("dragging");
-  moveGhost(ev.clientX,ev.clientY);
-  ev.target.setPointerCapture&&ev.target.setPointerCapture(ev.pointerId);
-  ev.target.addEventListener("pointermove",onMove);
-  ev.target.addEventListener("pointerup",onUp);
-  ev.target.addEventListener("pointercancel",onUp);
-}
-function moveGhost(x,y){drag.ghost.style.left=Math.min(x+12,window.innerWidth-200)+"px";drag.ghost.style.top=(y+12)+"px";}
-function onMove(ev){
-  if(!drag)return;moveGhost(ev.clientX,ev.clientY);
-  var b=binAt(ev.clientX,ev.clientY);
-  if(drag.over&&drag.over!==b)drag.over.classList.remove("over");
-  if(b)b.classList.add("over");drag.over=b;
-}
-function onUp(ev){
-  if(!drag)return;
-  ev.target.removeEventListener("pointermove",onMove);ev.target.removeEventListener("pointerup",onUp);ev.target.removeEventListener("pointercancel",onUp);
-  var b=ev.type==="pointerup"?binAt(ev.clientX,ev.clientY):null;
-  drag.ghost.remove();drag.li.classList.remove("dragging");if(drag.over)drag.over.classList.remove("over");
-  var id=drag.id;drag=null;
-  if(b)drop(id,b.dataset.bin);else{select(id);}
-}
-$("check").addEventListener("click",function(){
-  if(this.getAttribute("aria-disabled")==="true"){
-    if(!checked)status("Sort all the tools first. "+ITEMS.filter(function(it){return !place[it.id];}).length+" still to go.");
-    return;
-  }
-  checked=true;selected=null;
-  var wrong=ITEMS.filter(function(it){return place[it.id]!==it.bin;});
-  var score=ITEMS.length-wrong.length;
-  $("result-title").textContent=score+" of "+ITEMS.length+" right";
-  $("result-text").textContent=wrong.length?"Here's where the others belong.":"Every one in the right place. Senses takes readings, predicts looks ahead, and writes and talks works with words.";
-  var fb=$("feedback");fb.textContent="";
-  wrong.forEach(function(it){var li=el("li");li.appendChild(el("strong",null,it.text+": "+binName(it.bin)));li.appendChild(document.createTextNode(it.why));fb.appendChild(li);});
-  $("retry").hidden=wrong.length===0;$("reset").hidden=false;
-  $("result").hidden=false;render();status("");
-  announce(score+" of "+ITEMS.length+" right.");
-  $("result").focus({preventScroll:false});
+$("next").addEventListener("click",function(){
+  if(pos<queue.length-1){pos++;showTool();focusQuiet($("card"));reveal($("title"));announce("Tool "+(pos+1)+" of "+queue.length);return;}
+  finish();
 });
-$("retry").addEventListener("click",function(){
-  ITEMS.forEach(function(it){if(place[it.id]!==it.bin)place[it.id]=null;});
-  checked=false;$("result").hidden=true;$("retry").hidden=true;$("reset").hidden=true;render();
-  status("The wrong ones are back in the tools list. Right ones stay where they are.");
-  var first=document.querySelector("#tray-list .pick");if(first)first.focus();
-});
-$("reset").addEventListener("click",function(){
-  ITEMS.forEach(function(it){place[it.id]=null;});
-  checked=false;selected=null;$("result").hidden=true;$("retry").hidden=true;$("reset").hidden=true;render();status("");
-  document.querySelector("#tray-list .pick").focus();
-});
+function finish(){
+  var right=ITEMS.filter(function(it){return result[it.id];}).length,missed=ITEMS.length-right;
+  $("play").hidden=true;$("result").hidden=false;$("count").textContent="Finished";$("bar-fill").style.width="100%";
+  var firstRight=ITEMS.filter(function(it){return first[it.id];}).length;
+  $("result-title").textContent=firstRight<right?firstRight+" of "+ITEMS.length+" first time, "+(missed?right:"all "+right)+" now":right+" of "+ITEMS.length+" right";
+  var t=$("tally");t.textContent="";
+  BINS.forEach(function(b){
+    var all=ITEMS.filter(function(it){return it.bin===b.id;}),ok=all.filter(function(it){return result[it.id];}).length;
+    var li=el("li");li.appendChild(el("span",null,b.name));li.appendChild(el("b",null,ok+" of "+all.length));t.appendChild(li);
+  });
+  $("result-text").textContent="Senses: takes readings. Predicts: looks ahead. Writes and talks: works with words.";
+  $("retry").hidden=!missed;$("retry").textContent=missed===1?"Try the one I missed":"Try the "+missed+" I missed";
+  announce($("result-title").textContent+".");
+  focusQuiet($("result-title"));reportHeight();reveal($("title"));
+}
+$("retry").addEventListener("click",function(){start(ITEMS.filter(function(it){return !result[it.id];}));focusQuiet($("card"));reveal($("title"));});
+$("reset").addEventListener("click",function(){result={};first={};start(ITEMS.slice());focusQuiet($("card"));reveal($("title"));});
 if(props.title)$("title").textContent=props.title;
-render();ready();
+start(ITEMS.slice());ready();
 </script>
 </body>
 </html>

@@ -9,142 +9,176 @@
 :root{--paper:#F4F1EA;--white:#FFFFFF;--surface-2:#FAF8F3;--ink:#263341;--ink-2:#465565;--heading:#3B4E62;--muted:#5A6776;--line:#CEC8BA;--line-soft:#E3DED3;--control:#7A8592;--accent:#036DA0;--accent-hover:#025A85;--accent-soft:#E4F4FD;--accent-line:#B5DFF6;--sky:#05A5F1;--dark:#1F2B38;--on-accent:#FFFFFF;--ok:#1E6B45;--ok-bg:#E3F1E8;--bad:#9A3324;--bad-bg:#FBE6E1;--warn:#7A5A14;--warn-bg:#F6EDD3;--r-s:8px;--r-m:12px;--r-l:16px;--font:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;--serif:"Playfair Display",Georgia,"Times New Roman",serif}
 [data-theme=dark]{--paper:#0B0E12;--white:#1F2B38;--surface-2:#18222D;--ink:#EEF1F4;--ink-2:#D3D9E0;--heading:#E4E9EF;--muted:#B3BCC6;--line:#4A5868;--line-soft:#344252;--control:#8D99A6;--accent:#5CC3F5;--accent-hover:#8AD4F8;--accent-soft:#12324A;--accent-line:#2B5F80;--on-accent:#0B0E12;--ok:#8FD3AA;--ok-bg:#173A28;--bad:#F2A58F;--bad-bg:#3D2620;--warn:#ECD08A;--warn-bg:#3A3220}
 *{box-sizing:border-box}
-html,body{margin:0}
-body{padding:14px;background:var(--paper);color:var(--ink);font:17px/1.55 var(--font);overflow-x:hidden;-webkit-text-size-adjust:100%}
-main{max-width:760px;margin:0 auto}
+html,body{margin:0;background:transparent}
+body{padding:0;color:var(--ink);font:16px/1.45 var(--font);overflow-x:hidden;-webkit-text-size-adjust:100%}
+main{max-width:640px;margin:0 auto;background:var(--paper);border:1px solid var(--line-soft);border-radius:var(--r-m);padding:12px 14px 14px}
 h1,h2,h3,p,ul,ol,fieldset,legend{margin:0;padding:0}
 ul,ol{list-style:none}
 button,input,select,textarea{font:inherit;color:inherit}
-button{cursor:pointer}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.head{background:#1F2B38;color:#FFFFFF;padding:20px 20px 18px;border-radius:var(--r-l) var(--r-l) 0 0;border-bottom:4px solid #05A5F1}
-.head h1{font:500 27px/1.2 var(--serif);letter-spacing:-.2px}
-.head p{color:#E4E9EF;margin-top:6px;font-size:16px;max-width:60ch}
-.panel{background:var(--white);border:1px solid var(--line-soft);border-top:0;border-radius:0 0 var(--r-l) var(--r-l);padding:18px}
-.sub{font-size:15px;color:var(--muted)}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;min-width:48px;padding:10px 20px;border:2px solid var(--accent);border-radius:var(--r-m);background:var(--accent);color:var(--on-accent);font-weight:650;font-size:17px;line-height:1.25;text-align:center}
-.btn:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
-.btn.secondary{background:transparent;color:var(--accent)}
-.btn.secondary:hover{background:var(--accent-soft)}
+button{cursor:pointer;-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.top h1{font:500 20px/1.25 var(--serif);color:var(--heading)}
+.count{flex:none;font-size:16px;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{height:4px;margin-top:8px;border-radius:2px;background:var(--line-soft);overflow:hidden}
+.bar span{display:block;height:100%;width:0;background:var(--sky);transition:width .25s ease}
+.step{margin-top:12px}
+.step:focus{outline:none}
+.prompt{font-weight:650;font-size:18px;line-height:1.35;color:var(--ink)}
+.lead{font-size:16px;color:var(--muted)}
+.sub{font-size:16px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;min-width:48px;padding:10px 18px;border:2px solid var(--accent);border-radius:var(--r-s);background:var(--accent);color:var(--on-accent);font-weight:650;font-size:17px;line-height:1.25;text-align:center}
+.btn:active{transform:translateY(1px)}
+.btn.secondary{background:var(--white);color:var(--accent)}
 .btn[aria-disabled=true]{background:var(--surface-2);border-color:var(--line);color:var(--muted);cursor:not-allowed}
-.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.status{font-size:15px;color:var(--muted);min-height:1.5em;margin-top:8px}
-.result{margin-top:18px;padding:16px;border-radius:var(--r-m);background:var(--surface-2);border:1px solid var(--line)}
-.result h2{font:500 22px/1.3 var(--serif);color:var(--heading)}
-.result p{margin-top:8px}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.actions .btn{flex:1 1 auto}
+/* Answer buttons: full width, one per row. */
+.choices{display:grid;gap:8px;margin-top:10px}
+.choice{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:48px;padding:10px 12px;text-align:left;border:2px solid var(--line);border-radius:var(--r-s);background:var(--white);font-size:16px;line-height:1.35}
+.choice[aria-disabled=true]{cursor:default}
+.choice .tag{flex:none;font-size:16px;font-weight:700}
+.choice.right,.choice.right:hover{border-color:var(--ok);background:var(--ok-bg)}
+.choice.right .tag{color:var(--ok)}
+.choice.wrong,.choice.wrong:hover{border-color:var(--bad);background:var(--bad-bg)}
+.choice.wrong .tag{color:var(--bad)}
+.choice.flag,.choice.flag:hover{border-color:var(--warn);background:var(--warn-bg)}
+.choice.flag .tag{color:var(--warn)}
+.fb{margin-top:10px;padding:8px 12px;border-radius:var(--r-s);border-left:4px solid var(--ok);background:var(--ok-bg);font-size:16px;line-height:1.4}
+.fb.bad{border-left-color:var(--bad);background:var(--bad-bg);color:var(--ink)}
+.fb strong{font-weight:700}
+.fb:focus{outline:none}
+.status{font-size:16px;color:var(--muted);margin-top:6px}
+.status:empty{display:none}
+.score{font:500 34px/1.1 var(--serif);color:var(--accent)}
+.done h2{font:500 20px/1.3 var(--serif);color:var(--heading)}
+.done p{margin-top:6px}
+details.more{margin-top:10px;border-top:1px solid var(--line-soft)}
+details.more summary{display:flex;align-items:center;min-height:44px;font-weight:650;color:var(--accent);cursor:pointer;list-style:none}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary:before{content:"";flex:none;width:8px;height:8px;margin:0 10px 0 4px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .15s}
+details.more[open] summary:before{transform:rotate(45deg)}
 .ok{color:var(--ok)}.bad{color:var(--bad)}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 [hidden]{display:none!important}
-@media(max-width:480px){body{padding:8px}.head{padding:18px 16px 16px}.head h1{font-size:24px}.panel{padding:16px 14px}.actions .btn{flex:1 1 100%}}
+@media(max-width:400px){main{padding:10px 12px 12px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-label.field{display:block;font-weight:650;font-size:17px}
-.hint{font-size:15px;color:var(--muted);margin-top:2px}
-.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
-input[type=text],select{flex:1 1 240px;min-height:48px;padding:10px 12px;border:2px solid var(--line);border-radius:var(--r-s);background:var(--white);font-size:17px}
+@media (hover:hover){.btn:hover{background:var(--accent-hover);border-color:var(--accent-hover)}.btn.secondary:hover{background:var(--accent-soft)}.choice:not([aria-disabled=true]):hover{border-color:var(--accent)}}
+/* The course player has a sticky header and footer (about 70 px each) around the frame. */
+main *{scroll-margin:80px 0 90px}
+/* Focus mode: fill the height the player gives us, Done at the foot. */
+.focus main{min-height:var(--focus-h,auto);display:flex;flex-direction:column;border:0;border-radius:0}
+.focus main>*{flex:none}
+.focus-done{margin-top:auto;padding-top:12px;display:flex;justify-content:flex-end}
+.focus-done .btn{min-width:120px}
+label.field{display:block;font-weight:650;font-size:16px;margin-top:10px}
+.hint{font-size:16px;color:var(--muted)}
+input[type=text],select{display:block;width:100%;min-height:48px;margin-top:6px;padding:10px 12px;border:2px solid var(--line);border-radius:var(--r-s);background:var(--white);font-size:17px}
 input[type=text]:focus,select:focus{border-color:var(--accent)}
-.busy{display:flex;align-items:center;gap:12px;margin-top:16px;padding:14px;border-radius:var(--r-m);background:var(--surface-2)}
+#find .actions,.saved .actions{margin-top:8px}
+.busy{display:flex;align-items:center;gap:12px;margin-top:12px;padding:10px 12px;border-radius:var(--r-s);background:var(--white)}
 .spin{flex:none;width:22px;height:22px;border:3px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-.matches{display:grid;gap:8px;margin-top:10px}
-.match{display:block;width:100%;text-align:left;min-height:48px;padding:10px 12px;border:2px solid var(--line);border-radius:var(--r-s);background:var(--white);font-size:17px;line-height:1.35}
-.match:hover{border-color:var(--accent)}
-.match small{display:block;font-size:15px;color:var(--muted)}
-.box{margin-top:16px;padding:14px;border-radius:var(--r-m);border:1px solid var(--line);background:var(--paper)}
-.box h2{font:500 20px/1.3 var(--serif);color:var(--ink)}
+.box{margin-top:12px;padding:10px 12px;border-radius:var(--r-s);border:1px solid var(--line);background:var(--white)}
+.box h2{font:500 18px/1.3 var(--serif);color:var(--heading)}
+.box p{margin-top:4px}
 .box.err{background:var(--bad-bg);border-color:var(--bad)}
-.box.warn{background:var(--warn-bg);border-color:var(--warn)}
-.card{margin-top:16px;border:2px solid var(--accent);border-radius:var(--r-l);overflow:hidden;background:var(--white)}
-.card-head{background:#1F2B38;color:#FFFFFF;border-bottom:4px solid #05A5F1;padding:14px 16px}
-.card-head h2{font:500 21px/1.3 var(--serif)}
-.card-head p{color:#E4E9EF;font-size:15px;margin-top:2px}
-.figs{display:grid;grid-template-columns:1fr 1fr;gap:0}
-.fig{padding:16px;border-bottom:1px solid var(--line)}
-.fig+.fig{border-left:1px solid var(--line)}
-.fig .big{font:500 52px/1 var(--serif);color:var(--accent);letter-spacing:-1px}
-.fig .big.na{font-size:24px;color:var(--muted)}
-.fig .what{font-weight:650;margin-top:6px}
-.fig .from{font-size:15px;color:var(--muted);margin-top:4px}
-.months{padding:12px 16px 4px;display:grid;gap:6px}
-.months h3{font:600 16px/1.3 var(--font);color:var(--ink)}
-.mrow{display:grid;grid-template-columns:3.2em 1fr 4.4em;align-items:center;gap:8px;font-size:15px}
-.mbar{height:14px;border-radius:4px;background:var(--surface-2);overflow:hidden}
-.mbar span{display:block;height:100%;background:var(--accent)}
-.mrow .mm{text-align:right;font-variant-numeric:tabular-nums}
-.months .from{font-size:15px;color:var(--muted)}
-.card .notes{padding:10px 16px 14px;font-size:15px;color:var(--muted)}
-.card .notes p+p{margin-top:6px}
-label.copy-label{display:block;font-weight:650;font-size:17px;margin:18px 0 6px}
-textarea{width:100%;min-height:220px;padding:12px;border:1px solid var(--line);border-radius:var(--r-s);background:var(--paper);color:var(--ink);font-size:15px;line-height:1.5;resize:vertical}
-details.saved{margin-top:18px;border-top:1px solid var(--line);padding-top:12px}
-details.saved summary{cursor:pointer;min-height:48px;display:flex;align-items:center;font-weight:650;color:var(--accent)}
-@media(max-width:480px){.figs{grid-template-columns:1fr}.fig+.fig{border-left:0}.fig .big{font-size:48px}}
+.matches{margin-top:8px}
+.match{flex-direction:column;align-items:flex-start;gap:0}
+.match small{display:block;font-size:16px;color:var(--muted)}
+.card{margin-top:10px;border:2px solid var(--accent);border-radius:var(--r-m);overflow:hidden;background:var(--white)}
+.card-head{background:#1F2B38;color:#FFFFFF;border-bottom:4px solid #05A5F1;padding:8px 12px}
+.card-head h2{font:500 18px/1.3 var(--serif)}
+.card-head p{color:#E4E9EF;font-size:16px}
+.figs{display:grid;grid-template-columns:1fr 1fr}
+.fig{padding:10px 12px}
+.fig+.fig{border-left:1px solid var(--line-soft)}
+.fig .big{font:500 34px/1.05 var(--serif);color:var(--accent);letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.fig .big .unit{font-size:20px;letter-spacing:0}
+.fig .big.na{font:650 17px/1.3 var(--font);color:var(--muted)}
+.fig .what{font-size:16px;line-height:1.3;margin-top:4px}
+.months{margin-top:8px;padding:6px 12px 8px;border-radius:var(--r-s);background:var(--white)}
+.months h3{font:650 16px/1.3 var(--font);color:var(--ink)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(40px,1fr));gap:4px 6px;align-items:end;margin-top:4px}
+.col{display:flex;flex-direction:column;align-items:center;font-size:16px;line-height:1.2;font-variant-numeric:tabular-nums}
+.col .mbar{width:22px;margin:2px 0;border-radius:3px 3px 0 0;background:var(--accent)}
+.col .mon{color:var(--muted)}
+#result .actions{margin-top:10px}
+.notes p{margin-top:6px;font-size:16px;color:var(--ink-2)}
+.notes p:first-child{margin-top:0}
+.notes .from{color:var(--ink)}
+label.copy-label{display:block;font-weight:650;font-size:16px}
+textarea{display:block;width:100%;margin-top:4px;min-height:200px;padding:8px 10px;border:1px solid var(--line);border-radius:var(--r-s);background:var(--white);color:var(--ink);font-size:16px;line-height:1.4;resize:vertical}
+details.more .inner{padding-bottom:6px}
 </style>
 </head>
 <body>
 <main>
-  <header class="head">
+  <header class="top">
     <h1 id="title">Rain card</h1>
-    <p>Type your farm address. You'll get rain since 1 July at your nearest council gauge, how the season compares with normal, and a card to copy into any AI.</p>
   </header>
-  <section class="panel">
-    <form id="find" novalidate>
-      <label class="field" for="address">Farm address</label>
-      <p class="hint" id="address-hint">For example: 101 Bledisloe Street, Kurow. The road and town are enough.</p>
-      <div class="row">
-        <input type="text" id="address" name="address" autocomplete="street-address" aria-describedby="address-hint" maxlength="200" enterkeyhint="search">
-        <button class="btn" type="submit" id="go">Find my farm</button>
+
+  <form id="find" novalidate>
+    <label class="field" for="address">Your farm address</label>
+    <p class="hint" id="address-hint">The road and town are enough, like Bledisloe Street, Kurow.</p>
+    <input type="text" id="address" name="address" autocomplete="street-address" aria-describedby="address-hint" maxlength="200" enterkeyhint="search">
+    <div class="actions"><button class="btn" type="submit" id="go">Find my farm</button></div>
+    <p class="status" id="form-status" aria-live="polite"></p>
+  </form>
+
+  <div class="busy" id="busy" hidden><span class="spin" aria-hidden="true"></span><span id="busy-text"></span></div>
+
+  <section class="box" id="pick" hidden aria-labelledby="pick-title">
+    <h2 id="pick-title">Which one is your farm?</h2>
+    <div class="choices matches" id="matches"></div>
+  </section>
+
+  <section class="box" id="empty" hidden aria-labelledby="empty-title">
+    <h2 id="empty-title">No address matched</h2>
+    <p>Check the spelling, or try just the road and town. Rural (RAPID) numbers work too.</p>
+  </section>
+
+  <section class="box err" id="error" hidden aria-labelledby="error-title">
+    <h2 id="error-title">Couldn't get your figures</h2>
+    <p id="error-text"></p>
+  </section>
+
+  <section id="result" hidden aria-labelledby="card-title">
+    <div class="card">
+      <div class="card-head"><h2 id="card-title" tabindex="-1"></h2><p id="card-sub"></p></div>
+      <div class="figs">
+        <div class="fig" id="fig-normal"></div>
+        <div class="fig" id="fig-gauge"></div>
       </div>
-      <p class="status" id="form-status" aria-live="polite"></p>
-    </form>
-
-    <div class="busy" id="busy" hidden role="status"><span class="spin" aria-hidden="true"></span><span id="busy-text"></span></div>
-
-    <section class="box" id="pick" hidden aria-labelledby="pick-title">
-      <h2 id="pick-title">Which one is your farm?</h2>
-      <div class="matches" id="matches"></div>
-    </section>
-
-    <section class="box" id="empty" hidden aria-labelledby="empty-title">
-      <h2 id="empty-title">No address matched</h2>
-      <p>Check the spelling, or try just the road and the town, like Bledisloe Street, Kurow. Rural numbers (RAPID numbers) work too.</p>
-    </section>
-
-    <section class="box err" id="error" hidden aria-labelledby="error-title">
-      <h2 id="error-title">The farm data service didn't answer</h2>
-      <p id="error-text"></p>
-      <div class="actions"><button class="btn" type="button" id="retry">Try again</button></div>
-      <p style="margin-top:12px">No luck? Use the saved figures for a nearby district below.</p>
-    </section>
-
-    <section id="result" hidden tabindex="-1" aria-labelledby="card-title">
-      <div class="card">
-        <div class="card-head"><h2 id="card-title"></h2><p id="card-sub"></p></div>
-        <div class="figs">
-          <div class="fig" id="fig-normal"></div>
-          <div class="fig" id="fig-gauge"></div>
-        </div>
-        <div class="months" id="months" hidden></div>
-        <div class="notes" id="notes"></div>
-      </div>
-      <label class="copy-label" for="card-text">Your rain card, ready to paste into any AI</label>
-      <textarea id="card-text" readonly></textarea>
-      <div class="actions">
-        <button class="btn" type="button" id="copy">Copy card</button>
-        <button class="btn secondary" type="button" id="again">Try another address</button>
-      </div>
-      <p class="status" id="copy-status" aria-live="polite"></p>
-    </section>
-
-    <details class="saved" id="saved">
-      <summary>No signal? Use saved figures for a district</summary>
-      <label class="field" for="district" style="margin-top:6px">District</label>
-      <p class="hint" id="saved-hint"></p>
-      <div class="row">
-        <select id="district" aria-describedby="saved-hint"></select>
-        <button class="btn secondary" type="button" id="use-saved">Show saved card</button>
+    </div>
+    <div class="actions">
+      <button class="btn" type="button" id="copy">Copy card</button>
+      <button class="btn secondary" type="button" id="again">New address</button>
+    </div>
+    <p class="status" id="copy-status" aria-live="polite"></p>
+    <div class="months" id="months" hidden></div>
+    <details class="more" id="sources">
+      <summary>Sources and notes</summary>
+      <div class="inner notes" id="notes"></div>
+    </details>
+    <details class="more" id="text-box">
+      <summary>See the card text</summary>
+      <div class="inner">
+        <label class="copy-label" for="card-text">The card you copy into any AI</label>
+        <textarea id="card-text" readonly></textarea>
       </div>
     </details>
   </section>
+
+  <details class="more saved" id="saved">
+    <summary>No signal? Use saved figures for a district</summary>
+    <div class="inner">
+      <p class="hint" id="saved-hint"></p>
+      <label class="sr-only" for="district">District</label>
+      <select id="district" aria-describedby="saved-hint"></select>
+      <div class="actions"><button class="btn secondary" type="button" id="use-saved">Show saved card</button></div>
+    </div>
+  </details>
 </main>
 <div class="sr-only" id="announcer" aria-live="polite"></div>
 <script>
@@ -160,138 +194,174 @@ function reportHeight(){
   },40);
 }
 window.addEventListener("message",function(event){
+  if(event.source!==window.parent)return;
   var data=event.data||{};
   if(data.type==="widget-theme"&&(data.theme==="dark"||data.theme==="light")){root.setAttribute("data-theme",data.theme);reportHeight();}
+  if(data.type==="widget-mode")setMode(data.mode,data.height);
 });
+// Focus mode (FOCUS-MODE.md): the player may open the frame full screen and tell us the height we have.
+// Fill that height and show a Done button; back inline, the compact layout returns with progress kept.
+var doneBar=null;
+function setMode(mode,height){
+  var focus=mode==="focus";
+  root.classList.toggle("focus",focus);
+  root.style.setProperty("--focus-h",focus&&height>0?Math.floor(height)+"px":"auto");
+  if(focus&&!doneBar){
+    doneBar=el("div","focus-done");var b=el("button","btn secondary","Done");b.type="button";
+    b.addEventListener("click",function(){window.parent.postMessage({type:"widget-focus-exit"},"*");});
+    doneBar.appendChild(b);document.querySelector("main").appendChild(doneBar);
+  }
+  if(doneBar)doneBar.hidden=!focus;
+  reportHeight();
+}
 if(typeof ResizeObserver==="function")new ResizeObserver(reportHeight).observe(document.body);
 window.addEventListener("load",reportHeight);
 window.addEventListener("resize",reportHeight);
 var $=function(id){return document.getElementById(id);};
 function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;}
 function announce(msg){var a=$("announcer");a.textContent="";window.setTimeout(function(){a.textContent=msg;},30);}
-function ready(){window.setTimeout(function(){reportHeight();window.parent.postMessage({type:"widget-ready"},"*");},0);}
+function ready(){window.setTimeout(function(){reportHeight();window.parent.postMessage({type:"widget-ready",title:props.title||document.title},"*");},0);}
 function copyFrom(ta,status){
   function fallback(){
+    var back=document.activeElement,d=ta.closest("details");d=d&&!d.open?d:null;if(d)d.open=true;
     ta.focus();ta.select();try{ta.setSelectionRange(0,ta.value.length);}catch(e){}
     var ok=false;try{ok=document.execCommand("copy");}catch(e){ok=false;}
-    status.textContent=ok?"Copied. Now paste it into your AI chat.":"The text is selected. Press Ctrl+C, or press and hold it and choose Copy.";
+    status.textContent=ok?"Copied. Now paste it into your AI chat.":"The text is selected. Press and hold it, then tap Copy (or press Ctrl+C).";
+    if(ok&&d){d.open=false;if(back&&back!==document.body)back.focus({preventScroll:true});}
   }
   if(navigator.clipboard&&typeof navigator.clipboard.writeText==="function"){
     navigator.clipboard.writeText(ta.value).then(function(){status.textContent="Copied. Now paste it into your AI chat.";},fallback);
   }else{fallback();}
 }
+function progress(done,total,text){$("count").textContent=text;$("bar-fill").style.width=Math.round(done/total*100)+"%";}
+function focusQuiet(node){if(node.tabIndex<0&&!node.hasAttribute("tabindex"))node.setAttribute("tabindex","-1");node.focus({preventScroll:true});}
+// Scroll the node into the player's view once the frame has grown to fit it (the resize is async).
+function reveal(node){
+  var tries=0;
+  (function go(){
+    if(node.getBoundingClientRect().bottom>window.innerHeight+1&&tries++<20){window.setTimeout(go,60);return;}
+    try{node.scrollIntoView({block:"nearest"});}catch(e){}
+  })();
+}
 var API=(typeof props.api==="string"&&/^https:\/\//.test(props.api)?props.api:"https://farm-ai-commons-api.mail-5bc.workers.dev").replace(/\/+$/,"");
 var FALLBACK=/*FALLBACK*/{"saved":"2026-11-05","districts":[{"id":"kurow","name":"Kurow","card":{"place":"Kurow district","made":"2026-11-05","parcel":null,"gauge":{"site_no":408401,"name":"Awakino at Sunny Peaks","lat":-44.77032635926882,"lon":170.36497486378258,"altitude_m":1040,"distance_km":9.4},"gauge_rain":{"from":"2026-07-01","to":"2026-11-04","total_mm":223.5,"days_reported":127,"days_in_period":127,"months":[{"month":"2026-07","mm":40.5,"days_reported":31},{"month":"2026-08","mm":52,"days_reported":31},{"month":"2026-09","mm":63.5,"days_reported":30},{"month":"2026-10","mm":61.5,"days_reported":31},{"month":"2026-11","mm":6,"days_reported":4}]},"era5":{"cell_lat":-44.75,"cell_lon":170.5,"from":"2026-07-01","to":"2026-10-29","season_mm":336.8,"normal_mm":245.6,"percent_of_normal":137,"normal_period":"1991-2020"},"attribution":["Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).","Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz).","Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."],"card":"Rain card for Kurow district (made 5 Nov 2026)\n\nRain since 1 July 2026\n- Nearest open council rain gauge: Awakino at Sunny Peaks (ECan site 408401), 9.4 km away, 1040 m above sea level.\n- Gauge total, 1 Jul 2026 to 4 Nov 2026: 224 mm (127 of 127 days reported).\n- Gauge by month: Jul 41 mm, Aug 52 mm, Sep 64 mm, Oct 62 mm, Nov 6 mm so far (to 4 Nov).\n- Climate grid (ERA5, the nearest ~25 km climate grid cell, centred 44.75 S 170.50 E): 337 mm from 1 Jul 2026 to 29 Oct 2026, which is 137% of the 1991-2020 normal for those dates (246 mm).\n- A gauge measures one spot. The grid cell averages about 25 km of country, hills included, so its totals run different from the gauge. Compare the gauge with itself and the grid cell with its own normal.\n\nPlease use this card when you answer my questions about rain on this farm. If a question needs data the card doesn't have, say so.\n\nSources:\n- Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).\n- Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz). Read 5 Nov 2026.\n- Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."}},{"id":"hakataramea","name":"Hakataramea Valley","card":{"place":"Hakataramea Valley district","made":"2026-11-05","parcel":null,"gauge":{"site_no":405610,"name":"Hakataramea at Mount Florence","lat":-44.557854124900956,"lon":170.6683172424627,"altitude_m":397,"distance_km":9.3},"gauge_rain":{"from":"2026-07-01","to":"2026-11-04","total_mm":261.5,"days_reported":127,"days_in_period":127,"months":[{"month":"2026-07","mm":105,"days_reported":31},{"month":"2026-08","mm":34,"days_reported":31},{"month":"2026-09","mm":70,"days_reported":30},{"month":"2026-10","mm":51.5,"days_reported":31},{"month":"2026-11","mm":1,"days_reported":4}]},"era5":{"cell_lat":-44.5,"cell_lon":170.5,"from":"2026-07-01","to":"2026-10-29","season_mm":359.1,"normal_mm":245,"percent_of_normal":147,"normal_period":"1991-2020"},"attribution":["Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).","Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz).","Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."],"card":"Rain card for Hakataramea Valley district (made 5 Nov 2026)\n\nRain since 1 July 2026\n- Nearest open council rain gauge: Hakataramea at Mount Florence (ECan site 405610), 9.3 km away, 397 m above sea level.\n- Gauge total, 1 Jul 2026 to 4 Nov 2026: 262 mm (127 of 127 days reported).\n- Gauge by month: Jul 105 mm, Aug 34 mm, Sep 70 mm, Oct 52 mm, Nov 1 mm so far (to 4 Nov).\n- Climate grid (ERA5, the nearest ~25 km climate grid cell, centred 44.50 S 170.50 E): 359 mm from 1 Jul 2026 to 29 Oct 2026, which is 147% of the 1991-2020 normal for those dates (245 mm).\n- A gauge measures one spot. The grid cell averages about 25 km of country, hills included, so its totals run different from the gauge. Compare the gauge with itself and the grid cell with its own normal.\n\nPlease use this card when you answer my questions about rain on this farm. If a question needs data the card doesn't have, say so.\n\nSources:\n- Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).\n- Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz). Read 5 Nov 2026.\n- Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."}},{"id":"duntroon","name":"Duntroon","card":{"place":"Duntroon district","made":"2026-11-05","parcel":null,"gauge":{"site_no":408802,"name":"Waihuna at Ikawai","lat":-44.84204456315428,"lon":170.81134605132317,"altitude_m":302,"distance_km":10.2},"gauge_rain":{"from":"2026-07-01","to":"2026-11-04","total_mm":247.5,"days_reported":127,"days_in_period":127,"months":[{"month":"2026-07","mm":84.5,"days_reported":31},{"month":"2026-08","mm":40,"days_reported":31},{"month":"2026-09","mm":52,"days_reported":30},{"month":"2026-10","mm":67,"days_reported":31},{"month":"2026-11","mm":4,"days_reported":4}]},"era5":{"cell_lat":-44.75,"cell_lon":170.75,"from":"2026-07-01","to":"2026-10-29","season_mm":323.2,"normal_mm":224.7,"percent_of_normal":144,"normal_period":"1991-2020"},"attribution":["Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).","Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz).","Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."],"card":"Rain card for Duntroon district (made 5 Nov 2026)\n\nRain since 1 July 2026\n- Nearest open council rain gauge: Waihuna at Ikawai (ECan site 408802), 10.2 km away, 302 m above sea level.\n- Gauge total, 1 Jul 2026 to 4 Nov 2026: 248 mm (127 of 127 days reported).\n- Gauge by month: Jul 85 mm, Aug 40 mm, Sep 52 mm, Oct 67 mm, Nov 4 mm so far (to 4 Nov).\n- Climate grid (ERA5, the nearest ~25 km climate grid cell, centred 44.75 S 170.75 E): 323 mm from 1 Jul 2026 to 29 Oct 2026, which is 144% of the 1991-2020 normal for those dates (225 mm).\n- A gauge measures one spot. The grid cell averages about 25 km of country, hills included, so its totals run different from the gauge. Compare the gauge with itself and the grid cell with its own normal.\n\nPlease use this card when you answer my questions about rain on this farm. If a question needs data the card doesn't have, say so.\n\nSources:\n- Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).\n- Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz). Read 5 Nov 2026.\n- Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."}},{"id":"omarama","name":"Omarama","card":{"place":"Omarama district","made":"2026-11-05","parcel":null,"gauge":{"site_no":495810,"name":"Omarama at Dunstan Peaks","lat":-44.58773270662157,"lon":169.85457376968853,"altitude_m":582,"distance_km":14.3},"gauge_rain":{"from":"2026-07-01","to":"2026-11-04","total_mm":216.5,"days_reported":127,"days_in_period":127,"months":[{"month":"2026-07","mm":42,"days_reported":31},{"month":"2026-08","mm":64,"days_reported":31},{"month":"2026-09","mm":62.5,"days_reported":30},{"month":"2026-10","mm":45.5,"days_reported":31},{"month":"2026-11","mm":2.5,"days_reported":4}]},"era5":{"cell_lat":-44.5,"cell_lon":170,"from":"2026-07-01","to":"2026-10-29","season_mm":382.2,"normal_mm":275.3,"percent_of_normal":139,"normal_period":"1991-2020"},"attribution":["Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).","Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz).","Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."],"card":"Rain card for Omarama district (made 5 Nov 2026)\n\nRain since 1 July 2026\n- Nearest open council rain gauge: Omarama at Dunstan Peaks (ECan site 495810), 14.3 km away, 582 m above sea level.\n- Gauge total, 1 Jul 2026 to 4 Nov 2026: 217 mm (127 of 127 days reported).\n- Gauge by month: Jul 42 mm, Aug 64 mm, Sep 63 mm, Oct 46 mm, Nov 3 mm so far (to 4 Nov).\n- Climate grid (ERA5, the nearest ~25 km climate grid cell, centred 44.50 S 170.00 E): 382 mm from 1 Jul 2026 to 29 Oct 2026, which is 139% of the 1991-2020 normal for those dates (275 mm).\n- A gauge measures one spot. The grid cell averages about 25 km of country, hills included, so its totals run different from the gauge. Compare the gauge with itself and the grid cell with its own normal.\n\nPlease use this card when you answer my questions about rain on this farm. If a question needs data the card doesn't have, say so.\n\nSources:\n- Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).\n- Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz). Read 5 Nov 2026.\n- Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."}},{"id":"otematata","name":"Otematata","card":{"place":"Otematata district","made":"2026-11-05","parcel":null,"gauge":{"site_no":407010,"name":"Otematata at Glen Bouie","lat":-44.71355182460717,"lon":170.09083998335842,"altitude_m":1053,"distance_km":13.9},"gauge_rain":{"from":"2026-07-01","to":"2026-11-04","total_mm":170,"days_reported":127,"days_in_period":127,"months":[{"month":"2026-07","mm":17.5,"days_reported":31},{"month":"2026-08","mm":58,"days_reported":31},{"month":"2026-09","mm":37.5,"days_reported":30},{"month":"2026-10","mm":53,"days_reported":31},{"month":"2026-11","mm":4,"days_reported":4}]},"era5":{"cell_lat":-44.5,"cell_lon":170.25,"from":"2026-07-01","to":"2026-10-29","season_mm":344.6,"normal_mm":231.3,"percent_of_normal":149,"normal_period":"1991-2020"},"attribution":["Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).","Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz).","Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."],"card":"Rain card for Otematata district (made 5 Nov 2026)\n\nRain since 1 July 2026\n- Nearest open council rain gauge: Otematata at Glen Bouie (ECan site 407010), 13.9 km away, 1053 m above sea level.\n- Gauge total, 1 Jul 2026 to 4 Nov 2026: 170 mm (127 of 127 days reported).\n- Gauge by month: Jul 18 mm, Aug 58 mm, Sep 38 mm, Oct 53 mm, Nov 4 mm so far (to 4 Nov).\n- Climate grid (ERA5, the nearest ~25 km climate grid cell, centred 44.50 S 170.25 E): 345 mm from 1 Jul 2026 to 29 Oct 2026, which is 149% of the 1991-2020 normal for those dates (231 mm).\n- A gauge measures one spot. The grid cell averages about 25 km of country, hills included, so its totals run different from the gauge. Compare the gauge with itself and the grid cell with its own normal.\n\nPlease use this card when you answer my questions about rain on this farm. If a question needs data the card doesn't have, say so.\n\nSources:\n- Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).\n- Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz). Read 5 Nov 2026.\n- Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."}},{"id":"oamaru","name":"Oamaru","card":{"place":"Oamaru district","made":"2026-11-05","parcel":null,"gauge":{"site_no":418010,"name":"Broad Gully at Morven","lat":-44.826497419278304,"lon":171.03288724315277,"altitude_m":198,"distance_km":30.5},"gauge_rain":{"from":"2026-07-01","to":"2026-11-04","total_mm":346.5,"days_reported":127,"days_in_period":127,"months":[{"month":"2026-07","mm":167,"days_reported":31},{"month":"2026-08","mm":40.5,"days_reported":31},{"month":"2026-09","mm":54,"days_reported":30},{"month":"2026-10","mm":81,"days_reported":31},{"month":"2026-11","mm":4,"days_reported":4}]},"era5":{"cell_lat":-45,"cell_lon":171,"from":"2026-07-01","to":"2026-10-29","season_mm":288.7,"normal_mm":199.7,"percent_of_normal":145,"normal_period":"1991-2020"},"attribution":["Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).","Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz).","Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."],"card":"Rain card for Oamaru district (made 5 Nov 2026)\n\nRain since 1 July 2026\n- Nearest open council rain gauge: Broad Gully at Morven (ECan site 418010), 30.5 km away, 198 m above sea level.\n- Gauge total, 1 Jul 2026 to 4 Nov 2026: 347 mm (127 of 127 days reported).\n- Gauge by month: Jul 167 mm, Aug 41 mm, Sep 54 mm, Oct 81 mm, Nov 4 mm so far (to 4 Nov).\n- Climate grid (ERA5, the nearest ~25 km climate grid cell, centred 45.00 S 171.00 E): 289 mm from 1 Jul 2026 to 29 Oct 2026, which is 145% of the 1991-2020 normal for those dates (200 mm).\n- A gauge measures one spot. The grid cell averages about 25 km of country, hills included, so its totals run different from the gauge. Compare the gauge with itself and the grid cell with its own normal.\n\nPlease use this card when you answer my questions about rain on this farm. If a question needs data the card doesn't have, say so.\n\nSources:\n- Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).\n- Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz). Read 5 Nov 2026.\n- Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."}},{"id":"waimate","name":"Waimate","card":{"place":"Waimate district","made":"2026-11-05","parcel":null,"gauge":{"site_no":417110,"name":"Waihao at Poingdestres","lat":-44.726186759119415,"lon":171.15537151928444,"altitude_m":2,"distance_km":8.6},"gauge_rain":{"from":"2026-07-01","to":"2026-11-04","total_mm":288.5,"days_reported":127,"days_in_period":127,"months":[{"month":"2026-07","mm":124,"days_reported":31},{"month":"2026-08","mm":39.5,"days_reported":31},{"month":"2026-09","mm":52,"days_reported":30},{"month":"2026-10","mm":69.5,"days_reported":31},{"month":"2026-11","mm":3.5,"days_reported":4}]},"era5":{"cell_lat":-44.75,"cell_lon":171,"from":"2026-07-01","to":"2026-10-29","season_mm":308.9,"normal_mm":208,"percent_of_normal":149,"normal_period":"1991-2020"},"attribution":["Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).","Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz).","Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."],"card":"Rain card for Waimate district (made 5 Nov 2026)\n\nRain since 1 July 2026\n- Nearest open council rain gauge: Waihao at Poingdestres (ECan site 417110), 8.6 km away, 2 m above sea level.\n- Gauge total, 1 Jul 2026 to 4 Nov 2026: 289 mm (127 of 127 days reported).\n- Gauge by month: Jul 124 mm, Aug 40 mm, Sep 52 mm, Oct 70 mm, Nov 4 mm so far (to 4 Nov).\n- Climate grid (ERA5, the nearest ~25 km climate grid cell, centred 44.75 S 171.00 E): 309 mm from 1 Jul 2026 to 29 Oct 2026, which is 149% of the 1991-2020 normal for those dates (208 mm).\n- A gauge measures one spot. The grid cell averages about 25 km of country, hills included, so its totals run different from the gauge. Compare the gauge with itself and the grid cell with its own normal.\n\nPlease use this card when you answer my questions about rain on this farm. If a question needs data the card doesn't have, say so.\n\nSources:\n- Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).\n- Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz). Read 5 Nov 2026.\n- Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."}},{"id":"fairlie","name":"Fairlie","card":{"place":"Fairlie district","made":"2026-11-05","parcel":null,"gauge":{"site_no":400710,"name":"Opihi at Kimbell","lat":-44.04499675693772,"lon":170.72402476752882,"altitude_m":482,"distance_km":10.3},"gauge_rain":{"from":"2026-07-01","to":"2026-11-04","total_mm":312.5,"days_reported":127,"days_in_period":127,"months":[{"month":"2026-07","mm":94,"days_reported":31},{"month":"2026-08","mm":75.5,"days_reported":31},{"month":"2026-09","mm":93.5,"days_reported":30},{"month":"2026-10","mm":49.5,"days_reported":31},{"month":"2026-11","mm":0,"days_reported":4}]},"era5":{"cell_lat":-44,"cell_lon":170.75,"from":"2026-07-01","to":"2026-10-29","season_mm":460.4,"normal_mm":369.6,"percent_of_normal":125,"normal_period":"1991-2020"},"attribution":["Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).","Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz).","Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."],"card":"Rain card for Fairlie district (made 5 Nov 2026)\n\nRain since 1 July 2026\n- Nearest open council rain gauge: Opihi at Kimbell (ECan site 400710), 10.3 km away, 482 m above sea level.\n- Gauge total, 1 Jul 2026 to 4 Nov 2026: 313 mm (127 of 127 days reported).\n- Gauge by month: Jul 94 mm, Aug 76 mm, Sep 94 mm, Oct 50 mm, Nov 0 mm so far (to 4 Nov).\n- Climate grid (ERA5, the nearest ~25 km climate grid cell, centred 44.00 S 170.75 E): 460 mm from 1 Jul 2026 to 29 Oct 2026, which is 125% of the 1991-2020 normal for those dates (370 mm).\n- A gauge measures one spot. The grid cell averages about 25 km of country, hills included, so its totals run different from the gauge. Compare the gauge with itself and the grid cell with its own normal.\n\nPlease use this card when you answer my questions about rain on this farm. If a question needs data the card doesn't have, say so.\n\nSources:\n- Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).\n- Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz). Read 5 Nov 2026.\n- Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."}}]}/*END FALLBACK*/;
 var MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-var lastAction=null;
-function pretty(iso){return Number(iso.slice(8,10))+" "+MONTHS[Number(iso.slice(5,7))-1]+" "+iso.slice(0,4);}
-function show(id){["busy","pick","empty","error","result"].forEach(function(x){$(x).hidden=x!==id;});reportHeight();}
-function busy(text){$("busy-text").textContent=text;show("busy");}
+
+function pretty(iso){if(typeof iso!=="string"||iso.length<10)return "";return Number(iso.slice(8,10))+" "+MONTHS[Number(iso.slice(5,7))-1]+" "+iso.slice(0,4);}
+function show(id){["busy","pick","empty","error","result"].forEach(function(x){$(x).hidden=x!==id;});$("find").hidden=id==="result"||id==="busy";$("address-hint").hidden=id==="error"||id==="empty"||id==="pick";$("saved").hidden=!FALLBACK.districts.length||id==="result"||id==="busy";reportHeight();}
+function busy(text){$("busy-text").textContent=text;show("busy");announce(text);}
 function getJson(path,ms){
   var ctl=typeof AbortController==="function"?new AbortController():null;
   var timer=window.setTimeout(function(){if(ctl)ctl.abort();},ms);
   return fetch(API+path,{signal:ctl?ctl.signal:undefined,headers:{accept:"application/json"}}).then(function(res){
-    return res.json().catch(function(){return {};}).then(function(body){
+    return res.json().catch(function(){return null;}).then(function(body){
       window.clearTimeout(timer);
-      if(!res.ok){var e=new Error(body.error||"error");e.status=res.status;throw e;}
+      // A 200 that isn't JSON is usually a Wi-Fi sign-in page, so treat it as no connection.
+      if(!body||typeof body!=="object"){var n=new Error(res.ok?"network":"error");n.status=res.ok?0:res.status;throw n;}
+      if(!res.ok){var e=new Error(typeof body.error==="string"?body.error:"error");e.status=res.status;throw e;}
       return body;
     });
   },function(err){window.clearTimeout(timer);var e=new Error(err&&err.name==="AbortError"?"timeout":"network");e.status=0;throw e;});
 }
 function fail(err){
   var msg;
-  if(err.status===400)msg=err.message;
-  else if(err.status===429)msg="Lots of people are using it right now. Wait a minute and tap Try again.";
+  if(err.status===400)msg=err.message&&err.message!=="error"&&err.message.length<200?err.message:"Check the address and try again.";
+  else if(err.status===429)msg="Lots of people are using it right now. Wait a minute and tap Find my farm again.";
   else if(err.message==="timeout")msg="It took too long to answer. If your signal is weak, try again somewhere with better coverage.";
-  else if(err.status===0)msg="Your phone couldn't reach it. Check you have signal or Wi-Fi, then tap Try again.";
-  else msg=err.message&&err.message.length<200?err.message:"Something went wrong. Tap Try again.";
+  else if(err.status===0)msg="Couldn't reach the rain service. Check signal or Wi-Fi, then tap Find my farm again.";
+  else msg="Something went wrong at the rain service. Tap Find my farm again.";
   if(err.status===400){show(null);$("form-status").textContent=msg;$("address").focus();return;}
-  $("error-text").textContent=msg;show("error");$("saved").open=true;reportHeight();announce("The farm data service didn't answer.");
+  $("error-text").textContent=msg;show("error");$("saved").open=true;reportHeight();focusQuiet($("error-title"));reveal($("error"));announce(msg);
 }
 $("find").addEventListener("submit",function(ev){
   ev.preventDefault();
   var a=$("address").value.trim();$("form-status").textContent="";
   if(a.length<3){$("form-status").textContent="Type your farm address first, at least the road and town.";$("address").focus();return;}
-  lastAction=function(){find(a);};find(a);
+  find(a);
 });
 function find(a){
-  busy("Looking up your address in the LINZ address map...");
+  busy("Looking up your address...");
   getJson("/api/find?address="+encodeURIComponent(a),15000).then(function(body){
     var m=body.matches||[];
-    if(!m.length){show("empty");announce("No address matched.");return;}
+    if(!m.length){show("empty");focusQuiet($("empty-title"));reveal($("empty"));return;}
     if(m.length===1){card(m[0]);return;}
     var wrap=$("matches");wrap.textContent="";
     m.forEach(function(x){
-      var b=el("button","match",x.address);b.type="button";
+      var b=el("button","choice match");b.type="button";b.appendChild(el("span",null,x.address));
       if(x.district)b.appendChild(el("small",null,x.district));
-      b.addEventListener("click",function(){lastAction=function(){card(x);};card(x);});
+      b.addEventListener("click",function(){card(x);});
       wrap.appendChild(b);
     });
     show("pick");announce(m.length+" addresses matched. Pick yours.");wrap.querySelector("button").focus();
-  },fail);
+  }).catch(fail);
 }
 function card(match){
-  busy("Getting rain from the nearest council gauge and the climate record. The first time can take up to 20 seconds.");
-  getJson("/api/card?lat="+match.lat+"&lon="+match.lon+"&place="+encodeURIComponent(match.address),30000).then(function(body){render(body,null);},fail);
+  busy("Getting rain figures. This can take up to 20 seconds.");
+  getJson("/api/card?lat="+match.lat+"&lon="+match.lon+"&place="+encodeURIComponent(match.address),30000).then(function(body){render(body,null);}).catch(fail);
+}
+function fig(box,big,what,na,unit){
+  box.textContent="";
+  var b=el("p",na?"big na":"big",big);if(unit)b.appendChild(el("span","unit",unit));box.appendChild(b);
+  box.appendChild(el("p","what",what));
 }
 function render(c,savedOn){
-  $("card-title").textContent="Rain card: "+c.place;
-  $("card-sub").textContent=savedOn?"Saved figures from "+pretty(savedOn)+", not live":"Made "+pretty(c.made)+(c.parcel?". Parcel: "+c.parcel.appellation+", "+c.parcel.area_ha+" ha":"");
-  var n=$("fig-normal");n.textContent="";
+  $("card-title").textContent=c.place;
+  $("card-sub").textContent=savedOn?"Saved figures from "+pretty(savedOn)+", not live":"Rain card made "+pretty(c.made);
+  var notes=$("notes");notes.textContent="";
+  function note(t,cls){notes.appendChild(el("p",cls||null,t));}
   if(c.era5&&c.era5.percent_of_normal!==null){
-    n.appendChild(el("p","big",c.era5.percent_of_normal+"%"));
-    n.appendChild(el("p","what","of normal rain since 1 July"));
-    n.appendChild(el("p","from",Math.round(c.era5.season_mm)+" mm against a 1991-2020 normal of "+Math.round(c.era5.normal_mm)+" mm, to "+pretty(c.era5.to)+". From the ERA5 climate grid cell around you (about 25 km across)."));
+    fig($("fig-normal"),c.era5.percent_of_normal+"%","of normal rain since 1 July");
+    note("Season: "+Math.round(c.era5.season_mm)+" mm since 1 July against a 1991-2020 normal of "+Math.round(c.era5.normal_mm)+" mm, to "+pretty(c.era5.to)+". From the ERA5 climate grid cell around you (about 25 km across).","from");
   }else{
-    n.appendChild(el("p","big na","Not available"));
-    n.appendChild(el("p","what","Season compared with normal"));
-    n.appendChild(el("p","from","The climate record didn't answer this time. Try again later."));
+    fig($("fig-normal"),"Not available","Season against normal",true);
+    note("The climate record didn't answer this time. Try again later.","from");
   }
-  var g=$("fig-gauge");g.textContent="";
   if(c.gauge&&c.gauge_rain&&c.gauge_rain.to){
-    g.appendChild(el("p","big",Math.round(c.gauge_rain.total_mm)+" mm"));
-    g.appendChild(el("p","what","at the nearest council gauge since 1 July"));
-    g.appendChild(el("p","from",c.gauge.name+", "+c.gauge.distance_km+" km away"+(c.gauge.altitude_m!==null?", "+c.gauge.altitude_m+" m up":"")+". To "+pretty(c.gauge_rain.to)+", "+c.gauge_rain.days_reported+" of "+c.gauge_rain.days_in_period+" days reported."));
+    fig($("fig-gauge"),String(Math.round(c.gauge_rain.total_mm)),"gauge "+c.gauge.distance_km+" km away, since 1 July",false," mm");
+    note("Gauge: "+c.gauge.name+", "+c.gauge.distance_km+" km away"+(c.gauge.altitude_m!==null?", "+c.gauge.altitude_m+" m up":"")+". Since 1 July, to "+pretty(c.gauge_rain.to)+", "+c.gauge_rain.days_reported+" of "+c.gauge_rain.days_in_period+" days reported.","from");
   }else{
-    g.appendChild(el("p","big na",c.gauge?"Not available":"No gauge"));
-    g.appendChild(el("p","what","Council gauge rain"));
-    g.appendChild(el("p","from",c.gauge?"The council gauge data didn't answer this time.":"No open council rain gauge within 35 km. In Otago, Otago Regional Council shows gauge readings on its own website."));
+    fig($("fig-gauge"),c.gauge?"Not available":"No gauge","Council gauge rain",true);
+    note(c.gauge?"The council gauge data didn't answer this time.":"No open council rain gauge within 35 km. In Otago, Otago Regional Council shows gauge readings on its own website.","from");
   }
   var ms=$("months");ms.textContent="";
   var months=c.gauge_rain&&c.gauge_rain.months||[];
   if(months.length){
-    ms.appendChild(el("h3",null,"Gauge rain by month"));
+    var part=c.gauge_rain.to.slice(0,7)===months[months.length-1].month;
+    ms.appendChild(el("h3",null,"Rain by month (mm"+(part?", * so far)":")")));
     var max=Math.max.apply(null,months.map(function(m){return m.mm;}))||1;
+    var cols=el("div","cols");cols.setAttribute("role","list");
     months.forEach(function(m,i){
-      var row=el("div","mrow");
-      var part=i===months.length-1&&c.gauge_rain.to.slice(0,7)===m.month;
-      row.appendChild(el("span",null,MONTHS[Number(m.month.slice(5,7))-1]+(part?"*":"")));
-      var bar=el("span","mbar");var fill=el("span");fill.style.width=Math.max(2,Math.round(m.mm/max*100))+"%";bar.appendChild(fill);row.appendChild(bar);
-      bar.setAttribute("aria-hidden","true");
-      row.appendChild(el("span","mm",Math.round(m.mm)+" mm"));
-      ms.appendChild(row);
+      var name=MONTHS[Number(m.month.slice(5,7))-1],star=part&&i===months.length-1;
+      var col=el("div","col");col.setAttribute("role","listitem");
+      col.setAttribute("aria-label",name+(star?" so far":"")+": "+Math.round(m.mm)+" mm");
+      var v=el("span",null,String(Math.round(m.mm)));v.setAttribute("aria-hidden","true");col.appendChild(v);
+      var bar=el("span","mbar");bar.style.height=Math.max(2,Math.round(m.mm/max*44))+"px";bar.setAttribute("aria-hidden","true");col.appendChild(bar);
+      var mon=el("span","mon",name+(star?"*":""));mon.setAttribute("aria-hidden","true");col.appendChild(mon);
+      cols.appendChild(col);
     });
-    if(c.gauge_rain.to.slice(0,7)===months[months.length-1].month)ms.appendChild(el("p","from","* so far this month, to "+pretty(c.gauge_rain.to)));
+    ms.appendChild(cols);
+    if(part)note("* "+MONTHS[Number(months[months.length-1].month.slice(5,7))-1]+" is so far this month, to "+pretty(c.gauge_rain.to)+".");
     ms.hidden=false;
   }else ms.hidden=true;
-  var notes=$("notes");notes.textContent="";
-  if(c.gauge&&c.era5)notes.appendChild(el("p",null,"The gauge measures one spot. The grid cell averages a wide area, hills included, so compare each with itself, not with each other."));
-  if(c.parcel)notes.appendChild(el("p",null,"An address finds one parcel, often the house lot. Your farm may be bigger."));
-  (c.attribution||[]).forEach(function(a){notes.appendChild(el("p",null,a));});
+  if(c.parcel)note("Parcel: "+c.parcel.appellation+", "+c.parcel.area_ha+" ha. An address finds one parcel, often the house lot. Your farm may be bigger.");
+  if(c.gauge&&c.era5)note("The gauge measures one spot. The grid cell averages a wide area, hills included, so compare each with itself, not with each other.");
+  (c.attribution||[]).forEach(function(a){note(a);});
   $("card-text").value=c.card;$("copy-status").textContent="";
+  $("sources").open=false;$("text-box").open=false;
   show("result");
-  window.setTimeout(function(){$("result").focus({preventScroll:false});},30);
+  focusQuiet($("card-title"));reveal($("copy"));
   announce("Your rain card is ready.");
 }
-$("retry").addEventListener("click",function(){if(lastAction)lastAction();});
 $("copy").addEventListener("click",function(){copyFrom($("card-text"),$("copy-status"));});
-$("again").addEventListener("click",function(){show(null);$("address").select();$("address").focus();});
+$("again").addEventListener("click",function(){show(null);$("address").select();$("address").focus({preventScroll:true});reveal($("title"));});
+$("address").addEventListener("input",function(){if(!$("error").hidden||!$("empty").hidden)show(null);});
+["sources","text-box","saved"].forEach(function(id){$(id).addEventListener("toggle",reportHeight);});
 // Saved district cards, baked in by services/farm-ai-commons-api/scripts/bake-fallback.mjs.
 (function(){
   var sel=$("district");
   if(!FALLBACK.districts.length){$("saved").hidden=true;return;}
   FALLBACK.districts.forEach(function(d,i){var o=document.createElement("option");o.value=i;o.textContent=d.name;sel.appendChild(o);});
-  $("saved-hint").textContent="Figures saved on "+pretty(FALLBACK.saved)+" for the field-day districts. Use these if the live lookup won't load.";
+  $("saved-hint").textContent="Figures saved "+pretty(FALLBACK.saved)+".";
   $("use-saved").addEventListener("click",function(){var d=FALLBACK.districts[Number(sel.value)];render(d.card,FALLBACK.saved);$("saved").open=false;});
 })();
 if(props.title)$("title").textContent=props.title;

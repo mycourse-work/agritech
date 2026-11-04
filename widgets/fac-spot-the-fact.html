@@ -9,107 +9,107 @@
 :root{--paper:#F4F1EA;--white:#FFFFFF;--surface-2:#FAF8F3;--ink:#263341;--ink-2:#465565;--heading:#3B4E62;--muted:#5A6776;--line:#CEC8BA;--line-soft:#E3DED3;--control:#7A8592;--accent:#036DA0;--accent-hover:#025A85;--accent-soft:#E4F4FD;--accent-line:#B5DFF6;--sky:#05A5F1;--dark:#1F2B38;--on-accent:#FFFFFF;--ok:#1E6B45;--ok-bg:#E3F1E8;--bad:#9A3324;--bad-bg:#FBE6E1;--warn:#7A5A14;--warn-bg:#F6EDD3;--r-s:8px;--r-m:12px;--r-l:16px;--font:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;--serif:"Playfair Display",Georgia,"Times New Roman",serif}
 [data-theme=dark]{--paper:#0B0E12;--white:#1F2B38;--surface-2:#18222D;--ink:#EEF1F4;--ink-2:#D3D9E0;--heading:#E4E9EF;--muted:#B3BCC6;--line:#4A5868;--line-soft:#344252;--control:#8D99A6;--accent:#5CC3F5;--accent-hover:#8AD4F8;--accent-soft:#12324A;--accent-line:#2B5F80;--on-accent:#0B0E12;--ok:#8FD3AA;--ok-bg:#173A28;--bad:#F2A58F;--bad-bg:#3D2620;--warn:#ECD08A;--warn-bg:#3A3220}
 *{box-sizing:border-box}
-html,body{margin:0}
-body{padding:14px;background:var(--paper);color:var(--ink);font:17px/1.55 var(--font);overflow-x:hidden;-webkit-text-size-adjust:100%}
-main{max-width:760px;margin:0 auto}
+html,body{margin:0;background:transparent}
+body{padding:0;color:var(--ink);font:16px/1.45 var(--font);overflow-x:hidden;-webkit-text-size-adjust:100%}
+main{max-width:640px;margin:0 auto;background:var(--paper);border:1px solid var(--line-soft);border-radius:var(--r-m);padding:12px 14px 14px}
 h1,h2,h3,p,ul,ol,fieldset,legend{margin:0;padding:0}
 ul,ol{list-style:none}
 button,input,select,textarea{font:inherit;color:inherit}
-button{cursor:pointer}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.head{background:#1F2B38;color:#FFFFFF;padding:20px 20px 18px;border-radius:var(--r-l) var(--r-l) 0 0;border-bottom:4px solid #05A5F1}
-.head h1{font:500 27px/1.2 var(--serif);letter-spacing:-.2px}
-.head p{color:#E4E9EF;margin-top:6px;font-size:16px;max-width:60ch}
-.panel{background:var(--white);border:1px solid var(--line-soft);border-top:0;border-radius:0 0 var(--r-l) var(--r-l);padding:18px}
-.sub{font-size:15px;color:var(--muted)}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;min-width:48px;padding:10px 20px;border:2px solid var(--accent);border-radius:var(--r-m);background:var(--accent);color:var(--on-accent);font-weight:650;font-size:17px;line-height:1.25;text-align:center}
-.btn:hover{background:var(--accent-hover);border-color:var(--accent-hover)}
-.btn.secondary{background:transparent;color:var(--accent)}
-.btn.secondary:hover{background:var(--accent-soft)}
+button{cursor:pointer;-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.top h1{font:500 20px/1.25 var(--serif);color:var(--heading)}
+.count{flex:none;font-size:16px;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
+.bar{height:4px;margin-top:8px;border-radius:2px;background:var(--line-soft);overflow:hidden}
+.bar span{display:block;height:100%;width:0;background:var(--sky);transition:width .25s ease}
+.step{margin-top:12px}
+.step:focus{outline:none}
+.prompt{font-weight:650;font-size:18px;line-height:1.35;color:var(--ink)}
+.lead{font-size:16px;color:var(--muted)}
+.sub{font-size:16px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;min-width:48px;padding:10px 18px;border:2px solid var(--accent);border-radius:var(--r-s);background:var(--accent);color:var(--on-accent);font-weight:650;font-size:17px;line-height:1.25;text-align:center}
+.btn:active{transform:translateY(1px)}
+.btn.secondary{background:var(--white);color:var(--accent)}
 .btn[aria-disabled=true]{background:var(--surface-2);border-color:var(--line);color:var(--muted);cursor:not-allowed}
-.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.status{font-size:15px;color:var(--muted);min-height:1.5em;margin-top:8px}
-.result{margin-top:18px;padding:16px;border-radius:var(--r-m);background:var(--surface-2);border:1px solid var(--line)}
-.result h2{font:500 22px/1.3 var(--serif);color:var(--heading)}
-.result p{margin-top:8px}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.actions .btn{flex:1 1 auto}
+/* Answer buttons: full width, one per row. */
+.choices{display:grid;gap:8px;margin-top:10px}
+.choice{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:48px;padding:10px 12px;text-align:left;border:2px solid var(--line);border-radius:var(--r-s);background:var(--white);font-size:16px;line-height:1.35}
+.choice[aria-disabled=true]{cursor:default}
+.choice .tag{flex:none;font-size:16px;font-weight:700}
+.choice.right,.choice.right:hover{border-color:var(--ok);background:var(--ok-bg)}
+.choice.right .tag{color:var(--ok)}
+.choice.wrong,.choice.wrong:hover{border-color:var(--bad);background:var(--bad-bg)}
+.choice.wrong .tag{color:var(--bad)}
+.choice.flag,.choice.flag:hover{border-color:var(--warn);background:var(--warn-bg)}
+.choice.flag .tag{color:var(--warn)}
+.fb{margin-top:10px;padding:8px 12px;border-radius:var(--r-s);border-left:4px solid var(--ok);background:var(--ok-bg);font-size:16px;line-height:1.4}
+.fb.bad{border-left-color:var(--bad);background:var(--bad-bg);color:var(--ink)}
+.fb strong{font-weight:700}
+.fb:focus{outline:none}
+.status{font-size:16px;color:var(--muted);margin-top:6px}
+.status:empty{display:none}
+.score{font:500 34px/1.1 var(--serif);color:var(--accent)}
+.done h2{font:500 20px/1.3 var(--serif);color:var(--heading)}
+.done p{margin-top:6px}
+details.more{margin-top:10px;border-top:1px solid var(--line-soft)}
+details.more summary{display:flex;align-items:center;min-height:44px;font-weight:650;color:var(--accent);cursor:pointer;list-style:none}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary:before{content:"";flex:none;width:8px;height:8px;margin:0 10px 0 4px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .15s}
+details.more[open] summary:before{transform:rotate(45deg)}
 .ok{color:var(--ok)}.bad{color:var(--bad)}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 [hidden]{display:none!important}
-@media(max-width:480px){body{padding:8px}.head{padding:18px 16px 16px}.head h1{font-size:24px}.panel{padding:16px 14px}.actions .btn{flex:1 1 100%}}
+@media(max-width:400px){main{padding:10px 12px 12px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-.meta{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
-.meta .round{font-weight:650;font-size:16px;color:var(--accent)}
-.grid{display:grid;grid-template-columns:1fr 1.2fr;gap:14px;margin-top:12px}
-.card{border:1px solid var(--line);border-radius:var(--r-m);padding:14px;background:var(--paper)}
-.card h2{font:500 19px/1.3 var(--serif);color:var(--ink)}
-.card .kind{font-size:15px;color:var(--muted);margin-top:2px}
-.source{margin-top:10px;font-size:16px;line-height:1.5;white-space:pre-line;border-left:4px solid var(--sky);padding-left:10px}
-.claims{display:grid;gap:8px;margin-top:10px}
-.claim{display:block;width:100%;text-align:left;min-height:48px;padding:10px 12px 10px 44px;position:relative;border:2px solid var(--line);border-radius:var(--r-s);background:var(--white);font-size:17px;line-height:1.4}
-.claim:before{content:"";position:absolute;left:12px;top:12px;width:20px;height:20px;border:2px solid var(--line);border-radius:4px;background:var(--white)}
-.claim[aria-pressed=true]{border-color:var(--accent);background:var(--accent-soft)}
-.claim[aria-pressed=true]:before{border-color:var(--accent);background:var(--accent);box-shadow:inset 0 0 0 3px var(--accent-soft)}
-.claim.caught{border-color:var(--ok);background:var(--ok-bg)}
-.claim.missed{border-color:var(--bad);background:var(--bad-bg)}
-.claim.flagged{border-color:var(--warn);background:var(--warn-bg)}
-.claim.fine{border-color:var(--line);background:var(--white)}
-.claim .note{display:block;margin-top:6px;font-size:15px;color:var(--ink)}
-.claim .note strong{color:var(--ink)}
-.claim[aria-disabled=true]{cursor:default}
-.finish{margin-top:18px}
-.finish h2{font:500 22px/1.3 var(--serif);color:var(--accent)}
-label.copy-label{display:block;font-weight:650;font-size:16px;margin:16px 0 8px}
-textarea{width:100%;min-height:150px;padding:12px;border:1px solid var(--line);border-radius:var(--r-s);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.5;resize:vertical}
-@media(max-width:620px){.grid{grid-template-columns:1fr}}
+@media (hover:hover){.btn:hover{background:var(--accent-hover);border-color:var(--accent-hover)}.btn.secondary:hover{background:var(--accent-soft)}.choice:not([aria-disabled=true]):hover{border-color:var(--accent)}}
+/* The course player has a sticky header and footer (about 70 px each) around the frame. */
+main *{scroll-margin:80px 0 90px}
+/* Focus mode: fill the height the player gives us, Done at the foot. */
+.focus main{min-height:var(--focus-h,auto);display:flex;flex-direction:column;border:0;border-radius:0}
+.focus main>*{flex:none}
+.focus-done{margin-top:auto;padding-top:12px;display:flex;justify-content:flex-end}
+.focus-done .btn{min-width:120px}
+.label{font-weight:650;font-size:16px;color:var(--ink-2)}
+.label+*{margin-top:4px}
+.source{margin-top:8px;padding:8px 12px;border-left:4px solid var(--sky);border-radius:0 var(--r-s) var(--r-s) 0;background:var(--white);font-size:16px;line-height:1.45;white-space:pre-line}
+.ai{margin-top:12px}
+.claims{margin-top:6px}
+.claim .tag{align-self:flex-start}
+label.copy-label{display:block;font-weight:650;font-size:16px;margin-top:10px}
+textarea{display:block;width:100%;margin-top:4px;padding:8px 10px;border:1px solid var(--line);border-radius:var(--r-s);background:var(--white);color:var(--ink);font-size:16px;line-height:1.4;resize:none}
 </style>
 </head>
 <body>
 <main>
-  <header class="head">
+  <header class="top">
     <h1 id="title">Spot the made-up fact</h1>
-    <p>Read the source, then the AI answer. Tap every detail in the answer that the source doesn't back up, then tap Check.</p>
+    <p class="count" id="count" aria-hidden="true"></p>
   </header>
-  <section class="panel">
-    <div id="play">
-      <div class="meta">
-        <p class="round" id="round-label"></p>
-        <p class="sub" id="picked-label" aria-live="polite"></p>
-      </div>
-      <div class="grid">
-        <section class="card" aria-labelledby="src-title">
-          <h2 id="src-title">The source</h2>
-          <p class="kind" id="src-kind"></p>
-          <p class="source" id="src-text"></p>
-        </section>
-        <section class="card" aria-labelledby="ai-title">
-          <h2 id="ai-title">The AI answer</h2>
-          <p class="kind" id="ai-kind"></p>
-          <div class="claims" id="claims"></div>
-        </section>
-      </div>
-      <p class="status" id="status" aria-live="polite"></p>
-      <div class="actions">
-        <button class="btn" type="button" id="check">Check</button>
-        <button class="btn secondary" type="button" id="clear">Clear my taps</button>
-        <button class="btn" type="button" id="next" hidden>Next round</button>
-      </div>
-      <section class="result" id="round-result" hidden tabindex="-1" aria-labelledby="round-result-title">
-        <h2 id="round-result-title"></h2>
-        <p id="round-result-text"></p>
-      </section>
+  <div class="bar" aria-hidden="true"><span id="bar-fill"></span></div>
+
+  <section class="step" id="play" aria-labelledby="src-label">
+    <p class="label" id="src-label"></p>
+    <p class="source" id="src-text"></p>
+    <div class="ai">
+      <p class="label" id="ai-label"></p>
+      <div class="choices claims" id="claims" role="group" aria-labelledby="ai-label"></div>
     </div>
-    <section class="result finish" id="finish" hidden tabindex="-1" aria-labelledby="finish-title">
-      <h2 id="finish-title">Done</h2>
-      <p id="finish-text"></p>
-      <p>The made-up details all sounded as sure as the real ones. That's normal for a chat AI, so here's a question to paste under any answer before you act on it.</p>
-      <label class="copy-label" for="checklist">Paste this under an AI answer</label>
-      <textarea id="checklist" readonly></textarea>
-      <div class="actions">
-        <button class="btn" type="button" id="copy">Copy</button>
-        <button class="btn secondary" type="button" id="restart">Start again</button>
-      </div>
-      <p class="status" id="copy-status" aria-live="polite"></p>
-    </section>
+    <p class="fb" id="fb" hidden></p>
+    <div class="actions" id="next-wrap" hidden><button class="btn" type="button" id="next">Next</button></div>
+  </section>
+
+  <section class="step done" id="finish" hidden aria-labelledby="finish-title">
+    <h2 id="finish-title"></h2>
+    <p id="finish-text">The made-up bits sounded as sure as the real ones. Paste this check under any AI answer before you act on it.</p>
+    <label class="copy-label" for="checklist">Your check</label>
+    <textarea id="checklist" readonly rows="6"></textarea>
+    <div class="actions">
+      <button class="btn" type="button" id="copy">Copy</button>
+      <button class="btn secondary" type="button" id="restart">Start again</button>
+    </div>
+    <p class="status" id="copy-status" aria-live="polite"></p>
   </section>
 </main>
 <div class="sr-only" id="announcer" aria-live="polite"></div>
@@ -126,101 +126,124 @@ function reportHeight(){
   },40);
 }
 window.addEventListener("message",function(event){
+  if(event.source!==window.parent)return;
   var data=event.data||{};
   if(data.type==="widget-theme"&&(data.theme==="dark"||data.theme==="light")){root.setAttribute("data-theme",data.theme);reportHeight();}
+  if(data.type==="widget-mode")setMode(data.mode,data.height);
 });
+// Focus mode (FOCUS-MODE.md): the player may open the frame full screen and tell us the height we have.
+// Fill that height and show a Done button; back inline, the compact layout returns with progress kept.
+var doneBar=null;
+function setMode(mode,height){
+  var focus=mode==="focus";
+  root.classList.toggle("focus",focus);
+  root.style.setProperty("--focus-h",focus&&height>0?Math.floor(height)+"px":"auto");
+  if(focus&&!doneBar){
+    doneBar=el("div","focus-done");var b=el("button","btn secondary","Done");b.type="button";
+    b.addEventListener("click",function(){window.parent.postMessage({type:"widget-focus-exit"},"*");});
+    doneBar.appendChild(b);document.querySelector("main").appendChild(doneBar);
+  }
+  if(doneBar)doneBar.hidden=!focus;
+  reportHeight();
+}
 if(typeof ResizeObserver==="function")new ResizeObserver(reportHeight).observe(document.body);
 window.addEventListener("load",reportHeight);
 window.addEventListener("resize",reportHeight);
 var $=function(id){return document.getElementById(id);};
 function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;}
 function announce(msg){var a=$("announcer");a.textContent="";window.setTimeout(function(){a.textContent=msg;},30);}
-function ready(){window.setTimeout(function(){reportHeight();window.parent.postMessage({type:"widget-ready"},"*");},0);}
+function ready(){window.setTimeout(function(){reportHeight();window.parent.postMessage({type:"widget-ready",title:props.title||document.title},"*");},0);}
 function copyFrom(ta,status){
   function fallback(){
+    var back=document.activeElement,d=ta.closest("details");d=d&&!d.open?d:null;if(d)d.open=true;
     ta.focus();ta.select();try{ta.setSelectionRange(0,ta.value.length);}catch(e){}
     var ok=false;try{ok=document.execCommand("copy");}catch(e){ok=false;}
-    status.textContent=ok?"Copied. Now paste it into your AI chat.":"The text is selected. Press Ctrl+C, or press and hold it and choose Copy.";
+    status.textContent=ok?"Copied. Now paste it into your AI chat.":"The text is selected. Press and hold it, then tap Copy (or press Ctrl+C).";
+    if(ok&&d){d.open=false;if(back&&back!==document.body)back.focus({preventScroll:true});}
   }
   if(navigator.clipboard&&typeof navigator.clipboard.writeText==="function"){
     navigator.clipboard.writeText(ta.value).then(function(){status.textContent="Copied. Now paste it into your AI chat.";},fallback);
   }else{fallback();}
 }
-var ROUNDS=[
-  {kind:"Rain gauge record, Kurow",
-   source:"1 July to 31 October\nTotal: 162 mm\nWettest month: September, 48 mm\nDriest month: July, 27 mm\nNo readings 12 to 14 October (gauge fault)",
-   ask:"Asked: \"Sum up the rain at my gauge since July.\"",
-   claims:[
-    {t:"Your gauge recorded 162 mm between 1 July and 31 October.",real:true},
-    {t:"That's about 60% of the long-term average for the district.",real:false,why:"The record has no long-term average in it. The AI made that comparison up."},
-    {t:"September was the wettest month, with 48 mm.",real:true},
-    {t:"The gauge recorded rain every day of the period.",real:false,why:"The record says there were no readings from 12 to 14 October."},
+function progress(done,total,text){$("count").textContent=text;$("bar-fill").style.width=Math.round(done/total*100)+"%";}
+function focusQuiet(node){if(node.tabIndex<0&&!node.hasAttribute("tabindex"))node.setAttribute("tabindex","-1");node.focus({preventScroll:true});}
+// Scroll the node into the player's view once the frame has grown to fit it (the resize is async).
+function reveal(node){
+  var tries=0;
+  (function go(){
+    if(node.getBoundingClientRect().bottom>window.innerHeight+1&&tries++<20){window.setTimeout(go,60);return;}
+    try{node.scrollIntoView({block:"nearest"});}catch(e){}
+  })();
+}
+var GAUGE="Kurow rain gauge record";
+var GAUGE_TEXT="1 July to 31 October: 162 mm\nWettest month: September, 48 mm\nDriest month: July, 27 mm\nNo readings 12 to 14 Oct (fault)";
+var EMAIL="Council consents email";
+var STEPS=[
+  {source:GAUGE,text:GAUGE_TEXT,claims:[
+    {t:"Your gauge recorded 162 mm from 1 July to 31 October.",real:true},
+    {t:"That's about 60% of the district's long-term average.",real:false,why:"The record has no average in it. The AI made it up."}]},
+  {source:GAUGE,text:GAUGE_TEXT,claims:[
+    {t:"The gauge recorded rain every day of the period.",real:false,why:"No readings from 12 to 14 October."},
+    {t:"September was the wettest month, with 48 mm.",real:true}]},
+  {source:GAUGE,text:GAUGE_TEXT,claims:[
     {t:"July was the driest month, at 27 mm.",real:true},
-    {t:"With a season this dry, you should plan to destock before Christmas.",real:false,why:"Nothing in the record is advice. Whether to destock is your call, using far more than one gauge."}
-   ]},
-  {kind:"Email from the council consents team",
-   source:"Your water take consent CRC123456 expires on 30 June 2027.\nTo keep taking water while your renewal is processed, lodge it at least 6 months before expiry, by 31 December 2026.\nYou can apply online on the ECan website. Call the consents team if you have questions.",
-   ask:"Asked: \"What do I need to do about this email?\"",
-   claims:[
-    {t:"Your water take consent expires on 30 June 2027.",real:true},
-    {t:"Lodge the renewal by 31 December 2026 so you can keep taking water while it's processed.",real:true},
-    {t:"The renewal fee is $1,200.",real:false,why:"The email doesn't mention a fee. Ask the council what it will cost."},
-    {t:"You can apply online on the ECan website.",real:true},
-    {t:"The council will send you a reminder a month before the deadline.",real:false,why:"The email doesn't promise a reminder. Put the date in your own diary."}
-   ]}
+    {t:"With a season this dry, plan to destock before Christmas.",real:false,why:"The record gives no advice. Destocking is your call."}]},
+  {source:EMAIL,text:"Your water take consent CRC123456 expires on 30 June 2027. Lodge your renewal by 31 December 2026.",claims:[
+    {t:"Your consent expires on 30 June 2027.",real:true},
+    {t:"The renewal fee is $1,200.",real:false,why:"The email doesn't mention a fee."}]},
+  {source:EMAIL,text:"Lodge your renewal by 31 December 2026 to keep taking water meanwhile. You can apply online.",claims:[
+    {t:"Lodge by 31 December 2026 to keep taking water.",real:true},
+    {t:"The council will remind you a month before.",real:false,why:"No reminder is promised. Diary the date."},
+    {t:"You can apply online.",real:true}]}
 ];
 var CHECKLIST="Before I use your answer: list each fact or number you gave me, and quote the line from my source that backs it up. If nothing in my source backs it, write \"not in the source\" next to it.";
-var round=0,taps={},checked=false,totals={caught:0,fakes:0,flagged:0};
-function picked(){return Object.keys(taps).filter(function(k){return taps[k];}).length;}
-function showRound(){
-  var r=ROUNDS[round];taps={};checked=false;
-  $("round-label").textContent="Round "+(round+1)+" of "+ROUNDS.length;
-  $("src-kind").textContent=r.kind;$("src-text").textContent=r.source;$("ai-kind").textContent=r.ask;
+var cur=0,caught=0,answered=false;
+function show(i){
+  cur=i;answered=false;var s=STEPS[i];
+  progress(i,STEPS.length,(i+1)+" of "+STEPS.length);
+  $("src-label").textContent="Source: "+s.source;$("src-text").textContent=s.text;
+  $("ai-label").textContent="Tap the bit the AI made up:";
   var wrap=$("claims");wrap.textContent="";
-  r.claims.forEach(function(c,i){
-    var b=el("button","claim");b.type="button";b.setAttribute("aria-pressed","false");b.dataset.i=i;
+  s.claims.forEach(function(c,j){
+    var b=el("button","choice claim");b.type="button";
     b.appendChild(el("span",null,c.t));
-    b.addEventListener("click",function(){
-      if(checked)return;taps[i]=!taps[i];b.setAttribute("aria-pressed",taps[i]?"true":"false");updatePicked();$("status").textContent="";
-    });
+    b.addEventListener("click",function(){pick(j);});
     wrap.appendChild(b);
   });
-  $("check").hidden=false;$("clear").hidden=false;$("next").hidden=true;$("round-result").hidden=true;$("status").textContent="";
-  updatePicked();reportHeight();
-}
-function updatePicked(){var n=picked();$("picked-label").textContent=n===1?"1 detail tapped":n+" details tapped";}
-$("clear").addEventListener("click",function(){if(checked)return;taps={};document.querySelectorAll(".claim").forEach(function(b){b.setAttribute("aria-pressed","false");});updatePicked();});
-$("check").addEventListener("click",function(){
-  if(checked)return;
-  if(picked()===0){$("status").textContent="Tap at least one detail you think the source doesn't back up.";return;}
-  checked=true;var r=ROUNDS[round];var caught=0,fakes=0,flagged=0;
-  document.querySelectorAll(".claim").forEach(function(b){
-    var c=r.claims[b.dataset.i];var t=!!taps[b.dataset.i];var note=el("span","note");
-    if(!c.real){fakes++;if(t){caught++;b.classList.add("caught");note.appendChild(el("strong",null,"Caught. "));}else{b.classList.add("missed");note.appendChild(el("strong",null,"Missed. "));}note.appendChild(document.createTextNode(c.why));}
-    else if(t){flagged++;b.classList.add("flagged");note.appendChild(el("strong",null,"This one is in the source. "));note.appendChild(document.createTextNode("Check the source card again."));}
-    else{b.classList.add("fine");note.appendChild(document.createTextNode("In the source."));}
-    b.appendChild(note);b.setAttribute("aria-disabled","true");
-  });
-  totals.caught+=caught;totals.fakes+=fakes;totals.flagged+=flagged;
-  $("round-result-title").textContent="You caught "+caught+" of "+fakes+" made-up details";
-  $("round-result-text").textContent=flagged?flagged+(flagged===1?" detail you tapped was":" details you tapped were")+" actually in the source.":(caught===fakes?"Nothing slipped past you.":"Look at the ones marked Missed to see what gave them away.");
-  $("round-result").hidden=false;$("check").hidden=true;$("clear").hidden=true;
-  announce("You caught "+caught+" of "+fakes+".");
-  if(round<ROUNDS.length-1){$("next").hidden=false;$("next").focus();}
-  else finish();
+  $("fb").hidden=true;$("next-wrap").hidden=true;$("play").hidden=false;$("finish").hidden=true;
   reportHeight();
-});
-$("next").addEventListener("click",function(){round++;showRound();$("round-label").setAttribute("tabindex","-1");$("round-label").focus();});
-function finish(){
-  $("finish-text").textContent="Across both rounds you caught "+totals.caught+" of "+totals.fakes+" made-up details"+(totals.flagged?", and tapped "+totals.flagged+(totals.flagged===1?" that was real.":" that were real."):".");
-  $("checklist").value=CHECKLIST;$("copy-status").textContent="";
-  $("finish").hidden=false;reportHeight();
-  window.setTimeout(function(){$("finish").focus({preventScroll:true});},50);
 }
-$("copy").addEventListener("click",function(){copyFrom($("checklist"),$("copy-status"));});
-$("restart").addEventListener("click",function(){round=0;totals={caught:0,fakes:0,flagged:0};$("finish").hidden=true;showRound();$("round-label").setAttribute("tabindex","-1");$("round-label").focus();});
+function pick(j){
+  if(answered)return;answered=true;
+  var s=STEPS[cur],fake=null;s.claims.forEach(function(c){if(!c.real)fake=c;});
+  var right=!s.claims[j].real;if(right)caught++;
+  $("claims").querySelectorAll(".claim").forEach(function(b,k){
+    b.setAttribute("aria-disabled","true");var c=s.claims[k],tag=null;
+    if(!c.real){b.classList.add(right?"right":"wrong");tag=right?"Caught":"Made up";}
+    else if(k===j){b.classList.add("flag");tag="In the source";}
+    if(tag){b.appendChild(el("span","tag",tag));b.setAttribute("aria-label",c.t+" "+tag+".");}
+  });
+  var fb=$("fb");fb.textContent="";fb.className="fb"+(right?"":" bad");
+  fb.appendChild(el("strong",null,right?"Caught it. ":"That one is in the source. "));
+  fb.appendChild(document.createTextNode(fake.why));
+  fb.hidden=false;$("next-wrap").hidden=false;
+  $("next").textContent=cur<STEPS.length-1?"Next":"See how I did";
+  progress(cur+1,STEPS.length,(cur+1)+" of "+STEPS.length);
+  announce((right?"Caught it. ":"That one is in the source. The made-up bit was: "+fake.t+" ")+fake.why);
+  $("next").focus({preventScroll:true});reportHeight();reveal($("next"));
+}
+$("next").addEventListener("click",function(){
+  if(cur<STEPS.length-1){show(cur+1);focusQuiet($("src-label"));reveal($("title"));announce("Passage "+(cur+1)+" of "+STEPS.length);return;}
+  $("play").hidden=true;$("finish").hidden=false;$("count").textContent="Finished";
+  $("finish-title").textContent="You caught "+caught+" of "+STEPS.length+" made-up details";
+  $("checklist").value=CHECKLIST;$("copy-status").textContent="";
+  announce("You caught "+caught+" of "+STEPS.length+".");
+  focusQuiet($("finish-title"));reportHeight();reveal($("title"));
+});
+$("copy").addEventListener("click",function(){copyFrom($("checklist"),$("copy-status"));reportHeight();});
+$("restart").addEventListener("click",function(){caught=0;show(0);focusQuiet($("src-label"));reveal($("title"));});
 if(props.title)$("title").textContent=props.title;
-showRound();ready();
+show(0);ready();
 </script>
 </body>
 </html>
