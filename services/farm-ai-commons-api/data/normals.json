@@ -1,0 +1,1 @@
+{"source":"ERA5 via Open-Meteo archive API (models=era5). Contains modified Copernicus Climate Change Service information. CC BY 4.0.","normal_period":"1991-2020","grid_degrees":0.25,"built":"2026-11-04","values":"Per cell \"lat,lon\" (cell centre): 365 running totals of the mean daily rain from 1 July, in tenths of a mm. 29 Feb shares 28 Feb.","cells_wanted":146,"cells":{}}

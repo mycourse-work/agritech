@@ -1,0 +1,69 @@
+{
+ "features": [
+  {
+   "attributes": {
+    "SITENUMBER": 217810,
+    "SITE": "Waimakariri at Mount Byrne",
+    "SITENAME": "Mount Byrne",
+    "ALTITUDE": 1418.0,
+    "LAST_SAMPLE": 1793826000000
+   },
+   "geometry": {
+    "x": 171.863834919838,
+    "y": -42.75267310369431
+   }
+  },
+  {
+   "attributes": {
+    "SITENUMBER": 403601,
+    "SITE": "Hakataramea at McRaes",
+    "SITENAME": "McRaes Gorge",
+    "ALTITUDE": 610.0,
+    "LAST_SAMPLE": 1793826000000
+   },
+   "geometry": {
+    "x": 170.63621007385473,
+    "y": -44.3554357843306
+   }
+  },
+  {
+   "attributes": {
+    "SITENUMBER": 405610,
+    "SITE": "Hakataramea at Mount Florence",
+    "SITENAME": "Mount Florence",
+    "ALTITUDE": 397.0,
+    "LAST_SAMPLE": 1793826000000
+   },
+   "geometry": {
+    "x": 170.6683172424627,
+    "y": -44.557854124900956
+   }
+  },
+  {
+   "attributes": {
+    "SITENUMBER": 413001,
+    "SITE": "Washdyke at Hadlow Road",
+    "SITENAME": "Hadlow Road",
+    "ALTITUDE": 261.0,
+    "LAST_SAMPLE": 1793826000000
+   },
+   "geometry": {
+    "x": 171.09109989479376,
+    "y": -44.36139965708048
+   }
+  },
+  {
+   "attributes": {
+    "SITENUMBER": 999999,
+    "SITE": "Old closed gauge",
+    "SITENAME": "Mount Byrne",
+    "ALTITUDE": 1418.0,
+    "LAST_SAMPLE": 1500000000000
+   },
+   "geometry": {
+    "x": 170.47,
+    "y": -44.73
+   }
+  }
+ ]
+}

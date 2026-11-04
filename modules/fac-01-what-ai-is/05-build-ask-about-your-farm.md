@@ -31,7 +31,7 @@ Don't attach anything and don't add any figures. Write down or screenshot what i
 <div class="reflection-prompt">What did AI say with no data? Write down any rain figures it gave and whether it said the season was wet, dry or normal.</div>
 <div class="reflection-answer">
 
-**Example:** "It said about 250 mm since July, which it called close to normal for the Waitaki. It didn't say where the figure came from."
+**Example:** "It said about 180 mm since July, which it called a bit dry for the Waitaki. It didn't say where the figure came from."
 
 </div>
 </div>
@@ -52,7 +52,7 @@ Your card shows:
 
 > **Note:** A gauge measures the rain that falls in one spot. A climate grid cell averages about 25 km by 25 km, so on hill country it often reads wetter than a valley gauge. That's why the card compares the cell with its own long-term average, and shows the gauge total separately, rather than putting one against the other.
 
-If the live data can't be reached, the card falls back to figures saved for the field-day districts on 9 December, and says so.
+If the live data won't load, open **No signal? Use saved figures for a district** at the bottom of the card. It shows figures saved for the field-day districts, and says the date they were saved.
 
 ## Step 4: Ask again with the card
 
@@ -77,7 +77,7 @@ Some AI apps let you add a connector, so the app can fetch the rain data itself 
 Connector address:
 
 ```text
-WORKER_URL/mcp
+https://farm-ai-commons-api.mail-5bc.workers.dev/mcp
 ```
 
 - **Claude** (any plan, including free, which allows one custom connector): on claude.ai in a web browser, open Settings, find **Connectors** and choose **Add custom connector**. Name it Farm AI Commons and paste the connector address. Once it's added, it also works in the Claude phone app. Ask your question and include your address.
@@ -94,7 +94,7 @@ Put the two answers side by side.
 <div class="reflection-prompt">What did AI get wrong without the data? And name one thing about your farm's rain it still can't know, even with the card.</div>
 <div class="reflection-answer">
 
-**Model response:** Without the card it guessed about 250 mm and called it normal. The gauge says 168 mm since 1 July, and the card puts the season at about 70% of normal, so it's been a dry winter and spring. The first answer sounded just as sure as the second. Even with the card, it doesn't know that our back hill catches more rain than the gauge in the valley, or that the creek paddocks hold water long after the rest dries out.
+**Model response:** Without the card it guessed about 180 mm and called it a bit dry. On 5 November the nearest gauge to Kurow had 224 mm since 1 July, and the card put the season at 137% of normal, so it's been wetter than usual, not drier. The first answer sounded just as sure as the second. Even with the card, it doesn't know that our back hill catches more rain than the gauge in the valley, or that the creek paddocks hold water long after the rest dries out.
 
 </div>
 </div>
@@ -106,5 +106,5 @@ AI without your data guesses. AI with your data can reason. Every module after t
 ## Where the data comes from
 
 - **Address and parcel:** LINZ Data Service, NZ Addresses and NZ Primary Parcels (CC BY 4.0).
-- **Daily rain:** Environment Canterbury open data, rainfall by site (CC BY 4.0). The card uses the nearest Environment Canterbury gauge. In North Otago it uses one within 35 km if there is one. Otago Regional Council's live rain data isn't available as open data, so for the rest of Otago the card says so and links to their portal.
+- **Daily rain:** Environment Canterbury open data, rainfall by site (CC BY 4.0). The card uses the nearest Environment Canterbury gauge. In North Otago it uses one within 35 km if there is one. Otago Regional Council's live rain data isn't available as open data, so for the rest of Otago the card says so and points you to their website.
 - **Normal rain:** ERA5 reanalysis from the Copernicus Climate Change Service, served through Open-Meteo (CC BY 4.0). Contains modified Copernicus Climate Change Service information.

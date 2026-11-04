@@ -30,7 +30,7 @@ This part is optional, but it's where a lot of the learning happens. Hearing tha
 <div class="reflection-prompt">Write the one line you'd post with your screenshots.</div>
 <div class="reflection-answer">
 
-**Example:** "Asked AI about rain since July with no data: it said normal. With the gauge numbers: about 70% of normal. Same app, same question."
+**Example:** "Asked AI about rain since July with no data: it said a bit dry. With the rain card: 137% of normal, so wetter than usual. Same app, same question."
 
 </div>
 </div>
