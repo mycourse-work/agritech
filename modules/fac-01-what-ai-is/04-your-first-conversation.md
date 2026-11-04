@@ -58,7 +58,7 @@ Why bother? Everything earlier in a chat shapes the next answer. If you've been 
 
 ## 5. Use voice in the ute
 
-<!-- IMAGE:l4-ute-voice -->
+![A farmer drives a ute along a gravel track talking to his phone on the dash while a huntaway rides on the deck.](./assets/fac-l4-ute-voice.webp)
 
 Most of the main apps have a voice mode. You talk, it talks back, and you can keep going without touching the screen. It's handy for thinking a problem through on the way to the yards.
 

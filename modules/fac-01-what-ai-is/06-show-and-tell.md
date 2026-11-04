@@ -2,7 +2,7 @@
 
 You've asked AI about your farm with no data and with real data. The most useful thing you can do now is share what happened, especially what it got wrong.
 
-<!-- IMAGE:show-and-tell -->
+![Four farmers laugh together in a woolshed as one of them shows something on her phone.](./assets/fac-show-and-tell.webp)
 
 > **On the farm:** The farmers in your district are asking the same tools the same questions. One screenshot of AI confidently getting your rain wrong teaches the room more than an hour of talk about it.
 

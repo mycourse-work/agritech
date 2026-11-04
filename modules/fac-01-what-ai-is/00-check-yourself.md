@@ -2,6 +2,8 @@
 
 Three quick questions before you start. They take about two minutes, and nothing you pick is saved or sent anywhere.
 
+![A farmer at the kitchen table at dawn smiles at his phone over a mug of tea, his dog asleep at his feet and paddocks through the window.](./assets/fac-m1-hero.webp)
+
 > **Placement:** If you get all three right, you already know the ground this module covers. You can jump straight to the build, where you ask AI about your own farm.
 
 :::widget fac-check-yourself

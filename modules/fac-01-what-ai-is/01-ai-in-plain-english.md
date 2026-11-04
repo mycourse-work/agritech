@@ -16,7 +16,7 @@ By the end of this lesson, you will be able to:
 
 ## Three kinds of AI
 
-<!-- IMAGE:l1-three-kinds -->
+![Three kinds of AI in three panels: a camera on a fence post watching cows (AI that senses), rain clouds over paddocks (AI that predicts) and a phone full of chat bubbles (AI that writes and talks).](./assets/fac-l1-three-kinds.webp)
 
 ### 1. AI that senses
 

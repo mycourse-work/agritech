@@ -16,7 +16,7 @@ By the end of this lesson, you will be able to:
 
 ## What it's good at
 
-<!-- IMAGE:l3-gets-wrong -->
+![A farmer in his shed looks sceptically at a chat answer on his phone, his ruled notebook in the other hand and a rain gauge on the bench.](./assets/fac-l3-gets-wrong.webp)
 
 Chat AI does best when you give it the facts and ask it to work with them.
 

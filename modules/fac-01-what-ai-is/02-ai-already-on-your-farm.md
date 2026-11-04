@@ -16,7 +16,7 @@ By the end of this lesson, you will be able to:
 
 ## Collars and virtual fencing
 
-<!-- IMAGE:l2-collars -->
+![Friesian and Jersey cows wearing neck collars graze at sunrise, with a rotary milking shed behind.](./assets/fac-l2-collars.webp)
 
 Virtual fencing collars move stock with sound, vibration or a mild pulse instead of wire. The fence lines are drawn on a phone. Many collars also record movement and chewing time, and the software learns what's normal for each animal. When a cow's pattern changes, it flags her: she may be on heat, or getting sick.
 
@@ -24,19 +24,19 @@ That's AI that **senses**. It doesn't know the cow. It knows her pattern looks d
 
 ## EID weighing and drafting
 
-<!-- IMAGE:l2-eid-weighing -->
+![A farmer holds a tag reader to a merino's ear tag in a weigh crate while a heading dog watches.](./assets/fac-l2-eid-weighing.webp)
 
 An EID reader in the race reads the tag, the scale records the weight, and the drafting gate sorts by weight or by a list. A lot of this is straight automation, and that's fine. The AI part comes when software uses the weight records to predict, for example which lambs will reach a target weight by a date, or which animals are falling behind their mob.
 
 ## Pasture sensing
 
-<!-- IMAGE:l2-pasture-sensing -->
+![A drone flies low over a patchwork of paddocks with sheep, a satellite high above and snowy mountains behind.](./assets/fac-l2-pasture-sensing.webp)
 
 Satellite pasture tools estimate cover for each paddock from photos taken from space. They learned by matching what paddocks look like from above against thousands of plate meter and cut readings on the ground. That's AI that **predicts**, and like any estimate it can be off, especially under cloud, on steep country or after a big change in the paddock.
 
 ## Weather forecasts
 
-<!-- IMAGE:l2-forecast -->
+![A farmer parked at a gate checks a rain forecast on his phone as a storm builds over the plains.](./assets/fac-l2-forecast.webp)
 
 Forecasts have long come from big physics models run on supercomputers. Some major forecasting centres now also run AI weather models, trained on decades of past weather, alongside the traditional ones. Either way the forecast in your app is a prediction with a range around it.
 

@@ -2,6 +2,8 @@
 
 Time to ask AI about your own place. You'll ask it about this season's rain twice: once with nothing to go on, and once with the real numbers from your nearest council rain gauge. Then you'll compare the two answers.
 
+![A clear plastic rain gauge on a wooden fence post, sheep grazing in a green paddock and snowy mountains behind.](./assets/fac-build-rain-gauge.webp)
+
 > **On the farm:** Rain since 1 July sets up your spring: grass growth, when to sell, whether to buy in feed. It's a question every farmer has an answer to, so you'll know straight away if AI is guessing.
 
 ## What you'll need
