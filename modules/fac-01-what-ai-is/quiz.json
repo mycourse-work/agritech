@@ -1,0 +1,237 @@
+{
+  "title": "Quiz: What AI is, and what it isn't",
+  "type": "quiz",
+  "questions": [
+    {
+      "id": "fac-01-q01-three-kinds",
+      "questionNumber": 1,
+      "type": "MULTIPLE_CHOICE",
+      "question": "A collar flags a cow whose chewing time has dropped. Which kind of AI is that?",
+      "answers": [
+        {
+          "id": "fac-01-q01-three-kinds-a",
+          "text": "AI that senses",
+          "correct": true,
+          "feedback": "Right. It reads movement and chewing, learns what's normal for that cow, and flags a change."
+        },
+        {
+          "id": "fac-01-q01-three-kinds-b",
+          "text": "AI that writes and talks",
+          "correct": false,
+          "feedback": "Chat tools write and talk. The collar doesn't write anything; it reads the cow's activity."
+        },
+        {
+          "id": "fac-01-q01-three-kinds-c",
+          "text": "AI that predicts the weather",
+          "correct": false,
+          "feedback": "Weather models predict. The collar is reading the cow's own pattern."
+        },
+        {
+          "id": "fac-01-q01-three-kinds-d",
+          "text": "It isn't AI at all",
+          "correct": false,
+          "feedback": "Learning what's normal for each cow and flagging changes is a sensing kind of AI."
+        }
+      ],
+      "feedback": "Collars, cameras and scales that read the world and spot patterns are AI that senses."
+    },
+    {
+      "id": "fac-01-q02-how-chat-works",
+      "questionNumber": 2,
+      "type": "MULTIPLE_CHOICE",
+      "question": "How does a chat AI like ChatGPT, Gemini, Claude or Copilot come up with an answer?",
+      "answers": [
+        {
+          "id": "fac-01-q02-how-chat-works-a",
+          "text": "It looks the answer up in a checked database of facts",
+          "correct": false,
+          "feedback": "It doesn't. It writes from patterns in what it has read, which is why it can be wrong."
+        },
+        {
+          "id": "fac-01-q02-how-chat-works-b",
+          "text": "It picks likely next words, one after another, from patterns in what it has read",
+          "correct": true,
+          "feedback": "Right. That's why its answers read well, and why a likely-sounding answer isn't always true."
+        },
+        {
+          "id": "fac-01-q02-how-chat-works-c",
+          "text": "A person reads your question and types the reply",
+          "correct": false,
+          "feedback": "No person is involved in writing the answer."
+        },
+        {
+          "id": "fac-01-q02-how-chat-works-d",
+          "text": "It measures things on your farm through your phone",
+          "correct": false,
+          "feedback": "It knows nothing about your farm unless you tell it or give it data."
+        }
+      ],
+      "feedback": "A chat AI predicts likely words. Likely isn't the same as true."
+    },
+    {
+      "id": "fac-01-q03-good-job",
+      "questionNumber": 3,
+      "type": "MULTIPLE_CHOICE",
+      "question": "Which of these is a good job to give a chat AI?",
+      "answers": [
+        {
+          "id": "fac-01-q03-good-job-a",
+          "text": "Turning your notes from the stock agent's call into a tidy summary",
+          "correct": true,
+          "feedback": "Right. You supply the facts, it does the writing, and you can check it against your notes."
+        },
+        {
+          "id": "fac-01-q03-good-job-b",
+          "text": "Telling you this week's schedule price for prime lambs",
+          "correct": false,
+          "feedback": "It can give an old or overseas price with full confidence. Get prices from your processor or agent."
+        },
+        {
+          "id": "fac-01-q03-good-job-c",
+          "text": "Telling you how much rain fell on your farm last month, with nothing attached",
+          "correct": false,
+          "feedback": "Without your data it can only guess, as the build showed."
+        },
+        {
+          "id": "fac-01-q03-good-job-d",
+          "text": "Deciding whether a sick ewe needs the vet",
+          "correct": false,
+          "feedback": "That's a call for you and your vet, not a chat tool."
+        }
+      ],
+      "feedback": "Chat AI does best when you give it the facts and ask it to work with them."
+    },
+    {
+      "id": "fac-01-q04-gets-wrong",
+      "questionNumber": 4,
+      "type": "MULTIPLE_RESPONSE",
+      "question": "Which of these are ways a chat AI commonly gets things wrong? Pick all that apply.",
+      "answers": [
+        {
+          "id": "fac-01-q04-gets-wrong-a",
+          "text": "Inventing facts and stating them with confidence",
+          "correct": true,
+          "feedback": "Yes. These are often called hallucinations."
+        },
+        {
+          "id": "fac-01-q04-gets-wrong-b",
+          "text": "Giving out-of-date information",
+          "correct": true,
+          "feedback": "Yes. It learned from text gathered up to a point in time."
+        },
+        {
+          "id": "fac-01-q04-gets-wrong-c",
+          "text": "Guessing about your farm when you haven't told it anything",
+          "correct": true,
+          "feedback": "Yes. It fills the gaps with what's typical, which may be nothing like your place."
+        },
+        {
+          "id": "fac-01-q04-gets-wrong-d",
+          "text": "Refusing to answer any question about farming",
+          "correct": false,
+          "feedback": "It will happily answer farming questions. The risk is that it answers when it doesn't know."
+        }
+      ],
+      "feedback": "Made-up facts, out-of-date knowledge and guesses about your farm are the big three."
+    },
+    {
+      "id": "fac-01-q05-confident-tone",
+      "questionNumber": 5,
+      "type": "MULTIPLE_CHOICE",
+      "question": "An AI answer sounds very sure of itself. What does that tell you about whether it's right?",
+      "answers": [
+        {
+          "id": "fac-01-q05-confident-tone-a",
+          "text": "It's very likely right",
+          "correct": false,
+          "feedback": "It sounds just as sure when it's guessing. Tone tells you nothing."
+        },
+        {
+          "id": "fac-01-q05-confident-tone-b",
+          "text": "Nothing. You judge it by what you can check, such as a source or your own records",
+          "correct": true,
+          "feedback": "Right. Check the facts, not the tone."
+        },
+        {
+          "id": "fac-01-q05-confident-tone-c",
+          "text": "It has checked its answer on the internet",
+          "correct": false,
+          "feedback": "Not necessarily. Many answers come from patterns, not a search."
+        },
+        {
+          "id": "fac-01-q05-confident-tone-d",
+          "text": "It's wrong, because real experts hedge",
+          "correct": false,
+          "feedback": "Confident answers can be right too. You still can't tell from the tone."
+        }
+      ],
+      "feedback": "A confident tone tells you nothing about accuracy."
+    },
+    {
+      "id": "fac-01-q06-fresh-chat",
+      "questionNumber": 6,
+      "type": "MULTIPLE_CHOICE",
+      "question": "You've been asking about shearing. Now you want help with a calf rearing plan. What should you do?",
+      "answers": [
+        {
+          "id": "fac-01-q06-fresh-chat-a",
+          "text": "Keep going in the same chat so it remembers everything",
+          "correct": false,
+          "feedback": "Earlier talk about shearing can creep into the calf answers."
+        },
+        {
+          "id": "fac-01-q06-fresh-chat-b",
+          "text": "Start a fresh chat",
+          "correct": true,
+          "feedback": "Right. A new topic gets a clean start, so the old chat doesn't steer the answer."
+        },
+        {
+          "id": "fac-01-q06-fresh-chat-c",
+          "text": "Close the app and wait a day",
+          "correct": false,
+          "feedback": "No need to wait. Just start a new chat."
+        },
+        {
+          "id": "fac-01-q06-fresh-chat-d",
+          "text": "Type the question in capitals so it knows it's new",
+          "correct": false,
+          "feedback": "Capitals don't change anything. A fresh chat does."
+        }
+      ],
+      "feedback": "Start a fresh chat when you change topic."
+    },
+    {
+      "id": "fac-01-q07-build-lesson",
+      "questionNumber": 7,
+      "type": "MULTIPLE_CHOICE",
+      "question": "In the build, you asked about rain since 1 July with no data, then with your rain card. What's the main lesson?",
+      "answers": [
+        {
+          "id": "fac-01-q07-build-lesson-a",
+          "text": "AI is useless for farm questions",
+          "correct": false,
+          "feedback": "With the card it could reason from real numbers. The data made the difference."
+        },
+        {
+          "id": "fac-01-q07-build-lesson-b",
+          "text": "AI without your data guesses. AI with your data can reason",
+          "correct": true,
+          "feedback": "Right. Every later module adds more of your farm's own data."
+        },
+        {
+          "id": "fac-01-q07-build-lesson-c",
+          "text": "The first answer is always right if it sounds sure",
+          "correct": false,
+          "feedback": "The cold answer often sounds just as sure, and can be well off."
+        },
+        {
+          "id": "fac-01-q07-build-lesson-d",
+          "text": "Rain gauges and climate grid cells always agree",
+          "correct": false,
+          "feedback": "They measure different things: one spot versus a ~25 km cell. That's why the card shows both."
+        }
+      ],
+      "feedback": "AI without your data guesses. AI with your data can reason."
+    }
+  ]
+}

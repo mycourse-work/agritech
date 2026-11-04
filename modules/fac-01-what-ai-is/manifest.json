@@ -1,0 +1,63 @@
+{
+  "id": "fac-01-what-ai-is",
+  "title": "What AI is, and what it isn't",
+  "description": "Learn what AI is, where it's already on your farm and what it gets wrong. Then ask it your first question about your own farm, and see how much better the answer gets with real rain data.",
+  "estimatedDuration": "About 1.5 hours",
+  "tags": [
+    "Level 1",
+    "AI basics",
+    "first conversation",
+    "rain data",
+    "checking AI answers"
+  ],
+  "lessons": [
+    {
+      "id": "check-yourself",
+      "title": "Check yourself",
+      "type": "content",
+      "markdownPath": "00-check-yourself.md"
+    },
+    {
+      "id": "ai-in-plain-english",
+      "title": "AI in plain English",
+      "type": "content",
+      "markdownPath": "01-ai-in-plain-english.md"
+    },
+    {
+      "id": "ai-already-on-your-farm",
+      "title": "AI already on your farm",
+      "type": "content",
+      "markdownPath": "02-ai-already-on-your-farm.md"
+    },
+    {
+      "id": "good-at-gets-wrong",
+      "title": "What it's good at, and what it gets wrong",
+      "type": "content",
+      "markdownPath": "03-good-at-gets-wrong.md"
+    },
+    {
+      "id": "your-first-conversation",
+      "title": "Your first conversation",
+      "type": "content",
+      "markdownPath": "04-your-first-conversation.md"
+    },
+    {
+      "id": "build-ask-about-your-farm",
+      "title": "Build: Ask about your farm",
+      "type": "content",
+      "markdownPath": "05-build-ask-about-your-farm.md"
+    },
+    {
+      "id": "show-and-tell",
+      "title": "Show and tell",
+      "type": "content",
+      "markdownPath": "06-show-and-tell.md"
+    },
+    {
+      "id": "quiz",
+      "title": "Quiz: What AI is, and what it isn't",
+      "type": "quiz",
+      "quizPath": "quiz.json"
+    }
+  ]
+}
