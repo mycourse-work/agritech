@@ -4,7 +4,7 @@
 
 <video controls poster="/api/content/farm-ai-commons/@modules/fac-01-what-ai-is/assets/fac-l1-poster.jpg" playsinline preload="metadata" aria-label="Lesson 1 video: AI in plain English" style="width: 100%; max-width: 800px; border-radius: 12px; margin: 1.5rem auto; display: block;">
   <source src="./assets/fac-l1.mp4" type="video/mp4">
-  <track kind="captions" src="./assets/fac-l1.vtt" srclang="en-NZ" label="English (NZ)" default>
+  <track kind="captions" src="./assets/fac-l1.vtt" srclang="en-NZ" label="English (NZ)">
   Your browser cannot play this video.
 </video>
 

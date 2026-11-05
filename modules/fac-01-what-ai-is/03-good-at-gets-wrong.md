@@ -4,7 +4,7 @@ A chat AI can turn a page of rough notes into a tidy email in ten seconds. It ca
 
 <video controls poster="/api/content/farm-ai-commons/@modules/fac-01-what-ai-is/assets/fac-l3-poster.jpg" playsinline preload="metadata" aria-label="Lesson 3 video: What it's good at, and what it gets wrong" style="width: 100%; max-width: 800px; border-radius: 12px; margin: 1.5rem auto; display: block;">
   <source src="./assets/fac-l3.mp4" type="video/mp4">
-  <track kind="captions" src="./assets/fac-l3.vtt" srclang="en-NZ" label="English (NZ)" default>
+  <track kind="captions" src="./assets/fac-l3.vtt" srclang="en-NZ" label="English (NZ)">
   Your browser cannot play this video.
 </video>
 

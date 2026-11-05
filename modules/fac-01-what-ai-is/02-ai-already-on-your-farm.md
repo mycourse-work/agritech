@@ -4,7 +4,7 @@ Most farmers who say they've never used AI already have. It's in the collar, the
 
 <video controls poster="/api/content/farm-ai-commons/@modules/fac-01-what-ai-is/assets/fac-l2-poster.jpg" playsinline preload="metadata" aria-label="Lesson 2 video: AI already on your farm" style="width: 100%; max-width: 800px; border-radius: 12px; margin: 1.5rem auto; display: block;">
   <source src="./assets/fac-l2.mp4" type="video/mp4">
-  <track kind="captions" src="./assets/fac-l2.vtt" srclang="en-NZ" label="English (NZ)" default>
+  <track kind="captions" src="./assets/fac-l2.vtt" srclang="en-NZ" label="English (NZ)">
   Your browser cannot play this video.
 </video>
 
