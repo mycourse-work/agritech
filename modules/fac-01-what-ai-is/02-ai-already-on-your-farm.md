@@ -24,7 +24,7 @@ By the end of this lesson, you will be able to:
 
 Virtual fencing collars move stock with sound, vibration or a mild pulse instead of wire. The fence lines are drawn on a phone. Many collars also record movement and chewing time, and the software learns what's normal for each animal. When a cow's pattern changes, it flags her: she may be on heat, or getting sick.
 
-That's AI that **senses**. It doesn't know the cow. It knows her pattern looks different from her own usual.
+That's AI that **senses**. It doesn't know the cow, only that her pattern looks different from usual.
 
 ## EID weighing and drafting
 
@@ -46,7 +46,7 @@ Forecasts have long come from big physics models run on supercomputers. Some maj
 
 ## What's new since 2023
 
-The first three kinds have been creeping onto farms for years. The big change since 2023 is AI that **writes and talks**:
+The first two kinds, sensing and predicting, have been creeping onto farms for years. The big change since 2023 is AI that **writes and talks**:
 
 - **It writes.** Ask for a text to your shearer, a summary of a long email or a plain-words explanation of a regulation, and you get a draft in seconds.
 - **It reads documents.** Many tools can now read a PDF, a photo of a page or a spreadsheet you give them, and answer questions about it.

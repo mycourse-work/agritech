@@ -1,6 +1,6 @@
 # Your first conversation
 
-You don't need a computer, an account with a big company or any special words. A phone and a question about something you're dealing with this week is enough.
+You don't need a computer or any special words. A phone and a question about something you're dealing with this week is enough.
 
 <video controls poster="/api/content/farm-ai-commons/@modules/fac-01-what-ai-is/assets/fac-l4-poster.jpg" playsinline preload="metadata" aria-label="Lesson 4 video: Your first conversation" style="width: 100%; max-width: 800px; border-radius: 12px; margin: 1.5rem auto; display: block;">
   <source src="./assets/fac-l4.mp4" type="video/mp4">
@@ -8,7 +8,7 @@ You don't need a computer, an account with a big company or any special words. A
   Your browser cannot play this video.
 </video>
 
-> **On the farm:** The best first question is a real one. Something you'd normally ring a mate about, look up at night, or put off because the paperwork is a pain.
+> **On the farm:** A good first question is a real one. Something you'd normally ring a mate about, look up at night, or put off because the paperwork is a pain.
 
 ## Learning outcomes
 
@@ -42,7 +42,7 @@ The more of your situation you give it, the less it has to guess.
 
 ## 3. Follow up
 
-The first answer is a starting point. Reply in the same chat, just like a text conversation:
+The first answer is a starting point. Reply in the same chat, like a text conversation:
 
 ```text
 Make it shorter and less formal.
@@ -58,7 +58,7 @@ It remembers what you've said earlier in the same chat, so you don't need to rep
 
 When you move on to something different, start a new chat. Look for a **+** or a pencil icon, usually at the top of the screen.
 
-Why bother? Everything earlier in a chat shapes the next answer. If you've been talking about shearing and then ask about calf rearing, bits of the shearing chat can creep in. A fresh chat gives a clean start.
+Everything earlier in a chat shapes the next answer. If you've been talking about shearing and then ask about calf rearing, bits of the shearing chat can creep in. A fresh chat gives a clean start.
 
 ## 5. Use voice in the ute
 

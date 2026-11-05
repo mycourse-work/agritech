@@ -1,6 +1,6 @@
 # What it's good at, and what it gets wrong
 
-A chat AI can turn a page of rough notes into a tidy email in ten seconds. It can also tell you, just as smoothly, about a rule that doesn't exist. This lesson shows you where it earns its keep and where you need to check it.
+A chat AI can turn a page of rough notes into a tidy email in ten seconds. It can also tell you, just as smoothly, about a rule that doesn't exist.
 
 <video controls poster="/api/content/farm-ai-commons/@modules/fac-01-what-ai-is/assets/fac-l3-poster.jpg" playsinline preload="metadata" aria-label="Lesson 3 video: What it's good at, and what it gets wrong" style="width: 100%; max-width: 800px; border-radius: 12px; margin: 1.5rem auto; display: block;">
   <source src="./assets/fac-l3.mp4" type="video/mp4">
@@ -8,7 +8,7 @@ A chat AI can turn a page of rough notes into a tidy email in ten seconds. It ca
   Your browser cannot play this video.
 </video>
 
-> **On the farm:** The risk isn't that AI is often wrong. Most of the time it's useful. The risk is that a wrong answer sounds exactly like a right one, so you can't tell them apart by how sure it sounds.
+> **On the farm:** Most of the time AI is useful. The risk is that a wrong answer sounds exactly like a right one, so you can't tell them apart by how sure it sounds.
 
 ## Learning outcomes
 
@@ -41,7 +41,7 @@ A chat AI learned from text gathered up to a point in time, so prices, rules and
 
 ### 3. Anything about your farm you haven't told it
 
-It has never walked your paddocks. It doesn't know your stock numbers, your soils or what rain fell on your place last month. Ask it about your farm with nothing attached and it fills the gaps with what's typical for "a farm like yours", which may be nothing like yours. That's exactly what the build at the end of this module tests.
+It has never walked your paddocks. It doesn't know your stock numbers, your soils or what rain fell on your place last month. Ask it about your farm with nothing attached and it fills the gaps with what's typical for "a farm like yours", which may be nothing like yours. That's what the build at the end of this module tests.
 
 :::widget fac-spot-the-fact
 title: Spot the made-up fact

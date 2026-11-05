@@ -1,6 +1,6 @@
 # Show and tell
 
-You've asked AI about your farm with no data and with real data. The most useful thing you can do now is share what happened, especially what it got wrong.
+You've asked AI about your farm with no data and with real data. Now share what happened, especially what it got wrong.
 
 ![Four farmers laugh together in a woolshed as one of them shows something on her phone.](./assets/fac-show-and-tell.webp)
 
@@ -37,6 +37,6 @@ This part is optional, but it's where a lot of the learning happens. Hearing tha
 
 ## Before the quiz
 
-You now know the three kinds of AI, where they already turn up on farms, what chat AI does well and badly, and how to hold a first conversation. You've also put your farm on the map, which every later module builds on.
+You've put your farm on the map, which every later module builds on.
 
 Next up is the module quiz. You need 80% to pass, and you can retake it.
