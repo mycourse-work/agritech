@@ -67,10 +67,11 @@ details.more[open] summary:before{transform:rotate(45deg)}
 /* The course player has a sticky header and footer (about 70 px each) around the frame. */
 main *{scroll-margin:80px 0 90px}
 /* Focus mode: fill the height the player gives us, Done at the foot. */
-.focus main{min-height:var(--focus-h,auto);display:flex;flex-direction:column;border:0;border-radius:0}
+/* The room under the player's bar is ~615 px at 375x667, so the Done row stays slim (44 px button, 6 px gap). */
+.focus main{min-height:var(--focus-h,auto);display:flex;flex-direction:column;border:0;border-radius:0;padding-bottom:8px}
 .focus main>*{flex:none}
-.focus-done{margin-top:auto;padding-top:12px;display:flex;justify-content:flex-end}
-.focus-done .btn{min-width:120px}
+.focus-done{margin-top:auto;padding-top:6px;display:flex;justify-content:flex-end}
+.focus-done .btn{min-width:120px;min-height:44px}
 .label{font-weight:650;font-size:16px;color:var(--ink-2)}
 .label+*{margin-top:4px}
 .source{margin-top:8px;padding:8px 12px;border-left:4px solid var(--sky);border-radius:0 var(--r-s) var(--r-s) 0;background:var(--white);font-size:16px;line-height:1.45;white-space:pre-line}
