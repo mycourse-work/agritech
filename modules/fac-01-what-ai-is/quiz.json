@@ -1,6 +1,7 @@
 {
   "title": "Quiz: What AI is, and what it isn't",
   "type": "quiz",
+  "passingScore": 80,
   "questions": [
     {
       "id": "fac-01-q01-three-kinds",

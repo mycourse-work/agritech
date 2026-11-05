@@ -113,11 +113,28 @@ function archiveUrl(lat, lon, from, to) {
   return `https://archive-api.open-meteo.com/v1/archive?latitude=${lat}&longitude=${lon}&start_date=${from}&end_date=${to}&daily=precipitation_sum&models=era5&timezone=Pacific%2FAuckland`;
 }
 
+// A 30-year pull counts as about 78 Open-Meteo calls (free limit 10,000 a day), so each
+// data centre gets a small daily budget of live pulls; past it the card goes without a normal.
+// The count lives in the Cache API, so it is per data centre and approximate, which is enough.
+export const LIVE_NORMALS_PER_DAY = 40;
+
+async function spendLiveNormal(ctx) {
+  const cache = ctx.cache;
+  if (!cache) return;
+  const req = new Request('https://cache.farm-ai-commons.internal/normal-budget:' + (ctx.today ?? nzToday()));
+  const hit = await cache.match(req);
+  const used = hit ? Number(await hit.text()) || 0 : 0;
+  if (used >= LIVE_NORMALS_PER_DAY) throw new UpstreamError('Open-Meteo');
+  const put = cache.put(req, new Response(String(used + 1), { headers: { 'cache-control': `public, max-age=${26 * HOUR}` } }));
+  if (ctx.waitUntil) ctx.waitUntil(put); else await put;
+}
+
 async function cellNormal(ctx, cellLat, cellLon) {
   const key = cellKey(cellLat, cellLon);
   if (NORMALS.cells[key]) return NORMALS.cells[key];
   // Outside the baked table: work it out once and keep it for 30 days.
   return cached(ctx, 'era5-normal:' + key, TTL.normal, 'Open-Meteo', async () => {
+    await spendLiveNormal(ctx);
     const json = await getOk(ctx, archiveUrl(cellLat, cellLon, '1991-01-01', '2020-12-31'), 'Open-Meteo');
     return cumulativeNormal(json.daily.time, json.daily.precipitation_sum);
   });

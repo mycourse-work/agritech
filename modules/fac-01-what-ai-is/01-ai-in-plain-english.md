@@ -45,9 +45,7 @@ A chat AI has read a huge amount of text: websites, books, manuals, forum posts.
 
 When you ask it something, it writes the answer one small piece at a time, each time picking a likely next word. Try finishing this sentence in your head:
 
-```text
-After weaning, we moved the ewes back onto the ...
-```
+> After weaning, we moved the ewes back onto the ...
 
 You probably thought "hill" or "back block", not "beach". A chat AI does the same thing, very fast, millions of times over.
 

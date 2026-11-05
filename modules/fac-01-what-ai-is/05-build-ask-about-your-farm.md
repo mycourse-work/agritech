@@ -1,6 +1,6 @@
 # Build: Ask about your farm
 
-Time to ask AI about your own place. You'll ask it about this season's rain twice: once with nothing to go on, and once with the real numbers from your nearest council rain gauge. Then you'll compare the two answers.
+Time to ask AI about your own place. You'll ask it about this season's rain twice: once with nothing to go on, and once with real numbers for your area. Then you'll compare the two answers.
 
 ![A clear plastic rain gauge on a wooden fence post, sheep grazing in a green paddock and snowy mountains behind.](./assets/fac-build-rain-gauge.webp)
 
@@ -22,10 +22,7 @@ Type your farm's address into the rain card below. The Farm AI Commons looks it 
 
 Before you look at your card, open your chat AI, start a fresh chat and ask this, with your district in place of Kurow:
 
-```text
-How much rain has the Kurow district had since 1 July,
-and is that normal?
-```
+> How much rain has the Kurow district had since 1 July, and is that normal?
 
 Don't attach anything and don't add any figures. Write down or screenshot what it says. Note any numbers it gives and how sure it sounds.
 
@@ -42,17 +39,17 @@ Don't attach anything and don't add any figures. Write down or screenshot what i
 
 :::widget fac-rain-card
 title: Rain card
-description: Type your farm address to see rain since 1 July at your nearest council gauge, compared with normal, as a card you can copy into any AI.
+description: Type your farm address to see rain since 1 July for your area, compared with normal, as a card you can copy into any AI.
 :::
 
 Your card shows:
 
-- **Your nearest open council rain gauge**, and how far it is from your address.
+- **Your nearest open council rain gauge** (Canterbury and North Otago for now), and how far it is from your address.
 - **Rain at that gauge since 1 July**, with a total for each month.
 - **How this season compares with normal**, from the ERA5 climate record for the nearest ~25 km climate grid cell. It compares this season in that cell with the 1991 to 2020 average for the same dates in the same cell, as a percentage.
 - **Where every number came from** (tap **Sources and notes**), and the date the card was made.
 
-> **Note:** A gauge measures the rain that falls in one spot. A climate grid cell averages about 25 km by 25 km, so on hill country it often reads wetter than a valley gauge. That's why the card compares the cell with its own long-term average, and shows the gauge total separately, rather than putting one against the other.
+> **Note:** A gauge measures the rain that falls in one spot. A climate grid cell averages about 25 km by 25 km, so it can read quite a bit wetter or drier than any one gauge. That's why the card compares the cell with its own long-term average, and shows the gauge total separately, rather than putting one against the other.
 
 If the live data won't load, open **No signal? Use saved figures for a district** under the address box (it opens by itself if the live figures fail). It shows figures saved for the field-day districts, and says the date they were saved.
 
@@ -66,11 +63,7 @@ Same question, now with the real numbers. There are two ways to do it.
 2. Go back to your chat AI and start a fresh chat.
 3. Paste the card into the message box. Under it, type the same question:
 
-```text
-How much rain has my district had since 1 July, and is
-that normal? Use the rain card above, and say which
-numbers you used.
-```
+> How much rain has my district had since 1 July, and is that normal? Use the rain card above, and say which numbers you used.
 
 ### Way 2: Connect the Farm AI Commons connector (optional)
 
@@ -78,9 +71,7 @@ Some AI apps let you add a connector, so the app can fetch the rain data itself 
 
 Connector address:
 
-```text
-https://farm-ai-commons-api.mail-5bc.workers.dev/mcp
-```
+> https://farm-ai-commons-api.mail-5bc.workers.dev/mcp
 
 - **Claude** (any plan, including free, which allows one custom connector): on claude.ai in a web browser, open Settings, find **Connectors** and choose **Add custom connector**. Name it Farm AI Commons and paste the connector address. Once it's added, it also works in the Claude phone app. Ask your question and include your address.
 - **ChatGPT** (paid plans only, on the website, still in beta): open Settings, then **Apps & Connectors**, then **Advanced**, and turn on **Developer mode**. Then create a connector with the connector address. On some plans the tools don't show up yet. If that happens, use Way 1.

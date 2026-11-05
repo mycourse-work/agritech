@@ -31,12 +31,7 @@ At the bottom of the screen there's a box that says something like "Ask anything
 
 Write it the way you'd say it to a person. Add the details that matter:
 
-```text
-I run 2,000 ewes on hill country near Kurow. Shearing is
-booked for the second week of December. Write a short
-text to my shearing contractor checking they're still
-on for that week.
-```
+> I run 2,000 ewes on hill country near Kurow. Shearing is booked for the second week of December. Write a short text to my shearing contractor checking they're still on for that week.
 
 The more of your situation you give it, the less it has to guess.
 
@@ -44,13 +39,9 @@ The more of your situation you give it, the less it has to guess.
 
 The first answer is a starting point. Reply in the same chat, like a text conversation:
 
-```text
-Make it shorter and less formal.
-```
+> Make it shorter and less formal.
 
-```text
-Add that the woolshed power is fixed now.
-```
+> Add that the woolshed power is fixed now.
 
 It remembers what you've said earlier in the same chat, so you don't need to repeat yourself.
 

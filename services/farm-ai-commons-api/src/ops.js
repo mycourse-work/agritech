@@ -42,7 +42,7 @@ export async function rainSinceJuly(ctx, lat, lon, today = ctx.today ?? nzToday(
     rain,
     note: gauge
       ? 'Daily totals from the nearest open Environment Canterbury rain gauge. Today is left out until the day is complete.'
-      : 'No open council rain gauge within 35 km. Otago Regional Council shows its gauges on its own website (orc.govt.nz).',
+      : 'No open council rain gauge within 35 km. The card reads Environment Canterbury gauges for now; other regional councils show theirs on their own websites.',
     attribution: gauge ? [ATTRIBUTION.ecan] : [],
   };
 }

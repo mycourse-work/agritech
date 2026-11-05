@@ -146,3 +146,19 @@ test('handleRpc rejects junk and unknown methods', async () => {
   assert.equal((await handleRpc({}, { jsonrpc: '2.0', id: 9, method: 'resources/list' })).error.code, -32601);
   assert.equal((await handleRpc({}, { jsonrpc: '2.0', id: 9, method: 'tools/call', params: { name: 'x' } })).error.code, -32602);
 });
+
+test('live normals stop at the daily budget for this data centre', async () => {
+  const { era5Season, LIVE_NORMALS_PER_DAY } = await import('../src/sources.js');
+  const store = new Map();
+  const cache = {
+    match: async (req) => (store.has(req.url) ? new Response(store.get(req.url)) : undefined),
+    put: async (req, res) => { store.set(req.url, await res.text()); },
+  };
+  const f = fakeFetch();
+  const ctx = { fetch: f, cache, today: '2026-11-04' };
+  // Cells far from any baked one: each needs a live 30-year pull.
+  const lats = Array.from({ length: LIVE_NORMALS_PER_DAY + 1 }, (_, i) => -36 - i * 0.25);
+  for (const lat of lats.slice(0, -1)) assert.ok((await era5Season(ctx, lat, 175, ctx.today)).normal_mm > 0);
+  await assert.rejects(era5Season(ctx, lats.at(-1), 175, ctx.today), /Open-Meteo/);
+  assert.equal(f.calls.filter((u) => u.includes('start_date=1991')).length, LIVE_NORMALS_PER_DAY);
+});

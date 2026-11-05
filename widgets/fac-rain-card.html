@@ -322,7 +322,7 @@ function render(c,savedOn){
     note("Gauge: "+c.gauge.name+", "+c.gauge.distance_km+" km away"+(c.gauge.altitude_m!==null?", "+c.gauge.altitude_m+" m up":"")+". Since 1 July, to "+pretty(c.gauge_rain.to)+", "+c.gauge_rain.days_reported+" of "+c.gauge_rain.days_in_period+" days reported.","from");
   }else{
     fig($("fig-gauge"),c.gauge?"Not available":"No gauge","Council gauge rain",true);
-    note(c.gauge?"The council gauge data didn't answer this time.":"No open council rain gauge within 35 km. In Otago, Otago Regional Council shows gauge readings on its own website.","from");
+    note(c.gauge?"The council gauge data didn't answer this time.":"No open council rain gauge within 35 km. The card reads Environment Canterbury gauges for now; other regional councils show theirs on their own websites.","from");
   }
   var ms=$("months");ms.textContent="";
   var months=c.gauge_rain&&c.gauge_rain.months||[];

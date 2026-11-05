@@ -224,7 +224,7 @@ export function rainCardText({ place, parcel, gauge, gaugeRain, era5, today, gau
   } else if (gaugeFailed) {
     lines.push('- Council gauge rain: not available right now (the Environment Canterbury data service did not answer).');
   } else {
-    lines.push(`- No open council rain gauge within ${GAUGE_MAX_KM} km. In Otago, Otago Regional Council has gauge readings on its own website.`);
+    lines.push(`- No open council rain gauge within ${GAUGE_MAX_KM} km. The card reads Environment Canterbury gauges for now; other regional councils show theirs on their own websites.`);
   }
   if (era5 && era5.to) {
     lines.push(`- Climate grid (ERA5, the nearest ~25 km climate grid cell, centred ${latLonText(era5.cell_lat, era5.cell_lon)}): ${fmtMm(era5.season_mm)} from ${prettyDate(era5.from)} to ${prettyDate(era5.to)}, which is ${era5.percent_of_normal}% of the 1991-2020 normal for those dates (${fmtMm(era5.normal_mm)}).`);
