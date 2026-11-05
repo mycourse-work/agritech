@@ -2,7 +2,11 @@
 
 A chat AI can turn a page of rough notes into a tidy email in ten seconds. It can also tell you, just as smoothly, about a rule that doesn't exist. This lesson shows you where it earns its keep and where you need to check it.
 
-<!-- VIDEO:l3 -->
+<video controls poster="/api/content/farm-ai-commons/@modules/fac-01-what-ai-is/assets/fac-l3-poster.jpg" playsinline preload="metadata" aria-label="Lesson 3 video: What it's good at, and what it gets wrong" style="width: 100%; max-width: 800px; border-radius: 12px; margin: 1.5rem auto; display: block;">
+  <source src="./assets/fac-l3.mp4" type="video/mp4">
+  <track kind="captions" src="./assets/fac-l3.vtt" srclang="en-NZ" label="English (NZ)" default>
+  Your browser cannot play this video.
+</video>
 
 > **On the farm:** The risk isn't that AI is often wrong. Most of the time it's useful. The risk is that a wrong answer sounds exactly like a right one, so you can't tell them apart by how sure it sounds.
 
@@ -41,7 +45,7 @@ It has never walked your paddocks. It doesn't know your stock numbers, your soil
 
 :::widget fac-spot-the-fact
 title: Spot the made-up fact
-description: Read an AI answer about a farm, compare it with the source, and tap every detail the source doesn't back up.
+description: Five short AI answers about a farm. Compare each with its source and tap the one detail the source doesn't back up.
 :::
 
 ## How sure is it? You can't tell from the tone

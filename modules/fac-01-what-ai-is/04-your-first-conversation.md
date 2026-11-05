@@ -2,7 +2,11 @@
 
 You don't need a computer, an account with a big company or any special words. A phone and a question about something you're dealing with this week is enough.
 
-<!-- VIDEO:l4 -->
+<video controls poster="/api/content/farm-ai-commons/@modules/fac-01-what-ai-is/assets/fac-l4-poster.jpg" playsinline preload="metadata" aria-label="Lesson 4 video: Your first conversation" style="width: 100%; max-width: 800px; border-radius: 12px; margin: 1.5rem auto; display: block;">
+  <source src="./assets/fac-l4.mp4" type="video/mp4">
+  <track kind="captions" src="./assets/fac-l4.vtt" srclang="en-NZ" label="English (NZ)" default>
+  Your browser cannot play this video.
+</video>
 
 > **On the farm:** The best first question is a real one. Something you'd normally ring a mate about, look up at night, or put off because the paperwork is a pain.
 

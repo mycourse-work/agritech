@@ -2,7 +2,11 @@
 
 "AI" gets stuck on everything from ear tags to tractors. Under the label there are really three kinds of tool, and once you can tell them apart, the claims get easier to judge.
 
-<!-- VIDEO:l1 -->
+<video controls poster="/api/content/farm-ai-commons/@modules/fac-01-what-ai-is/assets/fac-l1-poster.jpg" playsinline preload="metadata" aria-label="Lesson 1 video: AI in plain English" style="width: 100%; max-width: 800px; border-radius: 12px; margin: 1.5rem auto; display: block;">
+  <source src="./assets/fac-l1.mp4" type="video/mp4">
+  <track kind="captions" src="./assets/fac-l1.vtt" srclang="en-NZ" label="English (NZ)" default>
+  Your browser cannot play this video.
+</video>
 
 > **On the farm:** You've probably used all three kinds already this year without calling any of them AI. A collar that flags a cow on heat, a forecast app that says rain Thursday, and a phone that turns your voice into a text message.
 
@@ -32,7 +36,7 @@ These are the chat tools: ChatGPT, Gemini, Claude, Copilot and others. You type 
 
 :::widget fac-sort-the-ai
 title: Sort the AI
-description: Drag each farm tool into the kind of AI it is. On a phone, tap a tool and then tap a bin.
+description: One farm tool at a time: tap the kind of AI it is, Senses, Predicts, or Writes and talks.
 :::
 
 ## How a chat AI comes up with an answer

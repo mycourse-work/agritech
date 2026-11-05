@@ -50,11 +50,11 @@ Your card shows:
 - **Your nearest open council rain gauge**, and how far it is from your address.
 - **Rain at that gauge since 1 July**, with a total for each month.
 - **How this season compares with normal**, from the ERA5 climate record for the nearest ~25 km climate grid cell. It compares this season in that cell with the 1991 to 2020 average for the same dates in the same cell, as a percentage.
-- **Where every number came from**, and the date the card was made.
+- **Where every number came from** (tap **Sources and notes**), and the date the card was made.
 
 > **Note:** A gauge measures the rain that falls in one spot. A climate grid cell averages about 25 km by 25 km, so on hill country it often reads wetter than a valley gauge. That's why the card compares the cell with its own long-term average, and shows the gauge total separately, rather than putting one against the other.
 
-If the live data won't load, open **No signal? Use saved figures for a district** at the bottom of the card. It shows figures saved for the field-day districts, and says the date they were saved.
+If the live data won't load, open **No signal? Use saved figures for a district** under the address box (it opens by itself if the live figures fail). It shows figures saved for the field-day districts, and says the date they were saved.
 
 ## Step 4: Ask again with the card
 
