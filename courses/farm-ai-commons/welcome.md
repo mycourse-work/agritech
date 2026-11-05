@@ -29,7 +29,7 @@ Each module has:
 
 ## Which AI tool to use
 
-Level 1 works in any mainstream AI chat tool, such as ChatGPT, Gemini, Claude or Copilot, or Amazon Quick if your work or business has it. Use the one you already have. The course teaches skills that carry across all of them.
+Level 1 works in any mainstream AI chat tool, such as ChatGPT, Gemini, Claude, Copilot or Amazon Quick. Use the one you already have. The course teaches skills that carry across all of them.
 
 ## Who this course is for
 

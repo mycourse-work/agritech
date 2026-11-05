@@ -21,7 +21,7 @@ By the end of this lesson, you will be able to:
 
 ## 1. Open an app
 
-Pick any of the main chat apps: ChatGPT, Gemini, Claude or Copilot, or Amazon Quick if your work or business has it. They all work much the same way. Download the app from your phone's app store, or open its website in your phone's browser. Most will ask you to sign in with an email address or an existing Google, Apple or Microsoft account. For Amazon Quick, sign in with the account your work or business gave you.
+Pick any of the main chat apps: ChatGPT, Gemini, Claude, Copilot or Amazon Quick. They all work much the same way. Download the app from your phone's app store, or open its website in your phone's browser. Most will ask you to sign in with an email address or an existing Google, Apple or Microsoft account.
 
 > **Hint:** If someone in the house already uses one, start with that. It's easier to learn with someone who can show you where things are.
 

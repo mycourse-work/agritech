@@ -75,7 +75,7 @@ Connector address:
 
 - **Claude** (any plan, including free, which allows one custom connector): on claude.ai in a web browser, open Settings, find **Connectors** and choose **Add custom connector**. Name it Farm AI Commons and paste the connector address. Once it's added, it also works in the Claude phone app. Ask your question and include your address.
 - **ChatGPT** (paid plans only, on the website, still in beta): open Settings, then **Apps & Connectors**, then **Advanced**, and turn on **Developer mode**. Then create a connector with the connector address. On some plans the tools don't show up yet. If that happens, use Way 1.
-- **Amazon Quick** (Enterprise plan only, and an administrator adds it): if you don't run your business's Quick account, ask the person who does. In Amazon Quick, open **Connectors**, choose the **Create for your team** tab, then **Model Context Protocol (MCP)**. Name it Farm AI Commons, paste the connector address as the MCP server endpoint, choose **Public network** and no authentication, then share it with the people who need it. If the tools don't show up, use Way 1.
+- **Amazon Quick** (Enterprise plan only, and an administrator adds it): in Amazon Quick, open **Connectors**, choose the **Create for your team** tab, then **Model Context Protocol (MCP)**. Name it Farm AI Commons, paste the connector address as the MCP server endpoint, choose **Public network** and no authentication, then share it with the people who need it. If the tools don't show up, use Way 1.
 - **Gemini, Copilot and others:** so far, custom connectors are only on some paid or work plans. Use Way 1.
 
 You don't need the connector to finish this build. Way 1 gives the AI the same numbers. You'll come back to connectors in Level 3.
