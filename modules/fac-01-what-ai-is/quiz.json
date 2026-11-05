@@ -40,7 +40,7 @@
       "id": "fac-01-q02-how-chat-works",
       "questionNumber": 2,
       "type": "MULTIPLE_CHOICE",
-      "question": "How does a chat AI like ChatGPT, Gemini, Claude or Copilot come up with an answer?",
+      "question": "How does a chat AI like ChatGPT, Gemini, Claude, Copilot or Amazon Quick come up with an answer?",
       "answers": [
         {
           "id": "fac-01-q02-how-chat-works-a",

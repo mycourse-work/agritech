@@ -32,7 +32,7 @@ It learns from years of past numbers and makes a call about what comes next. Pas
 
 ### 3. AI that writes and talks
 
-These are the chat tools: ChatGPT, Gemini, Claude, Copilot and others. You type or say a question in normal words, and it writes back in normal words. This is the kind most people mean when they say "AI" now, and it's the kind this course spends most of its time on.
+These are the chat tools: ChatGPT, Gemini, Claude, Copilot, Amazon Quick and others. You type or say a question in normal words, and it writes back in normal words. This is the kind most people mean when they say "AI" now, and it's the kind this course spends most of its time on.
 
 :::widget fac-sort-the-ai
 title: Sort the AI
@@ -70,7 +70,7 @@ Some apps can also search the web or read a file you give them. That helps, beca
 ## Key takeaways
 
 - AI comes in three kinds: it senses, it predicts, or it writes and talks.
-- Chat tools like ChatGPT, Gemini, Claude and Copilot are the "writes and talks" kind.
+- Chat tools like ChatGPT, Gemini, Claude, Copilot and Amazon Quick are the "writes and talks" kind.
 - A chat AI picks likely words, one after another, based on what it has read.
 - Likely isn't the same as true, so a confident answer still needs checking.
 
