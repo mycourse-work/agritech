@@ -4,6 +4,9 @@ import { ATTRIBUTION } from './lib.js';
 import { BadInput, findFarm, makeRainCard, rainNormal, rainSinceJuly, readLatLon } from './ops.js';
 import { handleRpc, SERVER_INFO, TOOLS } from './mcp.js';
 import { UpstreamError } from './sources.js';
+import { feedback } from './feedback.js';
+
+export { FeedbackBudget } from './feedback.js';
 
 const CORS = {
   'access-control-allow-origin': '*',
@@ -28,6 +31,7 @@ function about(origin) {
       rain_since_july: `${origin}/api/rain?lat=-44.728&lon=170.467`,
       rain_normal: `${origin}/api/normal?lat=-44.728&lon=170.467`,
       make_rain_card: `${origin}/api/card?address=101%20Bledisloe%20Street%2C%20Kurow`,
+      feedback: `POST ${origin}/api/feedback with JSON { id, answer } (course player only)`,
     },
     mcp: { url: `${origin}/mcp`, transport: 'streamable HTTP (stateless, JSON responses)', tools: TOOLS.map((t) => t.name) },
     attribution: Object.values(ATTRIBUTION),
@@ -56,6 +60,12 @@ async function route(request, ctx) {
     }
     const out = await handleRpc(ctx, body);
     return out ? json(out) : new Response(null, { status: 202, headers: CORS });
+  }
+
+  if (p === '/api/feedback') {
+    if (request.method !== 'POST') return json({ error: 'Use POST with JSON: { "id": "...", "answer": "..." }.' }, 405, { allow: 'POST, OPTIONS' });
+    const [status, body] = await feedback(ctx, request);
+    return json(body, status, { 'cache-control': 'no-store' });
   }
 
   if (request.method !== 'GET' && request.method !== 'HEAD') return json({ error: 'Use GET.' }, 405, { allow: 'GET, OPTIONS' });
