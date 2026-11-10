@@ -158,6 +158,7 @@ function log(id, outcome) {
 
 /** Returns [status, body]. */
 export async function feedback(ctx, request) {
+  if (Number(request.headers.get('content-length')) > MAX_BODY_CHARS) return [413, { feedback: null, error: 'Request too large.' }];
   let body;
   try {
     const text = await request.text();

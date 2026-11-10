@@ -116,6 +116,7 @@ test('bad requests are refused before any model call', async () => {
   assert.equal((await feedback(ctx, post({ id: ID, answer: '   ' })))[0], 400);
   assert.equal((await feedback(ctx, post({ id: ID, answer: 'x'.repeat(501) })))[0], 400);
   assert.equal((await feedback(ctx, post({ id: ID, answer: 'x'.repeat(5000) })))[0], 413);
+  assert.equal((await feedback(ctx, post({ id: ID, answer: 'x' }, { 'content-length': '999999' })))[0], 413);
   assert.equal(f.calls.length, 0);
   assert.equal((await feedback(ctx, post({ id: ID, answer: 'x'.repeat(500) })))[0], 200);
   assert.equal(f.calls.length, 1);
