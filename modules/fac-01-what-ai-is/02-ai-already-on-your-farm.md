@@ -54,11 +54,11 @@ The first two kinds, sensing and predicting, have been creeping onto farms for y
 
 ## Try it
 
-<div class="reflection" data-id="fac-01-already-on-farm" data-min-chars="30">
+<div class="reflection" data-id="fac-01-already-on-farm" data-min-chars="30" data-reveal-label="Get feedback and an example" data-hide-label="Hide" data-example-label="One farmer's answer. Yours can differ." data-feedback-url="https://farm-ai-commons-api.mail-5bc.workers.dev/api/feedback" data-feedback-id="fac-01-already-on-farm">
 <div class="reflection-prompt">List the tools on your farm that might use AI. For one of them, what does it sense or predict, and how would you know if it got it wrong?</div>
 <div class="reflection-answer">
 
-**Model response:** Our collars, our weather app and the cover readings from the pasture app. The collars flag cows that look off. I'd know they got it wrong if a flagged cow is fine when I check her, or a cow goes lame and wasn't flagged. I keep a note of both so I can see how often it's right.
+Our collars, our weather app and the cover readings from the pasture app. The collars flag cows that look off. I'd know they got it wrong if a flagged cow is fine when I check her, or a cow goes lame and wasn't flagged. I keep a note of both so I can see how often it's right.
 
 </div>
 </div>

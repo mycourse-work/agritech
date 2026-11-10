@@ -26,11 +26,11 @@ This part is optional, but it's where a lot of the learning happens. Hearing tha
 
 ## Try it
 
-<div class="reflection" data-id="fac-01-show-and-tell" data-min-chars="20">
+<div class="reflection" data-id="fac-01-show-and-tell" data-min-chars="20" data-reveal-label="Get feedback and an example" data-hide-label="Hide" data-example-label="One farmer's answer. Yours can differ." data-feedback-url="https://farm-ai-commons-api.mail-5bc.workers.dev/api/feedback" data-feedback-id="fac-01-show-and-tell">
 <div class="reflection-prompt">Write the one line you'd post with your screenshots.</div>
 <div class="reflection-answer">
 
-**Example:** "Asked AI about rain since July with no data: it said a bit dry. With the rain card: 137% of normal, so wetter than usual. Same app, same question."
+"Asked AI about rain since July with no data: it said a bit dry. With the rain card: 137% of normal, so wetter than usual. Same app, same question."
 
 </div>
 </div>

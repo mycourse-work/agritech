@@ -58,11 +58,11 @@ Some apps can also search the web or read a file you give them. That helps, beca
 
 ## Try it
 
-<div class="reflection" data-id="fac-01-plain-english-sort" data-min-chars="30">
+<div class="reflection" data-id="fac-01-plain-english-sort" data-min-chars="30" data-reveal-label="Get feedback and an example" data-hide-label="Hide" data-example-label="One farmer's answer. Yours can differ." data-feedback-url="https://farm-ai-commons-api.mail-5bc.workers.dev/api/feedback" data-feedback-id="fac-01-plain-english-sort">
 <div class="reflection-prompt">Think of one tool on your farm, or one you've seen at a field day, that gets called AI. Which of the three kinds is it, and what does it sense, predict or write?</div>
 <div class="reflection-answer">
 
-**Model response:** Our pasture app gives a cover reading for each paddock from satellite photos. That's AI that predicts: it has learned how the colour of a paddock from above lines up with plate meter readings, and it makes a best guess for our paddocks. It isn't measuring the grass directly, so I'd still walk the paddocks before a big feed decision.
+Our pasture app gives a cover reading for each paddock from satellite photos. That's AI that predicts: it has learned how the colour of a paddock from above lines up with plate meter readings, and it makes a best guess for our paddocks. It isn't measuring the grass directly, so I'd still walk the paddocks before a big feed decision.
 
 </div>
 </div>

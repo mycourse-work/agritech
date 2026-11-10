@@ -26,11 +26,11 @@ Before you look at your card, open your chat AI, start a fresh chat and ask this
 
 Don't attach anything and don't add any figures. Write down or screenshot what it says. Note any numbers it gives and how sure it sounds.
 
-<div class="reflection" data-id="fac-01-build-cold-answer" data-min-chars="20">
+<div class="reflection" data-id="fac-01-build-cold-answer" data-min-chars="20" data-reveal-label="Get feedback and an example" data-hide-label="Hide" data-example-label="One farmer's answer. Yours can differ." data-feedback-url="https://farm-ai-commons-api.mail-5bc.workers.dev/api/feedback" data-feedback-id="fac-01-build-cold-answer">
 <div class="reflection-prompt">What did AI say with no data? Write down any rain figures it gave and whether it said the season was wet, dry or normal.</div>
 <div class="reflection-answer">
 
-**Example:** "It said about 180 mm since July, which it called a bit dry for the Waitaki. It didn't say where the figure came from."
+"It said about 180 mm since July, which it called a bit dry for the Waitaki. It didn't say where the figure came from."
 
 </div>
 </div>
@@ -84,11 +84,11 @@ You don't need the connector to finish this build. Way 1 gives the AI the same n
 
 Put the two answers side by side.
 
-<div class="reflection" data-id="fac-01-build-compare" data-min-chars="40">
+<div class="reflection" data-id="fac-01-build-compare" data-min-chars="40" data-reveal-label="Get feedback and an example" data-hide-label="Hide" data-example-label="One farmer's answer. Yours can differ." data-feedback-url="https://farm-ai-commons-api.mail-5bc.workers.dev/api/feedback" data-feedback-id="fac-01-build-compare">
 <div class="reflection-prompt">What did AI get wrong without the data? And name one thing about your farm's rain it still can't know, even with the card.</div>
 <div class="reflection-answer">
 
-**Model response:** Without the card it guessed about 180 mm and called it a bit dry. On 5 November the nearest gauge to Kurow had 224 mm since 1 July, and the card put the season at 137% of normal, so it's been wetter than usual, not drier. The first answer sounded just as sure as the second. Even with the card, it doesn't know that our back hill catches more rain than the gauge in the valley, or that the creek paddocks hold water long after the rest dries out.
+Without the card it guessed about 180 mm and called it a bit dry. On 5 November the nearest gauge to Kurow had 224 mm since 1 July, and the card put the season at 137% of normal, so it's been wetter than usual, not drier. The first answer sounded just as sure as the second. Even with the card, it doesn't know that our back hill catches more rain than the gauge in the valley, or that the creek paddocks hold water long after the rest dries out.
 
 </div>
 </div>

@@ -73,11 +73,11 @@ Keep these on the fridge or in the ute. Each one is a different kind of job chat
 
 Open a chat app now and ask one of the five questions, using a real job from your week.
 
-<div class="reflection" data-id="fac-01-first-conversation" data-min-chars="30">
+<div class="reflection" data-id="fac-01-first-conversation" data-min-chars="30" data-reveal-label="Get feedback and an example" data-hide-label="Hide" data-example-label="One farmer's answer. Yours can differ." data-feedback-url="https://farm-ai-commons-api.mail-5bc.workers.dev/api/feedback" data-feedback-id="fac-01-first-conversation">
 <div class="reflection-prompt">What did you ask, what did you follow up with, and was the second answer better than the first?</div>
 <div class="reflection-answer">
 
-**Model response:** I asked it to write a text to the shearer about the second week of December. The first version was too long and too polite. I followed up with "shorter, and say the woolshed power is fixed", and the second one was close to what I'd write myself. I changed one word and sent it.
+I asked it to write a text to the shearer about the second week of December. The first version was too long and too polite. I followed up with "shorter, and say the woolshed power is fixed", and the second one was close to what I'd write myself. I changed one word and sent it.
 
 </div>
 </div>
