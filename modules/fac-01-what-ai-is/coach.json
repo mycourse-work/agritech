@@ -1,6 +1,7 @@
 {
   "version": 1,
   "exampleLabel": "One farmer's answer",
+  "townDefault": "Kurow",
   "consentNote": "It won't give doses, rates or money advice.",
   "profile": {
     "title": "About your farm",
@@ -19,6 +20,7 @@
       "minutes": 2,
       "question": "Pick one tool on your farm that might use AI. What does it sense or predict?",
       "starters": ["Weather app", "Drafting gate", "Pasture app", "Cow collars"],
+      "replies": ["I'd check it myself", "I'd ask a neighbour", "Not sure how I'd know"],
       "context": "Lesson 2 covered tools that already use AI on NZ farms: collars, drafting, milk meters, weather and pasture apps. Each one senses or predicts. None of them is always right.",
       "lookFor": [
         "Names a real tool",
@@ -37,6 +39,7 @@
       "minutes": 3,
       "question": "Name one farm job you'd give a chat AI this week, and one question you'd check before you trusted its answer. Why the difference?",
       "starters": ["I'd use it for", "I wouldn't trust it on", "Not sure yet"],
+      "replies": ["I'd ring someone who knows", "I'd look it up myself", "Not sure how I'd check"],
       "context": "Lesson 3 covered what chat AI is good at (drafting, summing up, explaining, sorting) and where it goes wrong: it can state made-up facts and figures and sound sure, and it knows nothing about your farm unless you tell it.",
       "lookFor": [
         "Names a real job",
@@ -67,9 +70,11 @@
       "runs": [
         { "id": "draft", "label": "Draft", "data": [] }
       ],
-      "maxRuns": 2,
+      "maxRuns": 3,
+      "followUps": ["Make it shorter", "Make it longer", "Add the date", "Friendlier tone"],
       "closing": {
         "question": "Was the second draft better than the first? What did your follow-up change?",
+        "replies": ["It got shorter", "It sounded more like me", "Not much changed"],
         "example": "The first one was too long and too polite. I asked for shorter, and the second was close to what I'd write myself. I changed one word."
       }
     },
@@ -93,9 +98,11 @@
         { "id": "card", "label": "With your rain card", "data": ["farm.rain_card"] }
       ],
       "maxRuns": 3,
+      "followUps": ["Which figures did you use?", "Is that normal for here?", "What should I check?"],
       "place": { "title": "Find your farm", "card": "Your rain card" },
       "closing": {
         "question": "What can't AI know about your farm's rain, even with the rain card?",
+        "replies": ["What fell on my paddocks", "How wet the ground is", "Not sure"],
         "example": "Our back hill catches more rain than the gauge in the valley."
       },
       "takeHome": true,

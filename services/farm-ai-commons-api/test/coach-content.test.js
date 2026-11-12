@@ -27,6 +27,8 @@ test('Module 1 has no reflection boxes left', () => {
 
 test('each activity is inside the coach Worker\'s limits', () => {
   const max = (v, n, what) => assert.ok(typeof v === 'string' && v.length > 0 && v.length <= n, `${what}: ${String(v).length} of ${n}`);
+  // The chips over the box: the player keeps four, of 32 characters each.
+  const chips = (v, what) => assert.ok(v === undefined || (Array.isArray(v) && v.length >= 1 && v.length <= 4 && v.every((c) => typeof c === 'string' && c.length >= 1 && c.length <= 32)), what);
   for (const [id, a] of acts) {
     assert.match(id, /^[a-z0-9][a-z0-9-]{0,63}$/, id);
     assert.ok(a.kind === 'chat' || a.kind === 'try', id);
@@ -41,6 +43,7 @@ test('each activity is inside the coach Worker\'s limits', () => {
       assert.ok((a.pushOn || '').length <= 200, `${id} pushOn`);
       assert.ok(a.turns >= 1 && a.turns <= 3, `${id} turns`);
       assert.ok(a.starters === undefined || (a.starters.length <= 4 && a.starters.every((s) => s.length <= 32)), `${id} starters`);
+      chips(a.replies, `${id} replies`);
       max(a.example, 400, `${id} example`);
     } else {
       max(a.task, 300, `${id} task`);
@@ -56,8 +59,21 @@ test('each activity is inside the coach Worker\'s limits', () => {
       assert.ok(a.maxRuns >= a.runs.length && a.maxRuns <= 5, `${id} maxRuns`);
       max(a.closing.question, 300, `${id} closing question`);
       max(a.closing.example, 400, `${id} closing example`);
+      chips(a.followUps, `${id} followUps`);
+      chips(a.closing.replies, `${id} closing replies`);
+      assert.ok(a.closing.turns === undefined || (a.closing.turns >= 1 && a.closing.turns <= 3), `${id} closing turns`);
     }
   }
+});
+
+test('the coach has one town to name when the learner gave none: Kurow, in letters only', () => {
+  assert.equal(coach.townDefault, 'Kurow');
+  for (const [id, a] of acts) {
+    if (a.townDefault !== undefined) assert.equal(a.townDefault, 'Kurow', id);
+  }
+  assert.match(coach.townDefault, /^[\p{L}\p{M} '-]{1,40}$/u);
+  // No other example town in what a learner reads in the chat.
+  assert.doesNotMatch(JSON.stringify(coach), /Taup[oō]/i);
 });
 
 test('learner-facing coach copy has no em or en dashes', () => {
