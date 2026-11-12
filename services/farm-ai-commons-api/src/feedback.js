@@ -22,6 +22,16 @@ const MAX_REPLY_CHARS = 300;
 export const MODEL_TIMEOUT_MS = 4500;
 export const MAX_OUTPUT_TOKENS = 150;
 export const DEFAULT_MODEL = 'claude-haiku-5-5';
+
+/**
+ * Thinking setting for the request. Haiku 5.5 thinks by default, and on a hard answer the thinking
+ * used up all of MAX_OUTPUT_TOKENS, so the reply came back with no text and the learner got no
+ * feedback. A two-line comment needs no thinking, so it's off. Sonnet 5.5 refuses 'disabled'
+ * (400); the least it accepts is 'between_tools', which never fires here as there are no tools.
+ */
+export function thinkingFor(model) {
+  return { type: /^claude-sonnet-5-5/.test(String(model)) ? 'between_tools' : 'disabled' };
+}
 // Worst case per call: ~1,100 input tokens (system + rubric + a 500-character answer) and
 // MAX_OUTPUT_TOKENS out. At $1 / $5 per million tokens that is under $0.002. Override with
 // FEEDBACK_USD_PER_CALL if the model's price differs.
@@ -117,6 +127,7 @@ async function takeBudget(ctx) {
 }
 
 async function askModel(ctx, entry, answer) {
+  const model = ctx.env.FEEDBACK_MODEL || DEFAULT_MODEL;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), ctx.feedbackTimeoutMs ?? MODEL_TIMEOUT_MS);
   try {
@@ -128,8 +139,9 @@ async function askModel(ctx, entry, answer) {
         'anthropic-version': '2023-06-01',
       },
       body: JSON.stringify({
-        model: ctx.env.FEEDBACK_MODEL || DEFAULT_MODEL,
+        model,
         max_tokens: MAX_OUTPUT_TOKENS,
+        thinking: thinkingFor(model),
         system: SYSTEM_PROMPT,
         messages: [{ role: 'user', content: buildUserMessage(entry, answer) }],
       }),
