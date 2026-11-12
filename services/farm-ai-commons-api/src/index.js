@@ -5,6 +5,7 @@ import { BadInput, findFarm, makeRainCard, rainNormal, rainSinceJuly, readLatLon
 import { handleRpc, SERVER_INFO, TOOLS } from './mcp.js';
 import { UpstreamError } from './sources.js';
 import { feedback } from './feedback.js';
+import { checkDataLimits, DATA_PER_IP_PER_MIN } from './limits.js';
 
 export { FeedbackBudget } from './feedback.js';
 
@@ -25,7 +26,7 @@ function json(body, status = 200, extra = {}) {
 function about(origin) {
   return {
     name: SERVER_INFO.title,
-    about: 'Read-only New Zealand farm data for the Farm AI Commons course (thecolab.ai). Free to use, 60 requests a minute.',
+    about: `Read-only New Zealand farm data for the Farm AI Commons course (thecolab.ai). Free to use, ${DATA_PER_IP_PER_MIN} requests a minute.`,
     http: {
       find_farm: `${origin}/api/find?address=101%20Bledisloe%20Street%2C%20Kurow`,
       rain_since_july: `${origin}/api/rain?lat=-44.728&lon=170.467`,
@@ -99,10 +100,10 @@ export default {
   async fetch(request, env, execCtx) {
     if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: CORS });
 
-    const ip = request.headers.get('cf-connecting-ip') || 'unknown';
-    if (env.LIMITER) {
-      const { success } = await env.LIMITER.limit({ key: ip });
-      if (!success) return json({ error: 'Too many requests. The limit is 60 a minute, so wait a minute and try again.' }, 429, { 'retry-after': '60' });
+    // Two layers (src/limits.js): a small bucket per session id, and a high ceiling per IP so a
+    // woolshed of phones on one wifi address isn't treated as one caller.
+    if (await checkDataLimits(env, request)) {
+      return json({ error: 'Too many requests. Wait a minute and try again.' }, 429, { 'retry-after': '60' });
     }
 
     const ctx = {

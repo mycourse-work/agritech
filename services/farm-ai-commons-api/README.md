@@ -28,7 +28,10 @@ Every response that uses a source carries its attribution line, and so does the 
 
 ## Limits and caching
 
-- 60 requests a minute per IP (Workers rate limiting binding, which is approximate).
+- Limits are sized for a field day, where 120 phones on one woolshed wifi are one IP address (`src/limits.js`, Workers rate limiting bindings, which are approximate):
+  - **Per IP:** 600 requests a minute. This is a ceiling that stops a script. It is high on purpose.
+  - **Per session:** a caller can add `?sid=<16 to 64 letters, digits, - or _>` to a data call. Each session id gets 30 requests a minute, so one phone stuck retrying can't use up the room's allowance. The rain card widget sends one. A session id is made up by the caller, so it is a fair-share rule and the per-IP ceiling is the wall.
+  - **Coach Worker:** calls that carry the shared key in `x-coach-key` (secret `COACH_KEY`, optional) and a `sid` skip the per-IP ceiling, because the coach Worker has its own per-device limits and its calls all come from Cloudflare's addresses.
 - Cache API TTLs: LINZ 7 days, ECan site list 24 h, gauge rain 3 h, ERA5 season 12 h, ERA5 normals 30 days.
 - 1991-2020 normals come from `data/normals.json` when a cell is baked in, otherwise they're fetched once and cached. `npm run build:normals` bakes the cells near active ECan gauges; it stops at Open-Meteo's hourly cap, so run it again later to finish.
 - Upstream error bodies are never passed on. LINZ errors echo the API key, and a test checks it can't leak.
@@ -40,7 +43,7 @@ The course's free-text questions (reflection blocks with `data-feedback-url` and
 - **Fallback:** anything that goes wrong returns `200 { "feedback": null }` and the player shows the example on its own. This covers no `ANTHROPIC_API_KEY`, the rate limit, the daily budget, a model error, a reply slower than 4.5 s or an empty reply. The player also gives up after 5 s.
 - **Input:** the answer is capped at 500 characters (the player cuts it, and the Worker refuses longer ones). Unknown ids get a 404.
 - **Prompt injection:** the answer goes inside `<learner_answer>` tags with `<` and `>` swapped for `‹ ›`, so it can't close the tag. The system prompt says the answer is data, never instructions. Replies are cut to plain text of 300 characters at most.
-- **Limits:** `FEEDBACK_LIMITER` allows 5 a minute per IP. A Durable Object (`FeedbackBudget`, one global instance) counts model calls per NZ day and stops at `FEEDBACK_DAILY_USD / FEEDBACK_USD_PER_CALL`, which is 1,000 calls at the defaults of $2 and $0.002. If the counter can't be reached, there's no model call.
+- **Limits:** `FEEDBACK_LIMITER` allows 300 a minute per IP (a field day is one wifi address for the whole room, so the per-IP limit is a ceiling and the daily budget is the spend cap). A Durable Object (`FeedbackBudget`, one global instance) counts model calls per NZ day and stops at `FEEDBACK_DAILY_USD / FEEDBACK_USD_PER_CALL`, which is 3,000 calls at the defaults of $6 and $0.002. That covers 120 farmers x 7 questions x 3 goes (2,520). If the counter can't be reached, there's no model call.
 - **Thinking:** the request turns thinking off (`thinking: { type: "disabled" }`). Haiku 5.5 thinks by default, and on harder answers the thinking used up all 150 output tokens, so the learner got no feedback. If `FEEDBACK_MODEL` is set to Sonnet 5.5, the request sends `{ type: "between_tools" }` instead, because that model refuses `disabled`.
 - **Cost:** a typical call is about 500 input and 50 output tokens. At $1/$5 per million tokens (the Haiku 4.5 list price; check Haiku 5.5's) that's about $0.0008 an answer. The worst case is under $0.002.
 - **Privacy:** answers go to the Anthropic API and nowhere else. They aren't stored, and the only log line is `{ event, id, outcome }`.

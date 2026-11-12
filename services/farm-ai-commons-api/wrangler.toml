@@ -1,5 +1,7 @@
 # Farm AI Commons course data API + MCP. Deploy with wrangler deploy.
 # The LINZ key is a secret: wrangler secret put LINZ_LDS_KEY (never in this file).
+# Optional: wrangler secret put COACH_KEY (24+ random characters, the same value as the coach Worker's
+# FARM_DATA_KEY). Calls that carry it in x-coach-key are limited per session id, not per IP.
 # AI feedback (POST /api/feedback) needs the Anthropic key as a secret: wrangler secret put ANTHROPIC_API_KEY.
 # Without it the endpoint returns { feedback: null } and the course shows the example answer only.
 name = "farm-ai-commons-api"
@@ -8,22 +10,34 @@ compatibility_date = "2026-10-01"
 workers_dev = true
 preview_urls = false
 
-# 60 requests a minute per IP.
+# Limits are built for a field day: 120 phones on one woolshed wifi are one IP address.
+# See src/limits.js. The numbers here must match the constants there.
+
+# Data API, per IP: a high ceiling that stops a script, not a room of farmers.
 [[ratelimits]]
 name = "LIMITER"
 namespace_id = "1001"
 
   [ratelimits.simple]
-  limit = 60
+  limit = 600
   period = 60
 
-# AI feedback: 5 requests a minute per IP.
+# Data API, per session id (?sid=): one phone's fair share.
+[[ratelimits]]
+name = "SESSION_LIMITER"
+namespace_id = "1003"
+
+  [ratelimits.simple]
+  limit = 30
+  period = 60
+
+# AI feedback, per IP. The daily budget below is the spend cap.
 [[ratelimits]]
 name = "FEEDBACK_LIMITER"
 namespace_id = "1002"
 
   [ratelimits.simple]
-  limit = 5
+  limit = 300
   period = 60
 
 # AI feedback: one global counter of model calls per NZ day.
@@ -38,7 +52,8 @@ new_sqlite_classes = ["FeedbackBudget"]
 [vars]
 FEEDBACK_MODEL = "claude-haiku-5-5"
 # Daily spend cap in US dollars. Calls per day = FEEDBACK_DAILY_USD / FEEDBACK_USD_PER_CALL (worst case per call).
-FEEDBACK_DAILY_USD = "2"
+# $6 = 3,000 calls: 120 farmers x 7 questions x 3 goes is 2,520.
+FEEDBACK_DAILY_USD = "6"
 FEEDBACK_USD_PER_CALL = "0.002"
 # Only the course player may call /api/feedback from a browser (host suffix match).
 FEEDBACK_ORIGINS = "mycourse.work"

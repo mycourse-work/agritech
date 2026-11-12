@@ -251,9 +251,18 @@ var MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","D
 function pretty(iso){if(typeof iso!=="string"||iso.length<10)return "";return Number(iso.slice(8,10))+" "+MONTHS[Number(iso.slice(5,7))-1]+" "+iso.slice(0,4);}
 function show(id){["busy","pick","empty","error","result"].forEach(function(x){$(x).hidden=x!==id;});$("find").hidden=id==="result"||id==="busy";$("address-hint").hidden=id==="error"||id==="empty"||id==="pick";$("saved").hidden=!FALLBACK.districts.length||id==="result"||id==="busy";reportHeight();}
 function busy(text){$("busy-text").textContent=text;show("busy");announce(text);}
+// A random id for this visit, sent as ?sid= so the rain service can give each phone its own
+// allowance. A room of phones on one wifi shares an IP address. It is not kept and not tied to you.
+var SID=(function(){
+  var abc="abcdefghijklmnopqrstuvwxyz0123456789",out="",i,buf;
+  try{buf=new Uint8Array(24);window.crypto.getRandomValues(buf);for(i=0;i<24;i++)out+=abc.charAt(buf[i]%36);}
+  catch(e){out="";for(i=0;i<24;i++)out+=abc.charAt(Math.floor(Math.random()*36));}
+  return out;
+})();
 function getJson(path,ms){
   var ctl=typeof AbortController==="function"?new AbortController():null;
   var timer=window.setTimeout(function(){if(ctl)ctl.abort();},ms);
+  path+=(path.indexOf("?")<0?"?":"&")+"sid="+SID;
   return fetch(API+path,{signal:ctl?ctl.signal:undefined,headers:{accept:"application/json"}}).then(function(res){
     return res.json().catch(function(){return null;}).then(function(body){
       window.clearTimeout(timer);
