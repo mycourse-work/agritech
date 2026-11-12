@@ -36,7 +36,9 @@ export function thinkingFor(model) {
 // MAX_OUTPUT_TOKENS out. At $1 / $5 per million tokens that is under $0.002. Override with
 // FEEDBACK_USD_PER_CALL if the model's price differs.
 export const DEFAULT_USD_PER_CALL = 0.002;
-export const DEFAULT_DAILY_USD = 2;
+// 3,000 calls a day. A field day is 120 farmers x 7 questions = 840 calls, and this leaves each
+// farmer three goes at every question (2,520) with some to spare.
+export const DEFAULT_DAILY_USD = 6;
 
 export const SYSTEM_PROMPT = `You give short feedback to a New Zealand farmer doing an online course called AI for Farmers.
 
@@ -195,6 +197,8 @@ export async function feedback(ctx, request) {
 
   const limiter = ctx.env.FEEDBACK_LIMITER;
   if (!limiter) return skip('no_limiter');
+  // Per IP, and high on purpose (FEEDBACK_PER_IP_PER_MIN in src/limits.js): a field day is one wifi
+  // address for the whole room. The daily budget below is what caps the spend.
   const ip = request.headers.get('cf-connecting-ip') || 'unknown';
   const { success } = await limiter.limit({ key: 'feedback:' + ip });
   if (!success) return skip('rate_limited');

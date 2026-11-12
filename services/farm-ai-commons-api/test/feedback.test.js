@@ -182,10 +182,17 @@ test('daily budget stops model calls at the cap and resets the next day', async 
   assert.deepEqual([...ns.map.keys()], ['day:2026-11-11']);
 });
 
-test('default cap is $2 a day at $0.002 a call', () => {
-  assert.equal(dailyCallCap({}), 1000);
-  assert.equal(dailyCallCap({ FEEDBACK_DAILY_USD: 'abc' }), 1000);
-  assert.equal(dailyCallCap({ FEEDBACK_DAILY_USD: '0' }), 1000);
+test('default cap is $6 a day at $0.002 a call, enough for a field day with retries', () => {
+  assert.equal(dailyCallCap({}), 3000);
+  assert.equal(dailyCallCap({ FEEDBACK_DAILY_USD: 'abc' }), 3000);
+  assert.equal(dailyCallCap({ FEEDBACK_DAILY_USD: '0' }), 3000);
+  // 120 farmers, 7 questions, three goes at each.
+  assert.ok(dailyCallCap({}) >= 120 * 7 * 3);
+  // wrangler.toml must not undercut the default.
+  const toml = readFileSync(new URL('../wrangler.toml', import.meta.url), 'utf8');
+  const usd = Number(/FEEDBACK_DAILY_USD = "([\d.]+)"/.exec(toml)[1]);
+  const perCall = Number(/FEEDBACK_USD_PER_CALL = "([\d.]+)"/.exec(toml)[1]);
+  assert.ok(Math.floor(usd / perCall) >= 120 * 7 * 3);
 });
 
 test('slow model call times out to null', async () => {
