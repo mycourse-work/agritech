@@ -1,0 +1,73 @@
+{
+  "about": "AI feedback rubrics for the free-text questions in Module 1. The course data API (services/farm-ai-commons-api) reads this file at build time. Each key is the reflection block's data-id and data-feedback-id. 'prompt' must match the lesson's reflection-prompt text word for word (a test checks it). 'rubric' is what a useful answer usually has; the AI uses it to pick one thing to praise and one small next step, never to mark right or wrong.",
+  "prompts": {
+    "fac-01-plain-english-sort": {
+      "lesson": "01-ai-in-plain-english.md",
+      "context": "The lesson sorts AI into three kinds: AI that senses (cameras, collars, sensors), AI that predicts (forecasts, pasture cover, yield), and AI that writes and talks (chat apps, voice to text).",
+      "prompt": "Think of one tool on your farm, or one you've seen at a field day, that gets called AI. Which of the three kinds is it, and what does it sense, predict or write?",
+      "rubric": [
+        "Names a real tool",
+        "Says which kind it is: senses, predicts, or writes and talks",
+        "Says what the tool actually senses, predicts or writes"
+      ]
+    },
+    "fac-01-already-on-farm": {
+      "lesson": "02-ai-already-on-your-farm.md",
+      "context": "The lesson covers AI already common on NZ farms: collars, weather apps, pasture cover from satellite, in-shed cameras, phone voice typing. Each one can be wrong and a farmer should know how they'd notice.",
+      "prompt": "List the tools on your farm that might use AI. For one of them, what does it sense or predict, and how would you know if it got it wrong?",
+      "rubric": [
+        "Lists at least one tool",
+        "Picks one and says what it senses or predicts",
+        "Gives a practical way to notice when it's wrong, such as checking against what they see or keeping a record"
+      ]
+    },
+    "fac-01-good-at-gets-wrong": {
+      "lesson": "03-good-at-gets-wrong.md",
+      "context": "The lesson's rule: chat AI is good at working with facts you give it (summaries, drafts, tidying notes) and unreliable when asked to supply facts it may not have (prices, local rules, dosages, recent events).",
+      "prompt": "Name one farm job you'd happily give a chat AI this week, and one question you wouldn't trust it to answer without checking. Why the difference?",
+      "rubric": [
+        "Names a job to give it",
+        "Names a question they'd check",
+        "Explains the difference, ideally that it's safer when you give it the facts than when it has to supply them"
+      ]
+    },
+    "fac-01-first-conversation": {
+      "lesson": "04-your-first-conversation.md",
+      "context": "The learner has just had a first conversation with a chat AI: asked something, then followed up to improve the answer (shorter, more detail, add a fact).",
+      "prompt": "What did you ask, what did you follow up with, and was the second answer better than the first?",
+      "rubric": [
+        "Says what they asked",
+        "Says what the follow-up was",
+        "Says whether the second answer was better, and how"
+      ]
+    },
+    "fac-01-build-cold-answer": {
+      "lesson": "05-build-ask-about-your-farm.md",
+      "context": "The learner asked a chat AI about rain on their farm since 1 July without giving it any data. Later they ask again with a rain card made from real gauge data and compare.",
+      "prompt": "What did AI say with no data? Write down any rain figures it gave and whether it said the season was wet, dry or normal.",
+      "rubric": [
+        "Notes what the AI said",
+        "Writes down any rain figure it gave, or notes that it gave none",
+        "Says whether it called the season wet, dry or normal"
+      ]
+    },
+    "fac-01-build-compare": {
+      "lesson": "05-build-ask-about-your-farm.md",
+      "context": "The learner has compared the AI's answer with no data against its answer with a rain card built from the nearest gauge and the 1991-2020 normal. Even with the card, AI can't know rain at their exact paddocks, what fell on a given day at their place, soil moisture, or how their own gauge reads.",
+      "prompt": "What did AI get wrong without the data? And name one thing about your farm's rain it still can't know, even with the card.",
+      "rubric": [
+        "Says what the AI got wrong, or how far off it was, without the data",
+        "Names one thing it still can't know with the card, such as rain at their own paddocks or their own gauge"
+      ]
+    },
+    "fac-01-show-and-tell": {
+      "lesson": "06-show-and-tell.md",
+      "context": "The learner is writing a one-line post to go with screenshots of the AI's answer with and without the rain card, to share with other farmers.",
+      "prompt": "Write the one line you'd post with your screenshots.",
+      "rubric": [
+        "Is one short line",
+        "Shows the difference the data made, for example the answer with no data against the answer with the card"
+      ]
+    }
+  }
+}
