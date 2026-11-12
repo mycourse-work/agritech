@@ -3,7 +3,7 @@
 import { BadInput, findFarm, makeRainCard, rainNormal, rainSinceJuly, readLatLon } from './ops.js';
 import { UpstreamError } from './sources.js';
 
-export const SERVER_INFO = { name: 'farm-ai-commons', title: 'Farm AI Commons course data', version: '1.0.0' };
+export const SERVER_INFO = { name: 'farm-ai-commons', title: 'AI for Farmers course data', version: '1.0.0' };
 const PROTOCOLS = ['2025-06-18', '2025-03-26', '2024-11-05'];
 
 const LATLON = {
@@ -79,7 +79,7 @@ export async function handleRpc(ctx, msg) {
         protocolVersion: PROTOCOLS.includes(asked) ? asked : PROTOCOLS[0],
         capabilities: { tools: { listChanged: false } },
         serverInfo: SERVER_INFO,
-        instructions: 'Read-only New Zealand farm data for the Farm AI Commons course: address and parcel (LINZ), rain since 1 July at the nearest Environment Canterbury gauge, and ERA5 rain against normal. Quote the sources and dates each tool returns.',
+        instructions: 'Read-only New Zealand farm data for the AI for Farmers course: address and parcel (LINZ), rain since 1 July at the nearest Environment Canterbury gauge, and ERA5 rain against normal. Quote the sources and dates each tool returns.',
       });
     }
     case 'ping':

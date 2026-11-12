@@ -1,4 +1,6 @@
-# Farm AI Commons
+# AI for Farmers
+
+<div class="colab-mark" style="width: 150px; margin: 0 0 1.25rem;"><img src="/api/content/farm-ai-commons/assets/thecolab-logo.png" alt="Colab AI" style="display: block; margin: 0;"></div>
 
 Learn AI by building it, on your own farm. Every module ends with you making something that works, using public data about your own place: rain, rivers, soils, land class and more. You start by putting your farm on the map, and every module after that builds on it.
 

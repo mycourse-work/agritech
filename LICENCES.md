@@ -1,4 +1,4 @@
-# Licences and third-party terms: Farm AI Commons Module 1
+# Licences and third-party terms: AI for Farmers Module 1 (formerly Farm AI Commons)
 
 **This is a checklist, not legal advice.** It lists what Module 1 (`modules/fac-01-what-ai-is`, the course page in `courses/farm-ai-commons` and the `fac-*` widgets) uses from other people, and what their terms say. Terms pages were read on 5–6 Nov 2026 and quotes are marked "checked 6 Nov 2026". Where a page didn't say, or we couldn't read it, this file says so instead of guessing. Get a lawyer to look before anything commercial depends on it.
 
@@ -143,7 +143,7 @@
   - **OpenAI** (ChatGPT): brand page not read (blocked fetch).
 - **Commercial use OK?** Factual naming is the normal fair use. Nothing in the copy implies endorsement.
 - **Status:** needs action (small).
-- **Recommended action:** add one line to the course footer or lesson 5, in a copy lane: "ChatGPT, Gemini, Claude, Copilot and Amazon Quick are trademarks of their owners. Farm AI Commons isn't affiliated with or endorsed by them." Keep to text only.
+- **Recommended action:** add one line to the course footer or lesson 5, in a copy lane: "ChatGPT, Gemini, Claude, Copilot and Amazon Quick are trademarks of their owners. AI for Farmers isn't affiliated with or endorsed by them." Keep to text only.
 - **Amazon Quick free tier:** the Quick pricing page lists a Free plan: "Free for everyone", US$0 a user a month, 1 user, no AWS account needed (<https://aws.amazon.com/quick/pricing/>, checked 6 Nov 2026). So "works in any free AI chat tool" in `course.json` stands, and lesson 4 can name Quick alongside the others. Lesson 5 says custom MCP connectors need the Enterprise plan. That comes from the AWS MCP user guide (`notes/quick/aws-facts.md`), not the pricing page, which doesn't mention MCP and lists built-in connectors on every plan.
 
 ## Quoted facts
