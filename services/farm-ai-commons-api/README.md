@@ -12,7 +12,7 @@ A public, read-only Cloudflare Worker that serves the farm data used in the AI f
 | `GET /api/find?address=` | `find_farm` | Up to 5 LINZ address matches, each with the parcel under it |
 | `GET /api/rain?lat=&lon=` | `rain_since_july` | Nearest active ECan rain gauge within 35 km and its total since 1 July, by month |
 | `GET /api/normal?lat=&lon=` | `rain_normal` | ERA5 rain since 1 July for the ~25 km grid cell, against the 1991-2020 normal for the same dates |
-| `GET /api/card?address=` or `?lat=&lon=&place=` | `make_rain_card` | All of the above as one plain-text card to paste into any AI |
+| `GET /api/card?address=` or `?lat=&lon=&place=` | `make_rain_card` | All of the above as one plain-text card to paste into any AI. The JSON also has `rows`: the same figures as up to 5 short label and value pairs, for the course player's AI coach |
 
 `POST /api/feedback` is for the course player only, not MCP: see [AI feedback](#ai-feedback-on-free-text-answers) below.
 

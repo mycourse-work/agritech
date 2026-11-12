@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
   addressCql, cellKey, cleanAddress, cumulativeNormal, era5SeasonTotal, gaugeSeasonTotal, haversineKm,
-  inNZ, nearestGauge, normalTo, nzToday, parseEcanDailyCsv, parseEcanSites, percentOf, rainCardText,
+  inNZ, nearestGauge, normalTo, nzToday, parseEcanDailyCsv, parseEcanSites, percentOf, rainCardRows, rainCardText,
   seasonDayIndex, seasonStart, snapToGrid,
 } from '../src/lib.js';
 
@@ -138,6 +138,29 @@ test('rain card text carries the review wording and sources', () => {
   assert.match(card, /not for resale/);
   assert.match(card, /Copernicus/);
   assert.doesNotMatch(card, /[–—]/); // no en or em dashes
+});
+
+test('rain card rows are short and say what is missing', () => {
+  const gauge = { name: 'Hakataramea at Mount Florence', site_no: 405610, distance_km: 19.9, altitude_m: 397 };
+  const gaugeRain = { from: '2026-07-01', to: '2026-11-04', total_mm: 168.4 };
+  const era5 = { from: '2026-07-01', to: '2026-10-30', season_mm: 210, normal_mm: 300, percent_of_normal: 70 };
+  assert.deepEqual(rainCardRows({ gauge, gaugeRain, era5 }), [
+    { label: 'Nearest gauge', value: 'Hakataramea at Mount Florence, 19.9 km' },
+    { label: 'Gauge since 1 July', value: '168 mm to 4 Nov' },
+    { label: 'Climate grid since 1 July', value: '210 mm' },
+    { label: 'Grid normal to 30 Oct', value: '300 mm' },
+    { label: 'Grid against normal', value: '70%' },
+  ]);
+  assert.deepEqual(rainCardRows({ gauge: null, gaugeRain: null, era5: null }), [
+    { label: 'Council gauge', value: 'None within 35 km' },
+    { label: 'Climate grid', value: 'Not available' },
+  ]);
+  assert.deepEqual(rainCardRows({ gauge: null, gaugeRain: null, era5, gaugeFailed: true })[0], { label: 'Council gauge', value: 'Not available' });
+  // A long gauge name is cut so the value stays within 60 characters.
+  const long = rainCardRows({ gauge: { ...gauge, name: 'A very long gauge name that goes on and on past what a phone row can hold' }, gaugeRain, era5 });
+  assert.ok(long[0].value.length <= 60, long[0].value);
+  assert.match(long[0].value, /\.\.\., 19\.9 km$/);
+  for (const row of long) assert.doesNotMatch(row.label + row.value, /[–—]/);
 });
 
 test('rain card without a gauge says so plainly', () => {

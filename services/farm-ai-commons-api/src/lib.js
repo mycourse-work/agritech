@@ -248,6 +248,40 @@ function fmtMm(v) {
   return `${Math.round(v)} mm`;
 }
 
+// The same figures as short rows, for an app that shows the card as a table (the course player's
+// AI coach). At most 5 rows; a label is at most 40 characters and a value at most 60. They are
+// kept short enough to sit on one line each on a 375 px phone (a long gauge name takes two).
+export function rainCardRows({ gauge, gaugeRain, era5, gaugeFailed = false }) {
+  const rows = [];
+  if (gauge && gaugeRain && gaugeRain.to) {
+    const away = `, ${gauge.distance_km} km`;
+    rows.push({ label: 'Nearest gauge', value: `${clip(gauge.name, 60 - away.length)}${away}` });
+    rows.push({ label: 'Gauge since 1 July', value: `${fmtMm(gaugeRain.total_mm)} to ${shortDate(gaugeRain.to)}` });
+  } else if (gaugeFailed) {
+    rows.push({ label: 'Council gauge', value: 'Not available' });
+  } else {
+    rows.push({ label: 'Council gauge', value: `None within ${GAUGE_MAX_KM} km` });
+  }
+  if (era5 && era5.to) {
+    rows.push({ label: 'Climate grid since 1 July', value: fmtMm(era5.season_mm) });
+    rows.push({ label: `Grid normal to ${shortDate(era5.to)}`, value: fmtMm(era5.normal_mm) });
+    rows.push({ label: 'Grid against normal', value: `${era5.percent_of_normal}%` });
+  } else {
+    rows.push({ label: 'Climate grid', value: 'Not available' });
+  }
+  return rows;
+}
+
+// "2026-11-04" -> "4 Nov". The card's own date carries the year.
+function shortDate(iso) {
+  return prettyDate(iso).slice(0, -5);
+}
+
+function clip(text, max) {
+  const s = String(text ?? '').replace(/\s+/g, ' ').trim();
+  return s.length > max ? `${s.slice(0, max - 3).trimEnd()}...` : s;
+}
+
 // ---------- input cleaning ----------
 
 // Keep letters (macrons folded), digits, spaces, commas, slashes and hyphens. Max 200 chars.

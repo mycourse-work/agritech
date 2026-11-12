@@ -1,6 +1,6 @@
 // The four course data operations. The HTTP routes and the MCP tools both call these.
 
-import { ATTRIBUTION, cleanAddress, inNZ, nzToday, rainCardText } from './lib.js';
+import { ATTRIBUTION, cleanAddress, inNZ, nzToday, rainCardRows, rainCardText } from './lib.js';
 import { era5Season, findAddresses, gaugeRain, parcelAt, UpstreamError } from './sources.js';
 
 export class BadInput extends Error {}
@@ -77,6 +77,7 @@ export async function makeRainCard(ctx, { address, lat, lon, place }, today = ct
   ]);
   if (rain.failed && !normal) throw new UpstreamError('ECan and Open-Meteo');
   const card = rainCardText({ place: label, parcel, gauge: rain.gauge, gaugeRain: rain.rain, era5: normal, today, gaugeFailed: !!rain.failed });
+  const rows = rainCardRows({ gauge: rain.gauge, gaugeRain: rain.rain, era5: normal, gaugeFailed: !!rain.failed });
   const attribution = [ATTRIBUTION.linz];
   if (rain.gauge) attribution.push(ATTRIBUTION.ecan);
   if (normal) attribution.push(ATTRIBUTION.era5);
@@ -90,6 +91,7 @@ export async function makeRainCard(ctx, { address, lat, lon, place }, today = ct
     era5: normal,
     missing: [rain.failed ? 'gauge rain (ECan did not answer)' : null, normal ? null : 'ERA5 normal (Open-Meteo did not answer)'].filter(Boolean),
     card,
+    rows,
     attribution,
   };
 }
