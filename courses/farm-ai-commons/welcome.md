@@ -23,7 +23,7 @@ The course runs as 12 modules in four levels, from "what is AI" through to build
 
 Each module has:
 
-- **Check yourself:** three quick questions at the start. Get all three right and you can go straight to the build
+- **Check yourself:** three quick questions at the start, to see what you already know
 - **Short lessons** you can read on your phone in 5 to 10 minutes, each with a 2 to 4 minute video
 - **A build:** a step-by-step job using public data about your own farm
 - **Show and tell:** share what you made with your district group or at a build night

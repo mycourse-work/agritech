@@ -61,12 +61,13 @@ const post = (body, headers = {}) => new Request('https://api.example/api/feedba
   headers: { 'cf-connecting-ip': '1.2.3.4', ...headers },
 });
 
-test('every rubric prompt matches its lesson word for word', () => {
+// Module 1 now uses coach activities (coach.json) in place of its reflection boxes, so a rubric
+// may have no block left in its lesson. A block that is still there must match word for word.
+test('a rubric prompt matches its reflection block word for word, where the lesson still has one', () => {
   for (const [id, entry] of Object.entries(RUBRICS)) {
     const md = readFileSync(new URL(`../../../modules/fac-01-what-ai-is/${entry.lesson}`, import.meta.url), 'utf8');
     const block = md.match(new RegExp(`data-id="${id}"[^>]*>\\s*<div class="reflection-prompt">([^<]*)</div>`));
-    assert.ok(block, `${id} block in ${entry.lesson}`);
-    assert.equal(block[1].trim(), entry.prompt, id);
+    if (block) assert.equal(block[1].trim(), entry.prompt, id);
     assert.ok(entry.rubric.length >= 2 && entry.context.length > 20, id);
   }
   assert.equal(Object.keys(RUBRICS).length, 7);

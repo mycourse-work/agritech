@@ -213,10 +213,7 @@ $("next").addEventListener("click",function(){
   if(cur<QUESTIONS.length-1){show(cur+1);focusQuiet($("question"));reveal($("title"));announce("Question "+(cur+1)+" of "+QUESTIONS.length);return;}
   $("ask").hidden=true;$("result").hidden=false;$("count").textContent="Finished";
   $("score").textContent=score+" out of "+QUESTIONS.length;
-  $("next-text").textContent=(score===QUESTIONS.length
-    ?"You know this ground. To skip ahead, open the lesson list and tap Build: Ask about your farm."
-    :"Best to work through the lessons in order. To skip anyway, open the lesson list and tap Build: Ask about your farm.")
-    +" You'll still need the module quiz at the end.";
+  $("next-text").textContent="Whatever you scored, the next lessons show where AI helps on a farm and where it gets it wrong. Then you'll try it on your own place.";
   announce("You got "+score+" out of "+QUESTIONS.length+".");
   focusQuiet($("result-title"));reportHeight();reveal($("title"));
 });

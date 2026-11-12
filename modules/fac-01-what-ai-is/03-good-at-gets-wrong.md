@@ -60,14 +60,8 @@ Module 2 turns this into a habit called "check three things".
 
 ## Try it
 
-<div class="reflection" data-id="fac-01-good-at-gets-wrong" data-min-chars="30" data-reveal-label="Get feedback and an example" data-hide-label="Hide" data-example-label="One farmer's answer. Yours can differ." data-feedback-url="https://farm-ai-commons-api.mail-5bc.workers.dev/api/feedback" data-feedback-id="fac-01-good-at-gets-wrong">
-<div class="reflection-prompt">Name one farm job you'd happily give a chat AI this week, and one question you wouldn't trust it to answer without checking. Why the difference?</div>
-<div class="reflection-answer">
-
-I'd give it my notes from the stock agent's call and ask for a tidy summary, because I know what was said and can check it. I wouldn't trust it to tell me this week's schedule for prime lambs, because it might give me an old price or an overseas one and sound sure about it. The difference is whether I'm giving it the facts or asking it to supply them.
-
-</div>
-</div>
+:::coach fac-01-trust
+:::
 
 ## Key takeaways
 
