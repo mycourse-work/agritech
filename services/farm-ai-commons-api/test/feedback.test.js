@@ -5,7 +5,7 @@ import { readFileSync } from 'node:fs';
 import worker from '../src/index.js';
 import {
   buildUserMessage, cleanReply, dailyCallCap, FeedbackBudget, feedback, MAX_OUTPUT_TOKENS,
-  neutraliseAnswer, originAllowed, RUBRICS, SYSTEM_PROMPT,
+  neutraliseAnswer, originAllowed, RUBRICS, SYSTEM_PROMPT, thinkingFor,
 } from '../src/feedback.js';
 
 const KEY = 'sk-test-0000000000000000000000';
@@ -88,6 +88,34 @@ test('good answer: one model call with the key in a header, reply comes back cle
   assert.equal(sent.system, SYSTEM_PROMPT);
   assert.match(sent.messages[0].content, /<learner_answer>\nOur weather app/);
   assert.equal(ctx.env.FEEDBACK_BUDGET.map.get('day:2026-11-10'), 1);
+});
+
+test('thinking is off in the request, so it cannot use up the reply tokens', async () => {
+  // Haiku 5.5 thinks by default. On hard answers the thinking used all of max_tokens and the reply had no text.
+  const f = anthropicFetch();
+  await feedback(makeCtx({ fetch: f }), post({ id: ID, answer: ANSWER }));
+  const sent = JSON.parse(f.calls[0].init.body);
+  assert.equal(sent.model, 'claude-haiku-5-5');
+  assert.deepEqual(sent.thinking, { type: 'disabled' });
+
+  // Sonnet 5.5 refuses 'disabled'; 'between_tools' is the least it accepts, and there are no tools.
+  const g = anthropicFetch();
+  await feedback(makeCtx({ env: { FEEDBACK_MODEL: 'claude-sonnet-5-5' }, fetch: g }), post({ id: ID, answer: ANSWER }));
+  const sonnet = JSON.parse(g.calls[0].init.body);
+  assert.equal(sonnet.model, 'claude-sonnet-5-5');
+  assert.deepEqual(sonnet.thinking, { type: 'between_tools' });
+
+  assert.deepEqual(thinkingFor('claude-haiku-5-5'), { type: 'disabled' });
+  assert.deepEqual(thinkingFor('claude-sonnet-5-5-20261001'), { type: 'between_tools' });
+  assert.deepEqual(thinkingFor(undefined), { type: 'disabled' });
+});
+
+test('a reply that is all thinking and no text is null, not an error', async () => {
+  // The shape the bug produced: stop_reason max_tokens with only a thinking block.
+  const reply = { content: [{ type: 'thinking', thinking: 'Let me weigh up the drench dose...' }], stop_reason: 'max_tokens' };
+  const [status, body] = await feedback(makeCtx({ fetch: anthropicFetch(reply) }), post({ id: ID, answer: ANSWER }));
+  assert.equal(status, 200);
+  assert.deepEqual(body, { feedback: null });
 });
 
 test('the key never appears in a response, even when the model call fails', async () => {

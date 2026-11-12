@@ -41,6 +41,7 @@ The course's free-text questions (reflection blocks with `data-feedback-url` and
 - **Input:** the answer is capped at 500 characters (the player cuts it, and the Worker refuses longer ones). Unknown ids get a 404.
 - **Prompt injection:** the answer goes inside `<learner_answer>` tags with `<` and `>` swapped for `‹ ›`, so it can't close the tag. The system prompt says the answer is data, never instructions. Replies are cut to plain text of 300 characters at most.
 - **Limits:** `FEEDBACK_LIMITER` allows 5 a minute per IP. A Durable Object (`FeedbackBudget`, one global instance) counts model calls per NZ day and stops at `FEEDBACK_DAILY_USD / FEEDBACK_USD_PER_CALL`, which is 1,000 calls at the defaults of $2 and $0.002. If the counter can't be reached, there's no model call.
+- **Thinking:** the request turns thinking off (`thinking: { type: "disabled" }`). Haiku 5.5 thinks by default, and on harder answers the thinking used up all 150 output tokens, so the learner got no feedback. If `FEEDBACK_MODEL` is set to Sonnet 5.5, the request sends `{ type: "between_tools" }` instead, because that model refuses `disabled`.
 - **Cost:** a typical call is about 500 input and 50 output tokens. At $1/$5 per million tokens (the Haiku 4.5 list price; check Haiku 5.5's) that's about $0.0008 an answer. The worst case is under $0.002.
 - **Privacy:** answers go to the Anthropic API and nowhere else. They aren't stored, and the only log line is `{ event, id, outcome }`.
 - **Optional:** set `FEEDBACK_ORIGINS` (comma-separated host suffixes, e.g. `mycourse.work,thecolab.ai`) to refuse feedback for pages on other sites. It's unset by default because the preview runs on a changing trycloudflare host. The Origin header can be faked outside a browser, so the budget is the real guard.
@@ -55,7 +56,7 @@ wrangler deploy                         # first deploy also creates the Feedback
 ## Run and deploy
 
 ```sh
-node --test test/                 # 39 tests, upstreams stubbed from test/fixtures
+node --test test/                 # 41 tests, upstreams stubbed from test/fixtures
 npm run build:normals             # optional, fills data/normals.json
 wrangler deploy                   # needs the LINZ_LDS_KEY secret set (wrangler secret put, via stdin)
 node scripts/bake-fallback.mjs    # saved district cards into widgets/fac-rain-card.html
