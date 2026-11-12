@@ -24,6 +24,8 @@ Tap below to start. It goes one screen at a time:
 :::coach fac-01-rain
 :::
 
+If the activity doesn't start, or you'd rather not use it, do the steps under **Now do it in your own AI app** further down. Then come back and answer the question on the card.
+
 > **Good to know:** An address finds one parcel, and that's often the house block. Your farm may span several titles. For rain that doesn't matter much, because the nearest gauge and the climate grid cover the whole area. Later modules use your full farm boundary.
 
 ## What's on your rain card

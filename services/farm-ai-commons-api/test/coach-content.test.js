@@ -4,6 +4,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
+import { cardProblem } from '../scripts/coach-saved-check.mjs';
 
 const DIR = new URL('../../../modules/fac-01-what-ai-is/', import.meta.url);
 const coach = JSON.parse(readFileSync(new URL('coach.json', DIR), 'utf8'));
@@ -65,4 +66,30 @@ test('learner-facing coach copy has no em or en dashes', () => {
 
 test('the rain activity names a saved-runs file inside the module', () => {
   assert.match(coach.activities['fac-01-rain'].saved, /^[a-z0-9-]+\/[a-z0-9-]+\.json$/);
+});
+
+test('the bake script saves a rain card only if the player will keep it', () => {
+  const good = {
+    place: 'Kurow district',
+    made: '2026-12-07',
+    rows: [
+      { label: 'Nearest gauge', value: 'Kurow, 3 km' },
+      { label: 'Gauge since 1 July', value: '212 mm to 6 Dec' },
+      { label: 'Grid against normal', value: '118%' },
+    ],
+    text: 'RAIN CARD ...',
+    attribution: 'Environment Canterbury',
+  };
+  assert.equal(cardProblem(good), '');
+  // A gauge too far away is a fact about the place, so the card is still good.
+  assert.equal(cardProblem({ ...good, rows: [{ label: 'Council gauge', value: 'None within 35 km' }, good.rows[2]] }), '');
+  assert.match(cardProblem(null), /no rain card/);
+  // The rain API before the card rows change: text only.
+  assert.match(cardProblem({ ...good, rows: undefined }), /no rows/);
+  assert.match(cardProblem({ ...good, rows: [] }), /no rows/);
+  assert.match(cardProblem({ ...good, rows: [{ label: 'Nearest gauge' }] }), /no label or no value/);
+  assert.match(cardProblem({ ...good, text: ' ' }), /no text/);
+  assert.match(cardProblem({ ...good, made: '7 Dec 2026' }), /not a plain date/);
+  assert.match(cardProblem({ ...good, rows: [{ label: 'Council gauge', value: 'Not available' }, good.rows[2]] }), /source was down.*Council gauge/);
+  assert.match(cardProblem({ ...good, rows: [good.rows[0], { label: 'Climate grid', value: 'Not available' }] }), /source was down.*Climate grid/);
 });

@@ -18,7 +18,7 @@
       "title": "AI on your place",
       "minutes": 2,
       "question": "Pick one tool on your farm that might use AI. What does it sense or predict?",
-      "starters": ["Cow collars", "Weather app", "Milk meter", "Drafting gate"],
+      "starters": ["Weather app", "Drafting gate", "Pasture app", "Cow collars"],
       "context": "Lesson 2 covered tools that already use AI on NZ farms: collars, drafting, milk meters, weather and pasture apps. Each one senses or predicts. None of them is always right.",
       "lookFor": [
         "Names a real tool",
@@ -95,7 +95,7 @@
       "maxRuns": 3,
       "place": { "title": "Find your farm", "card": "Your rain card" },
       "closing": {
-        "question": "What's one thing about your farm's rain it still can't know?",
+        "question": "What can't AI know about your farm's rain, even with the rain card?",
         "example": "Our back hill catches more rain than the gauge in the valley."
       },
       "takeHome": true,
