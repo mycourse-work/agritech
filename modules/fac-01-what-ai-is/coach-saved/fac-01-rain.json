@@ -1,0 +1,408 @@
+{
+  "saved": "13 Nov 2026",
+  "sets": [
+    {
+      "area": "Kurow",
+      "label": "Kurow",
+      "card": {
+        "place": "Kurow district",
+        "made": "2026-11-13",
+        "rows": [
+          {
+            "label": "Nearest gauge",
+            "value": "Awakino at Sunny Peaks, 9.4 km"
+          },
+          {
+            "label": "Gauge since 1 July",
+            "value": "263 mm to 12 Nov"
+          },
+          {
+            "label": "Climate grid since 1 July",
+            "value": "358 mm"
+          },
+          {
+            "label": "Grid normal to 6 Nov",
+            "value": "263 mm"
+          },
+          {
+            "label": "Grid against normal",
+            "value": "136%"
+          }
+        ],
+        "text": "Rain card for Kurow (made 13 Nov 2026)\n\nRain since 1 July 2026\n- Nearest open council rain gauge: Awakino at Sunny Peaks (ECan site 408401), 9.4 km away, 1040 m above sea level.\n- Gauge total, 1 Jul 2026 to 12 Nov 2026: 263 mm (135 of 135 days reported).\n- Gauge by month: Jul 41 mm, Aug 52 mm, Sep 64 mm, Oct 62 mm, Nov 45 mm so far (to 12 Nov).\n- Climate grid (ERA5, the nearest ~25 km climate grid cell, centred 44.75 S 170.50 E): 358 mm from 1 Jul 2026 to 6 Nov 2026, which is 136% of the 1991-2020 normal for those dates (263 mm).\n- A gauge measures one spot. The grid cell averages about 25 km of country, hills included, so its totals run different from the gauge. Compare the gauge with itself and the grid cell with its own normal.\n\nPlease use this card when you answer my questions about rain on this farm. If a question needs data the card doesn't have, say so.\n\nSources:\n- Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).\n- Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz). Read 13 Nov 2026.\n- Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information.",
+        "attribution": [
+          "Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).",
+          "Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz).",
+          "Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."
+        ]
+      },
+      "runs": [
+        {
+          "prompt": "How much rain has the Kurow district had since 1 July, and is that normal?",
+          "answer": "I don't have live rainfall data, so I can't tell you the exact total for Kurow since 1 July. For that, check NIWA's CliFlo database or the Otago Regional Council's rainfall pages, which list daily totals for local stations. To judge whether it's normal, compare the season total against the long-term average for July to date in the same station records. Those sources will give you both the figure and the context you need.",
+          "unbacked": [],
+          "note": "Your prompt named Kurow and the date, so the AI knew exactly what you wanted, but it had no rain figures behind it. That's why it sent you off to other websites and gave no total. Next run, ask it to say which numbers it used and where they came from."
+        },
+        {
+          "prompt": "How much rain has the Kurow district had since 1 July, and is that normal?",
+          "answer": "Since 1 July 2026, the nearest council rain gauge, Awakino at Sunny Peaks (ECan site 408401), 9.4 km away, has recorded 263 mm, up to 12 November 2026. Monthly totals were July 41 mm, August 52 mm, September 64 mm, October 62 mm, and 45 mm so far in November.\nIs it normal? The climate grid cell nearest Kurow (ERA5 via Open-Meteo) shows 358 mm from 1 July to 6 November, which is 136% of the 1991-2020 normal for those dates. So it has been a wetter than usual start to the season. The gauge has no normal in the card, so I can't compare its own total with its usual figure.",
+          "unbacked": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "area": "Hakataramea Valley",
+      "label": "Hakataramea Valley",
+      "card": {
+        "place": "Hakataramea Valley district",
+        "made": "2026-11-13",
+        "rows": [
+          {
+            "label": "Nearest gauge",
+            "value": "Hakataramea at Mount Florence, 9.3 km"
+          },
+          {
+            "label": "Gauge since 1 July",
+            "value": "281 mm to 12 Nov"
+          },
+          {
+            "label": "Climate grid since 1 July",
+            "value": "372 mm"
+          },
+          {
+            "label": "Grid normal to 6 Nov",
+            "value": "259 mm"
+          },
+          {
+            "label": "Grid against normal",
+            "value": "143%"
+          }
+        ],
+        "text": "Rain card for Hakataramea Valley (made 13 Nov 2026)\n\nRain since 1 July 2026\n- Nearest open council rain gauge: Hakataramea at Mount Florence (ECan site 405610), 9.3 km away, 397 m above sea level.\n- Gauge total, 1 Jul 2026 to 12 Nov 2026: 281 mm (135 of 135 days reported).\n- Gauge by month: Jul 105 mm, Aug 34 mm, Sep 70 mm, Oct 52 mm, Nov 20 mm so far (to 12 Nov).\n- Climate grid (ERA5, the nearest ~25 km climate grid cell, centred 44.50 S 170.50 E): 372 mm from 1 Jul 2026 to 6 Nov 2026, which is 143% of the 1991-2020 normal for those dates (259 mm).\n- A gauge measures one spot. The grid cell averages about 25 km of country, hills included, so its totals run different from the gauge. Compare the gauge with itself and the grid cell with its own normal.\n\nPlease use this card when you answer my questions about rain on this farm. If a question needs data the card doesn't have, say so.\n\nSources:\n- Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).\n- Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz). Read 13 Nov 2026.\n- Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information.",
+        "attribution": [
+          "Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).",
+          "Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz).",
+          "Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."
+        ]
+      },
+      "runs": [
+        {
+          "prompt": "How much rain has the Hakataramea Valley district had since 1 July, and is that normal?",
+          "answer": "I don't have live rainfall data or access to the web, so I can't tell you the actual total for the Hakataramea Valley since 1 July. For that, try NIWA's CliFlo database or the nearest Environment Canterbury or Meteorological Service station, which publish daily rain records. To judge whether the total is normal, compare it with the long-term monthly average for that station, which those same sources provide. Tell me the total you find and I can help you work out how it compares.",
+          "unbacked": [],
+          "note": "You named Hakataramea Valley and the 1 July date, and the AI still came back with no figure, because it had nothing behind it to look up. Its honest line was \"I don't have live rainfall data\", so any number it gave would be a guess."
+        },
+        {
+          "prompt": "How much rain has the Hakataramea Valley district had since 1 July, and is that normal?",
+          "answer": "The Hakataramea Valley district has had 281 mm at the Hakataramea at Mount Florence gauge (ECan site 405610) from 1 July to 12 November 2026. That is 105 mm in July, 34 mm in August, 70 mm in September, 52 mm in October and 20 mm so far in November.\nIs it normal? The climate grid cell nearest the valley shows 372 mm from 1 July to 6 November, which is 143% of the 1991-2020 normal of 259 mm for those dates. So it has been a wet season. The card has no normal for the gauge itself, so I can't say how the gauge total compares with its own usual figure.",
+          "unbacked": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "area": "Duntroon",
+      "label": "Duntroon",
+      "card": {
+        "place": "Duntroon district",
+        "made": "2026-11-13",
+        "rows": [
+          {
+            "label": "Nearest gauge",
+            "value": "Waihuna at Ikawai, 10.2 km"
+          },
+          {
+            "label": "Gauge since 1 July",
+            "value": "278 mm to 12 Nov"
+          },
+          {
+            "label": "Climate grid since 1 July",
+            "value": "339 mm"
+          },
+          {
+            "label": "Grid normal to 6 Nov",
+            "value": "241 mm"
+          },
+          {
+            "label": "Grid against normal",
+            "value": "141%"
+          }
+        ],
+        "text": "Rain card for Duntroon (made 13 Nov 2026)\n\nRain since 1 July 2026\n- Nearest open council rain gauge: Waihuna at Ikawai (ECan site 408802), 10.2 km away, 302 m above sea level.\n- Gauge total, 1 Jul 2026 to 12 Nov 2026: 278 mm (135 of 135 days reported).\n- Gauge by month: Jul 85 mm, Aug 40 mm, Sep 52 mm, Oct 67 mm, Nov 34 mm so far (to 12 Nov).\n- Climate grid (ERA5, the nearest ~25 km climate grid cell, centred 44.75 S 170.75 E): 339 mm from 1 Jul 2026 to 6 Nov 2026, which is 141% of the 1991-2020 normal for those dates (241 mm).\n- A gauge measures one spot. The grid cell averages about 25 km of country, hills included, so its totals run different from the gauge. Compare the gauge with itself and the grid cell with its own normal.\n\nPlease use this card when you answer my questions about rain on this farm. If a question needs data the card doesn't have, say so.\n\nSources:\n- Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).\n- Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz). Read 13 Nov 2026.\n- Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information.",
+        "attribution": [
+          "Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).",
+          "Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz).",
+          "Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."
+        ]
+      },
+      "runs": [
+        {
+          "prompt": "How much rain has the Duntroon district had since 1 July, and is that normal?",
+          "answer": "I can't see live rainfall data, so I can't tell you the exact total for Duntroon since 1 July. For that, check NIWA's CliFlo database or the local Environment Canterbury (Waitaki) rainfall records, which show daily totals for nearby gauges.\nAs for whether it's normal, Duntroon sits in the dry Waitaki basin, where annual rainfall is typically only around 400 to 500 millimetres. Compare the running total against the long-term monthly averages for the same period, which those same sources provide.",
+          "unbacked": [
+            "400",
+            "500"
+          ],
+          "note": "Your prompt named Duntroon and the date, which is good. But the AI had no rain figures, so the \"400 to 500 millimetres\" has nothing behind it. It's a guess dressed up as a fact, and it can't tell you if your year is normal."
+        },
+        {
+          "prompt": "How much rain has the Duntroon district had since 1 July, and is that normal?",
+          "answer": "The nearest council rain gauge, Waihuna at Ikawai (ECan site 408802, about 10.2 km away), recorded 278 mm from 1 July to 12 November 2026, across 135 of 135 days. Monthly totals were July 85 mm, August 40 mm, September 52 mm, October 67 mm and 34 mm so far in November.\nThe ERA5 climate grid cell nearest Duntroon shows 339 mm from 1 July to 6 November 2026, which is 141% of the 1991-2020 normal of 241 mm for those dates. That suggests a wetter-than-normal season, though the grid averages about 25 km of country, so it may differ from the gauge's spot reading.",
+          "unbacked": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "area": "Omarama",
+      "label": "Omarama",
+      "card": {
+        "place": "Omarama district",
+        "made": "2026-11-13",
+        "rows": [
+          {
+            "label": "Nearest gauge",
+            "value": "Omarama at Dunstan Peaks, 14.3 km"
+          },
+          {
+            "label": "Gauge since 1 July",
+            "value": "226 mm to 12 Nov"
+          },
+          {
+            "label": "Climate grid since 1 July",
+            "value": "405 mm"
+          },
+          {
+            "label": "Grid normal to 6 Nov",
+            "value": "291 mm"
+          },
+          {
+            "label": "Grid against normal",
+            "value": "139%"
+          }
+        ],
+        "text": "Rain card for Omarama (made 13 Nov 2026)\n\nRain since 1 July 2026\n- Nearest open council rain gauge: Omarama at Dunstan Peaks (ECan site 495810), 14.3 km away, 582 m above sea level.\n- Gauge total, 1 Jul 2026 to 12 Nov 2026: 226 mm (135 of 135 days reported).\n- Gauge by month: Jul 42 mm, Aug 64 mm, Sep 63 mm, Oct 46 mm, Nov 12 mm so far (to 12 Nov).\n- Climate grid (ERA5, the nearest ~25 km climate grid cell, centred 44.50 S 170.00 E): 405 mm from 1 Jul 2026 to 6 Nov 2026, which is 139% of the 1991-2020 normal for those dates (291 mm).\n- A gauge measures one spot. The grid cell averages about 25 km of country, hills included, so its totals run different from the gauge. Compare the gauge with itself and the grid cell with its own normal.\n\nPlease use this card when you answer my questions about rain on this farm. If a question needs data the card doesn't have, say so.\n\nSources:\n- Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).\n- Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz). Read 13 Nov 2026.\n- Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information.",
+        "attribution": [
+          "Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).",
+          "Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz).",
+          "Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."
+        ]
+      },
+      "runs": [
+        {
+          "prompt": "How much rain has the Omarama district had since 1 July, and is that normal?",
+          "answer": "I don't have live rainfall data, so I can't tell you the total for Omarama since 1 July. For the actual figure, check NIWA's CliFlo database or the Otago Regional Council's rainfall pages, which list gauge readings for the Waitaki district. For a sense of whether it's normal, compare the total against the long-term monthly averages for Omarama, which those same sources publish. Local farmers and the nearest weather station operator can also tell you how the season is shaping up.",
+          "unbacked": [],
+          "note": "Your prompt named Omarama and the date, which is why the AI answered about the right place. But it had no rain figures, so there's nothing behind its answer, and it honestly sent you elsewhere instead of guessing. Next time, ask it to list which numbers it used and where each came from."
+        },
+        {
+          "prompt": "How much rain has the Omarama district had since 1 July, and is that normal?",
+          "answer": "The Omarama at Dunstan Peaks council gauge (ECan site 495810, 14.3 km away, 582 m above sea level) recorded 226 mm from 1 July to 12 November 2026, with all 135 days reported. Monthly totals were July 42 mm, August 64 mm, September 63 mm, October 46 mm, and 12 mm so far in November.\nThe card doesn't include a gauge-based normal, so I can't say from the gauge alone whether that is normal. The nearby climate grid cell (ERA5, about 25 km square) shows 405 mm from 1 July to 6 November, which is 139% of its 1991-2020 normal of 291 mm, so it has been a wet season there.",
+          "unbacked": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "area": "Otematata",
+      "label": "Otematata",
+      "card": {
+        "place": "Otematata district",
+        "made": "2026-11-13",
+        "rows": [
+          {
+            "label": "Nearest gauge",
+            "value": "Otematata at Glen Bouie, 13.9 km"
+          },
+          {
+            "label": "Gauge since 1 July",
+            "value": "205 mm to 12 Nov"
+          },
+          {
+            "label": "Climate grid since 1 July",
+            "value": "361 mm"
+          },
+          {
+            "label": "Grid normal to 6 Nov",
+            "value": "244 mm"
+          },
+          {
+            "label": "Grid against normal",
+            "value": "148%"
+          }
+        ],
+        "text": "Rain card for Otematata (made 13 Nov 2026)\n\nRain since 1 July 2026\n- Nearest open council rain gauge: Otematata at Glen Bouie (ECan site 407010), 13.9 km away, 1053 m above sea level.\n- Gauge total, 1 Jul 2026 to 12 Nov 2026: 205 mm (135 of 135 days reported).\n- Gauge by month: Jul 18 mm, Aug 58 mm, Sep 38 mm, Oct 53 mm, Nov 39 mm so far (to 12 Nov).\n- Climate grid (ERA5, the nearest ~25 km climate grid cell, centred 44.50 S 170.25 E): 361 mm from 1 Jul 2026 to 6 Nov 2026, which is 148% of the 1991-2020 normal for those dates (244 mm).\n- A gauge measures one spot. The grid cell averages about 25 km of country, hills included, so its totals run different from the gauge. Compare the gauge with itself and the grid cell with its own normal.\n\nPlease use this card when you answer my questions about rain on this farm. If a question needs data the card doesn't have, say so.\n\nSources:\n- Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).\n- Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz). Read 13 Nov 2026.\n- Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information.",
+        "attribution": [
+          "Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).",
+          "Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz).",
+          "Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."
+        ]
+      },
+      "runs": [
+        {
+          "prompt": "How much rain has the Otematata district had since 1 July, and is that normal?",
+          "answer": "I don't have live rainfall data, so I can't tell you the exact total for Otematata since 1 July. For that, check NIWA's CliFlo database or the Otago Regional Council's rainfall pages, which list daily totals by station. To judge whether it's normal, compare the season total against the long-term average for that station over the same months, which those sources also provide. Otematata is in a dry part of Central Otago, so typical winter rainfall there is fairly low, but confirm the figures from the official source.",
+          "unbacked": [],
+          "note": "You named Otematata and gave 1 July, which is why the AI knew where and when. But it had no rain figures, so it gave you no total at all, and the line about a dry district has nothing behind it."
+        },
+        {
+          "prompt": "How much rain has the Otematata district had since 1 July, and is that normal?",
+          "answer": "The Otematata at Glen Bouie gauge (ECan site 407010) recorded 205 mm from 1 July to 12 November 2026, with all 135 days reported. Monthly totals were July 18 mm, August 58 mm, September 38 mm, October 53 mm and 39 mm so far in November.\nFor comparison, the nearby climate grid cell (ERA5, via Open-Meteo) shows 361 mm from 1 July to 6 November, which is 148% of its 1991-2020 normal of 244 mm for those dates. The grid cell averages a wider area, so its totals differ from the gauge and shouldn't be added to or swapped with it.\nSo the grid suggests a wet season so far.",
+          "unbacked": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "area": "Oamaru",
+      "label": "Oamaru",
+      "card": {
+        "place": "Oamaru district",
+        "made": "2026-11-13",
+        "rows": [
+          {
+            "label": "Nearest gauge",
+            "value": "Broad Gully at Morven, 30.5 km"
+          },
+          {
+            "label": "Gauge since 1 July",
+            "value": "371 mm to 12 Nov"
+          },
+          {
+            "label": "Climate grid since 1 July",
+            "value": "306 mm"
+          },
+          {
+            "label": "Grid normal to 6 Nov",
+            "value": "213 mm"
+          },
+          {
+            "label": "Grid against normal",
+            "value": "143%"
+          }
+        ],
+        "text": "Rain card for Oamaru (made 13 Nov 2026)\n\nRain since 1 July 2026\n- Nearest open council rain gauge: Broad Gully at Morven (ECan site 418010), 30.5 km away, 198 m above sea level.\n- Gauge total, 1 Jul 2026 to 12 Nov 2026: 371 mm (135 of 135 days reported).\n- Gauge by month: Jul 167 mm, Aug 41 mm, Sep 54 mm, Oct 81 mm, Nov 29 mm so far (to 12 Nov).\n- Climate grid (ERA5, the nearest ~25 km climate grid cell, centred 45.00 S 171.00 E): 306 mm from 1 Jul 2026 to 6 Nov 2026, which is 143% of the 1991-2020 normal for those dates (213 mm).\n- A gauge measures one spot. The grid cell averages about 25 km of country, hills included, so its totals run different from the gauge. Compare the gauge with itself and the grid cell with its own normal.\n\nPlease use this card when you answer my questions about rain on this farm. If a question needs data the card doesn't have, say so.\n\nSources:\n- Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).\n- Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz). Read 13 Nov 2026.\n- Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information.",
+        "attribution": [
+          "Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).",
+          "Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz).",
+          "Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."
+        ]
+      },
+      "runs": [
+        {
+          "prompt": "How much rain has the Oamaru district had since 1 July, and is that normal?",
+          "answer": "I don't have live rainfall data or any way to check it, so I can't tell you the total for Oamaru since 1 July. For that, try NIWA's CliFlo database or the Metservice website, which both show recent rainfall for Oamaru. To judge whether it's normal, compare the total with Oamaru's long-term monthly averages, which are published alongside those records. Oamaru is fairly dry, so even a modest total can stand out.",
+          "unbacked": [],
+          "note": "Your prompt named Oamaru and the date, which is a good start, but the AI had nothing to work from, so it said it can't see the rain and sent you elsewhere. Anything it says about Oamaru being dry has nothing behind it."
+        },
+        {
+          "prompt": "How much rain has the Oamaru district had since 1 July, and is that normal?",
+          "answer": "The data covers Oamaru through two sources, and they don't match in scale.\nThe nearest council gauge, Broad Gully at Morven (ECan site 418010), 30.5 km away, recorded 371 mm from 1 July to 12 November 2026, with all 135 days reported. July was the wettest month at 167 mm.\nThe climate grid cell (ERA5, centred 45.00 S 171.00 E) recorded 306 mm from 1 July to 6 November 2026, which is 143% of the 1991-2020 normal of 213 mm for those dates. So by that measure it has been well above normal.\nThe card has no normal for the gauge itself, so I can't say whether 371 mm is normal for that site.",
+          "unbacked": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "area": "Waimate",
+      "label": "Waimate",
+      "card": {
+        "place": "Waimate district",
+        "made": "2026-11-13",
+        "rows": [
+          {
+            "label": "Nearest gauge",
+            "value": "Waihao at Poingdestres, 8.6 km"
+          },
+          {
+            "label": "Gauge since 1 July",
+            "value": "306 mm to 12 Nov"
+          },
+          {
+            "label": "Climate grid since 1 July",
+            "value": "323 mm"
+          },
+          {
+            "label": "Grid normal to 6 Nov",
+            "value": "223 mm"
+          },
+          {
+            "label": "Grid against normal",
+            "value": "145%"
+          }
+        ],
+        "text": "Rain card for Waimate (made 13 Nov 2026)\n\nRain since 1 July 2026\n- Nearest open council rain gauge: Waihao at Poingdestres (ECan site 417110), 8.6 km away, 2 m above sea level.\n- Gauge total, 1 Jul 2026 to 12 Nov 2026: 306 mm (135 of 135 days reported).\n- Gauge by month: Jul 124 mm, Aug 40 mm, Sep 52 mm, Oct 70 mm, Nov 21 mm so far (to 12 Nov).\n- Climate grid (ERA5, the nearest ~25 km climate grid cell, centred 44.75 S 171.00 E): 323 mm from 1 Jul 2026 to 6 Nov 2026, which is 145% of the 1991-2020 normal for those dates (223 mm).\n- A gauge measures one spot. The grid cell averages about 25 km of country, hills included, so its totals run different from the gauge. Compare the gauge with itself and the grid cell with its own normal.\n\nPlease use this card when you answer my questions about rain on this farm. If a question needs data the card doesn't have, say so.\n\nSources:\n- Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).\n- Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz). Read 13 Nov 2026.\n- Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information.",
+        "attribution": [
+          "Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).",
+          "Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz).",
+          "Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."
+        ]
+      },
+      "runs": [
+        {
+          "prompt": "How much rain has the Waimate district had since 1 July, and is that normal?",
+          "answer": "I don't have live rainfall data, so I can't tell you the exact total for the Waimate district since 1 July. For current figures, check NIWA's CliFlo database or the Waimate District Council and MetService websites, which list recent rain gauge readings. To judge whether it's normal, compare the total with the long-term average for the same period, which those sources also provide. Waimate sits in South Canterbury, a relatively dry part of the country, so averages there are fairly modest.",
+          "unbacked": [],
+          "note": "Your prompt named Waimate and gave 1 July, which is good, but notice the answer has no rainfall figure at all. The AI had no data behind it, so it just sent you elsewhere. Next run, ask it to say which numbers it used and where they came from."
+        },
+        {
+          "prompt": "How much rain has the Waimate district had since 1 July, and is that normal?",
+          "answer": "The Waihao at Poingdestres gauge (ECan site 417110, 8.6 km from Waimate) recorded 306 mm from 1 July to 12 November 2026, with 135 of 135 days reported. July was the wettest month at 124 mm.\nIs it normal? The card only compares the climate grid cell against its 1991-2020 normal: 323 mm from 1 July to 6 November, which is 145% of the normal 223 mm for those dates. The gauge has no normal of its own on this card, so I can't say directly how the gauge total compares. Taken with the grid figure, though, it points to a wetter than usual winter and spring.",
+          "unbacked": [],
+          "note": ""
+        }
+      ]
+    },
+    {
+      "area": "Fairlie",
+      "label": "Fairlie",
+      "card": {
+        "place": "Fairlie district",
+        "made": "2026-11-13",
+        "rows": [
+          {
+            "label": "Nearest gauge",
+            "value": "Opihi at Kimbell, 10.3 km"
+          },
+          {
+            "label": "Gauge since 1 July",
+            "value": "331 mm to 12 Nov"
+          },
+          {
+            "label": "Climate grid since 1 July",
+            "value": "475 mm"
+          },
+          {
+            "label": "Grid normal to 6 Nov",
+            "value": "389 mm"
+          },
+          {
+            "label": "Grid against normal",
+            "value": "122%"
+          }
+        ],
+        "text": "Rain card for Fairlie (made 13 Nov 2026)\n\nRain since 1 July 2026\n- Nearest open council rain gauge: Opihi at Kimbell (ECan site 400710), 10.3 km away, 482 m above sea level.\n- Gauge total, 1 Jul 2026 to 12 Nov 2026: 331 mm (135 of 135 days reported).\n- Gauge by month: Jul 94 mm, Aug 76 mm, Sep 94 mm, Oct 50 mm, Nov 19 mm so far (to 12 Nov).\n- Climate grid (ERA5, the nearest ~25 km climate grid cell, centred 44.00 S 170.75 E): 475 mm from 1 Jul 2026 to 6 Nov 2026, which is 122% of the 1991-2020 normal for those dates (389 mm).\n- A gauge measures one spot. The grid cell averages about 25 km of country, hills included, so its totals run different from the gauge. Compare the gauge with itself and the grid cell with its own normal.\n\nPlease use this card when you answer my questions about rain on this farm. If a question needs data the card doesn't have, say so.\n\nSources:\n- Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).\n- Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz). Read 13 Nov 2026.\n- Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information.",
+        "attribution": [
+          "Address and parcel: LINZ NZ Addresses and NZ Primary Parcels, CC BY 4.0 (data.linz.govt.nz).",
+          "Gauge rainfall: Environment Canterbury, CC BY 4.0, not for resale (data.ecan.govt.nz).",
+          "Climate grid: ERA5 via Open-Meteo, CC BY 4.0. Contains modified Copernicus Climate Change Service information."
+        ]
+      },
+      "runs": [
+        {
+          "prompt": "How much rain has the Fairlie district had since 1 July, and is that normal?",
+          "answer": "I don't have live rainfall data or web access, so I can't tell you the actual totals for the Fairlie district since 1 July. For current figures, check NIWA's CliFlo database or the MetService website, or contact the local council or a nearby weather station. To judge whether the total is normal, compare it with the long-term average for the same period, which those sources also provide. Fairlie sits in the drier eastern Mackenzie area, so its average is usually well below the national figure.",
+          "unbacked": [],
+          "note": "Your prompt named Fairlie and the date, which is good, but the AI had no rain figures to work from, so it sent you to other websites instead of answering. The line about Fairlie being drier than most places is general knowledge with nothing behind it, so don't lean on it."
+        },
+        {
+          "prompt": "How much rain has the Fairlie district had since 1 July, and is that normal?",
+          "answer": "The Fairlie district has had 331 mm of rain from 1 July to 12 November 2026, measured at the nearby Opihi at Kimbell gauge (ECan site 400710, 10.3 km away). The gauge reported on all 135 days, with monthly totals of 94 mm in July, 76 mm in August, 94 mm in September, 50 mm in October and 19 mm so far in November.\nWhether that is normal is less clear from this card. The climate grid cell near Fairlie (ERA5, 44.00 S 170.75 E) recorded 475 mm from 1 July to 6 November, which is 122% of the 1991-2020 normal of 389 mm for those dates.",
+          "unbacked": [],
+          "note": ""
+        }
+      ]
+    }
+  ]
+}
