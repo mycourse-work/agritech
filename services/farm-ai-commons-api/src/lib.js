@@ -248,6 +248,34 @@ function fmtMm(v) {
   return `${Math.round(v)} mm`;
 }
 
+// The same figures as short rows, for an app that shows the card as a table (the course player's
+// AI coach). At most 5 rows; a label is at most 40 characters and a value at most 60.
+export function rainCardRows({ gauge, gaugeRain, era5, gaugeFailed = false }) {
+  const rows = [];
+  if (gauge && gaugeRain && gaugeRain.to) {
+    const away = `, ${gauge.distance_km} km away`;
+    rows.push({ label: 'Nearest council rain gauge', value: `${clip(gauge.name, 60 - away.length)}${away}` });
+    rows.push({ label: 'Gauge rain since 1 July', value: `${fmtMm(gaugeRain.total_mm)} (to ${prettyDate(gaugeRain.to)})` });
+  } else if (gaugeFailed) {
+    rows.push({ label: 'Council rain gauge', value: 'Not available right now' });
+  } else {
+    rows.push({ label: 'Council rain gauge', value: `None within ${GAUGE_MAX_KM} km` });
+  }
+  if (era5 && era5.to) {
+    rows.push({ label: 'Climate grid rain since 1 July', value: `${fmtMm(era5.season_mm)} (to ${prettyDate(era5.to)})` });
+    rows.push({ label: 'Grid normal for those dates', value: `${fmtMm(era5.normal_mm)} (1991-2020)` });
+    rows.push({ label: 'Grid rain against normal', value: `${era5.percent_of_normal}% of normal` });
+  } else {
+    rows.push({ label: 'Climate grid (ERA5)', value: 'Not available right now' });
+  }
+  return rows;
+}
+
+function clip(text, max) {
+  const s = String(text ?? '').replace(/\s+/g, ' ').trim();
+  return s.length > max ? `${s.slice(0, max - 3).trimEnd()}...` : s;
+}
+
 // ---------- input cleaning ----------
 
 // Keep letters (macrons folded), digits, spaces, commas, slashes and hyphens. Max 200 chars.

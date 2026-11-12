@@ -95,6 +95,18 @@ test('card for an address joins all three sources', async () => {
   assert.ok(json.era5.percent_of_normal > 0);
   assert.match(json.card, /Rain card for 101 Bledisloe Street, Kurow/);
   assert.equal(json.attribution.length, 3);
+  // The same figures as rows, for the course player.
+  assert.deepEqual(json.rows.map((r) => r.label), [
+    'Nearest council rain gauge', 'Gauge rain since 1 July',
+    'Climate grid rain since 1 July', 'Grid normal for those dates', 'Grid rain against normal',
+  ]);
+  assert.match(json.rows[1].value, /^\d+ mm \(to 4 Nov 2026\)$/);
+  assert.equal(json.rows[2].value, '123 mm (to 31 Oct 2026)');
+  assert.equal(json.rows[4].value, `${json.era5.percent_of_normal}% of normal`);
+  for (const row of json.rows) {
+    assert.ok(row.label.length <= 40 && row.value.length <= 60, `${row.label}: ${row.value}`);
+    assert.ok(json.card.includes(row.value.match(/^\d+ mm/)?.[0] ?? ''), `${row.value} is in the card text`);
+  }
 });
 
 test('card still comes back when ERA5 is down', async () => {
@@ -103,6 +115,8 @@ test('card still comes back when ERA5 is down', async () => {
   assert.equal(json.era5, null);
   assert.match(json.card, /ERA5\): not available/);
   assert.deepEqual(json.missing, ['ERA5 normal (Open-Meteo did not answer)']);
+  assert.deepEqual(json.rows.at(-1), { label: 'Climate grid (ERA5)', value: 'Not available right now' });
+  assert.equal(json.rows.length, 3);
 });
 
 test('unknown path 404, wrong method 405, OPTIONS 204', async () => {
