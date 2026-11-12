@@ -71,16 +71,12 @@ Keep these on the fridge or in the ute. Each one is a different kind of job chat
 
 ## Try it
 
-Open a chat app now and ask one of the five questions, using a real job from your week.
+Ask for a draft, read it, then follow up once to make it better. Use a real job from your week. Tap below to do it with the AI built into this course, or use your own chat app.
 
-<div class="reflection" data-id="fac-01-first-conversation" data-min-chars="30" data-reveal-label="Get feedback and an example" data-hide-label="Hide" data-example-label="One farmer's answer. Yours can differ." data-feedback-url="https://farm-ai-commons-api.mail-5bc.workers.dev/api/feedback" data-feedback-id="fac-01-first-conversation">
-<div class="reflection-prompt">What did you ask, what did you follow up with, and was the second answer better than the first?</div>
-<div class="reflection-answer">
+:::coach fac-01-draft-a-text
+:::
 
-I asked it to write a text to the shearer about the second week of December. The first version was too long and too polite. I followed up with "shorter, and say the woolshed power is fixed", and the second one was close to what I'd write myself. I changed one word and sent it.
-
-</div>
-</div>
+Then open your own chat app and ask one of the five questions, using a real job from your week.
 
 ## Key takeaways
 

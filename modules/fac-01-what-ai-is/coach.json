@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "exampleLabel": "One farmer's answer",
+  "consentNote": "It won't give doses, rates or money advice.",
+  "profile": {
+    "title": "About your farm",
+    "intro": "Two taps, so the coach uses examples from your kind of farm.",
+    "choiceLabel": "What do you farm?",
+    "choices": ["Dairy", "Sheep and beef", "Arable", "Deer", "Mixed", "Hort", "Other"],
+    "textLabel": "Nearest town"
+  },
+  "support": [
+    { "name": "Rural Support Trust (8am to 6pm)", "phone": "0800 787 254" }
+  ],
+  "activities": {
+    "fac-01-on-your-place": {
+      "kind": "chat",
+      "title": "AI on your place",
+      "minutes": 2,
+      "question": "Pick one tool on your farm that might use AI. What does it sense or predict?",
+      "starters": ["Cow collars", "Weather app", "Milk meter", "Drafting gate"],
+      "context": "Lesson 2 covered tools that already use AI on NZ farms: collars, drafting, milk meters, weather and pasture apps. Each one senses or predicts. None of them is always right.",
+      "lookFor": [
+        "Names a real tool",
+        "Says what it senses or predicts",
+        "Gives a practical way to notice when it's wrong"
+      ],
+      "pushOn": "How would you know if it got it wrong?",
+      "watchFor": ["If they bring up animal health or a dose, don't confirm or correct it."],
+      "example": "Our weather app. It predicts rain for the district. I'd know it was wrong by checking the gauge at the woolshed.",
+      "turns": 2,
+      "minChars": 15
+    },
+    "fac-01-trust": {
+      "kind": "chat",
+      "title": "When would you trust it?",
+      "minutes": 3,
+      "question": "Name one farm job you'd give a chat AI this week, and one question you'd check before you trusted its answer. Why the difference?",
+      "starters": ["I'd use it for", "I wouldn't trust it on", "Not sure yet"],
+      "context": "Lesson 3 covered what chat AI is good at (drafting, summing up, explaining, sorting) and where it goes wrong: it can state made-up facts and figures and sound sure, and it knows nothing about your farm unless you tell it.",
+      "lookFor": [
+        "Names a real job",
+        "Names a question they'd check",
+        "Says what makes one safe and the other not"
+      ],
+      "pushOn": "How would you check it?",
+      "watchFor": ["Doses, rates and withholding periods: don't confirm or correct. Money decisions: no advice either way."],
+      "example": "I'd get it to tidy my notes from the stock agent's call, because I know what was said. I wouldn't trust it on this week's lamb schedule. It could give an old price.",
+      "turns": 2,
+      "minChars": 15
+    },
+    "fac-01-draft-a-text": {
+      "kind": "try",
+      "title": "Get it to draft a text",
+      "minutes": 5,
+      "task": "Get the AI to draft a short text to a neighbour, contractor or stock agent about a real job this week.",
+      "starterPrompt": "I farm near {town}. Shearing is booked for the second week of December. Write a short text to my shearing contractor checking they're still on for that week.",
+      "townDefault": "Kurow",
+      "scope": "drafting a short everyday text message or email about farm work",
+      "offTask": "This box only drafts a short message. Try that one in your own AI app, and check what it says.",
+      "context": "Lesson 4 is a first conversation with a chat AI: ask, read the answer, then follow up to make it better.",
+      "lookFor": [
+        "Says who it's to",
+        "Says what the job is and when",
+        "Asks for a length or a tone"
+      ],
+      "runs": [
+        { "id": "draft", "label": "Draft", "data": [] }
+      ],
+      "maxRuns": 2,
+      "closing": {
+        "question": "Was the second draft better than the first? What did your follow-up change?",
+        "example": "The first one was too long and too polite. I asked for shorter, and the second was close to what I'd write myself. I changed one word."
+      }
+    },
+    "fac-01-rain": {
+      "kind": "try",
+      "title": "Ask about your rain",
+      "minutes": 8,
+      "task": "Ask the AI how much rain your district has had since 1 July, and if that's normal.",
+      "starterPrompt": "How much rain has the {town} district had since 1 July, and is that normal?",
+      "townDefault": "Kurow",
+      "scope": "rain since 1 July for one New Zealand district or farm",
+      "offTask": "This box only does rain questions. Try that one in your own AI app, and check what it says.",
+      "context": "Lesson 5: the same question twice. First with no data, then with a rain card of real figures for the farm. The point is what changes.",
+      "lookFor": [
+        "Names the place",
+        "Gives the dates",
+        "Asks which numbers it used"
+      ],
+      "runs": [
+        { "id": "cold", "label": "No data", "data": [] },
+        { "id": "card", "label": "With your rain card", "data": ["farm.rain_card"] }
+      ],
+      "maxRuns": 3,
+      "place": { "title": "Find your farm", "card": "Your rain card" },
+      "closing": {
+        "question": "What's one thing about your farm's rain it still can't know?",
+        "example": "Our back hill catches more rain than the gauge in the valley."
+      },
+      "takeHome": true,
+      "saved": "coach-saved/fac-01-rain.json"
+    },
+    "fac-01-tell-a-mate": {
+      "kind": "chat",
+      "title": "Tell a mate",
+      "minutes": 2,
+      "question": "What's the one thing from today you'd tell a mate about AI? Write it the way you'd say it.",
+      "context": "Module 1 covered: what AI is, where it already is on farms, what chat AI is good at and gets wrong, a first conversation, and asking with real data.",
+      "lookFor": [
+        "One clear point",
+        "In their own words",
+        "Something a mate could use"
+      ],
+      "pushOn": "",
+      "watchFor": [],
+      "example": "Asked AI about our rain with no data and it wasn't much use. Gave it the real figures and it could tell me we're well ahead of normal. Same app, same question.",
+      "turns": 2,
+      "minChars": 15,
+      "share": true
+    }
+  }
+}
