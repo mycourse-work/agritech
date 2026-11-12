@@ -145,21 +145,21 @@ test('rain card rows are short and say what is missing', () => {
   const gaugeRain = { from: '2026-07-01', to: '2026-11-04', total_mm: 168.4 };
   const era5 = { from: '2026-07-01', to: '2026-10-30', season_mm: 210, normal_mm: 300, percent_of_normal: 70 };
   assert.deepEqual(rainCardRows({ gauge, gaugeRain, era5 }), [
-    { label: 'Nearest council rain gauge', value: 'Hakataramea at Mount Florence, 19.9 km away' },
-    { label: 'Gauge rain since 1 July', value: '168 mm (to 4 Nov 2026)' },
-    { label: 'Climate grid rain since 1 July', value: '210 mm (to 30 Oct 2026)' },
-    { label: 'Grid normal for those dates', value: '300 mm (1991-2020)' },
-    { label: 'Grid rain against normal', value: '70% of normal' },
+    { label: 'Nearest gauge', value: 'Hakataramea at Mount Florence, 19.9 km' },
+    { label: 'Gauge since 1 July', value: '168 mm to 4 Nov' },
+    { label: 'Climate grid since 1 July', value: '210 mm' },
+    { label: 'Grid normal to 30 Oct', value: '300 mm' },
+    { label: 'Grid against normal', value: '70%' },
   ]);
   assert.deepEqual(rainCardRows({ gauge: null, gaugeRain: null, era5: null }), [
-    { label: 'Council rain gauge', value: 'None within 35 km' },
-    { label: 'Climate grid (ERA5)', value: 'Not available right now' },
+    { label: 'Council gauge', value: 'None within 35 km' },
+    { label: 'Climate grid', value: 'Not available' },
   ]);
-  assert.deepEqual(rainCardRows({ gauge: null, gaugeRain: null, era5, gaugeFailed: true })[0], { label: 'Council rain gauge', value: 'Not available right now' });
+  assert.deepEqual(rainCardRows({ gauge: null, gaugeRain: null, era5, gaugeFailed: true })[0], { label: 'Council gauge', value: 'Not available' });
   // A long gauge name is cut so the value stays within 60 characters.
   const long = rainCardRows({ gauge: { ...gauge, name: 'A very long gauge name that goes on and on past what a phone row can hold' }, gaugeRain, era5 });
   assert.ok(long[0].value.length <= 60, long[0].value);
-  assert.match(long[0].value, /\.\.\., 19\.9 km away$/);
+  assert.match(long[0].value, /\.\.\., 19\.9 km$/);
   for (const row of long) assert.doesNotMatch(row.label + row.value, /[–—]/);
 });
 

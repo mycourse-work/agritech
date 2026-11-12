@@ -97,15 +97,17 @@ test('card for an address joins all three sources', async () => {
   assert.equal(json.attribution.length, 3);
   // The same figures as rows, for the course player.
   assert.deepEqual(json.rows.map((r) => r.label), [
-    'Nearest council rain gauge', 'Gauge rain since 1 July',
-    'Climate grid rain since 1 July', 'Grid normal for those dates', 'Grid rain against normal',
+    'Nearest gauge', 'Gauge since 1 July', 'Climate grid since 1 July', 'Grid normal to 31 Oct', 'Grid against normal',
   ]);
-  assert.match(json.rows[1].value, /^\d+ mm \(to 4 Nov 2026\)$/);
-  assert.equal(json.rows[2].value, '123 mm (to 31 Oct 2026)');
-  assert.equal(json.rows[4].value, `${json.era5.percent_of_normal}% of normal`);
-  for (const row of json.rows) {
-    assert.ok(row.label.length <= 40 && row.value.length <= 60, `${row.label}: ${row.value}`);
-    assert.ok(json.card.includes(row.value.match(/^\d+ mm/)?.[0] ?? ''), `${row.value} is in the card text`);
+  assert.equal(json.rows[0].value, `${json.gauge.name}, ${json.gauge.distance_km} km`);
+  assert.equal(json.rows[1].value, `${Math.round(json.gauge_rain.total_mm)} mm to 4 Nov`);
+  assert.equal(json.rows[2].value, '123 mm');
+  assert.equal(json.rows[3].value, `${Math.round(json.era5.normal_mm)} mm`);
+  assert.equal(json.rows[4].value, `${json.era5.percent_of_normal}%`);
+  for (const row of json.rows) assert.ok(row.label.length <= 40 && row.value.length <= 60, `${row.label}: ${row.value}`);
+  // Every figure in a row is in the text card the AI reads.
+  for (const figure of [json.rows[1].value.split(' to ')[0], json.rows[2].value, json.rows[3].value, json.rows[4].value]) {
+    assert.ok(json.card.includes(figure), `${figure} is in the card text`);
   }
 });
 
@@ -115,7 +117,7 @@ test('card still comes back when ERA5 is down', async () => {
   assert.equal(json.era5, null);
   assert.match(json.card, /ERA5\): not available/);
   assert.deepEqual(json.missing, ['ERA5 normal (Open-Meteo did not answer)']);
-  assert.deepEqual(json.rows.at(-1), { label: 'Climate grid (ERA5)', value: 'Not available right now' });
+  assert.deepEqual(json.rows.at(-1), { label: 'Climate grid', value: 'Not available' });
   assert.equal(json.rows.length, 3);
 });
 
