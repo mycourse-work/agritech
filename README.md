@@ -1,6 +1,6 @@
 # AgriTech AI Learning
 
-Course content for [agritech.mycourse.work](https://agritech.mycourse.work).
+Course content for the AI for Farmers course (formerly Farm AI Commons) at [aiforfarmers.mycourse.work](https://aiforfarmers.mycourse.work) (was agritech.mycourse.work).
 
 ## Structure
 

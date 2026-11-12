@@ -233,6 +233,7 @@ test('cleanReply strips markup and caps length at a sentence', () => {
 test('origin allowlist matches host suffixes only', () => {
   const env = { FEEDBACK_ORIGINS: 'mycourse.work, trycloudflare.com,localhost' };
   assert.ok(originAllowed(env, 'https://agritech.mycourse.work'));
+  assert.ok(originAllowed(env, 'https://aiforfarmers.mycourse.work'));
   assert.ok(originAllowed(env, 'https://shark-x.trycloudflare.com'));
   assert.ok(originAllowed(env, 'http://localhost:8080'));
   assert.ok(!originAllowed(env, 'https://mycourse.work.evil.example'));

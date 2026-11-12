@@ -2,7 +2,7 @@
   "name": "farm-ai-commons-api",
   "private": true,
   "type": "module",
-  "description": "Farm AI Commons course data API and MCP server (Cloudflare Worker)",
+  "description": "AI for Farmers course data API and MCP server (Cloudflare Worker)",
   "scripts": {
     "test": "node --test test/",
     "build:normals": "node scripts/build-normals.mjs",

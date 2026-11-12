@@ -14,7 +14,7 @@ Time to ask AI about your own place. You'll ask it about this season's rain twic
 
 ## Step 1: Find your farm
 
-Type your farm's address into the rain card below. The Farm AI Commons looks it up in the national address and parcel maps from LINZ and puts your farm on the map.
+Type your farm's address into the rain card below. The card looks it up in the national address and parcel maps from LINZ and puts your farm on the map.
 
 > **Good to know:** An address finds one parcel, and that's often the house block. Your farm may span several titles. For rain that doesn't matter much, because the nearest gauge and the climate grid cover the whole area. Later modules use your full farm boundary.
 
@@ -65,17 +65,17 @@ Same question, now with the real numbers. There are two ways to do it.
 
 > How much rain has my district had since 1 July, and is that normal? Use the rain card above, and say which numbers you used.
 
-### Way 2: Connect the Farm AI Commons connector (optional)
+### Way 2: Connect the AI for Farmers connector (optional)
 
-Some AI apps let you add a connector, so the app can fetch the rain data itself when you ask. The Farm AI Commons connector is public and read-only. It has no accounts, and it only returns public data about the address you give it.
+Some AI apps let you add a connector, so the app can fetch the rain data itself when you ask. The AI for Farmers connector is public and read-only. It has no accounts, and it only returns public data about the address you give it.
 
 Connector address:
 
 > https://farm-ai-commons-api.mail-5bc.workers.dev/mcp
 
-- **Claude** (any plan, including free, which allows one custom connector): on claude.ai in a web browser, open Settings, find **Connectors** and choose **Add custom connector**. Name it Farm AI Commons and paste the connector address. Once it's added, it also works in the Claude phone app. Ask your question and include your address.
+- **Claude** (any plan, including free, which allows one custom connector): on claude.ai in a web browser, open Settings, find **Connectors** and choose **Add custom connector**. Name it AI for Farmers and paste the connector address. Once it's added, it also works in the Claude phone app. Ask your question and include your address.
 - **ChatGPT** (paid plans only, on the website, still in beta): open Settings, then **Apps & Connectors**, then **Advanced**, and turn on **Developer mode**. Then create a connector with the connector address. On some plans the tools don't show up yet. If that happens, use Way 1.
-- **Amazon Quick** (Enterprise plan only, and an administrator adds it): in Amazon Quick, open **Connectors**, choose the **Create for your team** tab, then **Model Context Protocol (MCP)**. Name it Farm AI Commons, paste the connector address as the MCP server endpoint, choose **Public network** and no authentication, then share it with the people who need it. If the tools don't show up, use Way 1.
+- **Amazon Quick** (Enterprise plan only, and an administrator adds it): in Amazon Quick, open **Connectors**, choose the **Create for your team** tab, then **Model Context Protocol (MCP)**. Name it AI for Farmers, paste the connector address as the MCP server endpoint, choose **Public network** and no authentication, then share it with the people who need it. If the tools don't show up, use Way 1.
 - **Gemini, Copilot and others:** so far, custom connectors are only on some paid or work plans. Use Way 1.
 
 You don't need the connector to finish this build. Way 1 gives the AI the same numbers. You'll come back to connectors in Level 3.

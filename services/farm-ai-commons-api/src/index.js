@@ -25,7 +25,7 @@ function json(body, status = 200, extra = {}) {
 function about(origin) {
   return {
     name: SERVER_INFO.title,
-    about: 'Read-only New Zealand farm data for the Farm AI Commons course (thecolab.ai). Free to use, 60 requests a minute.',
+    about: 'Read-only New Zealand farm data for the AI for Farmers course (thecolab.ai). Free to use, 60 requests a minute.',
     http: {
       find_farm: `${origin}/api/find?address=101%20Bledisloe%20Street%2C%20Kurow`,
       rain_since_july: `${origin}/api/rain?lat=-44.728&lon=170.467`,

@@ -1,6 +1,6 @@
-# Farm AI Commons course data API
+# AI for Farmers course data API
 
-A public, read-only Cloudflare Worker that serves the farm data used in the Farm AI Commons course. It answers plain HTTP for the course widgets and speaks MCP so farmers can add it to their own AI app as a connector.
+A public, read-only Cloudflare Worker that serves the farm data used in the AI for Farmers course (formerly Farm AI Commons). It answers plain HTTP for the course widgets and speaks MCP so farmers can add it to their own AI app as a connector.
 
 - Live: https://farm-ai-commons-api.mail-5bc.workers.dev
 - MCP connector address: https://farm-ai-commons-api.mail-5bc.workers.dev/mcp (streamable HTTP, stateless, JSON responses, no auth)
