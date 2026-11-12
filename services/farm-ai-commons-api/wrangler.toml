@@ -40,6 +40,8 @@ FEEDBACK_MODEL = "claude-haiku-5-5"
 # Daily spend cap in US dollars. Calls per day = FEEDBACK_DAILY_USD / FEEDBACK_USD_PER_CALL (worst case per call).
 FEEDBACK_DAILY_USD = "2"
 FEEDBACK_USD_PER_CALL = "0.002"
+# Only the course player may call /api/feedback from a browser (host suffix match).
+FEEDBACK_ORIGINS = "mycourse.work"
 
 [observability]
 enabled = true
