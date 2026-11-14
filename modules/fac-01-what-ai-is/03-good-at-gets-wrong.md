@@ -70,4 +70,20 @@ Module 2 turns this into a habit called "check three things".
 - A confident tone tells you nothing about whether it's right.
 - Give it your facts and check what it gives back.
 
+### Keep this check handy
+
+When an answer has facts or numbers in it, paste this in as your next message. It's the same check from Spot the made-up fact.
+
+```text
+Before I use your
+answer: list each fact
+or number you gave me,
+and quote the line from
+my source that backs it
+up. If nothing in my
+source backs it, write
+"not in the source" next
+to it.
+```
+
 Next: your first conversation with a chat AI on your phone.

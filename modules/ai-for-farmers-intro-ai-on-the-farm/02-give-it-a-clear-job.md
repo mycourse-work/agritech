@@ -84,7 +84,7 @@ That list gives you a head start on checking. The next lesson shows you how to u
 
 ## Talking instead of typing
 
-The phone apps let you speak your prompt, which is handy in the ute, but pull over first and read the transcript before you send it, because road noise can turn "fifteen" into "fifty".
+The phone apps let you speak your prompt, which is handy in the ute. Check the transcript before you send it, or ask the app to read it back, because road noise can turn "fifteen" into "fifty".
 
 ## Try it
 

@@ -24,7 +24,7 @@ By the end of this lesson, you will be able to:
 
 ### 1. AI that senses
 
-It takes in readings from the world and spots a pattern. A collar notices a cow is chewing her cud less than usual. A camera on a sprayer tells a weed from a crop. A crush scale reads a tag and matches a weight to the right animal.
+It takes in readings from the world and spots a pattern. A collar notices a cow's rumination time has dropped. A camera on a sprayer tells a weed from a crop. A crush scale reads a tag and matches a weight to the right animal.
 
 ### 2. AI that predicts
 
@@ -33,6 +33,8 @@ It learns from years of past numbers and makes a call about what comes next. Pas
 ### 3. AI that writes and talks
 
 These are the chat tools: ChatGPT, Gemini, Claude, Copilot, Amazon Quick and others. You type or say a question in normal words, and it writes back in normal words. This is the kind most people mean when they say "AI" now, and it's the kind this course spends most of its time on.
+
+> **Good to know:** The three kinds overlap. A chat AI can crunch your own numbers too. Upload your cattle weights file and ask: "At 1 kg a day, how many will reach 500 kg in 30 days?" It will work it out and show you how. Check the maths on a few animals before you act on it.
 
 :::widget fac-sort-the-ai
 title: Sort the AI

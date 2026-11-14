@@ -7,13 +7,13 @@
       "id": "fac-01-q01-three-kinds",
       "questionNumber": 1,
       "type": "MULTIPLE_CHOICE",
-      "question": "A collar flags a cow whose chewing time has dropped. Which kind of AI is that?",
+      "question": "A collar flags a cow whose rumination time has dropped. Which kind of AI is that?",
       "answers": [
         {
           "id": "fac-01-q01-three-kinds-a",
           "text": "AI that senses",
           "correct": true,
-          "feedback": "Right. It reads movement and chewing, learns what's normal for that cow, and flags a change."
+          "feedback": "Right. It reads grazing and rumination, learns what's normal for that cow, and flags a change."
         },
         {
           "id": "fac-01-q01-three-kinds-b",
