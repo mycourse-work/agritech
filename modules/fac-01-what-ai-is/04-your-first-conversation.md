@@ -57,7 +57,7 @@ Everything earlier in a chat shapes the next answer. If you've been talking abou
 
 Most of the main apps have a voice mode. You talk, it talks back, and you can keep going without touching the screen. It's handy for thinking a problem through on the way to the yards.
 
-> **Tip:** Got Apple CarPlay? ChatGPT's voice mode works hands-free through CarPlay in the ute. Otherwise put your phone in a cradle and use voice mode hands-free.
+> **Tip:** Got Apple CarPlay? ChatGPT works in CarPlay. Turn on "Start automatically in CarPlay" in its settings and voice mode opens as soon as you plug in. Otherwise put your phone in a cradle and use voice mode from there.
 
 ## Your first 5 questions
 
