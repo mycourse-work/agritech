@@ -211,19 +211,19 @@
       "id": "ai-on-the-farm-q07-voice-check",
       "questionNumber": 7,
       "type": "MULTIPLE_CHOICE",
-      "question": "Parked in the ute, you dictate a text to the vet clinic: \"We've got fifteen heifers to scan on Thursday.\" What should you do before sending?",
+      "question": "In the ute, you dictate a text to the vet clinic: \"We've got fifteen heifers to scan on Thursday.\" What should you do before sending?",
       "answers": [
         {
           "id": "ai-on-the-farm-q07-voice-check-a",
-          "text": "Send it straight away, because dictation is accurate when you're parked",
+          "text": "Send it straight away, because dictation is always accurate",
           "correct": false,
-          "feedback": "Being parked makes it safe, not accurate. Engine and wind noise can still change what the phone hears."
+          "feedback": "Dictation isn't always accurate. Engine and wind noise can change what the phone hears."
         },
         {
           "id": "ai-on-the-farm-q07-voice-check-b",
-          "text": "Read the transcript, because noise can turn fifteen into fifty",
+          "text": "Check the transcript, because noise can turn fifteen into fifty",
           "correct": true,
-          "feedback": "Right. A quick read catches a changed number before the clinic plans around it."
+          "feedback": "Right. A quick read, or having the app read it back, catches a changed number before the clinic plans around it."
         },
         {
           "id": "ai-on-the-farm-q07-voice-check-c",
@@ -235,10 +235,10 @@
           "id": "ai-on-the-farm-q07-voice-check-d",
           "text": "Send it, then ring the clinic later if the numbers look wrong",
           "correct": false,
-          "feedback": "By then the clinic may have booked the wrong amount of time. Reading it first takes seconds."
+          "feedback": "By then the clinic may have booked the wrong amount of time. Checking it first takes seconds."
         }
       ],
-      "feedback": "Voice input is handy, but the transcript is a draft too. Pull over and read it before it goes anywhere."
+      "feedback": "Voice input is handy, but the transcript is a draft too. Check it, or have it read back to you, before it goes anywhere."
     },
     {
       "id": "ai-on-the-farm-q08-check-items",

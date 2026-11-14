@@ -22,7 +22,7 @@ By the end of this lesson, you will be able to:
 
 ![Friesian and Jersey cows wearing neck collars graze at sunrise, with a rotary milking shed behind.](./assets/fac-l2-collars.webp)
 
-Virtual fencing collars move stock with sound, vibration or a mild pulse instead of wire. The fence lines are drawn on a phone. Many collars also record movement and chewing time, and the software learns what's normal for each animal. When a cow's pattern changes, it flags her: she may be on heat, or getting sick.
+Virtual fencing collars move stock with sound, vibration or a mild pulse instead of wire. The fence lines are drawn on a phone. They started on dairy farms, and more and more beef farms are taking them up, now that some collars can work through satellite on hill country. Many collars also record grazing and rumination time, and the software learns what's normal for each animal. When a cow's pattern changes, it flags her: she may be on heat, or getting sick.
 
 That's AI that **senses**. It doesn't know the cow, only that her pattern looks different from usual.
 

@@ -32,6 +32,6 @@ The examples use Ridgeback Farm, a made-up farm, so you can practise without sha
 
 Farmers, farm managers and farm staff in New Zealand who've heard about AI and want to know what it's actually useful for. You don't need any technical background, and you don't need to pay for anything to finish the course.
 
-> **Tip:** Do the lessons and activities when you're stopped, not while driving or working machinery. Module 4 ends with a bonus podcast episode you can listen to in the ute.
+> **Tip:** Module 4 ends with a bonus podcast episode you can listen to in the ute.
 
 This course is independent training and isn't endorsed by any of the companies or tools it mentions.

@@ -17,7 +17,7 @@ By the end of this lesson, you will be able to:
 - Open a chat AI on your phone and ask it a question by typing or speaking.
 - Follow up to get a better answer.
 - Start a fresh chat when you change topic.
-- Use voice hands-free in the ute, safely.
+- Use voice mode hands-free in the ute.
 
 ## 1. Open an app
 
@@ -57,7 +57,7 @@ Everything earlier in a chat shapes the next answer. If you've been talking abou
 
 Most of the main apps have a voice mode. You talk, it talks back, and you can keep going without touching the screen. It's handy for thinking a problem through on the way to the yards.
 
-> **Warning:** Set it up before you drive. Start the voice chat while you're stopped, put the phone in a cradle, and don't hold it while driving. If an answer needs reading, typing or checking, pull over first.
+> **Tip:** Got Apple CarPlay? ChatGPT works in CarPlay. Turn on "Start automatically in CarPlay" in its settings and voice mode opens as soon as you plug in. Otherwise put your phone in a cradle and use voice mode from there.
 
 ## Your first 5 questions
 
@@ -83,6 +83,6 @@ Then open your own chat app and ask one of the five questions, using a real job 
 - Any of the main chat apps will do. Open one, then type or speak your question.
 - Give it the details of your situation, then follow up to improve the answer.
 - Start a fresh chat when you change topic.
-- Set up voice before you drive, and pull over for anything you need to read.
+- Voice mode works hands-free in the ute, through CarPlay or with your phone in a cradle.
 
 Next is the build: you'll ask AI about rain on your own farm, first with no data and then with the real gauge numbers.

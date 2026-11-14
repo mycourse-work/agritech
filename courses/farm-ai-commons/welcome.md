@@ -37,6 +37,6 @@ Level 1 works in any mainstream AI chat tool, such as ChatGPT, Gemini, Claude, C
 
 Farmers, farm managers and farm staff in New Zealand. You don't need any technical background to start at Level 1.
 
-> **Tip:** Do the lessons and builds when you're stopped, not while driving or working machinery. The videos have captions, so you can watch with the sound off.
+> **Tip:** The videos have captions, so you can watch with the sound off.
 
 This course is independent training and isn't endorsed by any of the companies or tools it mentions. The data in the builds comes from public sources, and each one is named where it's used.
